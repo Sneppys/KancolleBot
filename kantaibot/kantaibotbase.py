@@ -10,6 +10,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print("Ready on {} ({})".format(client.user.name, client.user.id))
+    await client.change_presence(game=discord.Game(type=0, name='with cute ships'))
 
 
 @client.event
