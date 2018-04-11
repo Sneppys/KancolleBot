@@ -30,6 +30,15 @@ class UserInventory:
         cur.close()
         conn.commit()
 
+    def remove_from_inventory(self, inv_id):
+        table_name = USER_TABLE_NAME % (self.did)
+        query = "DELETE FROM %s WHERE ID='%s';" % (table_name, inv_id)
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute(query)
+        cur.close()
+        conn.commit()
+
 def get_connection():
     return sqlite3.connect(DB_PATH)
 

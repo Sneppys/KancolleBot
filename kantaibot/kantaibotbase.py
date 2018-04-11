@@ -1,5 +1,7 @@
 import discord
 import asyncio
+import botcommands
+import os
 
 
 client = discord.Client()
@@ -12,9 +14,10 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    print(message.author, message.content)
+    await botcommands.handle_message(client, message)
 
 
-f = open('botinfo.txt', 'r')
+DIR_PATH = os.path.dirname(os.path.realpath(__file__))
+f = open(os.path.join(DIR_PATH, "botinfo.txt") , 'r')
 key = f.readline()[:-1] # yeah, no, I'm keeping this secret
 client.run(key)
