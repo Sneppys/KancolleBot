@@ -1,5 +1,24 @@
 # file for storing classes related to stats and misc information about ships
 
+# Base class for a certain ship, as in database
+class ShipBase:
+    def __init__(self, sid, name, rarity, shiptype, imagedef):
+        self.sid = sid
+        self.name = name
+        self.rarity = rarity
+        self.shiptype = shiptype
+        self.imagedef = imagedef
+
+# Instance of a ship, existing in a user's inventory
+class ShipInstance:
+    def __init__(self, invid, sid, level=1):
+        self.invid = invid
+        self.sid = sid
+        self.level = level
+
+    def new(sid):
+        return ShipInstance(-1, sid)
+
 # Ship Type - The class of the ship
 ALL_SHIP_TYPES = []
 class ShipType:
