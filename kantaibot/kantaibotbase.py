@@ -15,4 +15,6 @@ async def on_message(message):
     print(message.author, message.content)
 
 
-client.run('BOT KEY HERE')
+f = open('botinfo.txt', 'r')
+key = f.readline()[:-1] # yeah, no, I'm keeping this secret
+client.run(key)
