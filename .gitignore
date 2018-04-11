@@ -1,1 +1,4 @@
+/__pycache__/
+/kantaibot/__pycache__/
 /kantaibot/botinfo.txt
+usersdb.db
