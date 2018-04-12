@@ -5,6 +5,10 @@ import sqlite3
 import os
 import htmlparsing
 import json
+from PIL import Image
+import urllib.request
+from io import BytesIO
+import base64
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 DB_PATH = os.path.join(DIR_PATH, "../kantaidb.db")
@@ -61,7 +65,6 @@ kc3_entry = get_kc3_data(kc3_id)
 ship_name, translated_name, ship_type, ship_rarity = get_ship_info(kc3_id, kc3_entry)
 if (kc3_id == 0):
     print("ID not found")
-    input()
     exit()
 type_discrim = ship_stats.get_ship_type(ship_type).discriminator
 print("Found ship '%s' of type %s and rarity %s with KC3 ID %s" % (ship_name, type_discrim, ship_rarity, kc3_id))
@@ -95,8 +98,31 @@ if (not img_reg or not img_dmg):
         if (not img_reg or not img_dmg):
             print("!! Could not find missing images")
 
+def img_from_url(url):
+    req = urllib.request.urlopen(url)
+    imgdata = Image.open(BytesIO(req.read()))
+    return imgdata
+
+def encode_image(img):
+    buf = BytesIO()
+    img.save(buf, format="PNG")
+    enc = base64.b64encode(buf.getvalue()).decode()
+    return enc
+
+print("Encoding images...")
+
+if (img_reg and img_dmg):
+    # download images and resave as PNG
+    enc_reg = encode_image(img_from_url(img_reg))
+    enc_dmg = encode_image(img_from_url(img_dmg))
+
+enc_small_reg = encode_image(Image.open(img_small_path))
+enc_small_dmg = encode_image(Image.open(img_small_damaged_path))
+
+print("Querying database...")
+
 query = "REPLACE INTO ShipBase (ShipID, Name, Rarity, ShipType, Image_Default, Image_Damaged, Image_Small, Image_Small_Damaged) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');"
-query = query % (ship_id, ship_name, ship_rarity, ship_type, img_reg, img_dmg, img_small_path, img_small_damaged_path)
+query = query % (ship_id, ship_name, ship_rarity, ship_type, enc_reg, enc_dmg, enc_small_reg, enc_small_dmg)
 conn = get_connection()
 cur = conn.cursor()
 cur.execute(query)
@@ -104,4 +130,3 @@ cur.close()
 conn.commit()
 
 print("Added to database")
-input() # stops command prompt auto closing

@@ -3,4 +3,5 @@
 /kantaibot/botinfo.txt
 /tools/__pycache__/
 usersdb.db
+kantaidb.db
 *.pyc
