@@ -3,6 +3,7 @@ import asyncio
 import imggen
 import ship_stats
 import io
+import drophandler
 
 COMMAND_PREFIX = "bg!"
 
@@ -22,10 +23,21 @@ async def command_show(client, message, args):
     else:
         await client.send_message(message.channel, "Usage: `%sshow [ship_id]`" % COMMAND_PREFIX)
 
+async def command_drop(client, message, args):
+    drop = drophandler.get_random_drop()
+    image_file = imggen.generate_ship_card(drop)
+    ship_base = drop.base()
+    ship_name = ship_base.name
+    ship_rarity = ship_base.rarity
+    rarity = ['Common', 'Common', 'Common', 'Uncommon', 'Rare', 'Very Rare', 'Extremely Rare', '**Legendary**']
+
+    await client.send_file(message.channel, io.BytesIO(image_file.getvalue()),
+            filename="image.png", content="%s got a%s %s! (%s)" % (message.author.display_name, 'n' if ship_name[0].lower() in 'aeiou' else '', ship_name, rarity[ship_rarity - 1]))
 
 commands = {
 "hello": command_hello,
 "show": command_show,
+"drop": command_drop,
 }
 
 

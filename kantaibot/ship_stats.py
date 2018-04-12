@@ -2,6 +2,7 @@ import sqlite3
 import os
 import ship_stats
 import sqlutils
+from PIL import Image
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 DB_PATH = os.path.join(DIR_PATH, "../kantaidb.db") # hidden to git
@@ -13,11 +14,24 @@ def get_connection():
 
 # Base class for a certain ship, as in database
 class ShipBase:
-    def __init__(self, sid, name, rarity, shiptype):
+    def __init__(self, sid, name, rarity, shiptype, remodels_from, remodels_into, remodel_level):
         self.sid = sid
         self.name = name
         self.rarity = rarity
         self.shiptype = shiptype
+        self.remodels_from = remodels_from
+        self.remodels_into = remodels_into
+        self.remodel_level = remodel_level
+
+    def instance(shipid):
+        query = "SELECT ShipID, Name, Rarity, ShipType, Remodels_From, Remodels_Into, Remodel_Level FROM ShipBase WHERE ShipID='%s';" % shipid
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute(query)
+        data = cur.fetchall()[0]
+        cur.close()
+        conn.commit()
+        return ShipBase(data[0], data[1], data[2], data[3], data[4], data[5], data[6])
 
 # Instance of a ship, existing in a user's inventory
 class ShipInstance:
@@ -27,14 +41,7 @@ class ShipInstance:
         self.level = level
 
     def base(self):
-        query = "SELECT * FROM ShipBase WHERE ShipID='%s'" % self.sid
-        conn = get_connection()
-        cur = conn.cursor()
-        cur.execute(query)
-        data = cur.fetchall()[0]
-        cur.close()
-        conn.commit()
-        return ShipBase(data[0], data[1], data[2], data[3])
+        return ShipBase.instance(self.sid)
 
     def new(sid):
         return ShipInstance(-1, sid)
@@ -52,6 +59,32 @@ SHIP_SUFFIXES = {0: "", 1: "Kai", 2: "Kai Ni", 3: "A", 4: "Carrier",
 SHIP_TRANSLATIONS = {u"Гангут": "Gangut", u"Верный": "Verniy",
                      u"Октябрьская революция": "Oktyabrskaya Revolyutsiya",
                      u"Ташкент": "Tashkent", u"два": "dva"}
+
+# uses Rarity_colors.jpg to get a backdrop for different rarities
+
+def get_rarity_backdrop(rarity, size):
+    rarity -= 1
+    rimg = Image.open(DIR_PATH + '/Rarity_colors.jpg')
+    w, h = rimg.size
+    start_x = int(rarity % 4 * (w / 4)) + 10
+    start_y = int(rarity // 4 * (h / 2)) + 15
+    max_w = int(w / 4) - 20
+    max_h = int(h / 2) - 30
+    if (w > h):
+        targ_w = max_w
+        targ_h = (h / w) * targ_w
+    else:
+        targ_h = max_h
+        targ_w = (w / h) * targ_h
+    if (targ_h > max_h):
+        targ_h = max_h
+    if (targ_w > max_w):
+        targ_w = max_w
+    targ_w = int(targ_w)
+    targ_h = int(targ_h)
+    rimg = rimg.crop((start_x, start_y, start_x + targ_w, start_y + targ_h))
+    rimg = rimg.resize(size, resample=Image.BICUBIC)
+    return rimg
 
 # Ship Type - The type of the ship, using KC3's internal type ids (Sometimes dupes)
 ALL_SHIP_TYPES = []
@@ -93,3 +126,18 @@ def get_ship_type(tid):
     if len(r) > 0:
         return r[0]
     return None
+
+
+def get_all_ships(allow_remodel=True):
+    if (allow_remodel):
+        query = "SELECT (ShipID) FROM ShipBase;"
+    else:
+        query = "SELECT (ShipID) FROM ShipBase WHERE Remodels_From == 'None';"
+    conn = get_connection()
+    cur = conn.cursor()
+    cur.execute(query)
+    ids = cur.fetchall()
+    cur.close()
+    conn.commit()
+
+    return [ShipBase.instance(id) for id in ids]

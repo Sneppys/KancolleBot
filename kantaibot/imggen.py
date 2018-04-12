@@ -32,6 +32,9 @@ def generate_ship_card(ship_instance):
 
     base = ship_instance.base()
 
+    backdrop = ship_stats.get_rarity_backdrop(base.rarity, CARD_SIZE)
+    img.paste(backdrop)
+
     use_damaged = False # TODO make this check if ship is damaged
 
     img_full = get_image_from_db(ship_instance.sid, "Image_Damaged" if use_damaged else "Image_Default")
@@ -49,22 +52,21 @@ def generate_ship_card(ship_instance):
 
     font = ImageFont.truetype("impact.ttf", 70)
     font_small = ImageFont.truetype("framd.ttf", 40)
-    draw_squish_text(img, (550, 220), base.name, font, 490)
+    draw_squish_text(img, (550, 220), base.name, font, 490, color=(0, 0, 0))
     draw_squish_text(img, (550, 300), "Level %s | %s" % (ship_instance.level,
-        ship_stats.get_ship_type(base.shiptype).full_name), font_small, 490)
+        ship_stats.get_ship_type(base.shiptype).full_name), font_small, 490, color=(0, 0, 0))
 
     r = io.BytesIO(b'')
     img.save(r, format="PNG")
     return r
 
 
-def draw_squish_text(img, position, text, font, max_width, color=(255, 255, 255), center_height=True, repeat=1):
+def draw_squish_text(img, position, text, font, max_width, color=(255, 255, 255), outline=(255, 255, 255), center_height=True, repeat=1):
     draw = ImageDraw.Draw(img)
     w, h = draw.textsize(text, font=font)
     text_img = Image.new(size=(w, h), color=(0, 0, 0, 0), mode="RGBA")
     tdraw = ImageDraw.Draw(text_img)
-    for i in range(repeat):
-        tdraw.text((0, 0), text, font=font, fill=color)
+    draw_outline(tdraw, (0, 0), text, font, color, outline, repeat)
     if (max_width < w):
         text_img = text_img.resize((max_width, h), Image.BILINEAR)
     w, h = text_img.size
@@ -77,7 +79,7 @@ def draw_squish_text(img, position, text, font, max_width, color=(255, 255, 255)
     del draw
 
 
-def draw_centered_text(draw, position, text, font, color=(255, 255, 255),
+def draw_centered_text(draw, position, text, font, color=(255, 255, 255), outline=(255, 255, 255),
                        center_height=True, repeat=1):
     w, h = draw.textsize(text, font=font)
     x, y = position
@@ -85,5 +87,15 @@ def draw_centered_text(draw, position, text, font, color=(255, 255, 255),
         start_loc = (x - w / 2, y - h / 2)
     else:
         start_loc = (x - w / 2, y)
+    draw_outline(draw, start_loc, text, font, color, outline, repeat)
+
+
+def draw_outline(draw, position, text, font, fill, outline, repeat):
+    x, y = position
+    for i in range(repeat * 3):
+        draw.text((x-1, y-1), text, font=font, fill=outline)
+        draw.text((x+1, y-1), text, font=font, fill=outline)
+        draw.text((x-1, y-1), text, font=font, fill=outline)
+        draw.text((x+1, y+1), text, font=font, fill=outline)
     for i in range(repeat):
-        draw.text(start_loc, text, font=font, fill=color)
+        draw.text((x, y), text, font=font, fill=fill)

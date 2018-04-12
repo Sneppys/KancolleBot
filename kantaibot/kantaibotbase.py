@@ -2,7 +2,7 @@ import discord
 import asyncio
 import botcommands
 import os
-
+import drophandler
 
 client = discord.Client()
 
@@ -11,6 +11,10 @@ client = discord.Client()
 async def on_ready():
     print("Ready on {} ({})".format(client.user.name, client.user.id))
     await client.change_presence(game=discord.Game(type=0, name='with cute ships'))
+    print("Current drop chances (Rarity, Chance):")
+    chances = drophandler.get_drop_chances()
+    for r in range(8):
+        print(" %s | %.04f" % (r + 1, chances[r]))
 
 
 @client.event
