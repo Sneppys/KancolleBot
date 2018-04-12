@@ -11,7 +11,7 @@ from io import BytesIO
 import base64
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
-DB_PATH = os.path.join(DIR_PATH, "../kantaidb.db")
+DB_PATH = os.path.join(DIR_PATH, "../kantaidb.db") # hidden to git
 
 HOME_DIR = os.path.expanduser("~")
 
@@ -46,10 +46,11 @@ def get_ship_info(kcid, entry=None):
     if (not entry):
         entry = get_kc3_data(kcid)
     sname = entry['name']['ja_jp'] if len(entry['name']['ja_romaji']) == 0 else entry['name']['ja_romaji']
-    sname = sname.title()
     tname = sname
     for o, t in ship_stats.SHIP_TRANSLATIONS.items():
         tname = tname.replace(o, t)
+    sname = sname.title()
+    tname = tname.title()
     stype = entry['type']
     srarity = entry['rare']
     suffix = 0
@@ -73,7 +74,7 @@ img_small_damaged_path = "%s/assets/img/ships/%s_d.png" % (kc3_file_path, kc3_id
 
 # kcwiki data
 def perform_search(tname, stype, kcid):
-    print("Fetching images from Kancolle Wiki...")
+    print("Fetching images from Kancolle Wiki '%s'..." % tname)
     typeobj = ship_stats.get_ship_type(stype)
     imgs = htmlparsing.get_images_on_wiki_page(tname)
     img_name_reg = "%s %s %03d Full" % (typeobj.discriminator, tname, int(kcid))
@@ -100,7 +101,7 @@ if (not img_reg or not img_dmg):
 
 def img_from_url(url):
     req = urllib.request.urlopen(url)
-    imgdata = Image.open(BytesIO(req.read()))
+    imgdata = Image.open(BytesIO(req.read())).convert('RGBA')
     return imgdata
 
 def encode_image(img):

@@ -1,13 +1,23 @@
+import sqlite3
+import os
+import ship_stats
+import sqlutils
+
+DIR_PATH = os.path.dirname(os.path.realpath(__file__))
+DB_PATH = os.path.join(DIR_PATH, "../kantaidb.db") # hidden to git
+
+def get_connection():
+    return sqlite3.connect(DB_PATH)
+
 # file for storing classes related to stats and misc information about ships
 
 # Base class for a certain ship, as in database
 class ShipBase:
-    def __init__(self, sid, name, rarity, shiptype, imagedef):
+    def __init__(self, sid, name, rarity, shiptype):
         self.sid = sid
         self.name = name
         self.rarity = rarity
         self.shiptype = shiptype
-        self.imagedef = imagedef
 
 # Instance of a ship, existing in a user's inventory
 class ShipInstance:
@@ -15,6 +25,16 @@ class ShipInstance:
         self.invid = invid
         self.sid = sid
         self.level = level
+
+    def base(self):
+        query = "SELECT * FROM ShipBase WHERE ShipID='%s'" % self.sid
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute(query)
+        data = cur.fetchall()[0]
+        cur.close()
+        conn.commit()
+        return ShipBase(data[0], data[1], data[2], data[3])
 
     def new(sid):
         return ShipInstance(-1, sid)
@@ -24,7 +44,7 @@ class ShipInstance:
 SHIP_SUFFIXES = {0: "", 1: "Kai", 2: "Kai Ni", 3: "A", 4: "Carrier",
                  5: "Carrier Kai", 6: "Carrier Kai Ni", 7: "zwei",
                  8: "drei", 9: "Kai Ni A", 10: "Kai Ni B",
-                 11: "Kai Ni B", 12: "due", 13: "Kai Bo", 14: "dva",
+                 11: "Kai Ni D", 12: "due", 13: "Kai Bo", 14: "dva",
                  15: "Mk.II", 16: "Mk.II Mod.2", 17: "B Kai"}
 
 # Translations for Russian ships as KC3 does not store the english name

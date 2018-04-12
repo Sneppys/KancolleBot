@@ -10,9 +10,17 @@ async def command_hello(client, message, args):
     await client.send_message(message.channel, "Hi!")
 
 async def command_show(client, message, args):
-    ship_instance = ship_stats.ShipInstance.new(2)
-    image_file = imggen.generate_ship_card(ship_instance)
-    await client.send_file(message.channel, io.BytesIO(image_file.getvalue()), filename="image.png")
+    if (len(args) > 0):
+        shipid = args[0]
+        if (shipid.isdigit()):
+            shipid = int(shipid)
+            ship_instance = ship_stats.ShipInstance.new(shipid)
+            image_file = imggen.generate_ship_card(ship_instance)
+            await client.send_file(message.channel, io.BytesIO(image_file.getvalue()), filename="image.png")
+        else:
+            await client.send_message(message.channel, "Please type a valid number")
+    else:
+        await client.send_message(message.channel, "Usage: `%sshow [ship_id]`" % COMMAND_PREFIX)
 
 
 commands = {
