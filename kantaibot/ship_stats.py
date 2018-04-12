@@ -51,7 +51,7 @@ SHIP_SUFFIXES = {0: "", 1: "Kai", 2: "Kai Ni", 3: "A", 4: "Carrier",
 
 SHIP_TRANSLATIONS = {u"Гангут": "Gangut", u"Верный": "Verniy",
                      u"Октябрьская революция": "Oktyabrskaya Revolyutsiya",
-                     u"Ташкент": "Tashkent"}
+                     u"Ташкент": "Tashkent", u"два": "dva"}
 
 # Ship Type - The type of the ship, using KC3's internal type ids (Sometimes dupes)
 ALL_SHIP_TYPES = []
