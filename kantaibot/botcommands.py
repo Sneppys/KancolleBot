@@ -64,7 +64,7 @@ commands = {
 
 async def handle_message(client, message):
     global commands
-    if (len(message.content) == 0):
+    if (message.author.bot or len(message.content) == 0):
         return
     words = message.content.split()
     cmd = words[0]

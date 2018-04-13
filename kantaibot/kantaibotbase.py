@@ -20,6 +20,8 @@ async def on_ready():
 @client.event
 async def on_message(message):
     await botcommands.handle_message(client, message)
+    if (not message.author.bot):
+        drophandler.drop_resources(message.author.id)
 
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
