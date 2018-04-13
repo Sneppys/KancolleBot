@@ -30,7 +30,8 @@ def get_images_on_wiki_page(ship_name):
     page = urllib.request.urlopen(url)
 
     parser = KCImageParser("Full")
-    parser.feed(str(page.read()))
+    page_data = page.read().decode('utf-8')
+    parser.feed(str(page_data))
     parser.close()
 
     return parser.imgs

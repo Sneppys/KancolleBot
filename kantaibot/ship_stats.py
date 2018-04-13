@@ -35,16 +35,17 @@ class ShipBase:
 
 # Instance of a ship, existing in a user's inventory
 class ShipInstance:
-    def __init__(self, invid, sid, level=1):
+    def __init__(self, invid, sid, owner, level=1):
         self.invid = invid
         self.sid = sid
+        self.owner = owner
         self.level = level
 
     def base(self):
         return ShipBase.instance(self.sid)
 
-    def new(sid):
-        return ShipInstance(-1, sid)
+    def new(sid, owner):
+        return ShipInstance(-1, sid, owner)
 
 # Suffixes at the end of a ship's name, using KC3 values
 
@@ -61,6 +62,10 @@ SHIP_TRANSLATIONS = {u"Гангут": "Gangut", u"Верный": "Verniy",
                      u"Ташкент": "Tashkent", u"два": "dva"}
 
 # uses Rarity_colors.jpg to get a backdrop for different rarities
+
+RARITY_COLORS = [(150, 150, 150), (150, 150, 150), (150, 150, 150),
+                 (0, 122, 103), (255, 255, 50), (0, 255, 84),
+                 (250, 25, 25), (255, 0, 234)]
 
 def get_rarity_backdrop(rarity, size):
     rarity -= 1

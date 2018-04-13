@@ -5,7 +5,7 @@ def get_weight(ship):
     return (10 - ship.rarity) * (20 - ship.rarity)
 
 # TODO maybe add more options or focii for randomization
-def get_random_drop():
+def get_random_drop(owner):
     ships = ship_stats.get_all_ships(allow_remodel=False)
 
     total_pool = sum(get_weight(s) for s in ships)
@@ -13,9 +13,9 @@ def get_random_drop():
     for ship in ships:
         val -= get_weight(ship)
         if (val <= 0):
-            return ship_stats.ShipInstance.new(ship.sid)
+            return ship_stats.ShipInstance.new(ship.sid, owner)
             break
-    return ship_stats.ShipInstance.new(11)
+    return ship_stats.ShipInstance.new(11, owner)
 
 def get_drop_chances():
     ships = ship_stats.get_all_ships(allow_remodel=False)
