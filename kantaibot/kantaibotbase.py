@@ -56,9 +56,9 @@ async def on_ready():
         print(" %s | %.04f" % (r + 1, chances[r]))
 
 
-@bot.event
-async def on_command_error(ctx, err):
-    await ctx.send("Error: %s" % str(err))
+#@bot.event
+#async def on_command_error(ctx, err):
+#    await ctx.send("Error: %s" % str(err))
 
 
 if __name__ == '__main__':

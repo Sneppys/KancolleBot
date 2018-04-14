@@ -24,8 +24,8 @@ class ShipBase:
         self.remodel_level = remodel_level
 
     def instance(shipid):
-        query = "SELECT ShipID, Name, Rarity, ShipType, Remodels_From, Remodels_Into, Remodel_Level FROM ShipBase WHERE ShipID=?;"
-        args = (shipid)
+        query = "SELECT ShipID, Name, Rarity, ShipType, Remodels_From, Remodels_Into, Remodel_Level FROM ShipBase WHERE ShipID=?"
+        args = (shipid,)
         conn = get_connection()
         cur = conn.cursor()
         cur.execute(query, args)

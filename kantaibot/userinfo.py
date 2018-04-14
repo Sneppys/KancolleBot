@@ -88,7 +88,7 @@ def get_connection():
 
 def get_user(discordid):
     query = "SELECT * FROM Users WHERE DiscordID=?;"
-    args = (discordid)
+    args = (discordid,)
     conn = get_connection()
     cur = conn.cursor()
     cur.execute(query, args)
@@ -99,7 +99,7 @@ def get_user(discordid):
     if (len(data) == 0):
         # if user doesn't exist, create it
         query = "REPLACE INTO Users (DiscordID) VALUES (%s);"
-        args = (discordid)
+        args = (discordid,)
         conn = get_connection()
         cur = conn.cursor()
         cur.execute(query, args)
@@ -113,7 +113,7 @@ def get_user_inventory(discordid):
     table_name = USER_TABLE_NAME % discordid
     if (sqlutils.table_exists(get_connection(), table_name)):
         query = "SELECT * FROM ?;"
-        args = (table_name)
+        args = (table_name,)
         conn = get_connection()
         cur = conn.cursor()
         cur.execute(query, args)

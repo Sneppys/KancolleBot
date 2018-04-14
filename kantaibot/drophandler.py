@@ -41,7 +41,7 @@ DROP_COOLDOWN = 30
 
 def drop_resources(did):
     query = "SELECT Last_Bonus FROM Users WHERE DiscordID=?;"
-    args = (did)
+    args = (did,)
 
     conn = get_connection()
     cur = conn.cursor()
