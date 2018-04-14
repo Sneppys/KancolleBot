@@ -13,12 +13,12 @@ def get_connection():
     return sqlite3.connect(DB_PATH)
 
 def get_image_from_db(shipid, colname):
-    query = "SELECT ? FROM ShipBase WHERE ShipID=?;"
-    args = (colname, shipid)
+    query = "SELECT %s FROM ShipBase WHERE ShipID=?;" % (colname)
+    args = (shipid,)
     conn = get_connection()
     cur = conn.cursor()
     cur.execute(query, args)
-    img_enc = cur.fetchall()[0][0]
+    img_enc = cur.fetchone()[0]
     cur.close()
     conn.commit()
 

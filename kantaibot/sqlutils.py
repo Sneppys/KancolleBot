@@ -1,7 +1,7 @@
 import sqlite3
 
 def table_exists(conn, table_name):
-    query = "SELECT count(*) FROM sqlite_master WHERE type='table' AND name=?;"
+    query = "SELECT count(*) FROM sqlite_master WHERE type='table' AND name=?"
     args = (table_name,)
     cur = conn.cursor()
     cur.execute(query, args)
@@ -20,10 +20,9 @@ def copy_table(conn, original_table, new_table_name):
     cur.execute(new_statement)
     cur.close()
 
-    query = "INSERT INTO ? SELECT * FROM ?"
-    args = (new_table_name, original_table)
+    query = "INSERT INTO %s SELECT * FROM %s" % (new_table_name, original_table)
     cur = conn.cursor()
-    cur.execute(query, args)
+    cur.execute(query)
     cur.close()
 
     conn.commit()

@@ -59,8 +59,8 @@ class UserInventory:
 
     def add_to_inventory(self, ship_instance):
         table_name = USER_TABLE_NAME % (self.did)
-        query = "INSERT INTO ? (ShipID) VALUES (?);"
-        args = (table_name, ship_instance.sid)
+        query = "INSERT INTO %s (ShipID) VALUES (?)" % (table_name)
+        args = (ship_instance.sid,)
         conn = get_connection()
         cur = conn.cursor()
         cur.execute(query, args)
@@ -112,11 +112,10 @@ def get_user(discordid):
 def get_user_inventory(discordid):
     table_name = USER_TABLE_NAME % discordid
     if (sqlutils.table_exists(get_connection(), table_name)):
-        query = "SELECT * FROM ?;"
-        args = (table_name,)
+        query = "SELECT * FROM %s" % table_name
         conn = get_connection()
         cur = conn.cursor()
-        cur.execute(query, args)
+        cur.execute(query)
         data = cur.fetchall()
         cur.close()
         conn.commit()

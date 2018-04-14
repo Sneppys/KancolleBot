@@ -141,4 +141,4 @@ def get_all_ships(allow_remodel=True):
     cur.close()
     conn.commit()
 
-    return [ShipBase.instance(id) for id in ids]
+    return [ShipBase.instance(id[0]) for id in ids]
