@@ -24,11 +24,12 @@ class ShipBase:
         self.remodel_level = remodel_level
 
     def instance(shipid):
-        query = "SELECT ShipID, Name, Rarity, ShipType, Remodels_From, Remodels_Into, Remodel_Level FROM ShipBase WHERE ShipID='%s';" % shipid
+        query = "SELECT ShipID, Name, Rarity, ShipType, Remodels_From, Remodels_Into, Remodel_Level FROM ShipBase WHERE ShipID=?;"
+        args = (shipid)
         conn = get_connection()
         cur = conn.cursor()
-        cur.execute(query)
-        data = cur.fetchall()[0]
+        cur.execute(query, args)
+        data = cur.fetchone()
         cur.close()
         conn.commit()
         return ShipBase(data[0], data[1], data[2], data[3], data[4], data[5], data[6])
@@ -94,40 +95,35 @@ def get_rarity_backdrop(rarity, size):
 # Ship Type - The type of the ship, using KC3's internal type ids (Sometimes dupes)
 ALL_SHIP_TYPES = []
 class ShipType:
-    def __init__(self, tid, discriminator, full_name):
+    def __init__(self, tid, discriminator, full_name, alt_ids=[]):
         self.tid = tid
         self.discriminator = discriminator
         self.full_name = full_name
+        self.alt_ids = alt_ids
         ALL_SHIP_TYPES.append(self)
 
-TYPE_DESTROYER = ShipType(1, "DD", "Destroyer")
-TYPE_LIGHT_CRUISER = ShipType(2, "CL", "Light Cruiser")
+TYPE_DESTROYER = ShipType(1, "DD", "Destroyer", alt_ids=[19])
+TYPE_LIGHT_CRUISER = ShipType(2, "CL", "Light Cruiser", alt_ids=[28])
 TYPE_TORPEDO_CRUISER = ShipType(3, "CLT", "Torpedo Cruiser")
-TYPE_HEAVY_CRUISER = ShipType(4, "CA", "Heavy Cruiser")
+TYPE_HEAVY_CRUISER = ShipType(4, "CA", "Heavy Cruiser", alt_ids=[23])
 TYPE_AVIATION_CRUISER = ShipType(5, "CAV", "Aviation Cruiser")
 TYPE_BATTLESHIP = ShipType(6, "BB", "Battleship")
 TYPE_FAST_BATTLESHIP = ShipType(7, "FBB", "Fast Battleship")
 TYPE_AVIATION_BATTLESHIP = ShipType(8, "BBV", "Aviation Battleship")
-TYPE_LIGHT_CARRIER = ShipType(9, "CVL", "Light Carrier")
+TYPE_LIGHT_CARRIER = ShipType(9, "CVL", "Light Carrier", alt_ids=[32])
 TYPE_CARRIER = ShipType(10, "CV", "Carrier")
 TYPE_ARMORED_CARRIER = ShipType(11, "CVB", "Armored Carrier")
-TYPE_SEAPLANE_TENDER = ShipType(12, "AV", "Seaplane Tender")
-TYPE_SUBMARINE = ShipType(13, "SS", "Submarine")
-TYPE_SUBMARINE_ALT = ShipType(14, "SS", "Submarine")
+TYPE_SEAPLANE_TENDER = ShipType(12, "AV", "Seaplane Tender", alt_ids=[24])
+TYPE_SUBMARINE = ShipType(13, "SS", "Submarine", alt_ids=[14])
 TYPE_AMPHIBIOUS_ASSAULT_SHIP = ShipType(15, "LHA", "Amphibious Assault Ship")
 TYPE_REPAIR_SHIP = ShipType(16, "AR", "Repair Ship")
 TYPE_SUBMARINE_TENDER = ShipType(17, "AS", "Submarine Tender")
-TYPE_DESTROYER_ALT = ShipType(19, "DD", "Destroyer")
 TYPE_TRAINING_CRUISER = ShipType(21, "CT", "Training Cruiser")
-TYPE_HEAVY_CRUISER_ALT = ShipType(23, "CA", "Heavy Cruiser")
-TYPE_SEAPLANE_TENDER_ALT = ShipType(24, "AV", "Seaplane Tender")
-TYPE_LIGHT_CRUISER_ALT = ShipType(28, "CL", "Light Cruiser")
 TYPE_FLEET_OILER = ShipType(29, "AO", "Fleet Oiler")
 TYPE_DESTROYER_ESCORT = ShipType(31, "DE", "Coastal Defense Ship")
-TYPE_LIGHT_CARRIER_ALT = ShipType(32, "CVL", "Light Carrier")
 
 def get_ship_type(tid):
-    r = [x for x in ALL_SHIP_TYPES if x.tid == int(tid)]
+    r = [x for x in ALL_SHIP_TYPES if x.tid == int(tid) or int(tid) in x.alt_ids]
     if len(r) > 0:
         return r[0]
     return None

@@ -21,10 +21,11 @@ class User:
         self.totalxp = totalxp
 
     def set_col(self, col, val):
-        query = "UPDATE Users SET %s='%s' WHERE DiscordID='%s'" % (col, val, self.did)
+        query = "UPDATE Users SET ?=? WHERE DiscordID=?"
+        args = (col, val, self.did)
         conn = get_connection()
         cur = conn.cursor()
-        cur.execute(query)
+        cur.execute(query, args)
         cur.close()
         conn.commit()
 
@@ -58,20 +59,22 @@ class UserInventory:
 
     def add_to_inventory(self, ship_instance):
         table_name = USER_TABLE_NAME % (self.did)
-        query = "INSERT INTO %s (ShipID) VALUES (%s);" % (table_name, ship_instance.sid)
+        query = "INSERT INTO ? (ShipID) VALUES (?);"
+        args = (table_name, ship_instance.sid)
         conn = get_connection()
         cur = conn.cursor()
-        cur.execute(query)
+        cur.execute(query, args)
         cur.close()
         conn.commit()
         self.append(ship_instance)
 
     def remove_from_inventory(self, inv_id):
         table_name = USER_TABLE_NAME % (self.did)
-        query = "DELETE FROM %s WHERE ID='%s';" % (table_name, inv_id)
+        query = "DELETE FROM ? WHERE ID=?;"
+        args = (table_name, inv_id)
         conn = get_connection()
         cur = conn.cursor()
-        cur.execute(query)
+        cur.execute(query, args)
         cur.close()
         conn.commit()
         ins = [x for x in self.inventory if x.invid == inv_id]
@@ -82,29 +85,24 @@ class UserInventory:
 def get_connection():
     return sqlite3.connect(DB_PATH)
 
-def get_user_name(client, discordid):
-    for s in client.servers:
-        m = s.get_member(discordid)
-        if m:
-            return m.name, m.discriminator, m.display_name
-    return "ID%s" % discordid, "XXXX", "ID%s" % discordid
-
 
 def get_user(discordid):
-    query = "SELECT * FROM Users WHERE DiscordID=%s;" % (discordid)
+    query = "SELECT * FROM Users WHERE DiscordID=?;"
+    args = (discordid)
     conn = get_connection()
     cur = conn.cursor()
-    cur.execute(query)
+    cur.execute(query, args)
     data = cur.fetchall()
     cur.close()
     conn.commit()
 
     if (len(data) == 0):
         # if user doesn't exist, create it
-        query = "REPLACE INTO Users (DiscordID) VALUES (%s);" % discordid
+        query = "REPLACE INTO Users (DiscordID) VALUES (%s);"
+        args = (discordid)
         conn = get_connection()
         cur = conn.cursor()
-        cur.execute(query)
+        cur.execute(query, args)
         cur.close()
         conn.commit()
         return get_user(discordid)
@@ -114,10 +112,11 @@ def get_user(discordid):
 def get_user_inventory(discordid):
     table_name = USER_TABLE_NAME % discordid
     if (sqlutils.table_exists(get_connection(), table_name)):
-        query = "SELECT * FROM %s;" % table_name
+        query = "SELECT * FROM ?;"
+        args = (table_name)
         conn = get_connection()
         cur = conn.cursor()
-        cur.execute(query)
+        cur.execute(query, args)
         data = cur.fetchall()
         cur.close()
         conn.commit()

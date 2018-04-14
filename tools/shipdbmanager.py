@@ -92,7 +92,6 @@ def register_ship_to_database(conn, ship_id, add_images=True):
         s_name = tname
         if (get_ship_id(kcid) in [147]): # Bep's images are in Russian
             s_name = ship_name
-            print([x for x, y in imgs.items() if '147' in x])
         img_name_reg = "%s %s %03d Full" % (typeobj.discriminator, s_name, int(kcid))
         img_name_dmg = "%s Damaged" % (img_name_reg)
         print("Searching for images: " + str([img_name_reg, img_name_dmg]))
@@ -146,24 +145,25 @@ def register_ship_to_database(conn, ship_id, add_images=True):
 
     if (add_images):
         query = "REPLACE INTO ShipBase (ShipID, Name, Rarity, ShipType, Image_Default, Image_Damaged, Image_Small, Image_Small_Damaged, Remodels_From, Remodels_Into, Remodel_Level)"\
-                " VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');"
-        query = query % (ship_id, ship_name, ship_rarity, ship_type, enc_reg, enc_dmg, enc_small_reg, enc_small_dmg, remodels_from, remodels_into, remodel_level)
+                " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"
+        args = (ship_id, ship_name, ship_rarity, ship_type, enc_reg, enc_dmg, enc_small_reg, enc_small_dmg, remodels_from, remodels_into, remodel_level)
     else:
-        query = "UPDATE ShipBase SET Name='%s', Rarity='%s', ShipType='%s', Remodels_From='%s', Remodels_Into='%s', Remodel_Level='%s' WHERE ShipID='%s';"
-        query = query % (ship_name, ship_rarity, ship_type, remodels_from, remodels_into, remodel_level, ship_id)
+        query = "UPDATE ShipBase SET Name='?', Rarity='?', ShipType='?', Remodels_From='?', Remodels_Into='?', Remodel_Level='?' WHERE ShipID='?';"
+        args = (ship_name, ship_rarity, ship_type, remodels_from, remodels_into, remodel_level, ship_id)
     cur = conn.cursor()
-    cur.execute(query)
+    cur.execute(query, args)
     cur.close()
 
     print("Added to database")
 
 
-id = input("Ship ID: ")
-conn = get_connection()
-register_ship_to_database(conn, id, add_images=True)
-#for id in range(1, 1600):
-#    try:
-#        register_ship_to_database(conn, id, add_images=False)
-#    except:
-#        print ("Error handling ID %s: %s" % (id, sys.exc_info()[0]))
-conn.commit()
+if __name__ == '__main__':
+    id = input("Ship ID: ")
+    conn = get_connection()
+    register_ship_to_database(conn, id, add_images=True)
+    #for id in range(1, 1600):
+    #    try:
+    #        register_ship_to_database(conn, id, add_images=False)
+    #    except:
+    #        print ("Error handling ID %s: %s" % (id, sys.exc_info()[0]))
+    conn.commit()

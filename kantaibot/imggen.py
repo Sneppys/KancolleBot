@@ -13,10 +13,11 @@ def get_connection():
     return sqlite3.connect(DB_PATH)
 
 def get_image_from_db(shipid, colname):
-    query = "SELECT %s FROM ShipBase WHERE ShipID='%s';" % (colname, shipid)
+    query = "SELECT ? FROM ShipBase WHERE ShipID=?;"
+    args = (colname, shipid)
     conn = get_connection()
     cur = conn.cursor()
-    cur.execute(query)
+    cur.execute(query, args)
     img_enc = cur.fetchall()[0][0]
     cur.close()
     conn.commit()
@@ -30,7 +31,8 @@ INVENTORY_SIZE = (800, 400)
 INV_SLOTS = (7, 12)
 LOWER_PADDING = 40
 
-def generate_inventory_screen(client, discord_id, page):
+def generate_inventory_screen(member, page):
+    discord_id = member.id
     user = userinfo.get_user(discord_id)
     inv = userinfo.get_user_inventory(discord_id)
     w, h = INVENTORY_SIZE
@@ -88,7 +90,7 @@ def generate_inventory_screen(client, discord_id, page):
     x, y = (0, INVENTORY_SIZE[1]) # start position of footer
     fw, fh = (w, LOWER_PADDING) # size of footer
 
-    display_name = "#".join(userinfo.get_user_name(client, discord_id)[0:2])
+    display_name = "%s#%s" % (member.name, member.discriminator)
     font = ImageFont.truetype("framd.ttf", fh * 3 // 4)
     draw.text((x + 10, y + fh // 8), "%s's Ships" % display_name, font=font, fill=(0, 0, 0))
 
@@ -135,7 +137,7 @@ def generate_inventory_screen(client, discord_id, page):
 
 CARD_SIZE = (800, 500)
 
-def generate_ship_card(client, ship_instance):
+def generate_ship_card(bot, ship_instance):
     img = Image.new(size=CARD_SIZE, mode="RGB", color=(0, 0, 0))
 
     base = ship_instance.base()
@@ -165,7 +167,13 @@ def generate_ship_card(client, ship_instance):
         ship_stats.get_ship_type(base.shiptype).full_name), font_small, 490, color=(0, 0, 0), outline=(125, 125, 125))
 
     font = ImageFont.truetype("framdit.ttf", 35)
-    display_name = "#".join(userinfo.get_user_name(client, ship_instance.owner)[0:2])
+
+    display_name="Unknown User"
+    for g in bot.guilds:
+        owner = g.get_member(ship_instance.owner)
+        if (owner):
+            display_name = "%s#%s" % (owner.name, owner.discriminator)
+            break
     draw_squish_text(img, (550, 450), "Part of %s's fleet" % (display_name), font, 490, color=(25, 25, 25), outline=(175, 175, 175))
 
     r = io.BytesIO(b'')
