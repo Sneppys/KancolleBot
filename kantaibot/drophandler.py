@@ -2,7 +2,6 @@ import ship_stats
 import random
 import sqlite3
 import os
-import time
 import userinfo
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
@@ -12,10 +11,10 @@ def get_connection():
     return sqlite3.connect(DB_PATH)
 
 def get_basic_weight(ship):
-    return (10 - ship.rarity) * (20 - ship.rarity)
+    return (10 - ship.rarity) * (15 - ship.rarity)
 
-def get_random_drop(owner, weight_function=get_basic_weight):
-    ships = ship_stats.get_all_ships(allow_remodel=False)
+def get_random_drop(owner, cur=None, weight_function=get_basic_weight):
+    ships = ship_stats.get_all_ships(cur=cur, allow_remodel=False)
 
     total_pool = sum(weight_function(s) for s in ships)
     val = random.randrange(total_pool)
@@ -37,31 +36,10 @@ def get_drop_chances(weight_function=get_basic_weight):
     return list(map(lambda x: x / total_pool, totals))
 
 
-DROP_COOLDOWN = 30
+DROP_COOLDOWN = 60
 
 def drop_resources(did):
-    query = "SELECT Last_Bonus FROM Users WHERE DiscordID=?;"
-    args = (did,)
-
-    conn = get_connection()
-    cur = conn.cursor()
-    cur.execute(query, args)
-    ts = cur.fetchone()[0]
-    cur.close()
-
-    drop = False
-    if (ts + DROP_COOLDOWN < time.time()):
-        drop = True
-
-        new_time = int(time.time())
-        query = "UPDATE Users SET Last_Bonus=? WHERE DiscordID=?;"
-        args = (new_time, did)
-        cur = conn.cursor()
-        cur.execute(query, args)
-        cur.close()
-    conn.commit()
-
-    if (drop):
+    if (userinfo.check_cooldown(did, 'Last_Bonus', DROP_COOLDOWN) == 0):
         user = userinfo.get_user(did)
         user.mod_fuel(random.randrange(30) + 30)
         user.mod_ammo(random.randrange(30) + 30)

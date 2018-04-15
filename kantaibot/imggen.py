@@ -107,6 +107,7 @@ def generate_inventory_screen(member, page):
     txt_ammo = "%05d" % (user.ammo)
     txt_steel = "%05d" % (user.steel)
     txt_bauxite = "%05d" % (user.bauxite)
+    txt_ships= "%03d / %03d" % (len(inv.inventory), user.shipslots)
 
     txt_w, txt_h = draw.textsize(txt_fuel, font)
 
@@ -115,6 +116,7 @@ def generate_inventory_screen(member, page):
     ico_ammo = Image.open(DIR_PATH + '/icons/ammo.png').resize(ico_size, Image.LINEAR)
     ico_steel = Image.open(DIR_PATH + '/icons/steel.png').resize(ico_size, Image.LINEAR)
     ico_bauxite = Image.open(DIR_PATH + '/icons/bauxite.png').resize(ico_size, Image.LINEAR)
+    ico_ships = Image.open(DIR_PATH + '/icons/ship.png').resize(ico_size, Image.LINEAR)
 
     x_off = ico_size[0] + txt_w + 6
     y_off = ico_size[1] + 2
@@ -124,11 +126,13 @@ def generate_inventory_screen(member, page):
     draw.text((rsc_x + toff_x, rsc_y + toff_y + y_off), txt_ammo, font=font, fill=(0, 0, 0))
     draw.text((rsc_x + toff_x + x_off, rsc_y + toff_y), txt_steel, font=font, fill=(0, 0, 0))
     draw.text((rsc_x + toff_x + x_off, rsc_y + toff_y + y_off), txt_bauxite, font=font, fill=(0, 0, 0))
+    draw.text((rsc_x + toff_x + x_off * 2, rsc_y + toff_y), txt_ships, font=font, fill=(0, 0, 0))
 
     img.paste(ico_fuel, (rsc_x, rsc_y), mask=ico_fuel)
     img.paste(ico_ammo, (rsc_x, rsc_y + y_off), mask=ico_fuel)
     img.paste(ico_steel, (rsc_x + x_off, rsc_y), mask=ico_fuel)
     img.paste(ico_bauxite, (rsc_x + x_off, rsc_y + y_off), mask=ico_fuel)
+    img.paste(ico_ships, (rsc_x + x_off * 2, rsc_y), mask=ico_ships)
 
     r = io.BytesIO()
     img.save(r, format="PNG")

@@ -129,16 +129,29 @@ def get_ship_type(tid):
     return None
 
 
-def get_all_ships(allow_remodel=True):
+def get_all_ships(cur=None, allow_remodel=True, type_ids=None):
+    args = ()
     if (allow_remodel):
-        query = "SELECT (ShipID) FROM ShipBase;"
+        query = "SELECT (ShipID) FROM ShipBase"
+        if (type_ids):
+            type_string = "(%s)" % (", ".join(map(str, type_ids)))
+            query += "WHERE ShipType IN %s" % type_string
     else:
-        query = "SELECT (ShipID) FROM ShipBase WHERE Remodels_From == 'None';"
-    conn = get_connection()
-    cur = conn.cursor()
-    cur.execute(query)
-    ids = cur.fetchall()
-    cur.close()
-    conn.commit()
+        query = "SELECT (ShipID) FROM ShipBase WHERE Remodels_From == 'None'"
+        if (type_ids):
+            type_string = "(%s)" % (", ".join(map(str, type_ids)))
+            query += "AND ShipType IN %s" % type_string
+    autoclose = False
+    if not cur:
+        conn = get_connection()
+        cur = conn.cursor()
+        autoclose = True
+    cur.execute(query, args)
+    ret = []
+    for row in cur.fetchall():
+        ret.append(ShipBase.instance(row[0]))
+    if (autoclose):
+        cur.close()
+        conn.commit()
 
-    return [ShipBase.instance(id[0]) for id in ids]
+    return ret
