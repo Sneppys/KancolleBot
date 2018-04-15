@@ -1,0 +1,16 @@
+BEGIN TRANSACTION;
+CREATE TABLE "ShipBase" (
+	`ShipID`	INTEGER NOT NULL UNIQUE,
+	`Name`	BLOB NOT NULL,
+	`Rarity`	INTEGER NOT NULL,
+	`ShipType`	INTEGER NOT NULL,
+	`Image_Default`	TEXT NOT NULL,
+	`Image_Damaged`	TEXT NOT NULL,
+	`Image_Small`	TEXT NOT NULL,
+	`Image_Small_Damaged`	TEXT NOT NULL,
+	`Remodels_Into`	INTEGER DEFAULT 0,
+	`Remodels_From`	INTEGER DEFAULT 0,
+	`Remodel_Level`	INTEGER DEFAULT 0,
+	PRIMARY KEY(`ShipID`)
+);
+COMMIT;

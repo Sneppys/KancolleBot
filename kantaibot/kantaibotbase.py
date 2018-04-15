@@ -62,7 +62,7 @@ async def craft(ctx, fuel: int, ammo: int, steel: int, bauxite: int):
     did = ctx.author.id
     user = userinfo.get_user(did)
     if (userinfo.has_space_in_inventory(did)):
-        cd = userinfo.check_cooldown(did, 'Last_Craft', 15 * 60)
+        cd = userinfo.check_cooldown(did, 'Last_Craft', 15 * 60, set_if_off=False)
         if (cd == 0):
             if (fuel >= 30 and ammo >= 30 and steel >= 30 and bauxite >= 30):
                 if (user.has_enough(fuel, ammo, steel, bauxite)):
@@ -73,6 +73,7 @@ async def craft(ctx, fuel: int, ammo: int, steel: int, bauxite: int):
                     user.mod_bauxite(-bauxite)
                     inv = userinfo.get_user_inventory(did)
                     inv.add_to_inventory(craft)
+                    userinfo.check_cooldown(did, 'Last_Craft', 15 * 60, set_if_off=True) # set cooldown
                     image_file = imggen.generate_ship_card(ctx.bot, craft)
                     ship_base = craft.base()
                     await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()),
