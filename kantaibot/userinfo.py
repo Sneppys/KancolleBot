@@ -92,7 +92,7 @@ def get_connection():
 
 
 def get_user(discordid):
-    query = "SELECT * FROM Users WHERE DiscordID=?;"
+    query = "SELECT * FROM Users WHERE DiscordID=?"
     args = (discordid,)
     conn = get_connection()
     cur = conn.cursor()
@@ -103,7 +103,7 @@ def get_user(discordid):
 
     if (not row):
         # if user doesn't exist, create it
-        query = "REPLACE INTO Users (DiscordID) VALUES (%s);"
+        query = "REPLACE INTO Users (DiscordID) VALUES (%s)" % (discordid)
         args = (discordid,)
         conn = get_connection()
         cur = conn.cursor()
