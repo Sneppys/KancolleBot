@@ -67,8 +67,8 @@ def nearest_n_recipes(f, a, s, b, n=3):
 def get_craft_from_resources(owner, f, a, s, b):
     nnr = nearest_n_recipes(f, a, s, b)
 
-    total_weight_bonus_shiptype = 40000
-    total_weight_bonus_rarity = 10000
+    total_weight_bonus_shiptype = 50000
+    total_weight_bonus_rarity = 25000
 
     # this is complicated so here's a simple explanation:
     # in (n - 1) steps where n is # of recipes taken from above:
@@ -128,7 +128,7 @@ def get_craft_from_resources(owner, f, a, s, b):
 
     def weight_function(ship):
         wb = ship.sid in weight_boost
-        return drophandler.get_basic_weight(ship) * (3 if wb else 1) + (weight_boost[ship.sid] if wb else 0)
+        return drophandler.get_basic_weight(ship) // (.5 if wb else 3) + (weight_boost[ship.sid] if wb else 0)
     drop = drophandler.get_random_drop(owner, weight_function=weight_function, cur=cur)
     cur.close()
     conn.commit()

@@ -11,7 +11,7 @@ def get_connection():
     return sqlite3.connect(DB_PATH)
 
 def get_basic_weight(ship):
-    return (10 - ship.rarity) * (15 - ship.rarity)
+    return (9 - ship.rarity) * (10 - ship.rarity) ** 2
 
 def get_random_drop(owner, cur=None, weight_function=get_basic_weight):
     ships = ship_stats.get_all_ships(cur=cur, allow_remodel=False)
