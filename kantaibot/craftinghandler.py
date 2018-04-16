@@ -61,7 +61,7 @@ def nearest_n_recipes(f, a, s, b, n=3):
     # maps each recipe to (recipe, distance)
     dist = list(map(lambda x: (x, (f - x.f) ** 2 + (a - x.a) ** 2 + (s - x.s) ** 2 + (b - x.b) ** 2), rlist))
     dist.sort(key=lambda x: x[1])
-    n = max(n, len(dist))
+    n = min(n, len(dist))
     return dist[:n]
 
 def get_craft_from_resources(owner, f, a, s, b):
@@ -127,8 +127,8 @@ def get_craft_from_resources(owner, f, a, s, b):
             weight_boost[s.sid] += rarity_award * rd
 
     def weight_function(ship):
-        wb = ship.sid in weight_boost
-        return drophandler.get_basic_weight(ship) // (.5 if wb else 3) + (weight_boost[ship.sid] if wb else 0)
+        wb = ship.sid in weight_boost and weight_boost[ship.sid] > 0
+        return (drophandler.get_basic_weight(ship) // (.5 if wb else 3)) + (weight_boost[ship.sid] if wb else 0)
     drop = drophandler.get_random_drop(owner, weight_function=weight_function, cur=cur)
     cur.close()
     conn.commit()
