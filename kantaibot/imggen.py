@@ -58,11 +58,22 @@ def generate_inventory_screen(member, page):
         for yi in range(sy):
             ship = inv.inventory[indx] if indx < len(inv.inventory) else None
 
+            shade_color = ((200, 200, 200) if shade else (255, 255, 255)) if ship else ((50, 50, 50) if shade else (75, 75, 75))
+            border_color = None
+
+            if (ship):
+                fleet = userinfo.UserFleet.instance(1, discord_id)
+                if (ship.invid in fleet.ships):
+                    flag = fleet.ships.index(ship.invid) == 0
+                    shade_color = (200, 200, 150) if shade else (255, 255, 200)
+                    if flag:
+                        border_color = (250, 100, 0)
+
             x, y = (xi * cw, yi * ch)
-            if (shade):
-                draw.rectangle((x, y, x + cw, y + ch), fill=(200, 200, 200) if ship else (50, 50, 50))
-            elif (not ship):
-                draw.rectangle((x, y, x + cw, y + ch), fill=(75, 75, 75))
+            draw.rectangle((x, y, x + cw, y + ch), fill=shade_color)
+            if (border_color):
+                b_in = 3
+                draw.rectangle((x + b_in, y + b_in, x + cw - b_in - 1, y + ch - b_in - 1), outline=border_color)
             if (ship):
                 base = ship.base()
                 font = ImageFont.truetype("trebucbd.ttf", ch * 5 // 8)

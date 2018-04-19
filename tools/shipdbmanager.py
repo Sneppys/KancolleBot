@@ -20,7 +20,9 @@ def get_connection():
 
 def register_ship_to_database(conn, ship_id, add_images=True):
     # kc3 path
-    kc3_file_path = HOME_DIR + "/AppData/Local/Google/Chrome/User Data/Default/Extensions/hkgmldnainaglpjngpajnnjfhpdjkohh/32.4.4_0"
+    kc3_file_path = HOME_DIR + "/AppData/Local/Google/Chrome/User Data/Default/Extensions/hkgmldnainaglpjngpajnnjfhpdjkohh/"
+    ver_dir = next(os.walk(kc3_file_path))[1][0]
+    kc3_file_path += ver_dir + "/"
     print("Searching KC3 stored information...")
     db_path = "%s/data/WhoCallsTheFleet_ships.nedb" % (kc3_file_path)
     db_data = []
@@ -58,13 +60,18 @@ def register_ship_to_database(conn, ship_id, add_images=True):
         stype = entry['type']
         srarity = entry['rare']
         r_into = None
-        r_from = None
+        r_from = 'None'
         r_level = None
         if ('remodel' in entry):
             rmdl = entry['remodel']
             if ('next' in rmdl):
                 r_into = get_ship_id(rmdl['next'])
-                r_level = get_ship_id(rmdl['next_lvl'])
+                r_level_id = get_ship_id(rmdl['next_lvl'])
+                if (r_level_id in ship_stats.REAL_REMODEL_LEVEL):
+                    r_level = ship_stats.REAL_REMODEL_LEVEL[r_level_id]
+                else:
+                    print("Can't find remodel value for '%s' for ship %s" % (r_level_id, ship_id))
+                    r_level = 0
             if ('prev' in rmdl):
                 r_from = get_ship_id(rmdl['prev'])
         suffix = 0
@@ -82,7 +89,7 @@ def register_ship_to_database(conn, ship_id, add_images=True):
         print("ID not found")
         exit()
     type_discrim = ship_stats.get_ship_type(ship_type).discriminator
-    print("Found ship '%s' of type %s with KC3 ID %s" % (ship_name, type_discrim, kc3_id))
+    print("Found ship '%s' of type %s with Ship ID %s and KC3 ID %s" % (ship_name, type_discrim, ship_id, kc3_id))
 
     # kcwiki data
     def perform_search(tname, stype, kcid):
@@ -148,7 +155,7 @@ def register_ship_to_database(conn, ship_id, add_images=True):
                 " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"
         args = (ship_id, ship_name, ship_rarity, ship_type, enc_reg, enc_dmg, enc_small_reg, enc_small_dmg, remodels_from, remodels_into, remodel_level)
     else:
-        query = "UPDATE ShipBase SET Name='?', Rarity='?', ShipType='?', Remodels_From='?', Remodels_Into='?', Remodel_Level='?' WHERE ShipID='?';"
+        query = "UPDATE ShipBase SET Name=?, Rarity=?, ShipType=?, Remodels_From=?, Remodels_Into=?, Remodel_Level=? WHERE ShipID=?;"
         args = (ship_name, ship_rarity, ship_type, remodels_from, remodels_into, remodel_level, ship_id)
     cur = conn.cursor()
     cur.execute(query, args)
@@ -158,12 +165,16 @@ def register_ship_to_database(conn, ship_id, add_images=True):
 
 
 if __name__ == '__main__':
-    id = input("Ship ID: ")
     conn = get_connection()
-    register_ship_to_database(conn, id, add_images=True)
-    #for id in range(1, 1600):
-    #    try:
-    #        register_ship_to_database(conn, id, add_images=False)
-    #    except:
-    #        print ("Error handling ID %s: %s" % (id, sys.exc_info()[0]))
+    sel = input("1 for all ships, one ship otherwise: ")
+    if (sel == 1):
+        sel = input("1 to update images, do not update otherwise: ")
+        for id in range(1, 1600):
+            try:
+                register_ship_to_database(conn, id, add_images=(sel == 1))
+            except TypeError:
+                print ("Error handling ID %s: %s" % (id, sys.exc_info()[0]))
+    else:
+        sid = input("Ship ID: ")
+        register_ship_to_database(conn, sid, add_images=True)
     conn.commit()

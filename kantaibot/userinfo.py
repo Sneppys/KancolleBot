@@ -7,6 +7,9 @@ import time
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 DB_PATH = os.path.join(DIR_PATH, "../usersdb.db") # hidden to git
 
+def get_connection():
+    return sqlite3.connect(DB_PATH)
+
 USER_TABLE_NAME = "INV_%s"
 BASIC_TABLE_NAME = "INV_BASIC"
 
@@ -86,10 +89,56 @@ class UserInventory:
         if (len(ins) > 0):
             si = ins.pop()
             self.inventory.remove(si)
+        for f in range(1, 5):
+            fleet = UserFleet.instance(f, self.did)
+            if (inv_id in fleet.ships):
+                fleet.ships.remove(inv_id)
+                fleet.update()
 
-def get_connection():
-    return sqlite3.connect(DB_PATH)
 
+# Instance of a user's fleet
+class UserFleet:
+    def __init__(self, fid, owner, ships):
+        self.fid = fid
+        self.owner = owner
+        self.ships = ships
+
+    def col_name(self):
+        return "Fleet_%s" % (self.fid)
+
+    def val(self):
+        return ";".join(map(str, self.ships))
+
+    def instance(fid, discordid):
+        r = UserFleet(fid, discordid, [])
+        get_user(discordid) # ensure user in table
+        query = "SELECT %s FROM Users WHERE DiscordID=?;" % (r.col_name())
+        args = (discordid,)
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute(query, args)
+        ship_string = cur.fetchone()[0]
+        cur.close()
+        conn.commit()
+
+        if(len(ship_string) > 0):
+            sids = ship_string.split(";")
+            sids = list(map(int, sids))
+            r.ships = sids
+        return r
+
+    def update(self):
+        query = "UPDATE Users SET %s=? WHERE DiscordID=?" % (self.col_name())
+        args = (self.val(), self.owner)
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute(query, args)
+        cur.close()
+        conn.commit()
+
+    def get_ship_instances(self):
+        inv = get_user_inventory(self.owner)
+        return list(map(lambda x: next([y for y in inv.inventory if y.invid == x]), self.ships))
 
 def get_user(discordid):
     query = "SELECT * FROM Users WHERE DiscordID=?"
@@ -126,7 +175,7 @@ def get_user_inventory(discordid):
 
         inv = UserInventory(discordid)
         for row in data:
-            si = ship_stats.ShipInstance(row[0], row[1], discordid, row[2])
+            si = ship_stats.ShipInstance(row[0], row[1], discordid, row[2], row[3])
             inv.append(si)
         return inv
     else:

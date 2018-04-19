@@ -9,6 +9,8 @@ import craftinghandler
 import userinfo
 import os
 import random
+import traceback
+import sys
 
 COMMAND_PREFIX = "bg!"
 
@@ -32,7 +34,7 @@ async def drop(ctx):
     if (userinfo.has_space_in_inventory(did)):
         cd = userinfo.check_cooldown(did, 'Last_Drop', 4 * 3600)
         if (cd == 0):
-            drop = drophandler.get_random_drop(did)
+            drop = drophandler.get_random_drop(did, only_droppable=True)
             image_file = imggen.generate_ship_card(ctx.bot, drop)
             ship_base = drop.base()
             ship_name = ship_base.name
@@ -108,6 +110,122 @@ async def scrap(ctx, shipid: int):
     else:
         await ctx.send("Ship with ID %s not found in your inventory" % (shipid))
 
+def fleet_strings(inv, fleet):
+    ship_ins = list(map(lambda x: [y for y in inv.inventory if y.invid == x].pop(), fleet.ships))
+    ship_data = list(map(lambda x: "*%s* (L%02d, %s)" % (x.base().name, x.level, ship_stats.get_ship_type(x.base().shiptype).discriminator), ship_ins))
+    return ship_data
+
+@bot.group(help="View your fleet (Subcommands for fleet management)")
+async def fleet(ctx):
+    if (not ctx.invoked_subcommand):
+        did = ctx.author.id
+        fleet = userinfo.UserFleet.instance(1, did)
+        inv = userinfo.get_user_inventory(did)
+        if(len(fleet.ships) > 0):
+            strs = fleet_strings(inv, fleet)
+            flag = strs.pop(0)
+            if (len(strs) > 0):
+                await ctx.send("Fleet %s: Flagship %s, ships %s" % (1, flag, ", ".join(strs)))
+            else:
+                await ctx.send("Fleet %s: Flagship %s" % (1, flag))
+        else:
+            await ctx.send("Fleet %s is empty!" % (1))
+
+@fleet.command(help="Add a ship to a fleet", name="add", usage="[Ship ID]")
+async def f_add(ctx, shipid: int):
+    did = ctx.author.id
+    fleet = userinfo.UserFleet.instance(1, did)
+    inv = userinfo.get_user_inventory(did)
+    ins = [x for x in inv.inventory if x.invid == shipid]
+    if (len(ins) > 0):
+        ins = ins.pop()
+        if (not shipid in fleet.ships):
+            if (len(fleet.ships) < 6):
+                fleet.ships.append(shipid)
+                fleet.update()
+                await ctx.send("Added %s to fleet %s" % (ins.base().name, 1))
+            else:
+                await ctx.send("Fleet %s is full!" % (1))
+        else:
+            await ctx.send("%s is already in fleet %s!" % (ins.base().name, 1))
+    else:
+        await ctx.send("Ship with ID %s not found in your inventory" % (shipid))
+
+@fleet.command(help="Set a fleet with up to 6 ships", name="set",
+               usage="[Flagship] (Ship2) (Ship3) ...")
+async def f_set(ctx, flagship: int, ship2: int=-1, ship3: int=-1, ship4: int=-1,
+                ship5: int=-1, ship6: int=-1):
+    did = ctx.author.id
+    fleet = userinfo.UserFleet.instance(1, did)
+    inv = userinfo.get_user_inventory(did)
+    sids_raw = [flagship, ship2, ship3, ship4, ship5, ship6]
+    # check for no dupes while still keeping order
+    sids = []
+    for x in sids_raw:
+        if x in sids:
+            continue
+        sids.append(x)
+    sids = [x for x in sids if x > 0 and x in map(lambda n: n.invid, inv.inventory)]
+    if (len(sids) == 0):
+        await ctx.send("Please include at least one valid ship ID")
+    else:
+        fleet.ships = sids
+        fleet.update()
+        strs = fleet_strings(inv, fleet)
+        flag = strs.pop(0)
+        if (len(strs) > 0):
+            await ctx.send("Set fleet %s to: Flagship %s, ships %s" % (1, flag, ", ".join(strs)))
+        else:
+            await ctx.send("Set fleet %s to: Flagship %s" % (1, flag))
+
+@fleet.command(help="Set a fleet's flagship", name="flag", usage="[Flagship]", aliases=["flagship"])
+async def f_flag(ctx, flagship: int):
+    did = ctx.author.id
+    fleet = userinfo.UserFleet.instance(1, did)
+    inv = userinfo.get_user_inventory(did)
+    ins = [x for x in inv.inventory if x.invid == flagship]
+    if (len(ins) > 0):
+        ins = ins.pop()
+        if (len(fleet.ships) > 0):
+            old_flag = fleet.ships.pop(0)
+            if (not old_flag == flagship):
+                if (flagship in fleet.ships):
+                    fleet.ships.remove(flagship)
+                fleet.ships.append(old_flag)
+            fleet.ships.insert(0, flagship)
+        else:
+            fleet.ships = [flagship,]
+        fleet.update()
+        await ctx.send("Set %s as the flagship of fleet %s" % (ins.base().name, 1))
+    else:
+        await ctx.send("Ship with ID %s not found in your inventory" % (flagship))
+
+@fleet.command(help="Remove a ship from a fleet", name="rem", usage="[Ship ID]", aliases=["remove"])
+async def f_rem(ctx, shipid: int):
+    did = ctx.author.id
+    fleet = userinfo.UserFleet.instance(1, did)
+    inv = userinfo.get_user_inventory(did)
+    ins = [x for x in inv.inventory if x.invid == shipid]
+    if (len(ins) > 0):
+        ins = ins.pop()
+        base = ins.base()
+        if (shipid in fleet.ships):
+            fleet.ships.remove(shipid)
+            fleet.update()
+            await ctx.send("Removed %s from fleet %s!" % (base.name, 1))
+        else:
+            await ctx.send("%s isn't in fleet %s!" % (base.name, 1))
+    else:
+        await ctx.send("Ship with ID %s not found in your inventory" % (shipid))
+
+@fleet.command(help="Clear a fleet", name="clear")
+async def f_clear(ctx):
+    did = ctx.author.id
+    fleet = userinfo.UserFleet.instance(1, did)
+    fleet.ships = []
+    fleet.update()
+    await ctx.send("Cleared fleet %s!" % (1))
+
 @bot.event
 async def on_ready():
     print("Ready on {} ({})".format(bot.user.name, bot.user.id))
@@ -123,7 +241,7 @@ async def on_message(message):
 @bot.event
 async def on_command_error(ctx, err):
     await ctx.send("Error: %s" % str(err))
-
+    traceback.print_exception(type(err), err, err.__traceback__, file=sys.stderr)
 
 if __name__ == '__main__':
     DIR_PATH = os.path.dirname(os.path.realpath(__file__))

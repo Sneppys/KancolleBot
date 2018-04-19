@@ -36,11 +36,12 @@ class ShipBase:
 
 # Instance of a ship, existing in a user's inventory
 class ShipInstance:
-    def __init__(self, invid, sid, owner, level=1):
+    def __init__(self, invid, sid, owner, level=1, exp=0):
         self.invid = invid
         self.sid = sid
         self.owner = owner
         self.level = level
+        self.exp = exp
 
     def base(self):
         return ShipBase.instance(self.sid)
@@ -55,6 +56,15 @@ SHIP_SUFFIXES = {0: "", 1: "Kai", 2: "Kai Ni", 3: "A", 4: "Carrier",
                  8: "drei", 9: "Kai Ni A", 10: "Kai Ni B",
                  11: "Kai Ni D", 12: "due", 13: "Kai Bo", 14: "два",
                  15: "Mk.II", 16: "Mk.II Mod.2", 17: "B Kai"}
+
+# What the fuck, KC3? (Maps KC3's internal 'remodel level' to the actual value)
+
+REAL_REMODEL_LEVEL = { 1: 80, 3: 77, 5: 20, 7: 84, 8: 90, 10: 50,
+                     12: 10, 16: 12, 20: 25, 21: 78, 24: 85, 25: 89,
+                     68: 15, 36: 30, 47: 55, 51: 70, 53: 60, 56: 63,
+                     58: 65, 60: 67, 61: 68, 65: 75, 72: 35, 74: 37,
+                     77: 40, 82: 45, 84: 47, 89: 48, 91: 19, 92: 18,
+                     103: 88}
 
 # Translations for Russian ships as KC3 does not store the english name
 
@@ -129,7 +139,7 @@ def get_ship_type(tid):
     return None
 
 
-def get_all_ships(cur=None, allow_remodel=True, type_ids=None):
+def get_all_ships(cur=None, allow_remodel=True, only_droppable=False, only_craftable=False, type_ids=None):
     args = ()
     if (allow_remodel):
         query = "SELECT (ShipID) FROM ShipBase"
@@ -141,6 +151,10 @@ def get_all_ships(cur=None, allow_remodel=True, type_ids=None):
         if (type_ids):
             type_string = "(%s)" % (", ".join(map(str, type_ids)))
             query += "AND ShipType IN %s" % type_string
+        if (only_droppable):
+            query += "AND Can_Drop='1'"
+        if (only_craftable):
+            query += "AND Can_Craft='1'"
     autoclose = False
     if not cur:
         conn = get_connection()

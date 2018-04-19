@@ -13,8 +13,8 @@ def get_connection():
 def get_basic_weight(ship):
     return (9 - ship.rarity) * (10 - ship.rarity) ** 2
 
-def get_random_drop(owner, cur=None, weight_function=get_basic_weight):
-    ships = ship_stats.get_all_ships(cur=cur, allow_remodel=False)
+def get_random_drop(owner, cur=None, weight_function=get_basic_weight, only_droppable=False, only_craftable=False):
+    ships = ship_stats.get_all_ships(cur=cur, allow_remodel=False, only_droppable, only_craftable)
 
     total_pool = sum(weight_function(s) for s in ships)
     val = random.randrange(total_pool)
