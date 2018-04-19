@@ -140,12 +140,15 @@ async def f_add(ctx, shipid: int):
     if (len(ins) > 0):
         ins = ins.pop()
         if (not shipid in fleet.ships):
-            if (len(fleet.ships) < 6):
-                fleet.ships.append(shipid)
-                fleet.update()
-                await ctx.send("Added %s to fleet %s" % (ins.base().name, 1))
+            if (not fleet.has_similar(ins.sid)):
+                if (len(fleet.ships) < 6):
+                    fleet.ships.append(shipid)
+                    fleet.update()
+                    await ctx.send("Added %s to fleet %s" % (ins.base().name, 1))
+                else:
+                    await ctx.send("Fleet %s is full!" % (1))
             else:
-                await ctx.send("Fleet %s is full!" % (1))
+                await ctx.send("You already have another %s in fleet %s!" % (ins.base().name, 1))
         else:
             await ctx.send("%s is already in fleet %s!" % (ins.base().name, 1))
     else:
@@ -159,13 +162,16 @@ async def f_set(ctx, flagship: int, ship2: int=-1, ship3: int=-1, ship4: int=-1,
     fleet = userinfo.UserFleet.instance(1, did)
     inv = userinfo.get_user_inventory(did)
     sids_raw = [flagship, ship2, ship3, ship4, ship5, ship6]
+    sids_raw = [x for x in sids_raw if x > 0 and x in map(lambda n: n.invid, inv.inventory)]
     # check for no dupes while still keeping order
     sids = []
     for x in sids_raw:
         if x in sids:
             continue
+        sid = [y for y in inv.inventory if y.invid == x].pop().sid
+        if sid in map(lambda y: [z for z in inv.inventory if z.invid == y].pop().sid, sids):
+            continue
         sids.append(x)
-    sids = [x for x in sids if x > 0 and x in map(lambda n: n.invid, inv.inventory)]
     if (len(sids) == 0):
         await ctx.send("Please include at least one valid ship ID")
     else:
@@ -186,17 +192,26 @@ async def f_flag(ctx, flagship: int):
     ins = [x for x in inv.inventory if x.invid == flagship]
     if (len(ins) > 0):
         ins = ins.pop()
+        cancel = False
         if (len(fleet.ships) > 0):
             old_flag = fleet.ships.pop(0)
             if (not old_flag == flagship):
                 if (flagship in fleet.ships):
                     fleet.ships.remove(flagship)
+                else:
+                    if ins.sid in map(lambda x: [y for y in inv.inventory if y.invid == x].pop().sid, fleet.ships):
+                        cancel = True
+                        await ctx.send("You already have another %s in fleet %s!" % (ins.base().name, 1))
                 fleet.ships.append(old_flag)
+            else:
+                cancel = True
+                await ctx.send("%s is already flagship of fleet %s!" % (ins.base().name, 1))
             fleet.ships.insert(0, flagship)
         else:
             fleet.ships = [flagship,]
-        fleet.update()
-        await ctx.send("Set %s as the flagship of fleet %s" % (ins.base().name, 1))
+        if (not cancel):
+            fleet.update()
+            await ctx.send("Set %s as the flagship of fleet %s" % (ins.base().name, 1))
     else:
         await ctx.send("Ship with ID %s not found in your inventory" % (flagship))
 
