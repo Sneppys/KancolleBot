@@ -34,14 +34,3 @@ def get_drop_chances(weight_function=get_basic_weight):
         rtotal = sum(weight_function(s) for s in ships if s.rarity == rarity + 1)
         totals[rarity] = rtotal
     return list(map(lambda x: x / total_pool, totals))
-
-
-DROP_COOLDOWN = 60
-
-def drop_resources(did):
-    if (userinfo.check_cooldown(did, 'Last_Bonus', DROP_COOLDOWN) == 0):
-        user = userinfo.get_user(did)
-        user.mod_fuel(random.randrange(30) + 30)
-        user.mod_ammo(random.randrange(30) + 30)
-        user.mod_steel(random.randrange(30) + 30)
-        user.mod_bauxite(random.randrange(20) + 10)

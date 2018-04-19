@@ -2,6 +2,7 @@ import sqlite3
 import os
 import ship_stats
 import sqlutils
+import userinfo
 from PIL import Image
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
@@ -48,6 +49,41 @@ class ShipInstance:
 
     def new(sid, owner):
         return ShipInstance(-1, sid, owner)
+
+    # add exp to ship instance, returns True for level up
+    def add_exp(self, exp):
+        req = self.exp_req()
+        self.exp += exp
+        lvl = False
+        if (self.exp > req and self.level < 99):
+            self.level += 1
+            self.exp -= req
+            lvl = True
+            self.add_exp(0) # level up as much as possible
+        userinfo.update_ship_exp(self)
+        return lvl
+
+    def exp_req(self):
+        base = self.level
+        if (self.level > 50):
+            base += self.level - 50
+        if (self.level > 60):
+            base += self.level - 60
+        if (self.level > 70):
+            base += self.level - 70
+        if (self.level > 80):
+            base += self.level - 80
+        add = {91: 5, 92: 15, 93: 25, 94: 45, 95: 95, 96: 195, 97: 295, 98: 580}
+        for a, v in add.items():
+            if (self.level >= a):
+                base += v
+        return base * 100
+
+    def is_remodel_ready(self):
+        base = self.base()
+        if (not base.remodels_into):
+            return False
+        return self.level >= base.remodel_level
 
 # Suffixes at the end of a ship's name, using KC3 values
 
@@ -137,7 +173,6 @@ def get_ship_type(tid):
     if len(r) > 0:
         return r[0]
     return None
-
 
 def get_all_ships(cur=None, allow_remodel=True, only_droppable=False, only_craftable=False, type_ids=None):
     args = ()

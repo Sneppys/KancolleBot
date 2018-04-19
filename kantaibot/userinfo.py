@@ -191,6 +191,24 @@ def has_space_in_inventory(did, ship_amount=1):
     inv = get_user_inventory(did)
     return len(inv.inventory) + ship_amount <= user.shipslots
 
+def update_ship_exp(ship_instance):
+    query = "UPDATE %s SET ShipLevel=?, ShipXP=? WHERE ID=?" % (USER_TABLE_NAME % ship_instance.owner)
+    args = (ship_instance.level, ship_instance.exp, ship_instance.invid)
+    conn = get_connection()
+    cur = conn.cursor()
+    cur.execute(query, args)
+    cur.close()
+    conn.commit()
+
+def update_ship_sid(ship_instance):
+    query = "UPDATE %s SET ShipID=? WHERE ID=?" % (USER_TABLE_NAME % ship_instance.owner)
+    args = (ship_instance.sid, ship_instance.invid)
+    conn = get_connection()
+    cur = conn.cursor()
+    cur.execute(query, args)
+    cur.close()
+    conn.commit()
+
 # returns 0 if off cooldown, # of seconds otherwise
 def check_cooldown(discordid, colname, cooldown_amount, set_if_off=True):
     query = "SELECT %s FROM Users WHERE DiscordID=?" % colname

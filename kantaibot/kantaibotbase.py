@@ -116,6 +116,31 @@ async def dupes(ctx, page: int=1):
     image_file = imggen.generate_inventory_screen(ctx.author, page, only_dupes=True)
     await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()), filename="image.png"))
 
+@bot.command(help="Remodel a ship if it is a high enough level", usage="[Ship ID]")
+async def remodel(ctx, shipid: int):
+    did = ctx.author.id
+    user = userinfo.get_user(did)
+    inv = userinfo.get_user_inventory(did)
+    ins = [x for x in inv.inventory if x.invid == shipid]
+    if (len(ins) > 0):
+        ship_instance = ins.pop()
+        base = ship_instance.base()
+        if (base.remodels_into):
+            if (ship_instance.is_remodel_ready()):
+                old_name = base.name
+                ship_instance.sid = base.remodels_into
+                new_name = ship_instance.base().name
+                userinfo.update_ship_sid(ship_instance)
+                image_file = imggen.generate_ship_card(ctx.bot, ship_instance)
+                await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()), filename="image.png"), content="*%s* is now *%s!*" % (old_name, new_name))
+            else:
+                await ctx.send("%s isn't ready for a remodel just yet." % (base.name))
+        else:
+            await ctx.send("%s doesn't have another remodel." % (base.name))
+    else:
+        await ctx.send("Ship with ID %s not found in your inventory" % (shipid))
+
+
 def fleet_strings(inv, fleet):
     ship_ins = list(map(lambda x: [y for y in inv.inventory if y.invid == x].pop(), fleet.ships))
     ship_data = list(map(lambda x: "*%s* (L%02d, %s)" % (x.base().name, x.level, ship_stats.get_ship_type(x.base().shiptype).discriminator), ship_ins))
@@ -205,6 +230,9 @@ async def f_flag(ctx, flagship: int):
                 if (flagship in fleet.ships):
                     fleet.ships.remove(flagship)
                 else:
+                    if (len(fleet.ships) >= 5):
+                        cancel = True
+                        await ctx.send("Fleet %s is full!" % (1))
                     if ins.sid in map(lambda x: [y for y in inv.inventory if y.invid == x].pop().sid, fleet.ships):
                         cancel = True
                         await ctx.send("You already have another %s in fleet %s!" % (ins.base().name, 1))
@@ -253,10 +281,26 @@ async def on_ready():
     await bot.change_presence(activity=discord.Game(type=0, name='with cute ships'))
 
 
+DROP_COOLDOWN = 60
+
 @bot.event
 async def on_message(message):
     if (not message.author.bot):
-        drophandler.drop_resources(message.author.id)
+        did = message.author.id
+        if (userinfo.check_cooldown(did, 'Last_Bonus', DROP_COOLDOWN) == 0):
+            user = userinfo.get_user(did)
+            user.mod_fuel(random.randrange(30) + 30)
+            user.mod_ammo(random.randrange(30) + 30)
+            user.mod_steel(random.randrange(30) + 30)
+            user.mod_bauxite(random.randrange(20) + 15)
+
+            fleet = userinfo.UserFleet.instance(1, did)
+            if (len(fleet.ships) > 0):
+                si_flag = fleet.get_ship_instances()[0]
+                flag_exp = random.randrange(20) + 40
+                lvl = si_flag.add_exp(flag_exp)
+                if (lvl):
+                    await message.channel.send("**%s**: *%s* has leveled up! (Level %s!)" % (message.author.display_name, si_flag.base().name, si_flag.level))
     await bot.process_commands(message)
 
 @bot.event
