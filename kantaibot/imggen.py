@@ -31,7 +31,7 @@ INVENTORY_SIZE = (800, 400)
 INV_SLOTS = (7, 12)
 LOWER_PADDING = 40
 
-def generate_inventory_screen(member, page):
+def generate_inventory_screen(member, page, only_dupes=False):
     discord_id = member.id
     user = userinfo.get_user(discord_id)
     inv = userinfo.get_user_inventory(discord_id)
@@ -41,8 +41,17 @@ def generate_inventory_screen(member, page):
     ch = int(h / sy)
     h += LOWER_PADDING
 
+    ship_pool = inv.inventory
+    if (only_dupes):
+        new_pool = []
+        for i in range(len(ship_pool)):
+            s = ship_pool.pop(0)
+            if (s.sid in map(lambda x: x.sid, new_pool) or s.sid in map(lambda x: x.sid, ship_pool)):
+                new_pool.append(s)
+        ship_pool = new_pool
+
     ships_per_page = sx * sy
-    pages_needed = (len(inv.inventory) // ships_per_page) + (0 if len(inv.inventory) % ships_per_page == 0 and len(inv.inventory) > 0 else 1)
+    pages_needed = (len(ship_pool) // ships_per_page) + (0 if len(ship_pool) % ships_per_page == 0 and len(ship_pool) > 0 else 1)
     if (page < 1):
         page = 1
     elif (page > pages_needed):
@@ -56,7 +65,7 @@ def generate_inventory_screen(member, page):
     indx += (ships_per_page * (page - 1))
     for xi in range(sx):
         for yi in range(sy):
-            ship = inv.inventory[indx] if indx < len(inv.inventory) else None
+            ship = ship_pool[indx] if indx < len(ship_pool) else None
 
             shade_color = ((200, 200, 200) if shade else (255, 255, 255)) if ship else ((50, 50, 50) if shade else (75, 75, 75))
             border_color = None
@@ -103,7 +112,8 @@ def generate_inventory_screen(member, page):
 
     display_name = "%s#%s" % (member.name, member.discriminator)
     font = ImageFont.truetype("framd.ttf", fh * 3 // 4)
-    draw.text((x + 10, y + fh // 8), "%s's Ships" % display_name, font=font, fill=(0, 0, 0))
+    o_txt = "Ships" if not only_dupes else "Dupes"
+    draw.text((x + 10, y + fh // 8), "%s's %s" % (display_name, o_txt), font=font, fill=(0, 0, 0))
 
     font = ImageFont.truetype("framdit.ttf", fh // 2)
     pg_txt = "Page %s of %s" % (page, pages_needed)
@@ -118,7 +128,7 @@ def generate_inventory_screen(member, page):
     txt_ammo = "%05d" % (user.ammo)
     txt_steel = "%05d" % (user.steel)
     txt_bauxite = "%05d" % (user.bauxite)
-    txt_ships= "%03d / %03d" % (len(inv.inventory), user.shipslots)
+    txt_ships= "%03d / %03d" % (len(ship_pool), user.shipslots)
 
     txt_w, txt_h = draw.textsize(txt_fuel, font)
 

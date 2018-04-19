@@ -110,6 +110,12 @@ async def scrap(ctx, shipid: int):
     else:
         await ctx.send("Ship with ID %s not found in your inventory" % (shipid))
 
+@bot.command(help="Shows your inventory, hiding all ships except duplicates", usage="(Page #)")
+async def dupes(ctx, page: int=1):
+    did = ctx.author.id
+    image_file = imggen.generate_inventory_screen(ctx.author, page, only_dupes=True)
+    await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()), filename="image.png"))
+
 def fleet_strings(inv, fleet):
     ship_ins = list(map(lambda x: [y for y in inv.inventory if y.invid == x].pop(), fleet.ships))
     ship_data = list(map(lambda x: "*%s* (L%02d, %s)" % (x.base().name, x.level, ship_stats.get_ship_type(x.base().shiptype).discriminator), ship_ins))
