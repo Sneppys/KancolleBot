@@ -10,6 +10,11 @@ import urllib.request
 from io import BytesIO
 import base64
 
+old_stdout = sys.stdout
+fd = os.dup(sys.stdout.fileno())
+sys.stdout = open(fd, mode='w', errors='replace')
+old_stdout.close()
+
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 DB_PATH = os.path.join(DIR_PATH, "../kantaidb.db") # hidden to git
 
@@ -167,11 +172,11 @@ def register_ship_to_database(conn, ship_id, add_images=True):
 if __name__ == '__main__':
     conn = get_connection()
     sel = input("1 for all ships, one ship otherwise: ")
-    if (sel == 1):
+    if (sel == '1'):
         sel = input("1 to update images, do not update otherwise: ")
         for id in range(1, 1600):
             try:
-                register_ship_to_database(conn, id, add_images=(sel == 1))
+                register_ship_to_database(conn, id, add_images=(sel == '1'))
             except TypeError:
                 print ("Error handling ID %s: %s" % (id, sys.exc_info()[0]))
     else:
