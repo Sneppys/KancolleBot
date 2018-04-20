@@ -63,8 +63,13 @@ def register_ship_to_database(conn, ship_id, add_images=True):
         tname = sname
         for o, t in ship_stats.SHIP_TRANSLATIONS.items():
             tname = tname.replace(o, t)
-        sname = sname.title()
-        tname = tname.title()
+        capitalize_instead = [539] # damn UIT-25
+        if (int(kcid) in capitalize_instead):
+            sname = sname.upper()
+            tname = tname.upper()
+        else:
+            sname = sname.title()
+            tname = tname.title()
         stype = entry['type']
         srarity = entry['rare']
         r_into = None
