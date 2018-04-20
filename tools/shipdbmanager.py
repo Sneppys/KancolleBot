@@ -57,7 +57,7 @@ def register_ship_to_database(conn, ship_id, add_images=True):
         if (not entry):
             entry = get_kc3_data(kcid)
         sname = entry['name']['ja_jp'] if len(entry['name']['ja_romaji']) == 0 else entry['name']['ja_romaji']
-        replacers = {"hamakami": "hamanami", "shimusyu": "shimushu"} # because having everything be consistent is too much
+        replacers = {"hamakami": "hamanami", "shimusyu": "shimushu", "kasugamaru": "kasuga maru"} # because having everything be consistent is too much
         if (sname in replacers):
             sname = replacers[sname]
         tname = sname
