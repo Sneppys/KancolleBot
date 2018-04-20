@@ -96,7 +96,7 @@ def register_ship_to_database(conn, ship_id, add_images=True):
         print("ID not found")
         exit()
     type_discrim = ship_stats.get_ship_type(ship_type).discriminator
-    print("Found ship '%s' of type %s with Ship ID %s and KC3 ID %s" % (ship_name, type_discrim, ship_id, kc3_id))
+    print("Found ship '%s' of type %s with Ship ID %s and KC3 ID %s" % (translated_name, type_discrim, ship_id, kc3_id))
 
     # kcwiki data
     def perform_search(tname, stype, kcid):
@@ -160,7 +160,7 @@ def register_ship_to_database(conn, ship_id, add_images=True):
     if (add_images):
         query = "REPLACE INTO ShipBase (ShipID, Name, Rarity, ShipType, Image_Default, Image_Damaged, Image_Small, Image_Small_Damaged, Remodels_From, Remodels_Into, Remodel_Level)"\
                 " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"
-        args = (ship_id, ship_name, ship_rarity, ship_type, enc_reg, enc_dmg, enc_small_reg, enc_small_dmg, remodels_from, remodels_into, remodel_level)
+        args = (ship_id, translated_name, ship_rarity, ship_type, enc_reg, enc_dmg, enc_small_reg, enc_small_dmg, remodels_from, remodels_into, remodel_level)
     else:
         query = "UPDATE ShipBase SET Name=?, Rarity=?, ShipType=?, Remodels_From=?, Remodels_Into=?, Remodel_Level=? WHERE ShipID=?;"
         args = (ship_name, ship_rarity, ship_type, remodels_from, remodels_into, remodel_level, ship_id)
