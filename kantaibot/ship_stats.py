@@ -151,7 +151,7 @@ class ShipType:
 
 TYPE_DESTROYER = ShipType(1, "DD", "Destroyer", resource_mult=0.5, alt_ids=[19])
 TYPE_LIGHT_CRUISER = ShipType(2, "CL", "Light Cruiser", resource_mult=0.75, alt_ids=[28])
-TYPE_TORPEDO_CRUISER = ShipType(3, "CLT", resource_mult=1.5, "Torpedo Cruiser")
+TYPE_TORPEDO_CRUISER = ShipType(3, "CLT", "Torpedo Cruiser", resource_mult=1.5)
 TYPE_HEAVY_CRUISER = ShipType(4, "CA", "Heavy Cruiser", resource_mult=1.5, alt_ids=[23])
 TYPE_AVIATION_CRUISER = ShipType(5, "CAV", "Aviation Cruiser", resource_mult=1.5)
 TYPE_BATTLESHIP = ShipType(6, "BB", "Battleship", resource_mult=3.0)
