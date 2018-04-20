@@ -57,8 +57,9 @@ def register_ship_to_database(conn, ship_id, add_images=True):
         if (not entry):
             entry = get_kc3_data(kcid)
         sname = entry['name']['ja_jp'] if len(entry['name']['ja_romaji']) == 0 else entry['name']['ja_romaji']
-        if (sname == "hamakami"): # why
-            sname = "hamanami"
+        replacers = {"hamakami": "hamanami", "shimusyu": "shimushu"} # because having everything be consistent is too much
+        if (sname in replacers):
+            sname = replacers[sname]
         tname = sname
         for o, t in ship_stats.SHIP_TRANSLATIONS.items():
             tname = tname.replace(o, t)
