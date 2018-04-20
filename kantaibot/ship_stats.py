@@ -141,32 +141,33 @@ def get_rarity_backdrop(rarity, size):
 # Ship Type - The type of the ship, using KC3's internal type ids (Sometimes dupes)
 ALL_SHIP_TYPES = []
 class ShipType:
-    def __init__(self, tid, discriminator, full_name, alt_ids=[]):
+    def __init__(self, tid, discriminator, full_name, resource_mult=1.0, alt_ids=[]):
         self.tid = tid
         self.discriminator = discriminator
         self.full_name = full_name
+        self.resource_mult = resource_mult
         self.alt_ids = alt_ids
         ALL_SHIP_TYPES.append(self)
 
-TYPE_DESTROYER = ShipType(1, "DD", "Destroyer", alt_ids=[19])
+TYPE_DESTROYER = ShipType(1, "DD", "Destroyer", resource_mult=0.5, alt_ids=[19])
 TYPE_LIGHT_CRUISER = ShipType(2, "CL", "Light Cruiser", alt_ids=[28])
 TYPE_TORPEDO_CRUISER = ShipType(3, "CLT", "Torpedo Cruiser")
 TYPE_HEAVY_CRUISER = ShipType(4, "CA", "Heavy Cruiser", alt_ids=[23])
 TYPE_AVIATION_CRUISER = ShipType(5, "CAV", "Aviation Cruiser")
-TYPE_BATTLESHIP = ShipType(6, "BB", "Battleship")
-TYPE_FAST_BATTLESHIP = ShipType(7, "FBB", "Fast Battleship")
-TYPE_AVIATION_BATTLESHIP = ShipType(8, "BBV", "Aviation Battleship")
-TYPE_LIGHT_CARRIER = ShipType(9, "CVL", "Light Carrier", alt_ids=[32])
-TYPE_CARRIER = ShipType(10, "CV", "Carrier")
-TYPE_ARMORED_CARRIER = ShipType(11, "CVB", "Armored Carrier")
+TYPE_BATTLESHIP = ShipType(6, "BB", "Battleship", resource_mult=2.0)
+TYPE_FAST_BATTLESHIP = ShipType(7, "FBB", "Fast Battleship", resource_mult=2.0)
+TYPE_AVIATION_BATTLESHIP = ShipType(8, "BBV", "Aviation Battleship", resource_mult=2.0)
+TYPE_LIGHT_CARRIER = ShipType(9, "CVL", "Light Carrier", resource_mult=1.25, alt_ids=[32])
+TYPE_CARRIER = ShipType(10, "CV", "Carrier", resource_mult=1.5)
+TYPE_ARMORED_CARRIER = ShipType(11, "CVB", "Armored Carrier", resource_mult=1.5)
 TYPE_SEAPLANE_TENDER = ShipType(12, "AV", "Seaplane Tender", alt_ids=[24])
-TYPE_SUBMARINE = ShipType(13, "SS", "Submarine", alt_ids=[14])
-TYPE_AMPHIBIOUS_ASSAULT_SHIP = ShipType(15, "LHA", "Amphibious Assault Ship")
+TYPE_SUBMARINE = ShipType(13, "SS", "Submarine", resource_mult=0.4, alt_ids=[14])
+TYPE_AMPHIBIOUS_ASSAULT_SHIP = ShipType(15, "LHA", "Amphibious Assault Ship", resource_mult=0.5)
 TYPE_REPAIR_SHIP = ShipType(16, "AR", "Repair Ship")
-TYPE_SUBMARINE_TENDER = ShipType(17, "AS", "Submarine Tender")
+TYPE_SUBMARINE_TENDER = ShipType(17, "AS", "Submarine Tender", resource_mult=0.5)
 TYPE_TRAINING_CRUISER = ShipType(21, "CT", "Training Cruiser")
 TYPE_FLEET_OILER = ShipType(29, "AO", "Fleet Oiler")
-TYPE_DESTROYER_ESCORT = ShipType(31, "DE", "Coastal Defense Ship")
+TYPE_DESTROYER_ESCORT = ShipType(31, "DE", "Coastal Defense Ship", resource_mult=0.5)
 
 def get_ship_type(tid):
     r = [x for x in ALL_SHIP_TYPES if x.tid == int(tid) or int(tid) in x.alt_ids]

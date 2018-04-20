@@ -11,6 +11,7 @@ import os
 import random
 import traceback
 import sys
+import fleet_training
 
 COMMAND_PREFIX = "bg!"
 
@@ -139,6 +140,79 @@ async def remodel(ctx, shipid: int):
             await ctx.send("%s doesn't have another remodel." % (base.name))
     else:
         await ctx.send("Ship with ID %s not found in your inventory" % (shipid))
+
+@bot.command(help="Show all training difficulties or train a fleet on one", usage="(Difficulty #)")
+async def train(ctx, dif: int=-1):
+    did = ctx.author.id
+    difs = fleet_training.ALL_DIFFICULTIES
+    if (dif == -1):
+        description = "Difficulties:\n"
+        description += "\n".join(["#%s. %s: Min Flagship level %s, Recommended fleet level %s." % (x + 1,
+                        difs[x].name, difs[x].min_flag, difs[x].avg_lvl) for x in range(len(difs))])
+        footer = "Type %strain (#) to train a fleet with a difficulty" % (COMMAND_PREFIX)
+        embed = discord.Embed(title="Fleet Training", description=description)
+        embed.set_footer(text=footer)
+
+        await ctx.send(embed=embed)
+    else:
+        if (dif > 0 and dif <= len(difs)):
+            dif_targ = difs[dif - 1]
+            fleet = userinfo.UserFleet.instance(1, did)
+            if (len(fleet.ships) > 0):
+                ins = fleet.get_ship_instances()
+                flag = ins[0]
+                if (flag.level >= dif_targ.min_flag):
+                    rsc = dif_targ.resource_costs(fleet)
+                    rsc = tuple(map(int, rsc))
+                    user = userinfo.get_user(did)
+                    if (user.has_enough(*rsc)):
+                        cd = userinfo.check_cooldown(did, "Last_Training", 2 * 3600)
+                        if (cd == 0):
+                            # conditions passed
+                            rank = dif_targ.rank_training(fleet)
+
+                            exp_rew_base = rank.exp_mult * dif_targ.exp_reward_base
+                            exp_rew_split = rank.exp_mult * dif_targ.exp_reward_split
+
+                            exp = [exp_rew_base] * len(ins)
+                            exp_per = exp_rew_split // len(ins) + 1
+                            exp[0] += exp_per
+                            exp = list(map(lambda x: x + exp_per, exp))
+
+                            lvl_dif = [x.level for x in ins]
+                            for i in range(len(ins)):
+                                ins[i].add_exp(exp[i])
+                                lvl_dif[i] = ins[i].level - lvl_dif[i]
+
+                            user.mod_fuel(-rsc[0])
+                            user.mod_ammo(-rsc[1])
+                            user.mod_steel(-rsc[2])
+                            user.mod_bauxite(-rsc[3])
+
+                            embed = discord.Embed(title="Training %s" % ("Success" if rank.is_success else "Failed"))
+                            embed.color = 65280 if rank.is_success else 16711680
+                            embed.description = "Rank %s | %s Difficulty" % (rank.symbol, dif_targ.name)
+                            flag = ins.pop(0)
+                            embed.add_field(name="EXP Gain", value=flag.base().name + " (*)\n" + "\n".join([x.base().name for x in ins]), inline=True)
+                            embed.add_field(name="--------", value="\n".join(["+%g EXP" % x for x in exp]))
+                            ins.insert(0, flag)
+                            embed.add_field(name="--------", value="\n".join(["Level %s (+%s)" % (ins[i].level, lvl_dif[i]) for i in range(len(ins))]))
+                            embed.set_footer(text="Used %g fuel, %g ammo, %g steel, %g bauxite" % rsc)
+
+                            await ctx.send(embed=embed)
+                        else:
+                            hrs = cd // 3600
+                            min = cd // 60 % 60
+                            sec = cd % 60
+                            await ctx.send("You have %dh%02dm%02ds remaining until you can train your fleet again" % (hrs, min, sec))
+                    else:
+                        await ctx.send("Not enough resources! (Required: %g fuel, %g ammo, %g steel, %g bauxite)" % rsc)
+                else:
+                    await ctx.send("Flagship isn't a high enough level! (Needs to be at least %s)" % (dif_targ.min_flag))
+            else:
+                await ctx.send("Fleet %s is empty!" % (1))
+        else:
+            await ctx.send("No such difficulty #%s" % dif)
 
 
 def fleet_strings(inv, fleet):
@@ -278,7 +352,7 @@ async def f_clear(ctx):
 @bot.event
 async def on_ready():
     print("Ready on {} ({})".format(bot.user.name, bot.user.id))
-    await bot.change_presence(activity=discord.Game(type=0, name='with cute ships'))
+    await bot.change_presence(activity=discord.Game(type=0, name='with cute ships | %shelp' % COMMAND_PREFIX))
 
 
 DROP_COOLDOWN = 60
@@ -300,7 +374,7 @@ async def on_message(message):
                 flag_exp = random.randrange(20) + 40
                 lvl = si_flag.add_exp(flag_exp)
                 if (lvl):
-                    await message.channel.send("**%s**: *%s* has leveled up! (Level %s!)" % (message.author.display_name, si_flag.base().name, si_flag.level))
+                    await message.channel.send("**%s** - *%s* has leveled up! (Level %s!)" % (message.author.display_name, si_flag.base().name, si_flag.level))
     await bot.process_commands(message)
 
 @bot.event
