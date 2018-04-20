@@ -106,7 +106,7 @@ REAL_REMODEL_LEVEL = { 1: 80, 3: 77, 5: 20, 7: 84, 8: 90, 10: 50,
 
 SHIP_TRANSLATIONS = {u"Гангут": "Gangut", u"Верный": "Verniy",
                      u"Октябрьская революция": "Oktyabrskaya Revolyutsiya",
-                     u"Ташкент": "Tashkent", u"два": "dva"}
+                     u"Ташкент": "Tashkent", u"два": "dva", u"伊": "I-"}
 
 # uses Rarity_colors.jpg to get a backdrop for different rarities
 
