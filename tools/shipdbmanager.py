@@ -87,7 +87,7 @@ def register_ship_to_database(conn, ship_id, add_images=True):
             suffix = ship_stats.SHIP_SUFFIXES[entry['name']['suffix']]
             tsuffix = suffix
             for o, t in ship_stats.SHIP_TRANSLATIONS.items():
-                tname = tsuffix.replace(o, t)
+                tsuffix = tsuffix.replace(o, t)
             sname += " " + suffix
             tname += " " + tsuffix
         return sname, tname, stype, srarity, r_into, r_from, r_level
