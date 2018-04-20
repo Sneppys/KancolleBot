@@ -228,11 +228,13 @@ async def fleet(ctx):
         inv = userinfo.get_user_inventory(did)
         if(len(fleet.ships) > 0):
             strs = fleet_strings(inv, fleet)
+            ins = fleet.get_ship_instances()
+            fleet_lvl = sum(x.level for x in ins) // len(ins)
             flag = strs.pop(0)
             if (len(strs) > 0):
-                await ctx.send("Fleet %s: Flagship %s, ships %s" % (1, flag, ", ".join(strs)))
+                await ctx.send("Fleet %s: Flagship %s, ships %s [Fleet Level %s]" % (1, flag, ", ".join(strs), fleet_lvl))
             else:
-                await ctx.send("Fleet %s: Flagship %s" % (1, flag))
+                await ctx.send("Fleet %s: Flagship %s [Fleet Level %s]" % (1, flag, fleet_lvl))
         else:
             await ctx.send("Fleet %s is empty!" % (1))
 
