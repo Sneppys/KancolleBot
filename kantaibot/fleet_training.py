@@ -56,7 +56,7 @@ class TrainingDifficulty():
 
     # returns tuple of (fuel, ammo, steel, bauxite) costs
     def resource_costs(self, fleet):
-        base = (30, 50, 0, 0)
+        base = (10, 15, 0, 0)
         ins = fleet.get_ship_instances()
         mult = sum([ship_stats.get_ship_type(x.base().shiptype).resource_mult for x in ins])
         return tuple(map(lambda x: x * mult, base))
