@@ -17,6 +17,10 @@ COMMAND_PREFIX = "bg!"
 
 bot = commands.Bot(command_prefix=COMMAND_PREFIX)
 
+DROP_COOLDOWN = 4 * 60 * 60
+CRAFTING_COOLDOWN = 15 * 60
+TRAINING_COOLDOWN = 60 * 60
+
 @bot.command(help="Show a ship from your inventory", usage="[Ship ID]")
 async def show(ctx, shipid: int):
     did = ctx.author.id
@@ -33,7 +37,7 @@ async def show(ctx, shipid: int):
 async def drop(ctx):
     did = ctx.author.id
     if (userinfo.has_space_in_inventory(did)):
-        cd = userinfo.check_cooldown(did, 'Last_Drop', 4 * 3600)
+        cd = userinfo.check_cooldown(did, 'Last_Drop', DROP_COOLDOWN)
         if (cd == 0):
             drop = drophandler.get_random_drop(did, only_droppable=True)
             image_file = imggen.generate_ship_card(ctx.bot, drop)
@@ -65,7 +69,7 @@ async def craft(ctx, fuel: int, ammo: int, steel: int, bauxite: int):
     did = ctx.author.id
     user = userinfo.get_user(did)
     if (userinfo.has_space_in_inventory(did)):
-        cd = userinfo.check_cooldown(did, 'Last_Craft', 15 * 60, set_if_off=False)
+        cd = userinfo.check_cooldown(did, 'Last_Craft', CRAFTING_COOLDOWN, set_if_off=False)
         if (cd == 0):
             if (fuel >= 30 and ammo >= 30 and steel >= 30 and bauxite >= 30):
                 if (user.has_enough(fuel, ammo, steel, bauxite)):
@@ -76,7 +80,7 @@ async def craft(ctx, fuel: int, ammo: int, steel: int, bauxite: int):
                     user.mod_bauxite(-bauxite)
                     inv = userinfo.get_user_inventory(did)
                     inv.add_to_inventory(craft)
-                    userinfo.check_cooldown(did, 'Last_Craft', 15 * 60, set_if_off=True) # set cooldown
+                    userinfo.check_cooldown(did, 'Last_Craft', CRAFTING_COOLDOWN, set_if_off=True) # set cooldown
                     image_file = imggen.generate_ship_card(ctx.bot, craft)
                     ship_base = craft.base()
                     await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()),
@@ -166,7 +170,7 @@ async def train(ctx, dif: int=-1):
                     rsc = tuple(map(int, rsc))
                     user = userinfo.get_user(did)
                     if (user.has_enough(*rsc)):
-                        cd = userinfo.check_cooldown(did, "Last_Training", 2 * 3600)
+                        cd = userinfo.check_cooldown(did, "Last_Training", TRAINING_COOLDOWN)
                         if (cd == 0):
                             # conditions passed
                             rank = dif_targ.rank_training(fleet)
@@ -214,6 +218,28 @@ async def train(ctx, dif: int=-1):
         else:
             await ctx.send("No such difficulty #%s" % dif)
 
+
+@bot.command(help="Show your active cooldowns", aliases=["cd"])
+async def cooldowns(ctx):
+    did = ctx.author.id
+    cd_check = {"Last_Drop": ("Drop", DROP_COOLDOWN),
+                "Last_Training": ("Fleet Training", TRAINING_COOLDOWN),
+                "Last_Craft": ("Crafting", CRAFTING_COOLDOWN)
+                }
+    msg = "Current cooldowns for %s:\n" % ctx.author.display_name
+    msg += "```\n"
+    for cd, v in cd_check.items():
+        t = userinfo.check_cooldown(did, cd, v[1], set_if_off=False)
+        if (t > 0):
+            hrs = t // 3600
+            min = t // 60 % 60
+            sec = t % 60
+            print(t, v[1])
+            msg += "%s: %dh%02dm%02ds remaining\n" % (v[0], hrs, min, sec)
+        else:
+            msg += "%s: Available!\n" % (v[0])
+    msg += "```"
+    await ctx.send(msg)
 
 def fleet_strings(inv, fleet):
     ship_ins = list(map(lambda x: [y for y in inv.inventory if y.invid == x].pop(), fleet.ships))
@@ -357,13 +383,13 @@ async def on_ready():
     await bot.change_presence(activity=discord.Game(type=0, name='with cute ships | %shelp' % COMMAND_PREFIX))
 
 
-DROP_COOLDOWN = 60
+BONUS_COOLDOWN = 60
 
 @bot.event
 async def on_message(message):
     if (not message.author.bot):
         did = message.author.id
-        if (userinfo.check_cooldown(did, 'Last_Bonus', DROP_COOLDOWN) == 0):
+        if (userinfo.check_cooldown(did, 'Last_Bonus', BONUS_COOLDOWN) == 0):
             user = userinfo.get_user(did)
             user.mod_fuel(random.randrange(30) + 30)
             user.mod_ammo(random.randrange(30) + 30)
