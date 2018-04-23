@@ -35,6 +35,16 @@ class ShipBase:
         conn.commit()
         return ShipBase(data[0], data[1], data[2], data[3], data[4], data[5], data[6])
 
+    # track all remodel from until first version reached
+    def get_first_base(self):
+        ship = self
+        try:
+            while (ship.remodels_from):
+                ship = ShipBase.instance(ship.remodels_from)
+        except TypeError:
+            pass
+        return ship
+
 # Instance of a ship, existing in a user's inventory
 class ShipInstance:
     def __init__(self, invid, sid, owner, level=1, exp=0):

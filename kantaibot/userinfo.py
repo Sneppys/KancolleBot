@@ -141,7 +141,8 @@ class UserFleet:
         return list(map(lambda x: [y for y in inv.inventory if y.invid == x].pop(), self.ships))
 
     def has_similar(self, ship_id):
-        return len([x for x in self.get_ship_instances() if x.sid == ship_id]) > 0
+        check_id = ship_stats.ShipBase.instance(ship_id).get_first_base().sid
+        return len([x for x in self.get_ship_instances() if x.base().get_first_base().sid == check_id]) > 0
 
 def get_user(discordid):
     query = "SELECT * FROM Users WHERE DiscordID=?"

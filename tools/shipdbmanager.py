@@ -191,6 +191,74 @@ if __name__ == '__main__':
             except TypeError:
                 print ("Error handling ID %s: %s" % (id, sys.exc_info()[0]))
     else:
-        sid = input("Ship ID: ")
-        register_ship_to_database(conn, sid, add_images=True)
+        sel = input("1 for custom ship, kc3 data otherwise: ")
+        if (sel == '1'):
+            sid = input("Ship ID: ")
+            name = input("English name: ")
+            rarity = input("Rarity #: ")
+            stype_d = input("Ship type discriminator: ")
+            remodels_from = input("Remodels from (ID): ")
+            remodels_into = input("Remodels into (ID): ")
+            remodel_level = input("Remodel Level: ")
+            image_url = input("Large image (URL): ")
+            image_dmg_url = input("Large damaged image (URL): ")
+            img_small_url = input("Small image (URL): ")
+            img_smgall_dmg_url = input("Small damaged image (URL): ")
+
+            type_obj = [x for x in ship_stats.ALL_SHIP_TYPES if x.discriminator == stype_d]
+            ship_type = type_obj[0].tid
+
+            def img_from_url(url):
+                req = urllib.request.urlopen(url)
+                imgdata = Image.open(BytesIO(req.read())).convert('RGBA')
+                return imgdata
+
+            def encode_image(img):
+                buf = BytesIO()
+                img.save(buf, format="PNG")
+                enc = base64.b64encode(buf.getvalue()).decode()
+                return enc
+
+            print("Encoding images...")
+
+            enc_reg = encode_image(img_from_url(image_url))
+            enc_dmg = encode_image(img_from_url(image_dmg_url))
+            enc_small_reg = encode_image(img_from_url(img_small_url))
+            enc_small_dmg = encode_image(img_from_url(img_smgall_dmg_url))
+
+            print("Encoding done")
+
+            if (remodels_into == 'None'):
+                remodels_into = None
+            if (remodel_level == 'None'):
+                remodel_level = None
+
+            if (not remodels_from == 'None'):
+                query_find = "SELECT ShipID FROM ShipBase WHERE Remodels_Into=?"
+                args_find = (sid,)
+                cur = conn.cursor()
+                cur.execute(query_find, args_find)
+                sid_r = cur.fetchone()
+                if (sid_r):
+                    sid_r = sid_r[0]
+                    print("Updated ship ID %s's remodel info" % (sid_r))
+                    query_update = "UPDATE ShipBase SET Remodels_Into=? WHERE ShipID=?"
+                    args_update = (sid, sid_r)
+                    cur.execute(query_update, args_update)
+                cur.close()
+
+            print("Adding to database...")
+
+            query = "REPLACE INTO ShipBase (ShipID, Name, Rarity, ShipType, Image_Default, Image_Damaged, Image_Small, Image_Small_Damaged, Remodels_From, Remodels_Into, Remodel_Level)"\
+                    " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"
+            args = (sid, name, rarity, ship_type, enc_reg, enc_dmg, enc_small_reg, enc_small_dmg, remodels_from, remodels_into, remodel_level)
+            print("ShipID: %s, Name: %s, Rarity: %s, ShipType: %s, Remodels From: %s, Remodels Into: %s, Remodel Level: %s" % (sid, name, rarity, ship_type, remodels_from, remodels_into, remodel_level))
+            cur = conn.cursor()
+            cur.execute(query, args)
+            cur.close()
+
+            print("Success!")
+        else:
+            sid = input("Ship ID: ")
+            register_ship_to_database(conn, sid, add_images=True)
     conn.commit()

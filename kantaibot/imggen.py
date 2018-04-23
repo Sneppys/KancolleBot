@@ -27,6 +27,8 @@ def get_image_from_db(shipid, colname):
     img = Image.open(buf).convert('RGBA')
     return img
 
+small_ico_mask_img = os.path.join(DIR_PATH, "mask_small.png")
+
 INVENTORY_SIZE = (800, 400)
 INV_SLOTS = (7, 12)
 LOWER_PADDING = 40
@@ -46,7 +48,7 @@ def generate_inventory_screen(member, page, only_dupes=False):
         new_pool = []
         for i in range(len(ship_pool)):
             s = ship_pool.pop(0)
-            if (s.sid in map(lambda x: x.sid, new_pool) or s.sid in map(lambda x: x.sid, ship_pool)):
+            if (s.base().get_first_base().sid in map(lambda x: x.base().get_first_base().sid, new_pool) or s.base().get_first_base().sid in map(lambda x: x.base().get_first_base().sid, ship_pool)):
                 new_pool.append(s)
         ship_pool = new_pool
 
@@ -102,7 +104,9 @@ def generate_inventory_screen(member, page, only_dupes=False):
                 ico = ico.resize((ch - 4, ch - 4), Image.BILINEAR)
                 border_color = ship_stats.RARITY_COLORS[base.rarity - 1]
                 draw.ellipse((cir_start_x - 1, cir_start_y - 1, cir_start_x + ch - 3, cir_start_y + ch - 3), fill=border_color)
-                img.paste(ico, (cir_start_x, cir_start_y), mask=ico)
+                msk = Image.open(small_ico_mask_img)
+                msk = msk.resize(ico.size)
+                img.paste(ico, (cir_start_x, cir_start_y), mask=msk)
             shade = not shade
             indx += 1
         if(sy % 2 == 0):
@@ -184,8 +188,10 @@ def generate_ship_card(bot, ship_instance):
     x_offset = int(200 - (targ_width / 2))
     img_full = img_full.resize((targ_width, 500), Image.BICUBIC)
     img_small = img_small.resize((80, 80), Image.LINEAR)
+    msk = Image.open(small_ico_mask_img)
+    msk = msk.resize(img_small.size)
     img.paste(img_full, (x_offset, 0), mask=img_full)
-    img.paste(img_small, (710, 10), mask=img_small)
+    img.paste(img_small, (710, 10), mask=msk)
 
     font = ImageFont.truetype("impact.ttf", 70)
     font_small = ImageFont.truetype("framd.ttf", 40)
