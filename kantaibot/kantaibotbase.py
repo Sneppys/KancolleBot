@@ -234,7 +234,6 @@ async def cooldowns(ctx):
             hrs = t // 3600
             min = t // 60 % 60
             sec = t % 60
-            print(t, v[1])
             msg += "%s: %dh%02dm%02ds remaining\n" % (name, hrs, min, sec)
         else:
             msg += "%s: Available!\n" % (name)
