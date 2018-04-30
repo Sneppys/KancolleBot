@@ -222,22 +222,22 @@ async def train(ctx, dif: int=-1):
 @bot.command(help="Show your active cooldowns", aliases=["cd"])
 async def cooldowns(ctx):
     did = ctx.author.id
-    cd_check = {"Last_Drop": ("Drop", DROP_COOLDOWN),
-                "Last_Training": ("Fleet Training", TRAINING_COOLDOWN),
-                "Last_Craft": ("Crafting", CRAFTING_COOLDOWN)
-                }
+    cd_check = [("Last_Drop", "Drop", DROP_COOLDOWN),
+                ("Last_Training", "Fleet Training", TRAINING_COOLDOWN),
+                ("Last_Craft", "Crafting", CRAFTING_COOLDOWN),
+                ]
     msg = "Current cooldowns for %s:\n" % ctx.author.display_name
     msg += "```\n"
-    for cd, v in cd_check.items():
-        t = userinfo.check_cooldown(did, cd, v[1], set_if_off=False)
+    for cd, name, cd_s in cd_check:
+        t = userinfo.check_cooldown(did, cd, cd_s, set_if_off=False)
         if (t > 0):
             hrs = t // 3600
             min = t // 60 % 60
             sec = t % 60
             print(t, v[1])
-            msg += "%s: %dh%02dm%02ds remaining\n" % (v[0], hrs, min, sec)
+            msg += "%s: %dh%02dm%02ds remaining\n" % (name, hrs, min, sec)
         else:
-            msg += "%s: Available!\n" % (v[0])
+            msg += "%s: Available!\n" % (name)
     msg += "```"
     await ctx.send(msg)
 
