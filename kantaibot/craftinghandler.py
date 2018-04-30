@@ -22,7 +22,7 @@ class BaseRecipe():
         self.rarityfocus = rarityfocus
         RECIPE_LIST.append(self)
 
-BaseRecipe(30, 30, 30, 30, 1, [ship_stats.TYPE_DESTROYER,
+BaseRecipe(30, 30, 30, 30, 2, [ship_stats.TYPE_DESTROYER,
                                ship_stats.TYPE_LIGHT_CRUISER])
 BaseRecipe(250, 130, 200, 30, 2, [ship_stats.TYPE_DESTROYER,
                                   ship_stats.TYPE_LIGHT_CRUISER,
@@ -30,7 +30,7 @@ BaseRecipe(250, 130, 200, 30, 2, [ship_stats.TYPE_DESTROYER,
                                   ship_stats.TYPE_HEAVY_CRUISER])
 BaseRecipe(300, 30, 150, 400, 2, [ship_stats.TYPE_LIGHT_CARRIER,
                                   ship_stats.TYPE_SEAPLANE_TENDER])
-BaseRecipe(250, 30, 200, 30, 2, [ship_stats.TYPE_DESTROYER,
+BaseRecipe(250, 30, 200, 30, 3, [ship_stats.TYPE_DESTROYER,
                                  ship_stats.TYPE_LIGHT_CRUISER,
                                  ship_stats.TYPE_HEAVY_CRUISER,
                                  ship_stats.TYPE_SUBMARINE])
@@ -41,7 +41,7 @@ BaseRecipe(400, 100, 600, 30, 2, [ship_stats.TYPE_HEAVY_CRUISER,
                                  ship_stats.TYPE_BATTLESHIP,
                                  ship_stats.TYPE_FAST_BATTLESHIP,
                                  ship_stats.TYPE_LIGHT_CRUISER])
-BaseRecipe(500, 30, 600, 30, 3, [ship_stats.TYPE_HEAVY_CRUISER,
+BaseRecipe(500, 30, 600, 30, 4, [ship_stats.TYPE_HEAVY_CRUISER,
                                  ship_stats.TYPE_BATTLESHIP,
                                  ship_stats.TYPE_LIGHT_CRUISER])
 BaseRecipe(300, 30, 400, 300, 3, [ship_stats.TYPE_LIGHT_CARRIER,
@@ -50,11 +50,11 @@ BaseRecipe(300, 30, 400, 300, 3, [ship_stats.TYPE_LIGHT_CARRIER,
 BaseRecipe(350, 30, 400, 400, 3, [ship_stats.TYPE_LIGHT_CARRIER,
                                   ship_stats.TYPE_CARRIER,
                                   ship_stats.TYPE_SEAPLANE_TENDER])
-BaseRecipe(300, 300, 600, 600, 3, [ship_stats.TYPE_CARRIER,
+BaseRecipe(300, 300, 600, 600, 4, [ship_stats.TYPE_CARRIER,
                                    ship_stats.TYPE_LIGHT_CARRIER])
-BaseRecipe(400, 200, 500, 700, 3, [ship_stats.TYPE_CARRIER,
+BaseRecipe(400, 200, 500, 700, 4, [ship_stats.TYPE_CARRIER,
                                    ship_stats.TYPE_LIGHT_CARRIER])
-BaseRecipe(1000, 1000, 1000, 200, 4, [ship_stats.TYPE_BATTLESHIP,
+BaseRecipe(1000, 1000, 1000, 200, 5, [ship_stats.TYPE_BATTLESHIP,
                                       ship_stats.TYPE_FAST_BATTLESHIP,
                                       ship_stats.TYPE_HEAVY_CRUISER])
 BaseRecipe(2000, 2000, 2000, 2000, 5, [ship_stats.TYPE_HEAVY_CRUISER,
@@ -66,7 +66,7 @@ BaseRecipe(1500, 1500, 2000, 1000, 5, [ship_stats.TYPE_BATTLESHIP,
                                        ship_stats.TYPE_FAST_BATTLESHIP,
                                        ship_stats.TYPE_HEAVY_CRUISER,
                                        ship_stats.TYPE_LIGHT_CRUISER])
-BaseRecipe(3000, 1500, 4000, 3000, 5, [ship_stats.TYPE_LIGHT_CARRIER,
+BaseRecipe(3000, 1500, 4000, 3000, 6, [ship_stats.TYPE_LIGHT_CARRIER,
                                        ship_stats.TYPE_CARRIER,
                                        ship_stats.TYPE_ARMORED_CARRIER])
 BaseRecipe(4000, 2000, 5500, 7000, 6, [ship_stats.TYPE_ARMORED_CARRIER,
@@ -89,7 +89,7 @@ def get_craft_from_resources(owner, f, a, s, b):
     nnr = nearest_n_recipes(f, a, s, b)
 
     total_weight_bonus_shiptype = 50000
-    total_weight_bonus_rarity = 25000
+    total_weight_bonus_rarity = 50000
 
     # this is complicated so here's a simple explanation:
     # in (n - 1) steps where n is # of recipes taken from above:
