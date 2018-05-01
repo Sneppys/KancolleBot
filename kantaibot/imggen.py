@@ -47,16 +47,13 @@ def generate_inventory_screen(member, page, only_dupes=False):
     if (only_dupes):
         new_pool = []
         first_bases = {}
-        print('test')
         for s in ship_pool:
             first_bases[s.sid] = s.base().get_first_base()
-        print('test2')
         for i in range(len(ship_pool)):
             s = ship_pool.pop(0)
             if (first_bases[s.sid].sid in map(lambda x: first_bases[x.sid].sid, new_pool) or first_bases[s.sid].sid in map(lambda x: first_bases[x.sid].sid, ship_pool)):
                 new_pool.append(s)
         ship_pool = new_pool
-    print('test3')
 
     ships_per_page = sx * sy
     pages_needed = (len(ship_pool) // ships_per_page) + (0 if len(ship_pool) % ships_per_page == 0 and len(ship_pool) > 0 else 1)
