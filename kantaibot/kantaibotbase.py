@@ -240,7 +240,7 @@ async def cooldowns(ctx):
     msg += "```"
     await ctx.send(msg)
 
-@bot.command(help="Marry a max level ship to increase their level cap", aliases=["ring"])
+@bot.command(help="Using a Ring, marry a max level ship to increase their level cap", aliases=["ring"])
 async def marry(ctx, shipid: int):
     did = ctx.author.id
     user = userinfo.get_user(did)
