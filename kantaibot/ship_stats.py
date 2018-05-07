@@ -91,7 +91,7 @@ class ShipInstance:
             for a, v in add.items():
                 if (self.level >= a):
                     base += v
-        elif (self.level == 99):
+        elif (self.level == 99 or self.level >= 165):
             return 0
         else:
             base = self.level
