@@ -65,28 +65,58 @@ class ShipInstance:
         req = self.exp_req()
         self.exp += exp
         lvl = False
-        if (self.exp > req and self.level < 99):
-            self.level += 1
-            self.exp -= req
-            lvl = True
-            self.add_exp(0) # level up as much as possible
+        if (self.level != 99 and self.level < 165):
+            if (self.exp > req):
+                self.level += 1
+                self.exp -= req
+                lvl = True
+                self.add_exp(0) # level up as much as possible
+        else:
+            self.exp = 0
         userinfo.update_ship_exp(self)
         return lvl
 
     def exp_req(self):
-        base = self.level
-        if (self.level > 50):
-            base += self.level - 50
-        if (self.level > 60):
-            base += self.level - 60
-        if (self.level > 70):
-            base += self.level - 70
-        if (self.level > 80):
-            base += self.level - 80
-        add = {91: 5, 92: 15, 93: 25, 94: 45, 95: 95, 96: 195, 97: 295, 98: 580}
-        for a, v in add.items():
-            if (self.level >= a):
-                base += v
+        if (self.level < 99):
+            base = self.level
+            if (self.level > 50):
+                base += self.level - 50
+            if (self.level > 60):
+                base += self.level - 60
+            if (self.level > 70):
+                base += self.level - 70
+            if (self.level > 80):
+                base += self.level - 80
+            add = {91: 5, 92: 15, 93: 25, 94: 45, 95: 95, 96: 195, 97: 295, 98: 580}
+            for a, v in add.items():
+                if (self.level >= a):
+                    base += v
+        elif (self.level == 99):
+            return 0
+        else:
+            base = self.level
+            lvl = self.level - 100
+            if (self.level > 100):
+                base -= 100
+                base += lvl * 9
+            if (self.level > 110):
+                base += (lvl - 10) * 10
+            if (self.level > 115):
+                base += (lvl - 15) * 10
+            if (self.level > 120):
+                base += (lvl - 20) * 10
+            if (self.level > 130):
+                base += (lvl - 30) * 10
+            if (self.level >= 140):
+                base += (lvl - 39) * 20
+            if (self.level >= 145):
+                base += (lvl - 44) * 10
+            if (self.level >= 150):
+                base += (lvl - 49) * 10
+            upper_bases = {155: 2500, 156: 600, 157: 800, 158: 1100, 159: 1500,
+                           160: 2000, 161: 2600, 162: 3300, 163: 4100, 164: 5000}
+            if (self.level >= 155):
+                base = upper_bases[self.level]
         return base * 100
 
     def is_remodel_ready(self):

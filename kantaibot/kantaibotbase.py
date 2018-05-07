@@ -240,6 +240,33 @@ async def cooldowns(ctx):
     msg += "```"
     await ctx.send(msg)
 
+@bot.command(help="Marry a max level ship to increase their level cap", aliases=["ring"])
+async def marry(ctx, shipid: int):
+    did = ctx.author.id
+    user = userinfo.get_user(did)
+    inv = userinfo.get_user_inventory(did)
+    ins = [x for x in inv.inventory if x.invid == shipid]
+    if (len(ins) > 0):
+        ship_instance = ins.pop()
+        base = ship_instance.base()
+        if (ship_instance.level == 99):
+            rings = user.rings
+            if (rings > 0):
+                ship_instance.level = 100
+                ship_instance.exp = 0
+                ship_instance.add_exp(0)
+                user.use_ring()
+                ship_name = base.name
+                image_file = imggen.generate_ship_card(ctx.bot, ship_instance)
+                await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()), filename="image.png"),
+                               content="*Slipping a ring on %s's finger, you form an everlasting bond*" % (ship_name))
+            else:
+                await ctx.send("You don't have any more rings.")
+        else:
+            await ctx.send("%s isn't ready for marriage yet." % (base.name))
+    else:
+        await ctx.send("Ship with ID %s not found in your inventory" % (shipid))
+
 def fleet_strings(inv, fleet):
     ship_ins = list(map(lambda x: [y for y in inv.inventory if y.invid == x].pop(), fleet.ships))
     ship_data = list(map(lambda x: "*%s* (L%02d, %s)" % (x.base().name, x.level, ship_stats.get_ship_type(x.base().shiptype).discriminator), ship_ins))

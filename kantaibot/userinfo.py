@@ -16,7 +16,7 @@ BASIC_TABLE_NAME = "INV_BASIC"
 RESOURCE_CAP = 99999 # max # of any resource a user can have
 
 class User:
-    def __init__(self, did, fuel, ammo, steel, bauxite, totalxp, shipslots):
+    def __init__(self, did, fuel, ammo, steel, bauxite, totalxp, shipslots, rings):
         self.did = int(did)
         self.fuel = int(fuel)
         self.ammo = int(ammo)
@@ -24,6 +24,7 @@ class User:
         self.bauxite = int(bauxite)
         self.totalxp = int(totalxp)
         self.shipslots = int(shipslots)
+        self.rings = int(rings)
 
     def set_col(self, col, val):
         query = "UPDATE Users SET %s=? WHERE DiscordID=?" % col
@@ -53,6 +54,11 @@ class User:
         self.bauxite += delta
         self.bauxite = max(0, min(RESOURCE_CAP, self.bauxite))
         self.set_col("RBauxite", self.bauxite)
+
+    def use_ring(self):
+        self.rings -= 1
+        self.rings = max(0, self.rings)
+        self.set_col("Rings", self.rings)
 
     def has_enough(self, f, a, s, b):
         return self.fuel >= f and self.ammo >= a and self.steel >= s and self.bauxite >= b
@@ -164,7 +170,7 @@ def get_user(discordid):
         cur.close()
         conn.commit()
         return get_user(discordid)
-    return User(row[0], row[1], row[2], row[3], row[4], row[6], row[7])
+    return User(row[0], row[1], row[2], row[3], row[4], row[6], row[7], row[15])
 
 def get_user_inventory(discordid):
     table_name = USER_TABLE_NAME % discordid
