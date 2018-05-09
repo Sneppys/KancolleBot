@@ -5,6 +5,7 @@ import os
 import base64
 import ship_stats
 import userinfo
+import math
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 DB_PATH = os.path.join(DIR_PATH, "../kantaidb.db") # hidden to git
@@ -235,6 +236,52 @@ def generate_ship_card(bot, ship_instance):
             display_name = "%s#%s" % (owner.name, owner.discriminator)
             break
     draw_squish_text(img, (550, 450), "Part of %s's fleet" % (display_name), font, 490, color=(25, 25, 25), outline=(175, 175, 175))
+
+    r = io.BytesIO(b'')
+    img.save(r, format="PNG")
+    return r
+
+
+def generate_sortie_card(sortie):
+    padding = 20
+    orig_size = sortie.map_size
+    img = Image.new(size=(orig_size[0] + padding * 2, orig_size[1] + padding * 2), mode="RGB", color=(255, 255, 255))
+
+    font = ImageFont.truetype("framd.ttf", 20)
+    draw = ImageDraw.Draw(img)
+    for pos, node in sortie.nodes:
+        pos = (pos[0] + padding, pos[1] + padding)
+        for r in node.routes:
+            for n_to in r.nodes_to:
+                node_to = sortie.nodes[n_to][0]
+                node_to = (node_to[0] + padding, node_to[1] + padding)
+                tri_w_s = 5
+                tri_w_e = 2
+                if (pos[0] == node_to[0]):
+                    tri_1 = (pos[0] - tri_w_s, pos[1])
+                    tri_2 = (pos[0] + tri_w_s, pos[1])
+                    tri_3 = (node_to[0] + tri_w_e, node_to[1])
+                    tri_4 = (node_to[0] - tri_w_e, node_to[1])
+                elif (pos[1] == node_to[1]):
+                    tri_1 = (pos[0], pos[1] + tri_w_s)
+                    tri_2 = (pos[0], pos[1] - tri_w_s)
+                    tri_3 = (node_to[0], node_to[1] + tri_w_e)
+                    tri_4 = (node_to[0], node_to[1] - tri_w_e)
+                else:
+                    rad = math.atan2(pos[1] - node_to[1], pos[0] - node_to[0])
+                    rad += math.pi / 2
+                    off_x = math.cos(rad)
+                    off_y = math.sin(rad)
+                    tri_1 = (pos[0] + tri_w_s * off_x, pos[1] + tri_w_s * off_y)
+                    tri_2 = (pos[0] - tri_w_s * off_x, pos[1] - tri_w_s * off_y)
+                    tri_3 = (node_to[0] + tri_w_e * off_x, node_to[1] + tri_w_e * off_y)
+                    tri_4 = (node_to[0] - tri_w_e * off_x, node_to[1] - tri_w_e * off_y)
+                draw.polygon([tri_1, tri_2, node_to], fill=(150, 150, 150), outline=(0, 0, 0))
+    for pos, node in sortie.nodes:
+        pos = (pos[0] + padding, pos[1] + padding)
+        cir_s = 12
+        ImageDraw.Draw(img).ellipse((pos[0] - cir_s, pos[1] - cir_s, pos[0] + cir_s, pos[1] + cir_s), fill=node.ntype.color)
+        draw_squish_text(img, pos, node.symbol(), font, 35, (255, 255, 255))
 
     r = io.BytesIO(b'')
     img.save(r, format="PNG")

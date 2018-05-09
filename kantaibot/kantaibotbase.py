@@ -12,6 +12,7 @@ import random
 import traceback
 import sys
 import fleet_training
+import sorties
 
 COMMAND_PREFIX = "bg!"
 
@@ -266,6 +267,12 @@ async def marry(ctx, shipid: int):
             await ctx.send("%s isn't ready for marriage yet." % (base.name))
     else:
         await ctx.send("Ship with ID %s not found in your inventory" % (shipid))
+
+@bot.command(help="Show the sortie map")
+async def map(ctx):
+    sortie = sorties.random_sortie()
+    image_file = imggen.generate_sortie_card(sortie)
+    await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()), filename="image.png"))
 
 def fleet_strings(inv, fleet):
     ship_ins = list(map(lambda x: [y for y in inv.inventory if y.invid == x].pop(), fleet.ships))
