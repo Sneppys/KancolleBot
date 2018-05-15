@@ -131,7 +131,7 @@ SHIP_SUFFIXES = {0: "", 1: "Kai", 2: "Kai Ni", 3: "A", 4: "Carrier",
                  5: "Carrier Kai", 6: "Carrier Kai Ni", 7: "zwei",
                  8: "drei", 9: "Kai Ni A", 10: "Kai Ni B",
                  11: "Kai Ni D", 12: "due", 13: "Kai Bo", 14: "два",
-                 15: "Mk.II", 16: "Mk.II Mod.2", 17: "B Kai"}
+                 15: "Mk.II", 16: "Mk.II Mod.2", 17: "B Kai", 18: "D Kai"}
 
 # What the fuck, KC3? (Maps KC3's internal 'remodel level' to the actual value)
 

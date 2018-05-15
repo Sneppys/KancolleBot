@@ -31,6 +31,8 @@ def get_image_from_db(shipid, colname):
 small_ico_mask_img = os.path.join(DIR_PATH, "mask_small.png")
 small_ico_ring_img = os.path.join(DIR_PATH, "ring_icon.png")
 
+large_bg_map_img = os.path.join(DIR_PATH, "map_bg.jpg")
+
 INVENTORY_SIZE = (800, 400)
 INV_SLOTS = (7, 12)
 LOWER_PADDING = 40
@@ -244,44 +246,73 @@ def generate_ship_card(bot, ship_instance):
 
 def generate_sortie_card(sortie):
     padding = 20
-    orig_size = sortie.map_size
-    img = Image.new(size=(orig_size[0] + padding * 2, orig_size[1] + padding * 2), mode="RGB", color=(255, 255, 255))
+    orig_w, orig_h = sortie.map_size
+    padding_s = padding * 2
+
+    size_info = padding
+    for pos, node in sortie.nodes:
+        if (len(node.routing_rules.routes) < 1):
+            continue
+        for connected in node.routing_rules.routes:
+            size_info += 22
+        size_info += 10
+
+    info_w, info_h = (0, size_info)
+    img = Image.new(size=(orig_w + padding_s + info_w, orig_h + padding_s + info_h), mode="RGB", color=(255, 255, 255))
+
+    bg = Image.open(large_bg_map_img)
+    bg = bg.resize((orig_w + padding_s, orig_h + padding_s), Image.LINEAR)
+    img.paste(bg, (0, 0))
 
     font = ImageFont.truetype("framd.ttf", 20)
     draw = ImageDraw.Draw(img)
     for pos, node in sortie.nodes:
         pos = (pos[0] + padding, pos[1] + padding)
-        for r in node.routes:
-            for n_to in r.nodes_to:
-                node_to = sortie.nodes[n_to][0]
-                node_to = (node_to[0] + padding, node_to[1] + padding)
-                tri_w_s = 5
-                tri_w_e = 2
-                if (pos[0] == node_to[0]):
-                    tri_1 = (pos[0] - tri_w_s, pos[1])
-                    tri_2 = (pos[0] + tri_w_s, pos[1])
-                    tri_3 = (node_to[0] + tri_w_e, node_to[1])
-                    tri_4 = (node_to[0] - tri_w_e, node_to[1])
-                elif (pos[1] == node_to[1]):
-                    tri_1 = (pos[0], pos[1] + tri_w_s)
-                    tri_2 = (pos[0], pos[1] - tri_w_s)
-                    tri_3 = (node_to[0], node_to[1] + tri_w_e)
-                    tri_4 = (node_to[0], node_to[1] - tri_w_e)
-                else:
-                    rad = math.atan2(pos[1] - node_to[1], pos[0] - node_to[0])
-                    rad += math.pi / 2
-                    off_x = math.cos(rad)
-                    off_y = math.sin(rad)
-                    tri_1 = (pos[0] + tri_w_s * off_x, pos[1] + tri_w_s * off_y)
-                    tri_2 = (pos[0] - tri_w_s * off_x, pos[1] - tri_w_s * off_y)
-                    tri_3 = (node_to[0] + tri_w_e * off_x, node_to[1] + tri_w_e * off_y)
-                    tri_4 = (node_to[0] - tri_w_e * off_x, node_to[1] - tri_w_e * off_y)
-                draw.polygon([tri_1, tri_2, node_to], fill=(150, 150, 150), outline=(0, 0, 0))
+        for r in node.routing_rules.routes:
+            n_to = r.node_to
+            node_to = sortie.nodes[n_to][0]
+            node_to = (node_to[0] + padding, node_to[1] + padding)
+            tri_w_s = 5
+            tri_w_e = 2
+            if (pos[0] == node_to[0]):
+                tri_1 = (pos[0] - tri_w_s, pos[1])
+                tri_2 = (pos[0] + tri_w_s, pos[1])
+                tri_3 = (node_to[0] + tri_w_e, node_to[1])
+                tri_4 = (node_to[0] - tri_w_e, node_to[1])
+            elif (pos[1] == node_to[1]):
+                tri_1 = (pos[0], pos[1] + tri_w_s)
+                tri_2 = (pos[0], pos[1] - tri_w_s)
+                tri_3 = (node_to[0], node_to[1] + tri_w_e)
+                tri_4 = (node_to[0], node_to[1] - tri_w_e)
+            else:
+                rad = math.atan2(pos[1] - node_to[1], pos[0] - node_to[0])
+                rad += math.pi / 2
+                off_x = math.cos(rad)
+                off_y = math.sin(rad)
+                tri_1 = (pos[0] + tri_w_s * off_x, pos[1] + tri_w_s * off_y)
+                tri_2 = (pos[0] - tri_w_s * off_x, pos[1] - tri_w_s * off_y)
+                tri_3 = (node_to[0] + tri_w_e * off_x, node_to[1] + tri_w_e * off_y)
+                tri_4 = (node_to[0] - tri_w_e * off_x, node_to[1] - tri_w_e * off_y)
+            draw.polygon([tri_1, tri_2, node_to], fill=(142, 136, 255), outline=(0, 0, 0))
     for pos, node in sortie.nodes:
         pos = (pos[0] + padding, pos[1] + padding)
         cir_s = 12
         ImageDraw.Draw(img).ellipse((pos[0] - cir_s, pos[1] - cir_s, pos[0] + cir_s, pos[1] + cir_s), fill=node.ntype.color)
         draw_squish_text(img, pos, node.symbol(), font, 35, (255, 255, 255))
+
+    draw = ImageDraw.Draw(img)
+    draw.rectangle((0, orig_h + padding_s, orig_w + padding_s + info_w, orig_h + padding_s + info_h), fill=(50, 50, 50))
+
+    txt_x = padding
+    txt_y = orig_h + padding_s + 10
+    for pos, node in sortie.nodes:
+        if (len(node.routing_rules.routes) < 1):
+            continue
+        format = node.routing_rules.format()
+        for connected in reversed(node.routing_rules.routes):
+            draw.text((txt_x, txt_y), "%s => %s : %s" % (node.symbol(), sortie.nodes[connected.node_to][1].symbol(), format[connected.node_to]), font=font, fill=(255, 255, 255))
+            txt_y += 22
+        txt_y += 10
 
     r = io.BytesIO(b'')
     img.save(r, format="PNG")
