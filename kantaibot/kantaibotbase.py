@@ -32,13 +32,12 @@ async def show(ctx, shipid: int):
         ship_instance = ins.pop()
         base = ship_instance.base()
         image_file = imggen.generate_ship_card(ctx.bot, ship_instance)
-        quote_line = "Idle" if ship_instance.level < 100 else "Married"
         quotes_check = []
         if (ship_instance.level >= 100):
             quotes_check.append('Married')
         quotes_check.extend(['Idle', 'Poke(1)', 'Poke(2)', 'Poke(3)'])
         for q in quotes_check:
-            quote = base.get_quote(quote_line)
+            quote = base.get_quote(q)
             if (quote != '???'):
                 break
         await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()), filename="image.png"), content="%s: *%s*" % (base.name, quote))
