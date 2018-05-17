@@ -58,7 +58,7 @@ class TrainingDifficulty():
     def resource_costs(self, fleet):
         base = (10, 15, 0, 0)
         ins = fleet.get_ship_instances()
-        mult = sum([ship_stats.get_ship_type(x.base().shiptype).resource_mult for x in ins])
+        mult = sum([ship_stats.get_ship_type(x.base().stype).resource_mult for x in ins])
         return tuple(map(lambda x: x * mult, base))
 
 TrainingDifficulty("Simple", 1, 1, 350, 50)
