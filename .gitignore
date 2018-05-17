@@ -5,4 +5,5 @@
 /tools/debug.log
 /cgs/
 usersdb.db
+data.json
 *.pyc
