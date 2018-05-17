@@ -123,10 +123,10 @@ def get_craft_from_resources(owner, f, a, s, b):
 
     all_types = []
     for recipe, _m in final_map:
-        all_types.extend(map(lambda x: x.tid, recipe.types))
+        all_types.extend(map(lambda x: x.discriminator, recipe.types))
     conn = get_connection()
     cur = conn.cursor()
-    applicable_ships = set(ship_stats.get_all_ships(cur=cur, allow_remodel=False, only_craftable=True, type_ids=all_types))
+    applicable_ships = set(ship_stats.get_all_ships(allow_remodel=False, only_craftable=True, type_discrims=all_types))
 
     # shiptype boost
     for recipe, weight_bonus in weight_bonus_shiptype:

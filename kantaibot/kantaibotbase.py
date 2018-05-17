@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 import asyncio
 import imggen
-import ship_stats
 import io
 import drophandler
 import craftinghandler
@@ -13,6 +12,7 @@ import traceback
 import sys
 import fleet_training
 import sorties
+import ship_stats
 
 COMMAND_PREFIX = "bg!"
 
@@ -29,8 +29,10 @@ async def show(ctx, shipid: int):
     ins = [x for x in inv.inventory if x.invid == shipid]
     if (len(ins) > 0):
         ship_instance = ins.pop()
+        base = ship_instance.base()
         image_file = imggen.generate_ship_card(ctx.bot, ship_instance)
-        await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()), filename="image.png"))
+        quote_line = "Idle" if ship_instance.level < 100 else "Married"
+        await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()), filename="image.png"), content="%s: *%s*" % (base.name, base.get_quote(quote_line)))
     else:
         await ctx.send("Ship with ID %s not found in your inventory" % (shipid))
 
@@ -50,7 +52,7 @@ async def drop(ctx):
             inv.add_to_inventory(drop)
 
             await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()),
-                    filename="image.png"), content="%s got a%s %s! (%s)" % (ctx.author.display_name, 'n' if ship_name[0].lower() in 'aeiou' else '', ship_name, rarity[ship_rarity - 1]))
+                    filename="image.png"), content="%s got %s! (%s)\n\n%s: *%s*" % (ctx.author.display_name, ship_name, rarity[ship_rarity - 1], ship_name, ship_base.get_quote('Intro')))
         else:
             hrs = cd // 3600
             min = cd // 60 % 60
@@ -85,7 +87,7 @@ async def craft(ctx, fuel: int, ammo: int, steel: int, bauxite: int):
                     image_file = imggen.generate_ship_card(ctx.bot, craft)
                     ship_base = craft.base()
                     await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()),
-                            filename="image.png"), content="%s just crafted %s!" % (ctx.author.display_name, ship_base.name))
+                            filename="image.png"), content="%s just crafted %s!\n\n%s: *%s*" % (ctx.author.display_name, ship_base.name, ship_base.name, ship_base.get_quote('Intro')))
                 else:
                     await ctx.send("Not enough resources!")
             else:
@@ -133,12 +135,12 @@ async def remodel(ctx, shipid: int):
         base = ship_instance.base()
         if (base.remodels_into):
             if (ship_instance.is_remodel_ready()):
-                old_name = base.name
                 ship_instance.sid = base.remodels_into
-                new_name = ship_instance.base().name
+                base = ship_instance.base()
+                new_name = base.name
                 userinfo.update_ship_sid(ship_instance)
                 image_file = imggen.generate_ship_card(ctx.bot, ship_instance)
-                await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()), filename="image.png"), content="*%s* is now *%s!*" % (old_name, new_name))
+                await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()), filename="image.png"), content="%s: *%s*" % (new_name, base.get_quote('Equip(3)')))
             else:
                 await ctx.send("%s isn't ready for a remodel just yet." % (base.name))
         else:
@@ -260,7 +262,7 @@ async def marry(ctx, shipid: int):
                 ship_name = base.name
                 image_file = imggen.generate_ship_card(ctx.bot, ship_instance)
                 await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()), filename="image.png"),
-                               content="*Slipping a ring on %s's finger, you form an everlasting bond*" % (ship_name))
+                               content="%s: *%s*" % (ship_name, base.get_quote('Wedding')))
             else:
                 await ctx.send("You don't have any more rings.")
         else:
@@ -269,14 +271,15 @@ async def marry(ctx, shipid: int):
         await ctx.send("Ship with ID %s not found in your inventory" % (shipid))
 
 @bot.command(help="Show the sortie map")
-async def map(ctx):
+@commands.is_owner()
+async def newmap(ctx):
     sortie = sorties.random_sortie()
     image_file = imggen.generate_sortie_card(sortie)
     await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()), filename="image.png"))
 
-def fleet_strings(inv, fleet):
-    ship_ins = list(map(lambda x: [y for y in inv.inventory if y.invid == x].pop(), fleet.ships))
-    ship_data = list(map(lambda x: "*%s* (L%02d, %s)" % (x.base().name, x.level, ship_stats.get_ship_type(x.base().shiptype).discriminator), ship_ins))
+def fleet_strings(inv, fleet_s):
+    ship_ins = list(map(lambda x: [y for y in inv.inventory if y.invid == x].pop(), fleet_s.ships))
+    ship_data = list(map(lambda x: "*%s* (L%02d, %s)" % (x.base().name, x.level, x.base().stype), ship_ins))
     return ship_data
 
 @bot.group(help="View your fleet (Subcommands for fleet management)")
@@ -310,7 +313,7 @@ async def f_add(ctx, shipid: int):
                 if (len(fleet.ships) < 6):
                     fleet.ships.append(shipid)
                     fleet.update()
-                    await ctx.send("Added %s to fleet %s" % (ins.base().name, 1))
+                    await ctx.send("Added %s to fleet %s\n\n%s: *%s*" % (ins.base().name, 1, ins.base().name, ins.base().get_quote('Join')))
                 else:
                     await ctx.send("Fleet %s is full!" % (1))
             else:
@@ -345,10 +348,11 @@ async def f_set(ctx, flagship: int, ship2: int=-1, ship3: int=-1, ship4: int=-1,
         fleet.update()
         strs = fleet_strings(inv, fleet)
         flag = strs.pop(0)
+        line_base = [x for x in inv.inventory if x.invid == sids[0]].pop().base()
         if (len(strs) > 0):
-            await ctx.send("Set fleet %s to: Flagship %s, ships %s" % (1, flag, ", ".join(strs)))
+            await ctx.send("Set fleet %s to: Flagship %s, ships %s\n\n%s: *%s*" % (1, flag, ", ".join(strs), line_base.name, line_base.get_quote('Join')))
         else:
-            await ctx.send("Set fleet %s to: Flagship %s" % (1, flag))
+            await ctx.send("Set fleet %s to: Flagship %s\n\n%s: *%s*" % (1, flag, line_base.name, line_base.get_quote('Join')))
 
 @fleet.command(help="Set a fleet's flagship", name="flag", usage="[Flagship]", aliases=["flagship"])
 async def f_flag(ctx, flagship: int):
@@ -380,7 +384,7 @@ async def f_flag(ctx, flagship: int):
             fleet.ships = [flagship,]
         if (not cancel):
             fleet.update()
-            await ctx.send("Set %s as the flagship of fleet %s" % (ins.base().name, 1))
+            await ctx.send("Set %s as the flagship of fleet %s\n\n%s: *%s*" % (ins.base().name, 1, ins.base().name, ins.base().get_quote('Join')))
     else:
         await ctx.send("Ship with ID %s not found in your inventory" % (flagship))
 
@@ -414,7 +418,9 @@ async def f_clear(ctx):
 async def on_ready():
     print("Ready on {} ({})".format(bot.user.name, bot.user.id))
     await bot.change_presence(activity=discord.Game(type=0, name='with cute ships | %shelp' % COMMAND_PREFIX))
-
+    print("Loading ships...")
+    ship_stats.get_all_ships() # add ships to cache
+    print("Done!")
 
 BONUS_COOLDOWN = 60
 

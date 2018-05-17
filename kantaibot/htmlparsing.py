@@ -23,9 +23,7 @@ class KCImageParser(HTMLParser):
         pass
 
 
-def get_images_on_wiki_page(ship_name):
-    ship_name = ship_name.replace(' ', '_')
-    url = "http://kancolle.wikia.com/wiki/%s" % ship_name
+def get_images_on_wiki_page(url):
     print("Sending request to '%s'" % url)
     page = urllib.request.urlopen(url)
 
@@ -33,5 +31,6 @@ def get_images_on_wiki_page(ship_name):
     page_data = page.read().decode('utf-8')
     parser.feed(str(page_data))
     parser.close()
+    print("Request success")
 
     return parser.imgs

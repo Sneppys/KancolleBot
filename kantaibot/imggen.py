@@ -1,6 +1,5 @@
 from PIL import Image, ImageDraw, ImageFont
 import io
-import sqlite3
 import os
 import base64
 import ship_stats
@@ -8,25 +7,6 @@ import userinfo
 import math
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
-DB_PATH = os.path.join(DIR_PATH, "../kantaidb.db") # hidden to git
-
-def get_connection():
-    return sqlite3.connect(DB_PATH)
-
-def get_image_from_db(shipid, colname):
-    query = "SELECT %s FROM ShipBase WHERE ShipID=?;" % (colname)
-    args = (shipid,)
-    conn = get_connection()
-    cur = conn.cursor()
-    cur.execute(query, args)
-    img_enc = cur.fetchone()[0]
-    cur.close()
-    conn.commit()
-
-    dec = base64.b64decode(img_enc)
-    buf = io.BytesIO(dec)
-    img = Image.open(buf).convert('RGBA')
-    return img
 
 small_ico_mask_img = os.path.join(DIR_PATH, "mask_small.png")
 small_ico_ring_img = os.path.join(DIR_PATH, "ring_icon.png")
@@ -99,7 +79,7 @@ def generate_inventory_screen(member, page, only_dupes=False):
                 draw_squish_text(img, (x + cw // 8, y + ch // 2), num_str, font, cw // 4 - 4, color=(0, 0, 0))
 
                 font = ImageFont.truetype("trebucbd.ttf", ch * 3 // 4)
-                lvl_str = "L%02d %s" % (ship.level, ship_stats.get_ship_type(base.shiptype).discriminator)
+                lvl_str = "L%02d %s" % (ship.level, base.stype)
                 if (ship.level > 99):
                     ring = Image.open(small_ico_ring_img)
                     ring = ring.resize((ch - 4, ch - 4))
@@ -111,7 +91,7 @@ def generate_inventory_screen(member, page, only_dupes=False):
                 cir_start_x = x + cw // 4
                 cir_start_y = y + 2
                 use_damaged = False # TODO check if use damaged image
-                ico = get_image_from_db(base.sid, "Image_Small_Damaged" if use_damaged else "Image_Small")
+                ico = base.get_cg(ico=True, dmg=use_damaged)
                 ico = ico.resize((ch - 4, ch - 4), Image.BILINEAR)
                 border_color = ship_stats.RARITY_COLORS[base.rarity - 1]
                 draw.ellipse((cir_start_x - 1, cir_start_y - 1, cir_start_x + ch - 3, cir_start_y + ch - 3), fill=border_color)
@@ -195,8 +175,8 @@ def generate_ship_card(bot, ship_instance):
 
     use_damaged = False # TODO make this check if ship is damaged
 
-    img_full = get_image_from_db(ship_instance.sid, "Image_Damaged" if use_damaged else "Image_Default")
-    img_small = get_image_from_db(ship_instance.sid, "Image_Small_Damaged" if use_damaged else "Image_Small")
+    img_full = base.get_cg(dmg=use_damaged)
+    img_small = base.get_cg(ico=True, dmg=use_damaged)
 
     draw = ImageDraw.Draw(img)
 
@@ -219,14 +199,15 @@ def generate_ship_card(bot, ship_instance):
     font_small = ImageFont.truetype("framd.ttf", 40)
     font_tiny = ImageFont.truetype("framd.ttf", 30)
     draw_squish_text(img, (550, 220), base.name, font, 490, color=(0, 0, 0), outline=(125, 125, 125))
-    draw_squish_text(img, (550, 300), "Level %s | %s" % (ship_instance.level,
-        ship_stats.get_ship_type(base.shiptype).full_name), font_small, 490, color=(0, 0, 0), outline=(125, 125, 125))
+    draw_squish_text(img, (550, 270), "%s %s" % (base.class_name,
+        ship_stats.get_ship_type(base.stype).full_name), font_tiny, 490, color=(0, 0, 0), outline=(125, 125, 125))
+    draw_squish_text(img, (550, 310), "Level %s" % (ship_instance.level), font_small, 490, color=(0, 0, 0), outline=(125, 125, 125))
     if ((ship_instance.level > 1 or ship_instance.exp > 0) and ship_instance.level != 99 and ship_instance.level < 165):
         exp = ship_instance.exp
         req = ship_instance.exp_req()
-        draw_squish_text(img, (550, 350), "%s / %s EXP (%.02f%%)" % (exp, req, 100.0 * exp / req), font_tiny, 490, color=(0, 0, 0), outline=(125, 125, 125))
+        draw_squish_text(img, (550, 360), "%s / %s EXP (%.02f%%)" % (exp, req, 100.0 * exp / req), font_tiny, 490, color=(0, 0, 0), outline=(125, 125, 125))
     if (base.remodels_into):
-        r_base = ship_stats.ShipInstance.new(base.remodels_into, None).base()
+        r_base = ship_stats.ShipBase.instance(base.remodels_into)
         draw_squish_text(img, (550, 400), "Next Remodel: %s (Level %s)" % (r_base.name, base.remodel_level), font_tiny, 490, color=(0, 0, 0), outline=(125, 125, 125))
 
     font = ImageFont.truetype("framdit.ttf", 35)
