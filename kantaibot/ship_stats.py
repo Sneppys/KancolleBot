@@ -183,6 +183,8 @@ class ShipBase:
         name = self.name
         if (self.sid in _IMG_EXCLUSIONS):
             name = _IMG_EXCLUSIONS[self.sid]
+        if ('-Kou' in name):
+            name = name.replace('-Kou', ' Carrier')
         n = "%s %s %03d Full" % (self.stype, name, self.kc3id)
         d = n + " Damaged"
         return (n, d)
