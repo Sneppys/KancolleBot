@@ -33,7 +33,8 @@ BaseRecipe(300, 30, 150, 400, 2, [ship_stats.TYPE_LIGHT_CARRIER,
 BaseRecipe(250, 30, 200, 30, 3, [ship_stats.TYPE_DESTROYER,
                                  ship_stats.TYPE_LIGHT_CRUISER,
                                  ship_stats.TYPE_HEAVY_CRUISER,
-                                 ship_stats.TYPE_SUBMARINE])
+                                 ship_stats.TYPE_SUBMARINE,
+                                 ship_stats.TYPE_TRAINING_CRUISER])
 BaseRecipe(270, 30, 330, 130, 2, [ship_stats.TYPE_HEAVY_CRUISER,
                                   ship_stats.TYPE_SUBMARINE,
                                   ship_stats.TYPE_DESTROYER])
