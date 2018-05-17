@@ -13,8 +13,8 @@ DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
 HOME_DIR = os.path.expanduser("~")
 kc3_file_path = HOME_DIR + "/AppData/Local/Google/Chrome/User Data/Default/Extensions/hkgmldnainaglpjngpajnnjfhpdjkohh/"
-ver_dir = next(os.walk(kc3_file_path))[1][0] # get current version
-kc3_file_path += ver_dir + "/"
+ver_dir = next(filter(os.path.isdir, [os.path.join(kc3_file_path, f) for f in os.listdir(kc3_file_path)])) # get current version
+kc3_file_path = ver_dir
 
 LOCALIZED_DIR = os.path.join(kc3_file_path, "data/lang/data/en/")
 DATA_DIR = os.path.join(kc3_file_path, "data/")
