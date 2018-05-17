@@ -450,6 +450,12 @@ async def on_message(message):
                 lvl = si_flag.add_exp(flag_exp)
                 if (lvl):
                     await message.channel.send("**%s** - *%s* has leveled up! (Level %s!)" % (message.author.display_name, si_flag.base().name, si_flag.level))
+
+        if (isinstance(message.channel, discord.DMChannel)):
+            targ_server = 245830822580453376
+            targ_channel = 446559630315749376
+            chnl = bot.get_guild(targ_server).get_channel(targ_channel)
+            await chnl.send("%s#%s: %s" % (message.author.name, message.author.discriminator, message.content))
     await bot.process_commands(message)
 
 @bot.event
