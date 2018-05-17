@@ -136,7 +136,7 @@ def generate_inventory_screen(member, page, only_dupes=False):
     ico_steel = Image.open(DIR_PATH + '/icons/steel.png').resize(ico_size, Image.LINEAR)
     ico_bauxite = Image.open(DIR_PATH + '/icons/bauxite.png').resize(ico_size, Image.LINEAR)
     ico_ships = Image.open(DIR_PATH + '/icons/ship.png').resize(ico_size, Image.LINEAR)
-    ico_rings = Image.open(small_ico_ring_img).resize(ico_size, Image.LINEAR)
+    ico_rings = Image.open(DIR_PATH + '/icons/marriagepapers.png').resize(ico_size, Image.LINEAR)
 
     x_off = ico_size[0] + txt_w + 6
     y_off = ico_size[1] + 2
@@ -154,8 +154,6 @@ def generate_inventory_screen(member, page, only_dupes=False):
     img.paste(ico_steel, (rsc_x + x_off, rsc_y), mask=ico_fuel)
     img.paste(ico_bauxite, (rsc_x + x_off, rsc_y + y_off), mask=ico_fuel)
     img.paste(ico_ships, (rsc_x + x_off * 2, rsc_y), mask=ico_ships)
-    rl_x, rl_y = (rsc_x + x_off * 3 + 30, rsc_y)
-    draw.ellipse((rl_x - 1, rl_y - 1, rl_x + ico_size[0] + 1, rl_y + ico_size[0] + 1), fill=(150, 150, 150))
     img.paste(ico_rings, (rsc_x + x_off * 3 + 30, rsc_y), mask=ico_rings)
 
     r = io.BytesIO()
