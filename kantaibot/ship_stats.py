@@ -193,18 +193,30 @@ class ShipBase:
         img_urls = self.get_image_urls()
         names = list(self.get_remote_img_names())
         base = self
-        while (names[0] not in img_urls):
+        found = False
+        while (not found):
+            for k, v in img_urls.items():
+                if (k.lower() == names[0].lower()):
+                    norm = v
+                    found = True
+                    break
             if (not base.remodels_from):
                 break
             base = ShipBase.instance(base.remodels_from)
             names[0] = base.get_remote_img_names()[0]
         base = self
-        while (names[1] not in img_urls):
+        found = False
+        while (not found):
+            for k, v in img_urls.items():
+                if (k.lower() == names[1].lower()):
+                    dmg = v
+                    found = True
+                    break
             if (not base.remodels_from):
                 break
             base = ShipBase.instance(base.remodels_from)
-            names[1] = base.get_remote_img_names()[1]
-        return (img_urls[names[0]], img_urls[names[1]])
+            names[0] = base.get_remote_img_names()[1]
+        return (norm, dmg)
 
     def get_ico_path(self):
         ico_n = os.path.join(kc3_file_path, './assets/img/ships/%s.png' % (self.kc3id))
