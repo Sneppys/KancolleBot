@@ -1,6 +1,6 @@
 /__pycache__/
 /kantaibot/__pycache__/
-/kantaibot/botinfo.txt
+/kantaibot/botinfo.json
 /tools/__pycache__/
 /tools/debug.log
 /cgs/

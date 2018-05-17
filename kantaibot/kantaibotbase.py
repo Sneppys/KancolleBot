@@ -13,6 +13,7 @@ import sys
 import fleet_training
 import sorties
 import ship_stats
+import json
 
 COMMAND_PREFIX = "bg!"
 
@@ -451,6 +452,7 @@ async def on_command_error(ctx, err):
 
 if __name__ == '__main__':
     DIR_PATH = os.path.dirname(os.path.realpath(__file__))
-    f = open(os.path.join(DIR_PATH, "botinfo.txt") , 'r')
-    key = f.readline()[:-1] # yeah, no, I'm keeping this secret
+    with open(os.path.join(DIR_PATH, "botinfo.json"), 'r') as bi:
+        info = json.load(bi)
+        key = info['key'] # yeah, no, I'm keeping this secret
     bot.run(key)

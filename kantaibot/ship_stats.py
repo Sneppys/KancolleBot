@@ -11,7 +11,10 @@ from PIL import Image
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
-HOME_DIR = os.path.expanduser("~")
+#HOME_DIR = os.path.expanduser("~")
+with open(os.path.join(DIR_PATH, 'botinfo.json'), 'r') as bi:
+    info = json.load(bi)
+    HOME_DIR = info['home_dir']
 kc3_file_path = HOME_DIR + "/AppData/Local/Google/Chrome/User Data/Default/Extensions/hkgmldnainaglpjngpajnnjfhpdjkohh/"
 ver_dir = next(filter(os.path.isdir, [os.path.join(kc3_file_path, f) for f in os.listdir(kc3_file_path)])) # get current version
 kc3_file_path = ver_dir
