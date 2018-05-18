@@ -471,7 +471,7 @@ async def birthday_task():
     for c in clist:
         channels.append(bot.get_channel(int(c)))
     print ("Starting task, current date is %s/%s" % (day, mon))
-    startup_send = True
+    startup_send = False
     while not bot.is_closed():
         current_time = datetime.datetime.now(tz=datetime.timezone.utc)
         cur_day = current_time.day
