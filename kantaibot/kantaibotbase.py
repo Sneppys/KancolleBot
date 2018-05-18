@@ -14,6 +14,7 @@ import fleet_training
 import sorties
 import ship_stats
 import json
+import datetime
 
 COMMAND_PREFIX = "bg!"
 
@@ -458,6 +459,51 @@ async def on_message(message):
             await chnl.send("%s#%s: %s" % (message.author.name, message.author.discriminator, message.content))
     await bot.process_commands(message)
 
+async def birthday_task():
+    await bot.wait_until_ready()
+    channels = []
+    current_time = datetime.datetime.now(tz=datetime.timezone.utc)
+    day = current_time.minute
+    mon = current_time.hour
+    with open(os.path.join(DIR_PATH, "birthdays.json"), 'r') as jd:
+        bdays = json.load(jd)
+    clist = bdays['_send_channels']
+    for c in clist:
+        channels.append(bot.get_channel(int(c)))
+    print ("Starting task, current date is %s/%s" % (day, mon))
+    startup_send = True
+    while not bot.is_closed():
+        current_time = datetime.datetime.now(tz=datetime.timezone.utc)
+        cur_day = current_time.day
+        cur_mon = current_time.month
+        if (cur_day != day or cur_mon != mon or startup_send):
+            startup_send = False
+            print("Time changed, setting stored to %s/%s" % (cur_day, cur_mon))
+            day = cur_day
+            mon = cur_mon
+
+            ship_names = []
+            look = "%02d-%02d" % (day, mon)
+            for k, v in bdays.items():
+                if (v == look):
+                    ship_names.append(k)
+            if (len(ship_names) > 0):
+                ships = ship_stats.get_all_ships(allow_remodel=False)
+                msg = "Happy birthday, %s!"
+                for sn in ship_names:
+                    for sb in ships:
+                        if (sb.name.lower() == sn.lower()):
+                            bio = imggen.get_birthday_image(sb)
+                            file = discord.File(io.BytesIO(bio.getvalue()), filename="image.png")
+                            for c in channels:
+                                await c.send(file=file, content=(msg % sb.name))
+            else:
+                msg = "There are no birthdays today. (%s/%s)" % (day, mon)
+                for c in channels:
+                    await c.send(content=msg)
+        await asyncio.sleep(10)
+
+
 @bot.event
 async def on_command_error(ctx, err):
     await ctx.send("Error: %s" % str(err))
@@ -468,4 +514,5 @@ if __name__ == '__main__':
     with open(os.path.join(DIR_PATH, "botinfo.json"), 'r') as bi:
         info = json.load(bi)
         key = info['key'] # yeah, no, I'm keeping this secret
+    bot.loop.create_task(birthday_task())
     bot.run(key)

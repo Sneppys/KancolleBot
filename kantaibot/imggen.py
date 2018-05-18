@@ -223,6 +223,32 @@ def generate_ship_card(bot, ship_instance):
     return r
 
 
+def get_birthday_image(base):
+    img_size = (600, 800)
+    img = Image.new(size=img_size, mode="RGB", color=(0, 0, 0))
+
+    backdrop = ship_stats.get_rarity_backdrop(8, img_size)
+    img.paste(backdrop)
+
+    cg = base.get_cg()
+    draw = ImageDraw.Draw(img)
+
+    img_w, img_h = cg.size
+    targ_height = img_size[1] * 3 // 4
+    targ_width = int(targ_height * (img_w / img_h))
+    x_offset = int((img_size[0] / 2) - (targ_width / 2))
+    cg = cg.resize((targ_width, targ_height), Image.BICUBIC)
+    img.paste(cg, (x_offset, 0), mask=cg)
+
+    font = ImageFont.truetype("impact.ttf", 60)
+    draw_squish_text(img, (img_size[0] // 2, targ_height + 20), "Happy Birthday", font, img_size[0] - 20, color=(0, 0, 0), outline=(125, 125, 125))
+    font_2 = ImageFont.truetype("impact.ttf", 80)
+    draw_squish_text(img, (img_size[0] // 2, targ_height + 110), "%s!" % (base.name), font_2, img_size[0] - 20, color=(0, 0, 0), outline=(125, 125, 125))
+
+    r = io.BytesIO(b'')
+    img.save(r, format="PNG")
+    return r
+
 def generate_sortie_card(sortie):
     padding = 20
     orig_w, orig_h = sortie.map_size
@@ -314,7 +340,6 @@ def draw_squish_text(img, position, text, font, max_width, color=(255, 255, 255)
         paste_y = position[1]
     img.paste(text_img, (paste_x, paste_y), mask=text_img)
     del draw
-
 
 def draw_centered_text(draw, position, text, font, color=(255, 255, 255), outline=(255, 255, 255),
                        center_height=True, repeat=1):
