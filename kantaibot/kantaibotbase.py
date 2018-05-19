@@ -542,9 +542,10 @@ async def on_command(ctx):
     logging.info("[Command] %s (%s) executed a command: %s" % (str(ctx.author), ctx.author.id, ctx.message.content))
 
 if __name__ == '__main__':
-    logging.basicConfig(filename='../output.log', format='[%(asctime)s] [%(levelname)s] %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.INFO)
-    logging.info("Starting bot...")
     DIR_PATH = os.path.dirname(os.path.realpath(__file__))
+    logpath = os.path.realpath(os.path.join(DIR_PATH, '../output.log'))
+    logging.basicConfig(filename=logpath, format='[%(asctime)s] [%(levelname)s] %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.INFO)
+    logging.info("Starting bot...")
     with open(os.path.join(DIR_PATH, "botinfo.json"), 'r') as bi:
         info = json.load(bi)
         key = info['key'] # yeah, no, I'm keeping this secret
