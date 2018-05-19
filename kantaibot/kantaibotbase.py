@@ -302,7 +302,7 @@ async def add_ship(ctx, user: discord.Member, ship_name):
     inv = userinfo.get_user_inventory(user.id)
     targ = None
     for ship in ship_stats.get_all_ships():
-        if (ship.name.lower() == ship_name.lower() or ship_name.lower().replace(' ', '_') == ship_name.lower()):
+        if (ship.name.lower() == ship_name.lower() or ship.name.lower().replace(' ', '_') == ship_name.lower()):
             targ = ship
             break
     if (targ):
