@@ -223,7 +223,7 @@ async def train(ctx, dif: int=-1):
                             embed.set_footer(text="Used %g fuel, %g ammo, %g steel, %g bauxite" % rsc)
 
                             await ctx.send(embed=embed)
-                            logging.info("[Training] %s (%s) completed training level %s with rank %s" % (str(ctx.author), did, dif_targ.name, rank))
+                            logging.info("[Training] %s (%s) completed training level %s with rank %s" % (str(ctx.author), did, dif_targ.name, rank.symbol))
                         else:
                             hrs = cd // 3600
                             min = cd // 60 % 60
@@ -294,6 +294,24 @@ async def newmap(ctx):
     sortie = sorties.random_sortie()
     image_file = imggen.generate_sortie_card(sortie)
     await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()), filename="image.png"))
+
+
+@bot.command(help="Admin command to add a ship to someone's inventory")
+@commands.is_owner()
+async def add_ship(ctx, user: discord.Member, ship_name):
+    inv = userinfo.get_user_inventory(user.id)
+    targ = None
+    for ship in ship_stats.get_all_ships():
+        if (ship.name.lower() == ship_name.lower() or ship_name.lower().replace(' ', '_') == ship_name.lower()):
+            targ = ship
+            break
+    if (targ):
+        ins = ship_stats.ShipInstance.new(targ.sid, user.id)
+        inv.add_to_inventory(ins)
+        await ctx.send("Added %s to %s's inventory" % (targ.name, str(user)))
+        logging.info("[ADMIN_ADD] Added %s to %s's (%s) inventory" % (targ.name, str(user), user.id))
+    else:
+        await ctx.send("Cannot find ship '%s'" % ship_name)
 
 def fleet_strings(inv, fleet_s):
     ship_ins = list(map(lambda x: [y for y in inv.inventory if y.invid == x].pop(), fleet_s.ships))
@@ -529,7 +547,7 @@ async def backup_task():
         db_loc = str(os.path.realpath(DB_PATH))
         logging.info("Creating backup %s..." % backup_file)
         subprocess.check_output(['sqlite3', db_loc, '.backup %s' % backup_file])
-        await asyncio.sleep(3600)
+        await asyncio.sleep(3600 * 2)
 
 
 @bot.event
