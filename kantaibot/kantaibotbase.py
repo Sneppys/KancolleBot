@@ -15,6 +15,8 @@ import sorties
 import ship_stats
 import json
 import datetime
+import subprocess
+import logging
 
 COMMAND_PREFIX = "bg!"
 
@@ -62,6 +64,7 @@ async def drop(ctx):
 
             await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()),
                     filename="image.png"), content="%s got %s! (%s)\n\n%s: *%s*" % (ctx.author.display_name, ship_name, rarity[ship_rarity - 1], ship_name, ship_base.get_quote('Intro')))
+            logging.info("[Drop] %s (%s) received %s from a drop" % (str(ctx.author), did, ship_name))
         else:
             hrs = cd // 3600
             min = cd // 60 % 60
@@ -97,6 +100,7 @@ async def craft(ctx, fuel: int, ammo: int, steel: int, bauxite: int):
                     ship_base = craft.base()
                     await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()),
                             filename="image.png"), content="%s just crafted %s!\n\n%s: *%s*" % (ctx.author.display_name, ship_base.name, ship_base.name, ship_base.get_quote('Intro')))
+                    logging.info("[Craft] %s (%s) crafted %s using recipe %s/%s/%s/%s" % (str(ctx.author), did, ship_base.name, fuel, ammo, steel, bauxite))
                 else:
                     await ctx.send("Not enough resources!")
             else:
@@ -124,6 +128,7 @@ async def scrap(ctx, shipid: int):
         user.mod_bauxite(random.randrange(5) + 3)
         inv.remove_from_inventory(shipid)
         await ctx.send("Scrapped %s... <:roosad:434916104268152853>" % base.name)
+        logging.info("[Scrap] %s (%s) scrapped ship %s with inv id %s" % (str(ctx.author), did, base.name, shipid))
     else:
         await ctx.send("Ship with ID %s not found in your inventory" % (shipid))
 
@@ -144,12 +149,14 @@ async def remodel(ctx, shipid: int):
         base = ship_instance.base()
         if (base.remodels_into):
             if (ship_instance.is_remodel_ready()):
+                old_name = base.name
                 ship_instance.sid = base.remodels_into
                 base = ship_instance.base()
                 new_name = base.name
                 userinfo.update_ship_sid(ship_instance)
                 image_file = imggen.generate_ship_card(ctx.bot, ship_instance)
                 await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()), filename="image.png"), content="%s: *%s*" % (new_name, base.get_quote('Equip(3)')))
+                logging.info("[Remodel] %s (%s) remodelled %s into %s" % (str(ctx.author), did, old_name, new_name))
             else:
                 await ctx.send("%s isn't ready for a remodel just yet." % (base.name))
         else:
@@ -216,6 +223,7 @@ async def train(ctx, dif: int=-1):
                             embed.set_footer(text="Used %g fuel, %g ammo, %g steel, %g bauxite" % rsc)
 
                             await ctx.send(embed=embed)
+                            logging.info("[Training] %s (%s) completed training level %s with rank %s" % (str(ctx.author), did, dif_targ.name, rank))
                         else:
                             hrs = cd // 3600
                             min = cd // 60 % 60
@@ -272,6 +280,7 @@ async def marry(ctx, shipid: int):
                 image_file = imggen.generate_ship_card(ctx.bot, ship_instance)
                 await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()), filename="image.png"),
                                content="%s: *%s*" % (ship_name, base.get_quote('Wedding')))
+                logging.info("[Marriage] %s (%s) married their %s" % (str(ctx.author), did, ship_name))
             else:
                 await ctx.send("You don't have any more rings.")
         else:
@@ -427,9 +436,9 @@ async def f_clear(ctx):
 async def on_ready():
     print("Ready on {} ({})".format(bot.user.name, bot.user.id))
     await bot.change_presence(activity=discord.Game(type=0, name='with cute ships | %shelp' % COMMAND_PREFIX))
-    print("Loading ships...")
+    logging.info("Loading ships...")
     ship_stats.get_all_ships() # add ships to cache
-    print("Done!")
+    logging.info("Ships loaded")
 
 BONUS_COOLDOWN = 60
 
@@ -456,21 +465,23 @@ async def on_message(message):
             targ_server = 245830822580453376
             targ_channel = 446559630315749376
             chnl = bot.get_guild(targ_server).get_channel(targ_channel)
-            await chnl.send("%s#%s: %s" % (message.author.name, message.author.discriminator, message.content))
+            msg = "%s#%s: %s" % (message.author.name, message.author.discriminator, message.content)
+            await chnl.send(msg)
+            logging.info("[PM] %s" % msg)
     await bot.process_commands(message)
 
 async def birthday_task():
     await bot.wait_until_ready()
     channels = []
     current_time = datetime.datetime.now(tz=datetime.timezone.utc)
-    day = current_time.minute
-    mon = current_time.hour
+    day = current_time.day
+    mon = current_time.month
     with open(os.path.join(DIR_PATH, "birthdays.json"), 'r') as jd:
         bdays = json.load(jd)
     clist = bdays['_send_channels']
     for c in clist:
         channels.append(bot.get_channel(int(c)))
-    print ("Starting task, current date is %s/%s" % (day, mon))
+    logging.info("Starting birthday task, current date is %s/%s" % (day, mon))
     startup_send = False
     while not bot.is_closed():
         current_time = datetime.datetime.now(tz=datetime.timezone.utc)
@@ -478,7 +489,7 @@ async def birthday_task():
         cur_mon = current_time.month
         if (cur_day != day or cur_mon != mon or startup_send):
             startup_send = False
-            print("Time changed, setting stored to %s/%s" % (cur_day, cur_mon))
+            logging.info("Time changed, setting stored to %s/%s" % (cur_day, cur_mon))
             day = cur_day
             mon = cur_mon
 
@@ -501,7 +512,24 @@ async def birthday_task():
                 msg = "There are no birthdays today. (%s/%s)" % (day, mon)
                 for c in channels:
                     await c.send(content=msg)
-        await asyncio.sleep(10)
+        await asyncio.sleep(30)
+
+
+async def backup_task():
+    await bot.wait_until_ready()
+    DIR_PATH = os.path.dirname(os.path.realpath(__file__))
+    DB_PATH = os.path.join(DIR_PATH, "../usersdb.db") # hidden to git
+    BACKUP_DIR = os.path.join(DIR_PATH, "../db_backup/")
+    await asyncio.sleep(20)
+    while not bot.is_closed():
+        now = datetime.datetime.now()
+        backup_name = "usersdb-backup-%s.db" % (now.strftime("%y-%m-%d.%H-%M-%S"))
+        backup_file = os.path.join(BACKUP_DIR, backup_name)
+        backup_file = str(os.path.realpath(backup_file)).replace('\\', '\\\\')
+        db_loc = str(os.path.realpath(DB_PATH))
+        logging.info("Creating backup %s..." % backup_file)
+        subprocess.check_output(['sqlite3', db_loc, '.backup %s' % backup_file])
+        await asyncio.sleep(3600)
 
 
 @bot.event
@@ -509,10 +537,19 @@ async def on_command_error(ctx, err):
     await ctx.send("Error: %s" % str(err))
     traceback.print_exception(type(err), err, err.__traceback__, file=sys.stderr)
 
+@bot.event
+async def on_command(ctx):
+    logging.info("[Command] %s (%s) executed a command: %s" % (str(ctx.author), ctx.author.id, ctx.message.content))
+
 if __name__ == '__main__':
+    logging.basicConfig(filename='../output.log', format='[%(asctime)s] [%(levelname)s] %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.INFO)
+    logging.info("Starting bot...")
     DIR_PATH = os.path.dirname(os.path.realpath(__file__))
     with open(os.path.join(DIR_PATH, "botinfo.json"), 'r') as bi:
         info = json.load(bi)
         key = info['key'] # yeah, no, I'm keeping this secret
+    logging.info("Creating async tasks...")
     bot.loop.create_task(birthday_task())
+    bot.loop.create_task(backup_task())
+    logging.info("Running bot...")
     bot.run(key)
