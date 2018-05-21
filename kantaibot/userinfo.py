@@ -78,6 +78,11 @@ class UserInventory:
         conn = get_connection()
         cur = conn.cursor()
         cur.execute(query, args)
+
+        query = "SELECT ID FROM %s;" % table_name
+        cur.execute(query)
+        id = cur.fetchall()[-1]
+        ship_instance.invid = id
         cur.close()
         conn.commit()
         self.append(ship_instance)
