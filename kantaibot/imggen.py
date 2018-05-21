@@ -174,7 +174,6 @@ def generate_ship_card(bot, ship_instance):
     use_damaged = False # TODO make this check if ship is damaged
 
     img_full = base.get_cg(dmg=use_damaged)
-    img_small = base.get_cg(ico=True, dmg=use_damaged)
 
     draw = ImageDraw.Draw(img)
 
@@ -182,31 +181,31 @@ def generate_ship_card(bot, ship_instance):
     targ_width = int(500 * (img_w / img_h))
     x_offset = int(200 - (targ_width / 2))
     img_full = img_full.resize((targ_width, 500), Image.BICUBIC)
-    img_small = img_small.resize((80, 80), Image.LINEAR)
-    msk = Image.open(small_ico_mask_img)
-    msk = msk.resize(img_small.size)
     img.paste(img_full, (x_offset, 0), mask=img_full)
-    img.paste(img_small, (710, 10), mask=msk)
 
     if (ship_instance.level > 99):
         ring = Image.open(small_ico_ring_img)
         ring = ring.resize((60, 60))
-        img.paste(ring, (640, 20), mask=ring)
+        img.paste(ring, (20, 20), mask=ring)
 
     font = ImageFont.truetype("impact.ttf", 70)
     font_small = ImageFont.truetype("framd.ttf", 40)
     font_tiny = ImageFont.truetype("framd.ttf", 30)
-    draw_squish_text(img, (550, 220), base.name, font, 490, color=(0, 0, 0), outline=(125, 125, 125))
-    draw_squish_text(img, (550, 270), "%s %s" % (base.class_name,
+    draw_squish_text(img, (550, 170), base.name, font, 490, color=(0, 0, 0), outline=(125, 125, 125))
+    draw_squish_text(img, (550, 230), "%s %s" % (base.class_name,
         ship_stats.get_ship_type(base.stype).full_name), font_tiny, 490, color=(0, 0, 0), outline=(125, 125, 125))
-    draw_squish_text(img, (550, 310), "Level %s" % (ship_instance.level), font_small, 490, color=(0, 0, 0), outline=(125, 125, 125))
+    draw_squish_text(img, (550, 300), "Level %s" % (ship_instance.level), font_small, 490, color=(0, 0, 0), outline=(125, 125, 125))
     if ((ship_instance.level > 1 or ship_instance.exp > 0) and ship_instance.level != 99 and ship_instance.level < 165):
         exp = ship_instance.exp
         req = ship_instance.exp_req()
-        draw_squish_text(img, (550, 360), "%s / %s EXP (%.02f%%)" % (exp, req, 100.0 * exp / req), font_tiny, 490, color=(0, 0, 0), outline=(125, 125, 125))
+        draw_squish_text(img, (550, 340), "%s / %s EXP (%.02f%%)" % (exp, req, 100.0 * exp / req), font_tiny, 490, color=(0, 0, 0), outline=(125, 125, 125))
     if (base.remodels_into):
         r_base = ship_stats.ShipBase.instance(base.remodels_into)
         draw_squish_text(img, (550, 400), "Next Remodel: %s (Level %s)" % (r_base.name, base.remodel_level), font_tiny, 490, color=(0, 0, 0), outline=(125, 125, 125))
+
+    font_corner = ImageFont.truetype("framd.ttf", 60)
+    draw_squish_text(img, (640, 40), base.stype, font_corner, 60, color=(0, 0, 0), outline=(125, 125, 125))
+    draw_squish_text(img, (730, 40), "ID%04d" % ship_instance.invid, font_corner, 100, color=(0, 0, 0), outline=(125, 125, 125))
 
     font = ImageFont.truetype("framdit.ttf", 35)
 
@@ -216,7 +215,7 @@ def generate_ship_card(bot, ship_instance):
         if (owner):
             display_name = "%s#%s" % (owner.name, owner.discriminator)
             break
-    draw_squish_text(img, (550, 450), "Part of %s's fleet" % (display_name), font, 490, color=(25, 25, 25), outline=(175, 175, 175))
+    draw_squish_text(img, (550, 475), "Part of %s's fleet" % (display_name), font, 490, color=(25, 25, 25), outline=(175, 175, 175))
 
     r = io.BytesIO(b'')
     img.save(r, format="PNG")

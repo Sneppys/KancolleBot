@@ -325,14 +325,19 @@ async def fleet(ctx):
         fleet = userinfo.UserFleet.instance(1, did)
         inv = userinfo.get_user_inventory(did)
         if(len(fleet.ships) > 0):
-            strs = fleet_strings(inv, fleet)
             ins = fleet.get_ship_instances()
             fleet_lvl = sum(x.level for x in ins) // len(ins)
-            flag = strs.pop(0)
-            if (len(strs) > 0):
-                await ctx.send("Fleet %s: Flagship %s, ships %s [Fleet Level %s]" % (1, flag, ", ".join(strs), fleet_lvl))
-            else:
-                await ctx.send("Fleet %s: Flagship %s [Fleet Level %s]" % (1, flag, fleet_lvl))
+
+            embed = discord.Embed(title="%s's Fleet" % str(ctx.author))
+            embed.color = 524358
+            flag = ins.pop(0)
+            embed.add_field(name="Ship", value=flag.base().stype + " " + flag.base().name + " (*)\n" + "\n".join([x.base().stype + " " + x.base().name for x in ins]), inline=True)
+            ins.insert(0, flag)
+            embed.add_field(name="Level", value="\n".join([str(x.level) for x in ins]), inline=True)
+            embed.add_field(name="ID", value="\n".join(["%04d" % (x.invid) for x in ins]), inline=True)
+            embed.set_footer(text="Fleet level %d" % fleet_lvl)
+
+            await ctx.send(embed=embed)
         else:
             await ctx.send("Fleet %s is empty!" % (1))
 
