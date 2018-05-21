@@ -54,13 +54,13 @@ async def drop(ctx):
         cd = userinfo.check_cooldown(did, 'Last_Drop', DROP_COOLDOWN)
         if (cd == 0):
             drop = drophandler.get_random_drop(did, only_droppable=True)
-            image_file = imggen.generate_ship_card(ctx.bot, drop)
             ship_base = drop.base()
             ship_name = ship_base.name
             ship_rarity = ship_base.rarity
             rarity = ['Common', 'Common', 'Common', 'Uncommon', 'Rare', 'Very Rare', 'Extremely Rare', '**Legendary**']
             inv = userinfo.get_user_inventory(did)
             inv.add_to_inventory(drop)
+            image_file = imggen.generate_ship_card(ctx.bot, drop)
 
             await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()),
                     filename="image.png"), content="%s got %s! (%s)\n\n%s: *%s*" % (ctx.author.display_name, ship_name, rarity[ship_rarity - 1], ship_name, ship_base.get_quote('Intro')))
