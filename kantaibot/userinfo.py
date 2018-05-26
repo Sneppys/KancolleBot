@@ -82,7 +82,7 @@ class UserInventory:
         query = "SELECT ID FROM %s;" % table_name
         cur.execute(query)
         id = cur.fetchall()[-1]
-        ship_instance.invid = id
+        ship_instance.invid = id[0]
         cur.close()
         conn.commit()
         self.append(ship_instance)
