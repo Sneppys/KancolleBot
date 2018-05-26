@@ -1,5 +1,6 @@
 import random
 import geomutils
+import ship_stats
 
 def random_sortie():
     difficulty = random.randrange(1, 4)
@@ -214,7 +215,7 @@ class RoutingRules:
         self.rtype = 0
 
     def routes_to(self, nid):
-        return nid in [x.node_to for x in self.routes]
+        return nid in (x.node_to for x in self.routes)
 
     def generate_random(self, difficulty, exclusions=[]):
         if (len(self.routes) < 2):
@@ -243,6 +244,7 @@ class RoutingRules:
 
                 if (self.rtype == 2):
                     route_limit.routing_weight = 0
+                    route_limit.routing_weight_if_true = 50
             else:
                 self.rtype = 0
         else:
@@ -277,8 +279,23 @@ class RoutingRules:
         return nodes
 
     def get_route_to(self, fleet):
-        # TODO given fleet comp, determine route to go to
-        pass
+        weights = {x: x.routing_weight for x in self.routes}
+        if (self.rtype in (1, 2)):
+            is_true = [r for r in self.routes if r.matches_rule(fleet)]
+            if (len(is_true) > 0):
+                for r in self.routes:
+                    if (r not in is_true):
+                        weights[r] = r.routing_weight_if_other_true
+                    else:
+                        weights[r] = r.routing_weight_if_true
+
+        total_weight = sum(weights.values())
+        targ = random.randrange(total_weight)
+        for k, v in weights.items():
+            targ -= v
+            if (targ < 0):
+                return k
+        return None
 
 class Route:
     def __init__(self, node_to):
@@ -286,6 +303,7 @@ class Route:
         self.routing_type = None
         self.routing_value = 0
         self.routing_weight = 50 # default routing weight
+        self.routing_weight_if_true = 50 # routing weight if the condition is true
         self.routing_weight_if_other_true = 50 # routing weight if other condition in node is true
 
     def set_type(self, routing_type):
@@ -298,6 +316,11 @@ class Route:
             return self.routing_type.format(self.routing_value)
         else:
             return None
+
+    def matches_rule(self, fleet):
+        if (self.routing_type):
+            return self.routing_type.valid_func(fleet, self.routing_value)
+        return False
 
 class RoutingType:
     def __init__(self, tid, infostring, infostring_zero=None, min=0, max=0, weight=5, excludes=[]):
@@ -313,6 +336,9 @@ class RoutingType:
         self.excludes = excludes
         ROUTING_TYPES.append(self)
 
+    def valid_func(self, fleet, val):
+        return False
+
     def format(self, val):
         if (val == 0):
             return self.infostring_zero
@@ -320,20 +346,47 @@ class RoutingType:
             return self.infostring.format(val)
         return self.infostring
 
+def count(fleet, types):
+    c = 0
+    typediscrims = [x.discriminator for x in types]
+    for si in fleet:
+        if (si.base().stype in typediscrims):
+            c += 1
+    return c
+
+ROUTING_INFO_MIN = "Fleet contains at least {0} %s"
+class RoutingTypeMinimum(RoutingType):
+    def __init__(self, tid, info, stypes, min=1, max=2, weight=5, excludes=[]):
+        super().__init__(tid, ROUTING_INFO_MIN % info, min=min, max=max, weight=weight, excludes=excludes)
+        self.stypes = stypes
+
+    def valid_func(self, fleet, val):
+        return count(fleet, self.stypes) >= val
+
+ROUTING_INFO_MAX = "Amount of %s ≤{0}"
+ROUTING_INFO_MAX_ZERO = "Fleet does not contain any %s"
+class RoutingTypeMaximum(RoutingType):
+    def __init__(self, tid, info, stypes, min=0, max=2, weight=5, excludes=[]):
+        super().__init__(tid, ROUTING_INFO_MAX % info, infostring_zero=ROUTING_INFO_MAX_ZERO % info, min=min, max=max, weight=weight, excludes=excludes)
+        self.stypes = stypes
+
+    def valid_func(self, fleet, val):
+        return count(fleet, self.stypes) <= val
+
 ROUTING_TYPES = []
-ROUTING_TYPE_LIMIT_DESTROYER = RoutingType(10, "Amount of DD/DE ≤{0}", infostring_zero="Fleet does not contain DD/DE", max=3, excludes=[11, 20])
-ROUTING_TYPE_LIMIT_DD = RoutingType(11, "Amount of DD ≤{0}", infostring_zero="Fleet does not contain DD", max=3, excludes=[10, 20])
-ROUTING_TYPE_LIMIT_CARRIER = RoutingType(12, "Amount of carriers ≤{0}", infostring_zero="Fleet does not contain carriers", max=2, excludes=[13, 21, 22])
-ROUTING_TYPE_LIMIT_CV = RoutingType(13, "Amount of CV(B) ≤{0}", infostring_zero="Fleet does not contain CV(B)", max=2, excludes=[12, 21, 22])
-ROUTING_TYPE_LIMIT_BATTLESHIP = RoutingType(14, "Amount of (F)BB(V) ≤{0}", infostring_zero="Fleet does not contain (F)BB(V)", max=2, excludes=[15, 16, 22, 23, 24])
-ROUTING_TYPE_LIMIT_BBV = RoutingType(15, "Amount of BBV ≤{0}", infostring_zero="Fleet does not contain BBV", max=2, weight=3, excludes=[14, 16, 22, 23, 24])
-ROUTING_TYPE_LIMIT_FBB = RoutingType(16, "Amount of FBB ≤{0}", infostring_zero="Fleet does not contain FBB", max=2, weight=2, excludes=[13, 14, 22, 23, 24])
-ROUTING_TYPE_LIMIT_SUBMARINE = RoutingType(17, "Amount of SS(V) ≤{0}", infostring_zero="Fleet does not contain SS(V)", max=2, excludes=[26])
-ROUTING_TYPE_LIMIT_CA = RoutingType(18, "Amount of CA(V) ≤{0}", infostring_zero="Fleet contains no CA(V)", max=2, excludes=[25])
-ROUTING_TYPE_MIN_DESTROYER = RoutingType(20, "Fleet contains ≥{0} DD/DE", min=1, max=2, excludes=[10, 11])
-ROUTING_TYPE_MIN_CARRIER = RoutingType(21, "Fleet contains ≥{0} carriers", min=1, max=2, excludes=[12, 13])
-ROUTING_TYPE_MIN_BATTLESHIP = RoutingType(22, "Fleet contains ≥{0} (F)BB(V)", min=1, max=2, excludes=[23, 24, 14, 15, 16])
-ROUTING_TYPE_MIN_FBB = RoutingType(23, "Fleet contains ≥{0} FBB", min=1, max=2, weight=2, excludes=[22, 24, 14, 15, 16])
-ROUTING_TYPE_MIN_BBV = RoutingType(24, "Fleet contains ≥{0} BBV", min=1, max=2, weight=3, excludes=[22, 23, 14, 15, 16])
-ROUTING_TYPE_MIN_CA = RoutingType(25, "Fleet contains ≥{0} CA(V)", min=1, max=2, excludes=[18])
-ROUTING_TYPE_MIN_SUBMARINE = RoutingType(26, "Fleet contains ≥{0} SS(V)", min=1, max=2, excludes=[17])
+ROUTING_TYPE_LIMIT_DESTROYER = RoutingTypeMaximum(10, "DD/DE", [ship_stats.TYPE_DESTROYER, ship_stats.TYPE_DESTROYER_ESCORT], max=3, excludes=[20])
+ROUTING_TYPE_LIMIT_DD = RoutingTypeMaximum(11, "DD", [ship_stats.TYPE_DESTROYER], max=3, excludes=[20])
+ROUTING_TYPE_LIMIT_CARRIER = RoutingTypeMaximum(12, "carriers", [ship_stats.TYPE_CARRIER, ship_stats.TYPE_ARMORED_CARRIER, ship_stats.TYPE_LIGHT_CARRIER], max=2, excludes=[21, 22])
+ROUTING_TYPE_LIMIT_CV = RoutingTypeMaximum(13, "CV(B)", [ship_stats.TYPE_CARRIER, ship_stats.TYPE_ARMORED_CARRIER], max=2, excludes=[21, 22])
+ROUTING_TYPE_LIMIT_BATTLESHIP = RoutingTypeMaximum(14, "(F)BB(V)", [ship_stats.TYPE_BATTLESHIP, ship_stats.TYPE_FAST_BATTLESHIP, ship_stats.TYPE_AVIATION_BATTLESHIP], max=2, excludes=[22, 23, 24])
+ROUTING_TYPE_LIMIT_BBV = RoutingTypeMaximum(15, "BBV", [ship_stats.TYPE_AVIATION_BATTLESHIP], max=2, weight=3, excludes=[22, 23, 24])
+ROUTING_TYPE_LIMIT_FBB = RoutingTypeMaximum(16, "FBB", [ship_stats.TYPE_FAST_BATTLESHIP], max=2, weight=2, excludes=[22, 23, 24])
+ROUTING_TYPE_LIMIT_SUBMARINE = RoutingTypeMaximum(17, "SS(V)", [ship_stats.TYPE_SUBMARINE, ship_stats.TYPE_AIRCRAFT_CARRYING_SUBMARINE], max=2, excludes=[26])
+ROUTING_TYPE_LIMIT_CA = RoutingTypeMaximum(18, "CA(V)", [ship_stats.TYPE_HEAVY_CRUISER, ship_stats.TYPE_AVIATION_CRUISER], max=2, excludes=[25])
+ROUTING_TYPE_MIN_DESTROYER = RoutingTypeMinimum(20, "DD/DE", [ship_stats.TYPE_DESTROYER, ship_stats.TYPE_DESTROYER_ESCORT], min=1, max=2, excludes=[10, 11])
+ROUTING_TYPE_MIN_CARRIER = RoutingTypeMinimum(21, "carriers", [ship_stats.TYPE_CARRIER, ship_stats.TYPE_ARMORED_CARRIER, ship_stats.TYPE_LIGHT_CARRIER], min=1, max=2, excludes=[12, 13])
+ROUTING_TYPE_MIN_BATTLESHIP = RoutingTypeMinimum(22, "(F)BB(V)", [ship_stats.TYPE_BATTLESHIP, ship_stats.TYPE_FAST_BATTLESHIP, ship_stats.TYPE_AVIATION_BATTLESHIP], min=1, max=2, excludes=[14, 15, 16])
+ROUTING_TYPE_MIN_FBB = RoutingTypeMinimum(23, "FBB", [ship_stats.TYPE_FAST_BATTLESHIP], min=1, max=2, weight=2, excludes=[14, 15, 16])
+ROUTING_TYPE_MIN_BBV = RoutingTypeMinimum(24, "BBV", [ship_stats.TYPE_AVIATION_BATTLESHIP], min=1, max=2, weight=3, excludes=[14, 15, 16])
+ROUTING_TYPE_MIN_CA = RoutingTypeMinimum(25, "CA(V)", [ship_stats.TYPE_HEAVY_CRUISER, ship_stats.TYPE_AVIATION_CRUISER], min=1, max=2, excludes=[18])
+ROUTING_TYPE_MIN_SUBMARINE = RoutingTypeMinimum(26, "SS(V)", [ship_stats.TYPE_SUBMARINE, ship_stats.TYPE_AIRCRAFT_CARRYING_SUBMARINE], min=1, max=2, excludes=[17])

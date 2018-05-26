@@ -217,7 +217,7 @@ class ShipBase:
             if (not base.remodels_from):
                 break
             base = ShipBase.instance(base.remodels_from)
-            names[0] = base.get_remote_img_names()[1]
+            names[1] = base.get_remote_img_names()[1]
         return (norm, dmg)
 
     def get_ico_path(self):

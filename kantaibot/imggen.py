@@ -204,8 +204,7 @@ def generate_ship_card(bot, ship_instance):
         draw_squish_text(img, (550, 400), "Next Remodel: %s (Level %s)" % (r_base.name, base.remodel_level), font_tiny, 490, color=(0, 0, 0), outline=(125, 125, 125))
 
     font_corner = ImageFont.truetype("framd.ttf", 60)
-    draw_squish_text(img, (640, 40), base.stype, font_corner, 60, color=(0, 0, 0), outline=(125, 125, 125))
-    draw_squish_text(img, (730, 40), "ID%04d" % ship_instance.invid, font_corner, 100, color=(0, 0, 0), outline=(125, 125, 125))
+    draw_squish_text(img, (630, 40), "%s-%04d" % (base.stype, ship_instance.invid), font_corner, 160, color=(0, 0, 0), outline=(125, 125, 125))
 
     font = ImageFont.truetype("framdit.ttf", 35)
 
