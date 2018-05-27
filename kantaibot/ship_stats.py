@@ -1,7 +1,5 @@
-import sqlite3
+"""Handles information about ships."""
 import os
-import ship_stats
-import sqlutils
 import userinfo
 import json
 import htmlparsing
@@ -11,12 +9,16 @@ from PIL import Image
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
-#HOME_DIR = os.path.expanduser("~")
+# HOME_DIR = os.path.expanduser("~")
 with open(os.path.join(DIR_PATH, 'botinfo.json'), 'r') as bi:
     info = json.load(bi)
     HOME_DIR = info['home_dir']
-kc3_file_path = HOME_DIR + "/AppData/Local/Google/Chrome/User Data/Default/Extensions/hkgmldnainaglpjngpajnnjfhpdjkohh/"
-ver_dir = next(filter(os.path.isdir, [os.path.join(kc3_file_path, f) for f in os.listdir(kc3_file_path)])) # get current version
+kc3_file_path = HOME_DIR + ("/AppData/Local/Google/Chrome/"
+                            "User Data/Default/Extensions/"
+                            "hkgmldnainaglpjngpajnnjfhpdjkohh/")
+# get current version
+ver_dir = next(filter(os.path.isdir, [os.path.join(kc3_file_path, f)
+                                      for f in os.listdir(kc3_file_path)]))
 kc3_file_path = ver_dir
 
 LOCALIZED_DIR = os.path.join(kc3_file_path, "data/lang/data/en/")
@@ -29,7 +31,9 @@ WHOCALLSTHEFLEET_DB = DATA_DIR + "WhoCallsTheFleet_ships.nedb"
 _json_cache = {}
 _wctf_cache = None
 
+
 def get_row(condition):
+    """Return the first JSON row of the WCTF database matching a function."""
     global _wctf_cache
     if(not _wctf_cache):
         with open(WHOCALLSTHEFLEET_DB, 'r', encoding='utf-8') as nedb:
@@ -37,13 +41,19 @@ def get_row(condition):
     row_gen = (x for x in _wctf_cache)
     return next(x for x in row_gen if condition(x))
 
+
 def get_kc3_id(shipid):
+    """Convert a ship id to the corresponding kc3 id."""
     return get_row(lambda l: l['no'] == shipid)['id']
 
+
 def get_ship_id(kc3id):
+    """Convert a kc3 id to the corresponding ship id."""
     return get_row(lambda l: l['id'] == kc3id)['no']
 
+
 def read_json(filepath):
+    """Return the JSON inside of the given JSON file."""
     if (filepath in _json_cache):
         return _json_cache[filepath]
     with open(filepath, 'r', encoding='utf-8') as fileinfo:
@@ -51,23 +61,58 @@ def read_json(filepath):
         _json_cache[filepath] = data
         return data
 
+
 def read_localized(filename):
+    """Return the JSON of the kc3 localization file."""
     return read_json(LOCALIZED_DIR + filename)
 
+
 def read_data(filename):
+    """Return the JSON of a kc3 data file."""
     return read_json(DATA_DIR + filename)
 
+
 def get_master_entry(shipid):
+    """Get the JSON entry in the local ship data file of the specified ship."""
     data = read_json(MASTER_DATA)
     kc3id = get_kc3_id(shipid)
     return data['ship'][str(kc3id)]
 
+
 _sbase_cache = {}
 _imgurl_cache = {}
 
-# Base class for a certain ship, as in database
+
 class ShipBase:
-    def __init__(self, sid, kc3id, name, class_name, rarity, stype, quotes, remodels_from, remodels_into, remodel_level):
+    """The base type of a ship, including its shared information."""
+
+    def __init__(self, sid, kc3id, name, class_name, rarity, stype, quotes,
+                 remodels_from, remodels_into, remodel_level):
+        """Initialize the ship base.
+
+        Parameters
+        ----------
+        sid : int
+            The ship id of the ship.
+        kc3id : int
+            The kc3 id of the ship.
+        name : str
+            The english name of the ship.
+        class_name : str
+            The english name of the ship's class.
+        rarity : int
+            An integer, 1-8 inclusive, of the ship's rarity.
+        stype : str
+            The discriminator for the ship's type.
+        quotes : dict
+            The JSON data of the quotes of this ships.
+        remodels_from : int
+            The ship id of the previous remodel, None if none exists.
+        remodels_into : int
+            The ship id of the ship this remodels into, None of none exists.
+        remodel_level : int
+            The level this ship needs to remodel into the next ship.
+        """
         self.sid = sid
         self.kc3id = kc3id
         self.name = name
@@ -80,6 +125,7 @@ class ShipBase:
         self.remodel_level = remodel_level
 
     def instance(shipid):
+        """Get an instance of ShipBase for the given ship id."""
         if (shipid in _sbase_cache):
             return _sbase_cache[shipid]
 
@@ -107,7 +153,8 @@ class ShipBase:
             en = affix['ctype'][jp]
             class_jp = class_jp.replace(jp, en)
         if (class_jp == "Amphibious Assault Ship"):
-            class_jp = "Hei Class" # Amphibious Assault Ship Amphibious Assault Ship
+            # Amphibious Assault Ship Amphibious Assault Ship
+            class_jp = "Hei Class"
 
         quotedata = read_localized('quotes.json')
         if (str(kc3id) in quotedata):
@@ -131,11 +178,13 @@ class ShipBase:
             if ('prev' in rmdl):
                 r_from = get_ship_id(rmdl['prev'])
 
-        ins = ShipBase(shipid, kc3id, name, class_jp, rarity, stype_discrim, quotes, r_from, r_into, r_level)
+        ins = ShipBase(shipid, kc3id, name, class_jp, rarity, stype_discrim,
+                       quotes, r_from, r_into, r_level)
         _sbase_cache[shipid] = ins
         return ins
 
     def get_quote(self, key):
+        """Return a quote that the ship has, given its key."""
         if (key in self._quotes):
             e = self._quotes[key]
             if (type(e) is dict):
@@ -153,8 +202,8 @@ class ShipBase:
             pass
         return "???"
 
-    # track all remodel from until first version reached
     def get_first_base(self):
+        """Get the original base of this ship, before all remodels."""
         ship = self
         try:
             while (ship.remodels_from):
@@ -166,12 +215,20 @@ class ShipBase:
     # image management
 
     def get_wiki_link(self):
+        """Get the URL of the kancolle wiki page of this ship."""
         base = self.get_first_base()
-        row = get_row(lambda x: x['no'] == base.sid)
-        url = "http://kancolle.wikia.com/wiki/%s" % (base.name.replace(' ', '_').replace('.', '._')) # fucking sammy b
+        url = "http://kancolle.wikia.com/wiki/%s" % (
+            base.name.replace(' ', '_').replace('.', '._'))  # fucking sammy b
         return url
 
     def get_image_urls(self):
+        """Get all the images in the wiki page for the ship.
+
+        Returns
+        -------
+        dict
+            A dictionary, key being the name of the image, value being its URL.
+        """
         wiki = self.get_wiki_link()
         if (wiki in _imgurl_cache):
             return _imgurl_cache[wiki]
@@ -180,6 +237,13 @@ class ShipBase:
         return imgs
 
     def get_remote_img_names(self):
+        """Get the name of the images of this ship's CG art.
+
+        Returns
+        -------
+        tuple
+            A 2-tuple of the ship's normal cg name, and the damaged version.
+        """
         name = self.name
         if (self.sid in _IMG_EXCLUSIONS):
             name = _IMG_EXCLUSIONS[self.sid]
@@ -190,6 +254,13 @@ class ShipBase:
         return (n, d)
 
     def get_main_cg(self):
+        """Return the URL of both cgs of the ship.
+
+        Returns
+        -------
+        tuple
+            A 2-tuple of the URLs of the images, normal then damaged
+        """
         norm = ""
         dmg = ""
         img_urls = self.get_image_urls()
@@ -221,17 +292,35 @@ class ShipBase:
         return (norm, dmg)
 
     def get_ico_path(self):
-        ico_n = os.path.join(kc3_file_path, './assets/img/ships/%s.png' % (self.kc3id))
-        ico_d = os.path.join(kc3_file_path, './assets/img/ships/%s_d.png' % (self.kc3id))
+        """Return the local kc3 icons for the normal and damaged states."""
+        ico_n = os.path.join(kc3_file_path,
+                             './assets/img/ships/%s.png' % (self.kc3id))
+        ico_d = os.path.join(kc3_file_path,
+                             './assets/img/ships/%s_d.png' % (self.kc3id))
         return (ico_n, ico_d)
 
     def get_local_paths(self):
+        """Return the local path for the full cgs, normal and damaged."""
         path_b = '../cgs/%s.png'
         path_n = os.path.join(DIR_PATH, path_b % (str(self.sid)))
         path_d = os.path.join(DIR_PATH, path_b % (str(self.sid) + "_d"))
         return (path_n, path_d)
 
     def get_cg(self, ico=False, dmg=False):
+        """Return the full CG of the ship.
+
+        Parameters
+        ----------
+        ico : bool
+            True if requesting the icon, False if requesting the full CG.
+        dmg : bool
+            True if requesting the damaged version, False if normal version.
+
+        Returns
+        -------
+        PIL.Image
+            The CG requested, in its native size
+        """
         if (ico):
             return Image.open(self.get_ico_path()[1 if dmg else 0])
         else:
@@ -246,13 +335,31 @@ class ShipBase:
                 imgdata.save(path)
                 return imgdata
 
-# Weird image naming inconsistencies
-_IMG_EXCLUSIONS = {147: 'Верный', 361: 'Samuel B. Roberts', 321: 'Kasuga Maru',
-                   161: 'Akitsu Maru'}
 
-# Instance of a ship, existing in a user's inventory
+# Weird image naming inconsistencies
+_IMG_EXCLUSIONS = {147: 'Верный', 361: 'Samuel B. Roberts',
+                   321: 'Kasuga Maru', 161: 'Akitsu Maru'}
+
+
 class ShipInstance:
+    """Represents an instance of a ship in a user's inventory."""
+
     def __init__(self, invid, sid, owner, level=1, exp=0):
+        """Initialize the ship instance.
+
+        Parameters
+        ----------
+        invid : int
+            The inventory slot this ship takes up.
+        sid : int
+            The ship id of the ship.
+        owner : int
+            The discord id of the owner of this ship.
+        level : int
+            The ship's level.
+        exp : int
+            The ship's current exp.
+        """
         self.invid = invid
         self.sid = sid
         self.owner = owner
@@ -260,13 +367,21 @@ class ShipInstance:
         self.exp = exp
 
     def base(self):
+        """Return the ShipBase corresponding to this ship."""
         return ShipBase.instance(self.sid)
 
     def new(sid, owner):
+        """Make a new ship with the given shipid owned by the given owner."""
         return ShipInstance(-1, sid, owner)
 
-    # add exp to ship instance, returns True for level up
     def add_exp(self, exp):
+        """Add EXP to the local copy of the ship.
+
+        Returns
+        -------
+        bool
+            Whether or not the ship levelled up in the process.
+        """
         req = self.exp_req()
         self.exp += exp
         lvl = False
@@ -275,13 +390,14 @@ class ShipInstance:
                 self.level += 1
                 self.exp -= req
                 lvl = True
-                self.add_exp(0) # level up as much as possible
+                self.add_exp(0)  # level up as much as possible
         else:
             self.exp = 0
         userinfo.update_ship_exp(self)
         return lvl
 
     def exp_req(self):
+        """Get the amount of EXP required for the next level."""
         if (self.level < 99):
             base = self.level
             if (self.level > 50):
@@ -292,7 +408,8 @@ class ShipInstance:
                 base += self.level - 70
             if (self.level > 80):
                 base += self.level - 80
-            add = {91: 5, 92: 15, 93: 25, 94: 45, 95: 95, 96: 195, 97: 295, 98: 580}
+            add = {91: 5, 92: 15, 93: 25, 94: 45, 95: 95, 96: 195, 97: 295,
+                   98: 580}
             for a, v in add.items():
                 if (self.level >= a):
                     base += v
@@ -319,24 +436,35 @@ class ShipInstance:
             if (self.level >= 150):
                 base += (lvl - 49) * 10
             upper_bases = {155: 2500, 156: 600, 157: 800, 158: 1100, 159: 1500,
-                           160: 2000, 161: 2600, 162: 3300, 163: 4100, 164: 5000}
+                           160: 2000, 161: 2600, 162: 3300, 163: 4100,
+                           164: 5000}
             if (self.level >= 155):
                 base = upper_bases[self.level]
         return base * 100
 
     def is_remodel_ready(self):
+        """Return true if the ship's level is high enough for a remodel."""
         base = self.base()
         if (not base.remodels_into):
             return False
         return self.level >= base.remodel_level
 
-# uses Rarity_colors.jpg to get a backdrop for different rarities
 
 RARITY_COLORS = [(150, 150, 150), (150, 150, 150), (150, 150, 150),
                  (0, 122, 103), (255, 255, 50), (0, 255, 84),
                  (250, 25, 25), (255, 0, 234)]
 
+
 def get_rarity_backdrop(rarity, size):
+    """Return an image of the corresponding rarity background.
+
+    Uses an 8-tiled image (Rarity_colors.jpg)
+
+    Returns
+    -------
+    PIL.Image
+        The image resized to the given size.
+    """
     rarity -= 1
     rimg = Image.open(DIR_PATH + '/Rarity_colors.jpg')
     w, h = rimg.size
@@ -360,17 +488,35 @@ def get_rarity_backdrop(rarity, size):
     rimg = rimg.resize(size, resample=Image.BICUBIC)
     return rimg
 
-# Ship Type - The type of the ship, using KC3's internal type ids (Sometimes dupes)
+
 ALL_SHIP_TYPES = []
+
+
 class ShipType:
+    """Type or class of a ship."""
+
     def __init__(self, discriminator, full_name, resource_mult=1.0):
+        """Initialize the ship type.
+
+        Parameters
+        ----------
+        discriminator : str
+            The shorthand discriminator for the ship type.
+        full_name : str
+            The full type name.
+        resource_mult : float
+            A multiplier for the amount of resources this ship type takes
+            compared to others.
+        """
         self.discriminator = discriminator
         self.full_name = full_name
         self.resource_mult = resource_mult
         ALL_SHIP_TYPES.append(self)
 
     def __str__(self):
+        """Return the full name of the ship."""
         return self.full_name
+
 
 TYPE_DESTROYER = ShipType("DD", "Destroyer", resource_mult=0.5)
 TYPE_LIGHT_CRUISER = ShipType("CL", "Light Cruiser", resource_mult=0.75)
@@ -379,27 +525,49 @@ TYPE_HEAVY_CRUISER = ShipType("CA", "Heavy Cruiser", resource_mult=1.5)
 TYPE_AVIATION_CRUISER = ShipType("CAV", "Aviation Cruiser", resource_mult=1.5)
 TYPE_BATTLESHIP = ShipType("BB", "Battleship", resource_mult=3.0)
 TYPE_FAST_BATTLESHIP = ShipType("FBB", "Fast Battleship", resource_mult=3.0)
-TYPE_AVIATION_BATTLESHIP = ShipType("BBV", "Aviation Battleship", resource_mult=3.0)
+TYPE_AVIATION_BATTLESHIP = ShipType("BBV", "Aviation Battleship",
+                                    resource_mult=3.0)
 TYPE_LIGHT_CARRIER = ShipType("CVL", "Light Carrier", resource_mult=1.25)
 TYPE_CARRIER = ShipType("CV", "Carrier", resource_mult=2)
 TYPE_ARMORED_CARRIER = ShipType("CVB", "Armored Carrier", resource_mult=2.25)
 TYPE_SEAPLANE_TENDER = ShipType("AV", "Seaplane Tender")
 TYPE_SUBMARINE = ShipType("SS", "Submarine", resource_mult=0.4)
-TYPE_AIRCRAFT_CARRYING_SUBMARINE = ShipType("SSV", "Aircraft Carrying Submarine", resource_mult=0.5)
+TYPE_AIRCRAFT_CARRYING_SUBMARINE = ShipType("SSV",
+                                            "Aircraft Carrying Submarine",
+                                            resource_mult=0.5)
 TYPE_AMPHIBIOUS_ASSAULT_SHIP = ShipType("LHA", "Amphibious Assault Ship")
 TYPE_REPAIR_SHIP = ShipType("AR", "Repair Ship")
 TYPE_SUBMARINE_TENDER = ShipType("AS", "Submarine Tender", resource_mult=0.5)
 TYPE_TRAINING_CRUISER = ShipType("CT", "Training Cruiser")
 TYPE_FLEET_OILER = ShipType("AO", "Fleet Oiler")
-TYPE_DESTROYER_ESCORT = ShipType("DE", "Coastal Defense Ship", resource_mult=0.5)
+TYPE_DESTROYER_ESCORT = ShipType("DE", "Coastal Defense Ship",
+                                 resource_mult=0.5)
+
 
 def get_ship_type(discrim):
+    """Return the ShipType object corresponding to the given discriminator."""
     r = [x for x in ALL_SHIP_TYPES if x.discriminator == discrim]
     if len(r) > 0:
         return r[0]
     return None
 
-def get_all_ships(allow_remodel=True, only_droppable=False, only_craftable=False, type_discrims=None):
+
+def get_all_ships(allow_remodel=True, only_droppable=False,
+                  only_craftable=False, type_discrims=None):
+    """Return every ship base.
+
+    Parameters
+    ----------
+    allow_remodel : bool
+        If False, only return ships with no past remodels.
+    only_droppable : bool
+        If True, only return ships that are able to be dropped.
+    only_craftable : bool
+        If True, only return ships that can be crafted.
+    type_discrims : list
+        A list (str) of discriminators of ship types,
+        if not None, only returns ships of the given types.
+    """
     ret = []
 
     exclusions = read_json(os.path.join(DIR_PATH, 'drop_exclusions.json'))
@@ -414,7 +582,7 @@ def get_all_ships(allow_remodel=True, only_droppable=False, only_craftable=False
             ins = ShipBase.instance(sid)
             if (ins.remodels_from and not allow_remodel):
                 continue
-            if (type_discrims and not ins.stype in type_discrims):
+            if (type_discrims and ins.stype not in type_discrims):
                 continue
             ret.append(ins)
 
