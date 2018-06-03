@@ -614,7 +614,7 @@ async def on_ready():
     ship_stats.get_all_ships()  # add ships to cache
     logging.info("Ships loaded")
 
-BONUS_COOLDOWN = 60
+BONUS_COOLDOWN = 120
 
 
 @bot.event
@@ -622,12 +622,21 @@ async def on_message(message):
     """Run when a user sends a message that the bot can see."""
     if (not message.author.bot):
         did = message.author.id
-        if (userinfo.check_cooldown(did, 'Last_Bonus', BONUS_COOLDOWN) == 0):
+
+        if (isinstance(message.channel, discord.DMChannel)):
+            targ_server = 245830822580453376
+            targ_channel = 446559630315749376
+            chnl = bot.get_guild(targ_server).get_channel(targ_channel)
+            msg = "%s#%s: %s" % (message.author.name,
+                                 message.author.discriminator, message.content)
+            await chnl.send(msg)
+            logging.info("[PM] %s" % msg)
+        elif (userinfo.check_cooldown(did, 'Last_Bonus', BONUS_COOLDOWN) == 0):
             user = userinfo.get_user(did)
-            user.mod_fuel(random.randrange(30) + 30)
-            user.mod_ammo(random.randrange(30) + 30)
-            user.mod_steel(random.randrange(30) + 30)
-            user.mod_bauxite(random.randrange(20) + 15)
+            user.mod_fuel(random.randrange(50) + 40)
+            user.mod_ammo(random.randrange(50) + 40)
+            user.mod_steel(random.randrange(50) + 40)
+            user.mod_bauxite(random.randrange(35) + 20)
 
             fleet = userinfo.UserFleet.instance(1, did)
             if (len(fleet.ships) > 0):
@@ -641,14 +650,6 @@ async def on_message(message):
                                                    si_flag.base().name,
                                                    si_flag.level))
 
-        if (isinstance(message.channel, discord.DMChannel)):
-            targ_server = 245830822580453376
-            targ_channel = 446559630315749376
-            chnl = bot.get_guild(targ_server).get_channel(targ_channel)
-            msg = "%s#%s: %s" % (message.author.name,
-                                 message.author.discriminator, message.content)
-            await chnl.send(msg)
-            logging.info("[PM] %s" % msg)
     await bot.process_commands(message)
 
 
