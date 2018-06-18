@@ -106,6 +106,7 @@ class ShipBase:
             The CG requested, in its native size
         """
         file_dir = "../icos/" if ico else "../cgs/"
+        file_dir = os.path.join(DIR_PATH, file_dir)
         info_name = 'small' if ico else 'full'
         info_name += '_damaged' if dmg else ''
         image_info = self.images[info_name]
