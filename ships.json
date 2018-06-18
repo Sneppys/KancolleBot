@@ -1,5 +1,7 @@
 {
     "1": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagato Class",
         "images": {
             "full": {
@@ -37,6 +39,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Nagato"
     },
     "2": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagato Class",
         "images": {
             "full": {
@@ -74,6 +78,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Mutsu"
     },
     "3": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ise Class",
         "images": {
             "full": {
@@ -111,6 +117,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ise"
     },
     "4": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ise Class",
         "images": {
             "full": {
@@ -148,6 +156,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hyuuga"
     },
     "5": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -185,6 +195,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yukikaze"
     },
     "6": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akagi Class",
         "images": {
             "full": {
@@ -222,6 +234,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akagi"
     },
     "7": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kaga Class",
         "images": {
             "full": {
@@ -259,6 +273,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kaga"
     },
     "8": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Souryuu Class",
         "images": {
             "full": {
@@ -296,6 +312,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Souryuu"
     },
     "9": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hiryuu Class",
         "images": {
             "full": {
@@ -333,6 +351,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hiryuu"
     },
     "10": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shimakaze Class",
         "images": {
             "full": {
@@ -370,6 +390,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shimakaze"
     },
     "11": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -407,6 +429,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Fubuki"
     },
     "12": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -444,6 +468,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shirayuki"
     },
     "13": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -481,6 +507,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hatsuyuki"
     },
     "14": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -518,6 +546,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Miyuki"
     },
     "15": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -555,6 +585,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Murakumo"
     },
     "16": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -592,6 +624,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Isonami"
     },
     "17": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -629,6 +663,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ayanami"
     },
     "18": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -666,6 +702,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shikinami"
     },
     "19": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kuma Class",
         "images": {
             "full": {
@@ -703,6 +741,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ooi"
     },
     "20": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kuma Class",
         "images": {
             "full": {
@@ -740,6 +780,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kitakami"
     },
     "21": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kongou Class",
         "images": {
             "full": {
@@ -777,6 +819,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kongou"
     },
     "22": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kongou Class",
         "images": {
             "full": {
@@ -814,6 +858,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hiei"
     },
     "23": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kongou Class",
         "images": {
             "full": {
@@ -851,6 +897,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Haruna"
     },
     "24": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kongou Class",
         "images": {
             "full": {
@@ -888,6 +936,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kirishima"
     },
     "25": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Houshou Class",
         "images": {
             "full": {
@@ -925,6 +975,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Houshou"
     },
     "26": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fusou Class",
         "images": {
             "full": {
@@ -962,6 +1014,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Fusou"
     },
     "27": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fusou Class",
         "images": {
             "full": {
@@ -999,6 +1053,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yamashiro"
     },
     "28": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Tenryuu Class",
         "images": {
             "full": {
@@ -1036,6 +1092,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tenryuu"
     },
     "29": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Tenryuu Class",
         "images": {
             "full": {
@@ -1073,6 +1131,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tatsuta"
     },
     "30": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ryuujou Class",
         "images": {
             "full": {
@@ -1110,6 +1170,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ryuujou"
     },
     "31": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -1147,6 +1209,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Mutsuki"
     },
     "32": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -1184,6 +1248,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kisaragi"
     },
     "33": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -1221,6 +1287,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Satsuki"
     },
     "34": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -1258,6 +1326,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Fumizuki"
     },
     "35": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -1295,6 +1365,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Nagatsuki"
     },
     "36": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -1332,6 +1404,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kikuzuki"
     },
     "37": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -1369,6 +1443,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Mikazuki"
     },
     "38": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -1406,6 +1482,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Mochizuki"
     },
     "39": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kuma Class",
         "images": {
             "full": {
@@ -1443,6 +1521,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kuma"
     },
     "40": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kuma Class",
         "images": {
             "full": {
@@ -1480,6 +1560,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tama"
     },
     "41": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kuma Class",
         "images": {
             "full": {
@@ -1517,6 +1599,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kiso"
     },
     "42": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -1554,6 +1638,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Nagara"
     },
     "43": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -1591,6 +1677,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Isuzu"
     },
     "44": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -1628,6 +1716,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Natori"
     },
     "45": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -1665,6 +1755,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yura"
     },
     "46": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Sendai Class",
         "images": {
             "full": {
@@ -1702,6 +1794,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Sendai"
     },
     "47": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Sendai Class",
         "images": {
             "full": {
@@ -1739,6 +1833,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Jintsuu"
     },
     "48": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Sendai Class",
         "images": {
             "full": {
@@ -1776,6 +1872,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Naka"
     },
     "49": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Chitose Class",
         "images": {
             "full": {
@@ -1813,6 +1911,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Chitose"
     },
     "50": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Chitose Class",
         "images": {
             "full": {
@@ -1850,6 +1950,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Chiyoda"
     },
     "51": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mogami Class",
         "images": {
             "full": {
@@ -1887,6 +1989,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Mogami"
     },
     "52": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Furutaka Class",
         "images": {
             "full": {
@@ -1924,6 +2028,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Furutaka"
     },
     "53": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Furutaka Class",
         "images": {
             "full": {
@@ -1961,6 +2067,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kako"
     },
     "54": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Aoba Class",
         "images": {
             "full": {
@@ -1998,6 +2106,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Aoba"
     },
     "55": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Myoukou Class",
         "images": {
             "full": {
@@ -2035,6 +2145,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Myoukou"
     },
     "56": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Myoukou Class",
         "images": {
             "full": {
@@ -2072,6 +2184,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Nachi"
     },
     "57": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Myoukou Class",
         "images": {
             "full": {
@@ -2109,6 +2223,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ashigara"
     },
     "58": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Myoukou Class",
         "images": {
             "full": {
@@ -2146,6 +2262,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Haguro"
     },
     "59": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Takao Class",
         "images": {
             "full": {
@@ -2183,6 +2301,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Takao"
     },
     "60": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Takao Class",
         "images": {
             "full": {
@@ -2220,6 +2340,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Atago"
     },
     "61": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Takao Class",
         "images": {
             "full": {
@@ -2257,6 +2379,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Maya"
     },
     "62": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Takao Class",
         "images": {
             "full": {
@@ -2294,6 +2418,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Choukai"
     },
     "63": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Tone Class",
         "images": {
             "full": {
@@ -2331,6 +2457,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tone"
     },
     "64": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Tone Class",
         "images": {
             "full": {
@@ -2368,6 +2496,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Chikuma"
     },
     "65": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hiyou Class",
         "images": {
             "full": {
@@ -2405,6 +2535,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hiyou"
     },
     "66": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hiyou Class",
         "images": {
             "full": {
@@ -2442,6 +2574,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Junyou"
     },
     "67": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -2479,6 +2613,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Oboro"
     },
     "68": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -2516,6 +2652,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akebono"
     },
     "69": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -2553,6 +2691,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Sazanami"
     },
     "70": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -2590,6 +2730,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ushio"
     },
     "71": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akatsuki Class",
         "images": {
             "full": {
@@ -2627,6 +2769,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akatsuki"
     },
     "72": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akatsuki Class",
         "images": {
             "full": {
@@ -2664,6 +2808,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hibiki"
     },
     "73": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akatsuki Class",
         "images": {
             "full": {
@@ -2701,6 +2847,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ikazuchi"
     },
     "74": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akatsuki Class",
         "images": {
             "full": {
@@ -2738,6 +2886,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Inazuma"
     },
     "75": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hatsuharu Class",
         "images": {
             "full": {
@@ -2775,6 +2925,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hatsuharu"
     },
     "76": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hatsuharu Class",
         "images": {
             "full": {
@@ -2812,6 +2964,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Nenohi"
     },
     "77": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hatsuharu Class",
         "images": {
             "full": {
@@ -2849,6 +3003,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Wakaba"
     },
     "78": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hatsuharu Class",
         "images": {
             "full": {
@@ -2886,6 +3042,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hatsushimo"
     },
     "79": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -2923,6 +3081,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shiratsuyu"
     },
     "80": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -2960,6 +3120,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shigure"
     },
     "81": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -2997,6 +3159,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Murasame"
     },
     "82": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -3034,6 +3198,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yuudachi"
     },
     "83": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -3071,6 +3237,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Samidare"
     },
     "84": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -3108,6 +3276,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Suzukaze"
     },
     "85": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -3145,6 +3315,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Asashio"
     },
     "86": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -3182,6 +3354,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ooshio"
     },
     "87": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -3219,6 +3393,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Michishio"
     },
     "88": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -3256,6 +3432,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Arashio"
     },
     "89": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -3293,6 +3471,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Arare"
     },
     "90": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -3330,6 +3510,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kasumi"
     },
     "91": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -3367,6 +3549,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kagerou"
     },
     "92": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -3404,6 +3588,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shiranui"
     },
     "93": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -3441,6 +3627,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kuroshio"
     },
     "94": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shouhou Class",
         "images": {
             "full": {
@@ -3478,6 +3666,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shouhou"
     },
     "95": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Chitose Class",
         "images": {
             "full": {
@@ -3515,6 +3705,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Chitose"
     },
     "96": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Chitose Class",
         "images": {
             "full": {
@@ -3552,6 +3744,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Chiyoda"
     },
     "97": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kuma Class",
         "images": {
             "full": {
@@ -3589,6 +3783,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ooi"
     },
     "98": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kuma Class",
         "images": {
             "full": {
@@ -3626,6 +3822,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kitakami"
     },
     "99": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Chitose Class",
         "images": {
             "full": {
@@ -3663,6 +3861,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Chitose"
     },
     "100": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Chitose Class",
         "images": {
             "full": {
@@ -3700,6 +3900,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Chiyoda"
     },
     "101": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mogami Class",
         "images": {
             "full": {
@@ -3737,6 +3939,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Mogami"
     },
     "102": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ise Class",
         "images": {
             "full": {
@@ -3774,6 +3978,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ise"
     },
     "103": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ise Class",
         "images": {
             "full": {
@@ -3811,6 +4017,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hyuuga"
     },
     "104": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Chitose Class",
         "images": {
             "full": {
@@ -3848,6 +4056,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Chitose"
     },
     "105": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Chitose Class",
         "images": {
             "full": {
@@ -3885,6 +4095,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Chiyoda"
     },
     "106": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shoukaku Class",
         "images": {
             "full": {
@@ -3922,6 +4134,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shoukaku"
     },
     "107": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shoukaku Class",
         "images": {
             "full": {
@@ -3959,6 +4173,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Zuikaku"
     },
     "108": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shoukaku Class",
         "images": {
             "full": {
@@ -3996,6 +4212,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Zuikaku"
     },
     "109": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -4033,6 +4251,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kinu"
     },
     "110": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -4070,6 +4290,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Abukuma"
     },
     "111": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuubari Class",
         "images": {
             "full": {
@@ -4107,6 +4329,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yuubari"
     },
     "112": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shouhou Class",
         "images": {
             "full": {
@@ -4144,6 +4368,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Zuihou"
     },
     "113": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shouhou Class",
         "images": {
             "full": {
@@ -4181,6 +4407,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Zuihou"
     },
     "114": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kuma Class",
         "images": {
             "full": {
@@ -4218,6 +4446,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ooi"
     },
     "115": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kuma Class",
         "images": {
             "full": {
@@ -4255,6 +4485,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kitakami"
     },
     "116": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mogami Class",
         "images": {
             "full": {
@@ -4292,6 +4524,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Mikuma"
     },
     "117": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mogami Class",
         "images": {
             "full": {
@@ -4329,6 +4563,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Mikuma"
     },
     "118": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -4366,6 +4602,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hatsukaze"
     },
     "119": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -4403,6 +4641,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Maikaze"
     },
     "120": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Aoba Class",
         "images": {
             "full": {
@@ -4440,6 +4680,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kinugasa"
     },
     "121": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Chitose Class",
         "images": {
             "full": {
@@ -4477,6 +4719,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Chitose"
     },
     "122": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Chitose Class",
         "images": {
             "full": {
@@ -4514,6 +4758,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Chiyoda"
     },
     "123": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Junsen B Class",
         "images": {
             "full": {
@@ -4551,6 +4797,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-19"
     },
     "124": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mogami Class",
         "images": {
             "full": {
@@ -4588,6 +4836,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Suzuya"
     },
     "125": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mogami Class",
         "images": {
             "full": {
@@ -4625,6 +4875,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kumano"
     },
     "126": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kaidai VI Class",
         "images": {
             "full": {
@@ -4662,6 +4914,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-168"
     },
     "127": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Junsen B Class Kai Ni",
         "images": {
             "full": {
@@ -4699,6 +4953,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-58"
     },
     "128": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Junsen 3 Class",
         "images": {
             "full": {
@@ -4736,6 +4992,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-8"
     },
     "129": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mogami Class",
         "images": {
             "full": {
@@ -4773,6 +5031,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Suzuya"
     },
     "130": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mogami Class",
         "images": {
             "full": {
@@ -4810,6 +5070,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kumano"
     },
     "131": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yamato Class",
         "images": {
             "full": {
@@ -4847,6 +5109,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yamato"
     },
     "132": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -4884,6 +5148,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akigumo"
     },
     "133": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -4921,6 +5187,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yuugumo"
     },
     "134": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -4958,6 +5226,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Makigumo"
     },
     "135": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -4995,6 +5265,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Naganami"
     },
     "136": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yamato Class",
         "images": {
             "full": {
@@ -5032,6 +5304,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yamato"
     },
     "137": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Agano Class",
         "images": {
             "full": {
@@ -5069,6 +5343,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Agano"
     },
     "138": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Agano Class",
         "images": {
             "full": {
@@ -5106,6 +5382,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Noshiro"
     },
     "139": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Agano Class",
         "images": {
             "full": {
@@ -5143,6 +5421,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yahagi"
     },
     "140": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Agano Class",
         "images": {
             "full": {
@@ -5180,6 +5460,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Sakawa"
     },
     "141": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -5217,6 +5499,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Isuzu"
     },
     "142": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Aoba Class",
         "images": {
             "full": {
@@ -5254,6 +5538,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kinugasa"
     },
     "143": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yamato Class",
         "images": {
             "full": {
@@ -5291,6 +5577,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Musashi"
     },
     "144": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -5328,6 +5616,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yuudachi"
     },
     "145": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -5365,6 +5655,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shigure"
     },
     "146": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kuma Class",
         "images": {
             "full": {
@@ -5402,6 +5694,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kiso"
     },
     "147": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akatsuki Class",
         "images": {
             "full": {
@@ -5439,6 +5733,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hibiki"
     },
     "148": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yamato Class",
         "images": {
             "full": {
@@ -5476,6 +5772,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Musashi"
     },
     "149": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kongou Class",
         "images": {
             "full": {
@@ -5513,6 +5811,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kongou"
     },
     "150": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kongou Class",
         "images": {
             "full": {
@@ -5550,6 +5850,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hiei"
     },
     "151": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kongou Class",
         "images": {
             "full": {
@@ -5587,6 +5889,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Haruna"
     },
     "152": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kongou Class",
         "images": {
             "full": {
@@ -5624,6 +5928,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kirishima"
     },
     "153": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Taihou Class",
         "images": {
             "full": {
@@ -5661,6 +5967,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Taihou"
     },
     "154": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Katori Class",
         "images": {
             "full": {
@@ -5698,6 +6006,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Katori"
     },
     "155": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Sentoku Class (I-400 Class)",
         "images": {
             "full": {
@@ -5735,6 +6045,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-401"
     },
     "156": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Taihou Class",
         "images": {
             "full": {
@@ -5772,6 +6084,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Taihou"
     },
     "157": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ryuujou Class",
         "images": {
             "full": {
@@ -5809,6 +6123,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ryuujou"
     },
     "158": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Sendai Class",
         "images": {
             "full": {
@@ -5846,6 +6162,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Sendai"
     },
     "159": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Sendai Class",
         "images": {
             "full": {
@@ -5883,6 +6201,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Jintsuu"
     },
     "160": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Sendai Class",
         "images": {
             "full": {
@@ -5920,6 +6240,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Naka"
     },
     "161": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hei Class",
         "images": {
             "full": {
@@ -5957,6 +6279,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akitsumaru"
     },
     "162": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kamoi Class",
         "images": {
             "full": {
@@ -5994,6 +6318,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kamoi"
     },
     "163": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Type 3 Submergence Transport Vehicle",
         "images": {
             "full": {
@@ -6031,6 +6357,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Maruyu"
     },
     "164": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -6068,6 +6396,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yayoi"
     },
     "165": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -6105,6 +6435,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Uzuki"
     },
     "166": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hei Class",
         "images": {
             "full": {
@@ -6142,6 +6474,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akitsumaru"
     },
     "167": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -6179,6 +6513,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Isokaze"
     },
     "168": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -6216,6 +6552,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Urakaze"
     },
     "169": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -6253,6 +6591,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tanikaze"
     },
     "170": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -6290,6 +6630,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hamakaze"
     },
     "171": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Bismarck Class",
         "images": {
             "full": {
@@ -6327,6 +6669,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Bismarck"
     },
     "172": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Bismarck Class",
         "images": {
             "full": {
@@ -6364,6 +6708,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Bismarck"
     },
     "173": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Bismarck Class",
         "images": {
             "full": {
@@ -6401,6 +6747,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Bismarck"
     },
     "174": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Z1 Class",
         "images": {
             "full": {
@@ -6438,6 +6786,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Z1"
     },
     "175": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Z1 Class",
         "images": {
             "full": {
@@ -6475,6 +6825,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Z3"
     },
     "176": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Admiral Hipper Class",
         "images": {
             "full": {
@@ -6512,6 +6864,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Prinz_Eugen"
     },
     "177": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Admiral Hipper Class",
         "images": {
             "full": {
@@ -6549,6 +6903,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Prinz_Eugen"
     },
     "178": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Bismarck Class",
         "images": {
             "full": {
@@ -6586,6 +6942,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Bismarck"
     },
     "179": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Z1 Class",
         "images": {
             "full": {
@@ -6623,6 +6981,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Z1"
     },
     "180": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Z1 Class",
         "images": {
             "full": {
@@ -6660,6 +7020,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Z3"
     },
     "181": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -6697,6 +7059,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Amatsukaze"
     },
     "182": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Repair Ship",
         "images": {
             "full": {
@@ -6734,6 +7098,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akashi"
     },
     "183": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ooyodo Class",
         "images": {
             "full": {
@@ -6771,6 +7137,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ooyodo"
     },
     "184": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Taigei Class",
         "images": {
             "full": {
@@ -6808,6 +7176,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Taigei"
     },
     "185": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ryuuhou Class",
         "images": {
             "full": {
@@ -6845,6 +7215,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Taigei"
     },
     "186": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -6882,6 +7254,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tokitsukaze"
     },
     "187": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Repair Ship",
         "images": {
             "full": {
@@ -6919,6 +7293,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akashi"
     },
     "188": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Tone Class",
         "images": {
             "full": {
@@ -6956,6 +7332,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tone"
     },
     "189": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Tone Class",
         "images": {
             "full": {
@@ -6993,6 +7371,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Chikuma"
     },
     "190": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ryuuhou Class",
         "images": {
             "full": {
@@ -7030,6 +7410,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Taigei"
     },
     "191": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Myoukou Class",
         "images": {
             "full": {
@@ -7067,6 +7449,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Myoukou"
     },
     "192": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Myoukou Class",
         "images": {
             "full": {
@@ -7104,6 +7488,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Nachi"
     },
     "193": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Myoukou Class",
         "images": {
             "full": {
@@ -7141,6 +7527,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ashigara"
     },
     "194": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Myoukou Class",
         "images": {
             "full": {
@@ -7178,6 +7566,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Haguro"
     },
     "195": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -7215,6 +7605,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ayanami"
     },
     "196": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hiryuu Class",
         "images": {
             "full": {
@@ -7252,6 +7644,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hiryuu"
     },
     "197": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Souryuu Class",
         "images": {
             "full": {
@@ -7289,6 +7683,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Souryuu"
     },
     "198": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -7326,6 +7722,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Arare"
     },
     "199": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -7363,6 +7761,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ooshio"
     },
     "200": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -7400,6 +7800,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Abukuma"
     },
     "201": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Unryuu Class",
         "images": {
             "full": {
@@ -7437,6 +7839,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Unryuu"
     },
     "202": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Unryuu Class",
         "images": {
             "full": {
@@ -7474,6 +7878,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Amagi"
     },
     "203": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Unryuu Class",
         "images": {
             "full": {
@@ -7511,6 +7917,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Katsuragi"
     },
     "204": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hatsuharu Class",
         "images": {
             "full": {
@@ -7548,6 +7956,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hatsuharu"
     },
     "205": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -7585,6 +7995,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Harusame"
     },
     "206": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Unryuu Class",
         "images": {
             "full": {
@@ -7622,6 +8034,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Unryuu"
     },
     "207": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -7659,6 +8073,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ushio"
     },
     "208": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hiyou Class",
         "images": {
             "full": {
@@ -7696,6 +8112,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Junyou"
     },
     "209": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -7733,6 +8151,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hayashimo"
     },
     "210": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -7770,6 +8190,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kiyoshimo"
     },
     "211": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fusou Class",
         "images": {
             "full": {
@@ -7807,6 +8229,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Fusou"
     },
     "212": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fusou Class",
         "images": {
             "full": {
@@ -7844,6 +8268,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yamashiro"
     },
     "213": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -7881,6 +8307,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Asagumo"
     },
     "214": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -7918,6 +8346,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yamagumo"
     },
     "215": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -7955,6 +8385,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Nowaki"
     },
     "216": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Furutaka Class",
         "images": {
             "full": {
@@ -7992,6 +8424,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Furutaka"
     },
     "217": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Furutaka Class",
         "images": {
             "full": {
@@ -8029,6 +8463,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kako"
     },
     "218": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -8066,6 +8502,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Satsuki"
     },
     "219": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hatsuharu Class",
         "images": {
             "full": {
@@ -8103,6 +8541,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hatsushimo"
     },
     "220": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -8140,6 +8580,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Murakumo"
     },
     "221": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Akizuki Class",
         "images": {
             "full": {
@@ -8177,6 +8619,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akizuki"
     },
     "222": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Akizuki Class",
         "images": {
             "full": {
@@ -8214,6 +8658,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Teruzuki"
     },
     "223": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Akizuki Class",
         "images": {
             "full": {
@@ -8251,6 +8697,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hatsuzuki"
     },
     "224": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -8288,6 +8736,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Takanami"
     },
     "225": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -8325,6 +8775,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Asashimo"
     },
     "226": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -8362,6 +8814,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Fubuki"
     },
     "227": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Takao Class",
         "images": {
             "full": {
@@ -8399,6 +8853,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Choukai"
     },
     "228": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Takao Class",
         "images": {
             "full": {
@@ -8436,6 +8892,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Maya"
     },
     "229": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Unryuu Class",
         "images": {
             "full": {
@@ -8473,6 +8931,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Amagi"
     },
     "230": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Unryuu Class",
         "images": {
             "full": {
@@ -8510,6 +8970,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Katsuragi"
     },
     "231": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Type IXC U-boat",
         "images": {
             "full": {
@@ -8550,6 +9012,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/U-511"
     },
     "232": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Graf Zeppelin Class",
         "images": {
             "full": {
@@ -8587,6 +9051,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Graf_Zeppelin"
     },
     "233": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Lexington Class",
         "images": {
             "full": {
@@ -8624,6 +9090,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Saratoga"
     },
     "234": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -8661,6 +9129,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Mutsuki"
     },
     "235": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -8698,6 +9168,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kisaragi"
     },
     "236": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ro Class",
         "images": {
             "full": {
@@ -8735,6 +9207,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/U-511"
     },
     "237": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akatsuki Class",
         "images": {
             "full": {
@@ -8772,6 +9246,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akatsuki"
     },
     "238": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Lexington Class",
         "images": {
             "full": {
@@ -8809,6 +9285,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Saratoga"
     },
     "239": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Queen Elizabeth Class",
         "images": {
             "full": {
@@ -8846,6 +9324,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Warspite"
     },
     "240": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Iowa Class",
         "images": {
             "full": {
@@ -8883,6 +9363,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Iowa"
     },
     "241": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "V.Veneto Class",
         "images": {
             "full": {
@@ -8920,6 +9402,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Littorio"
     },
     "242": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "V.Veneto Class",
         "images": {
             "full": {
@@ -8957,6 +9441,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Roma"
     },
     "243": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Maestrale Class",
         "images": {
             "full": {
@@ -8994,6 +9480,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Libeccio"
     },
     "244": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Aquila Class",
         "images": {
             "full": {
@@ -9031,6 +9519,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Aquila"
     },
     "245": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akitsushima Class",
         "images": {
             "full": {
@@ -9068,6 +9558,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akitsushima"
     },
     "246": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "V.Veneto Class",
         "images": {
             "full": {
@@ -9105,6 +9597,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Littorio"
     },
     "247": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "V.Veneto Class",
         "images": {
             "full": {
@@ -9142,6 +9636,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Roma"
     },
     "248": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Zara Class",
         "images": {
             "full": {
@@ -9179,6 +9675,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Zara"
     },
     "249": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Zara Class",
         "images": {
             "full": {
@@ -9216,6 +9714,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Pola"
     },
     "250": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akitsushima Class",
         "images": {
             "full": {
@@ -9253,6 +9753,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akitsushima"
     },
     "251": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mizuho Class",
         "images": {
             "full": {
@@ -9290,6 +9792,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Mizuho"
     },
     "252": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -9327,6 +9831,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Okinami"
     },
     "253": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -9364,6 +9870,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kazagumo"
     },
     "254": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -9401,6 +9909,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Arashi"
     },
     "255": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -9438,6 +9948,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hagikaze"
     },
     "256": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -9475,6 +9987,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Oyashio"
     },
     "257": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -9512,6 +10026,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yamakaze"
     },
     "258": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -9549,6 +10065,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Umikaze"
     },
     "259": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -9586,6 +10104,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kawakaze"
     },
     "260": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kai Kazahaya Class",
         "images": {
             "full": {
@@ -9623,6 +10143,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hayasui"
     },
     "261": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shoukaku Class",
         "images": {
             "full": {
@@ -9660,6 +10182,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shoukaku"
     },
     "262": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shoukaku Class",
         "images": {
             "full": {
@@ -9697,6 +10221,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Zuikaku"
     },
     "263": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -9734,6 +10260,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Asashio"
     },
     "264": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -9771,6 +10299,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kasumi"
     },
     "265": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Katori Class",
         "images": {
             "full": {
@@ -9808,6 +10338,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kashima"
     },
     "266": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shoukaku Class",
         "images": {
             "full": {
@@ -9845,6 +10377,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shoukaku"
     },
     "267": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shoukaku Class",
         "images": {
             "full": {
@@ -9882,6 +10416,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Zuikaku"
     },
     "268": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -9919,6 +10455,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Asashio"
     },
     "269": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -9956,6 +10494,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kawakaze"
     },
     "270": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -9993,6 +10533,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kasumi"
     },
     "271": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Kamikaze Class",
         "images": {
             "full": {
@@ -10030,6 +10572,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kamikaze"
     },
     "272": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Kamikaze Class",
         "images": {
             "full": {
@@ -10067,6 +10611,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Asakaze"
     },
     "273": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Kamikaze Class",
         "images": {
             "full": {
@@ -10104,6 +10650,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Harukaze"
     },
     "274": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Kamikaze Class",
         "images": {
             "full": {
@@ -10141,6 +10689,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Matsukaze"
     },
     "275": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kamikaze Class",
         "images": {
             "full": {
@@ -10178,6 +10728,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hatakaze"
     },
     "276": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kamikaze Class",
         "images": {
             "full": {
@@ -10215,6 +10767,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kamikaze"
     },
     "278": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Tenryuu Class",
         "images": {
             "full": {
@@ -10252,6 +10806,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tatsuta"
     },
     "279": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -10289,6 +10845,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Amagiri"
     },
     "280": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -10329,6 +10887,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Sagiri"
     },
     "281": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -10366,6 +10926,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Minazuki"
     },
     "283": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Junsen B Class",
         "images": {
             "full": {
@@ -10403,6 +10965,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-26"
     },
     "284": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -10440,6 +11004,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hamanami"
     },
     "285": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -10477,6 +11043,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Fujinami"
     },
     "286": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -10514,6 +11082,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Uranami"
     },
     "287": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -10551,6 +11121,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kinu"
     },
     "288": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -10588,6 +11160,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yura"
     },
     "289": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -10628,6 +11202,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Michishio"
     },
     "290": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -10665,6 +11241,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Arashio"
     },
     "291": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "C.Teste Class",
         "images": {
             "full": {
@@ -10702,6 +11280,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Commandant_Teste"
     },
     "292": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Richelieu Class",
         "images": {
             "full": {
@@ -10739,6 +11319,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Richelieu"
     },
     "293": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Sentoku Class (I-400 Class)",
         "images": {
             "full": {
@@ -10776,6 +11358,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-400"
     },
     "294": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Junsen A Class Kai Ni",
         "images": {
             "full": {
@@ -10813,6 +11397,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-13"
     },
     "295": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Junsen A Class Kai Ni",
         "images": {
             "full": {
@@ -10850,6 +11436,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-14"
     },
     "296": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Zara Class",
         "images": {
             "full": {
@@ -10887,6 +11475,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Zara"
     },
     "298": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -10924,6 +11514,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Murasame"
     },
     "299": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kamoi Class",
         "images": {
             "full": {
@@ -10961,6 +11553,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kamoi"
     },
     "300": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kamoi Class",
         "images": {
             "full": {
@@ -10998,6 +11592,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kamoi"
     },
     "303": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mogami Class",
         "images": {
             "full": {
@@ -11035,6 +11631,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Suzuya"
     },
     "304": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mogami Class",
         "images": {
             "full": {
@@ -11072,6 +11670,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kumano"
     },
     "308": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mogami Class",
         "images": {
             "full": {
@@ -11109,6 +11709,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Suzuya"
     },
     "309": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mogami Class",
         "images": {
             "full": {
@@ -11146,6 +11748,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kumano"
     },
     "311": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Gangut Class",
         "images": {
             "full": {
@@ -11183,6 +11787,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Gangut"
     },
     "312": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Gangut Class",
         "images": {
             "full": {
@@ -11220,6 +11826,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Gangut"
     },
     "313": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Tashkent Class",
         "images": {
             "full": {
@@ -11257,6 +11865,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tashkent"
     },
     "315": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Ark Royal Class",
         "images": {
             "full": {
@@ -11294,6 +11904,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ark_Royal"
     },
     "316": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Gangut Class",
         "images": {
             "full": {
@@ -11331,6 +11943,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Gangut"
     },
     "317": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Shimushu Class",
         "images": {
             "full": {
@@ -11368,6 +11982,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shimushu"
     },
     "318": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Shimushu Class",
         "images": {
             "full": {
@@ -11405,6 +12021,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kunashiri"
     },
     "319": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "J Class",
         "images": {
             "full": {
@@ -11442,6 +12060,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Jervis"
     },
     "321": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Kasugamaru Class",
         "images": {
             "full": {
@@ -11479,6 +12099,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kasugamaru"
     },
     "325": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Guglielmo Marconi Class",
         "images": {
             "full": {
@@ -11516,6 +12138,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Luigi_Torelli"
     },
     "326": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Taiyou Class",
         "images": {
             "full": {
@@ -11553,6 +12177,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kasugamaru"
     },
     "329": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Guglielmo Marconi Class",
         "images": {
             "full": {
@@ -11590,6 +12216,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Luigi_Torelli"
     },
     "330": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Guglielmo Marconi Class",
         "images": {
             "full": {
@@ -11627,6 +12255,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Luigi_Torelli"
     },
     "331": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Taiyou Class",
         "images": {
             "full": {
@@ -11664,6 +12294,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kasugamaru"
     },
     "332": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Akizuki Class",
         "images": {
             "full": {
@@ -11701,6 +12333,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Suzutsuki"
     },
     "334": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Etorofu Class",
         "images": {
             "full": {
@@ -11738,6 +12372,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Etorofu"
     },
     "335": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Etorofu Class",
         "images": {
             "full": {
@@ -11775,6 +12411,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Matsuwa"
     },
     "337": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akizuki Class",
         "images": {
             "full": {
@@ -11812,6 +12450,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Suzutsuki"
     },
     "339": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Etorofu Class",
         "images": {
             "full": {
@@ -11849,6 +12489,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Sado"
     },
     "340": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Etorofu Class",
         "images": {
             "full": {
@@ -11886,6 +12528,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tsushima"
     },
     "341": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagato Class",
         "images": {
             "full": {
@@ -11923,6 +12567,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Nagato"
     },
     "343": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -11960,6 +12606,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Naganami"
     },
     "344": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Casablanca Class",
         "images": {
             "full": {
@@ -11997,6 +12645,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Gambier_Bay"
     },
     "345": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Lexington Class",
         "images": {
             "full": {
@@ -12034,6 +12684,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Saratoga"
     },
     "346": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yamato Class",
         "images": {
             "full": {
@@ -12071,6 +12723,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Musashi"
     },
     "347": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kuma Class",
         "images": {
             "full": {
@@ -12108,6 +12762,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tama"
     },
     "348": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -12145,6 +12801,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Fumizuki"
     },
     "349": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Essex Class",
         "images": {
             "full": {
@@ -12182,6 +12840,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Intrepid"
     },
     "350": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Lexington Class",
         "images": {
             "full": {
@@ -12219,6 +12879,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Saratoga"
     },
     "351": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Hiburi Class",
         "images": {
             "full": {
@@ -12256,6 +12918,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hiburi"
     },
     "352": {
+        "can_craft": false,
+        "can_drop": true,
         "class_name": "Hiburi Class",
         "images": {
             "full": {
@@ -12293,6 +12957,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Daitou"
     },
     "355": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shouhou Class",
         "images": {
             "full": {
@@ -12330,6 +12996,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Zuihou"
     },
     "356": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -12367,6 +13035,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Urakaze"
     },
     "357": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -12404,6 +13074,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Isokaze"
     },
     "358": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -12441,6 +13113,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hamakaze"
     },
     "360": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shouhou Class",
         "images": {
             "full": {
@@ -12478,6 +13152,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Zuihou"
     },
     "361": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "John C.Butler Class",
         "images": {
             "full": {
@@ -12515,6 +13191,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Samuel_B._Roberts"
     },
     "365": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Etorofu Class",
         "images": {
             "full": {
@@ -12552,6 +13230,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Fukae"
     },
     "366": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -12589,6 +13269,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kagerou"
     },
     "367": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -12626,6 +13308,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shiranui"
     },
     "1301": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -12663,6 +13347,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Fubuki"
     },
     "1302": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -12700,6 +13386,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shirayuki"
     },
     "1303": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -12737,6 +13425,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hatsuyuki"
     },
     "1304": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -12774,6 +13464,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Miyuki"
     },
     "1305": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -12811,6 +13503,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Murakumo"
     },
     "1306": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -12848,6 +13542,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Isonami"
     },
     "1307": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -12885,6 +13581,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ayanami"
     },
     "1308": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -12922,6 +13620,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shikinami"
     },
     "1309": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kongou Class",
         "images": {
             "full": {
@@ -12959,6 +13659,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kongou"
     },
     "1310": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kongou Class",
         "images": {
             "full": {
@@ -12996,6 +13698,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hiei"
     },
     "1311": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kongou Class",
         "images": {
             "full": {
@@ -13033,6 +13737,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Haruna"
     },
     "1312": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kongou Class",
         "images": {
             "full": {
@@ -13070,6 +13776,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kirishima"
     },
     "1313": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Tenryuu Class",
         "images": {
             "full": {
@@ -13107,6 +13815,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tenryuu"
     },
     "1314": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Tenryuu Class",
         "images": {
             "full": {
@@ -13144,6 +13854,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tatsuta"
     },
     "1315": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kuma Class",
         "images": {
             "full": {
@@ -13181,6 +13893,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kuma"
     },
     "1316": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kuma Class",
         "images": {
             "full": {
@@ -13218,6 +13932,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tama"
     },
     "1317": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kuma Class",
         "images": {
             "full": {
@@ -13255,6 +13971,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kiso"
     },
     "1318": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -13292,6 +14010,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Nagara"
     },
     "1319": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -13329,6 +14049,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Isuzu"
     },
     "1320": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -13366,6 +14088,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yura"
     },
     "1321": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -13403,6 +14127,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Natori"
     },
     "1322": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Sendai Class",
         "images": {
             "full": {
@@ -13440,6 +14166,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Sendai"
     },
     "1323": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Sendai Class",
         "images": {
             "full": {
@@ -13477,6 +14205,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Jintsuu"
     },
     "1324": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Sendai Class",
         "images": {
             "full": {
@@ -13514,6 +14244,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Naka"
     },
     "1325": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -13551,6 +14283,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kagerou"
     },
     "1326": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -13588,6 +14322,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shiranui"
     },
     "1327": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -13625,6 +14361,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kuroshio"
     },
     "1328": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -13662,6 +14400,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yukikaze"
     },
     "1329": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shimakaze Class",
         "images": {
             "full": {
@@ -13699,6 +14439,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shimakaze"
     },
     "1330": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -13736,6 +14478,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Oboro"
     },
     "1331": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -13773,6 +14517,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akebono"
     },
     "1332": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -13810,6 +14556,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Sazanami"
     },
     "1333": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -13847,6 +14595,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ushio"
     },
     "1334": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akatsuki Class",
         "images": {
             "full": {
@@ -13884,6 +14634,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akatsuki"
     },
     "1335": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akatsuki Class",
         "images": {
             "full": {
@@ -13921,6 +14673,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hibiki"
     },
     "1336": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akatsuki Class",
         "images": {
             "full": {
@@ -13958,6 +14712,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ikazuchi"
     },
     "1337": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akatsuki Class",
         "images": {
             "full": {
@@ -13995,6 +14751,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Inazuma"
     },
     "1338": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hatsuharu Class",
         "images": {
             "full": {
@@ -14032,6 +14790,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hatsuharu"
     },
     "1339": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hatsuharu Class",
         "images": {
             "full": {
@@ -14069,6 +14829,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Nenohi"
     },
     "1340": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hatsuharu Class",
         "images": {
             "full": {
@@ -14106,6 +14868,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Wakaba"
     },
     "1341": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hatsuharu Class",
         "images": {
             "full": {
@@ -14143,6 +14907,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hatsushimo"
     },
     "1342": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -14180,6 +14946,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shiratsuyu"
     },
     "1343": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -14217,6 +14985,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shigure"
     },
     "1344": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -14254,6 +15024,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Murasame"
     },
     "1345": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -14291,6 +15063,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yuudachi"
     },
     "1346": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -14328,6 +15102,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Samidare"
     },
     "1347": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -14365,6 +15141,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Suzukaze"
     },
     "1348": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -14402,6 +15180,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Asashio"
     },
     "1349": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -14439,6 +15219,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ooshio"
     },
     "1350": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -14476,6 +15258,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Michishio"
     },
     "1351": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -14513,6 +15297,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Arashio"
     },
     "1352": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -14550,6 +15336,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Arare"
     },
     "1353": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -14587,6 +15375,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kasumi"
     },
     "1354": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -14624,6 +15414,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Mutsuki"
     },
     "1355": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -14661,6 +15453,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kisaragi"
     },
     "1356": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -14698,6 +15492,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Satsuki"
     },
     "1357": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -14735,6 +15531,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Fumizuki"
     },
     "1358": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -14772,6 +15570,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Nagatsuki"
     },
     "1359": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -14809,6 +15609,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kikuzuki"
     },
     "1360": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -14846,6 +15648,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Mikazuki"
     },
     "1361": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -14883,6 +15687,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Mochizuki"
     },
     "1362": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Furutaka Class",
         "images": {
             "full": {
@@ -14920,6 +15726,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Furutaka"
     },
     "1363": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Furutaka Class",
         "images": {
             "full": {
@@ -14957,6 +15765,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kako"
     },
     "1364": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Aoba Class",
         "images": {
             "full": {
@@ -14994,6 +15804,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Aoba"
     },
     "1365": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Myoukou Class",
         "images": {
             "full": {
@@ -15031,6 +15843,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Myoukou"
     },
     "1366": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Myoukou Class",
         "images": {
             "full": {
@@ -15068,6 +15882,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Nachi"
     },
     "1367": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Myoukou Class",
         "images": {
             "full": {
@@ -15105,6 +15921,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ashigara"
     },
     "1368": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Myoukou Class",
         "images": {
             "full": {
@@ -15142,6 +15960,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Haguro"
     },
     "1369": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Takao Class",
         "images": {
             "full": {
@@ -15179,6 +15999,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Takao"
     },
     "1370": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Takao Class",
         "images": {
             "full": {
@@ -15216,6 +16038,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Atago"
     },
     "1371": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Takao Class",
         "images": {
             "full": {
@@ -15253,6 +16077,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Maya"
     },
     "1372": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Takao Class",
         "images": {
             "full": {
@@ -15290,6 +16116,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Choukai"
     },
     "1373": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Tone Class",
         "images": {
             "full": {
@@ -15327,6 +16155,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tone"
     },
     "1374": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Tone Class",
         "images": {
             "full": {
@@ -15364,6 +16194,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Chikuma"
     },
     "1375": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagato Class",
         "images": {
             "full": {
@@ -15401,6 +16233,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Nagato"
     },
     "1376": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagato Class",
         "images": {
             "full": {
@@ -15438,6 +16272,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Mutsu"
     },
     "1377": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akagi Class",
         "images": {
             "full": {
@@ -15475,6 +16311,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akagi"
     },
     "1378": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kaga Class",
         "images": {
             "full": {
@@ -15512,6 +16350,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kaga"
     },
     "1379": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Souryuu Class",
         "images": {
             "full": {
@@ -15549,6 +16389,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Souryuu"
     },
     "1380": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hiryuu Class",
         "images": {
             "full": {
@@ -15586,6 +16428,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hiryuu"
     },
     "1381": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ryuujou Class",
         "images": {
             "full": {
@@ -15623,6 +16467,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ryuujou"
     },
     "1382": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shouhou Class",
         "images": {
             "full": {
@@ -15660,6 +16506,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shouhou"
     },
     "1383": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hiyou Class",
         "images": {
             "full": {
@@ -15697,6 +16545,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hiyou"
     },
     "1384": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hiyou Class",
         "images": {
             "full": {
@@ -15734,6 +16584,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Junyou"
     },
     "1385": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Houshou Class",
         "images": {
             "full": {
@@ -15771,6 +16623,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Houshou"
     },
     "1386": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fusou Class",
         "images": {
             "full": {
@@ -15808,6 +16662,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Fusou"
     },
     "1387": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fusou Class",
         "images": {
             "full": {
@@ -15845,6 +16701,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yamashiro"
     },
     "1388": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shoukaku Class",
         "images": {
             "full": {
@@ -15882,6 +16740,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shoukaku"
     },
     "1389": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -15919,6 +16779,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kinu"
     },
     "1390": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Nagara Class",
         "images": {
             "full": {
@@ -15956,6 +16818,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Abukuma"
     },
     "1391": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Chitose Class",
         "images": {
             "full": {
@@ -15993,6 +16857,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Chitose"
     },
     "1392": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Chitose Class",
         "images": {
             "full": {
@@ -16030,6 +16896,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Chiyoda"
     },
     "1393": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuubari Class",
         "images": {
             "full": {
@@ -16067,6 +16935,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yuubari"
     },
     "1394": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -16104,6 +16974,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Maikaze"
     },
     "1395": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Aoba Class",
         "images": {
             "full": {
@@ -16141,6 +17013,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kinugasa"
     },
     "1396": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -16178,6 +17052,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hatsukaze"
     },
     "1397": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -16215,6 +17091,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akigumo"
     },
     "1398": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -16252,6 +17130,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yuugumo"
     },
     "1399": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -16289,6 +17169,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Makigumo"
     },
     "1400": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -16326,6 +17208,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Naganami"
     },
     "1401": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Agano Class",
         "images": {
             "full": {
@@ -16363,6 +17247,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Agano"
     },
     "1402": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Agano Class",
         "images": {
             "full": {
@@ -16400,6 +17286,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Noshiro"
     },
     "1403": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Agano Class",
         "images": {
             "full": {
@@ -16437,6 +17325,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yahagi"
     },
     "1404": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -16474,6 +17364,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yayoi"
     },
     "1405": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -16511,6 +17403,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Uzuki"
     },
     "1406": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Z1 Class",
         "images": {
             "full": {
@@ -16548,6 +17442,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Z1"
     },
     "1407": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Z1 Class",
         "images": {
             "full": {
@@ -16585,6 +17481,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Z3"
     },
     "1408": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -16622,6 +17520,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hamakaze"
     },
     "1409": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -16659,6 +17559,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tanikaze"
     },
     "1410": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Agano Class",
         "images": {
             "full": {
@@ -16696,6 +17598,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Sakawa"
     },
     "1411": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -16733,6 +17637,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Amatsukaze"
     },
     "1412": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -16770,6 +17676,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Urakaze"
     },
     "1413": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -16807,6 +17715,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Isokaze"
     },
     "1414": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ooyodo Class",
         "images": {
             "full": {
@@ -16844,6 +17754,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ooyodo"
     },
     "1415": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -16881,6 +17793,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tokitsukaze"
     },
     "1416": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -16918,6 +17832,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Harusame"
     },
     "1417": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -16955,6 +17871,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hayashimo"
     },
     "1418": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -16992,6 +17910,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kiyoshimo"
     },
     "1419": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -17029,6 +17949,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Asagumo"
     },
     "1420": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Asashio Class",
         "images": {
             "full": {
@@ -17066,6 +17988,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yamagumo"
     },
     "1421": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -17103,6 +18027,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Nowaki"
     },
     "1422": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akizuki Class",
         "images": {
             "full": {
@@ -17140,6 +18066,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Akizuki"
     },
     "1423": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Katori Class",
         "images": {
             "full": {
@@ -17177,6 +18105,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Katori"
     },
     "1424": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -17214,6 +18144,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Asashimo"
     },
     "1425": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -17251,6 +18183,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Takanami"
     },
     "1426": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akizuki Class",
         "images": {
             "full": {
@@ -17288,6 +18222,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Teruzuki"
     },
     "1427": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Maestrale Class",
         "images": {
             "full": {
@@ -17325,6 +18261,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Libeccio"
     },
     "1428": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mizuho Class",
         "images": {
             "full": {
@@ -17362,6 +18300,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Mizuho"
     },
     "1429": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -17399,6 +18339,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kazagumo"
     },
     "1430": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -17436,6 +18378,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Umikaze"
     },
     "1431": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -17473,6 +18417,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kawakaze"
     },
     "1432": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kai Kazahaya Class",
         "images": {
             "full": {
@@ -17510,6 +18456,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hayasui"
     },
     "1433": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Graf Zeppelin Class",
         "images": {
             "full": {
@@ -17547,6 +18495,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Graf_Zeppelin"
     },
     "1434": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -17584,6 +18534,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Arashi"
     },
     "1435": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -17621,6 +18573,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hagikaze"
     },
     "1436": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Katori Class",
         "images": {
             "full": {
@@ -17658,6 +18612,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kashima"
     },
     "1437": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Akizuki Class",
         "images": {
             "full": {
@@ -17695,6 +18651,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hatsuzuki"
     },
     "1438": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Zara Class",
         "images": {
             "full": {
@@ -17732,6 +18690,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Zara"
     },
     "1439": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -17769,6 +18729,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Okinami"
     },
     "1440": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Iowa Class",
         "images": {
             "full": {
@@ -17806,6 +18768,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Iowa"
     },
     "1441": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Zara Class",
         "images": {
             "full": {
@@ -17843,6 +18807,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Pola"
     },
     "1442": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kagerou Class",
         "images": {
             "full": {
@@ -17880,6 +18846,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Oyashio"
     },
     "1443": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kamikaze Class",
         "images": {
             "full": {
@@ -17917,6 +18885,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Harukaze"
     },
     "1444": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Queen Elizabeth Class",
         "images": {
             "full": {
@@ -17954,6 +18924,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Warspite"
     },
     "1445": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Aquila Class",
         "images": {
             "full": {
@@ -17991,6 +18963,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Aquila"
     },
     "1446": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Mutsuki Class",
         "images": {
             "full": {
@@ -18028,6 +19002,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Minazuki"
     },
     "1447": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Junsen B Class",
         "images": {
             "full": {
@@ -18065,6 +19041,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-26"
     },
     "1448": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Fubuki Class",
         "images": {
             "full": {
@@ -18102,6 +19080,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Uranami"
     },
     "1449": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shiratsuyu Class",
         "images": {
             "full": {
@@ -18139,6 +19119,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Yamakaze"
     },
     "1450": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kamikaze Class",
         "images": {
             "full": {
@@ -18176,6 +19158,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Asakaze"
     },
     "1451": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kamikaze Class",
         "images": {
             "full": {
@@ -18213,6 +19197,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Matsukaze"
     },
     "1452": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "C.Teste Class",
         "images": {
             "full": {
@@ -18250,6 +19236,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Commandant_Teste"
     },
     "1453": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -18287,6 +19275,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Fujinami"
     },
     "1454": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Junsen A Class Kai Ni",
         "images": {
             "full": {
@@ -18324,6 +19314,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-13"
     },
     "1455": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Junsen A Class Kai Ni",
         "images": {
             "full": {
@@ -18361,6 +19353,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-14"
     },
     "1456": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shimushu Class",
         "images": {
             "full": {
@@ -18398,6 +19392,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Shimushu"
     },
     "1457": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Shimushu Class",
         "images": {
             "full": {
@@ -18435,6 +19431,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kunashiri"
     },
     "1460": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Taiyou Class",
         "images": {
             "full": {
@@ -18472,6 +19470,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Kasugamaru"
     },
     "1463": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Etorofu Class",
         "images": {
             "full": {
@@ -18509,6 +19509,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Etorofu"
     },
     "1464": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Etorofu Class",
         "images": {
             "full": {
@@ -18546,6 +19548,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Matsuwa"
     },
     "1465": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Etorofu Class",
         "images": {
             "full": {
@@ -18583,6 +19587,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Sado"
     },
     "1466": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Etorofu Class",
         "images": {
             "full": {
@@ -18620,6 +19626,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tsushima"
     },
     "1467": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kamikaze Class",
         "images": {
             "full": {
@@ -18657,6 +19665,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hatakaze"
     },
     "1470": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -18694,6 +19704,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Amagiri"
     },
     "1471": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ayanami Class",
         "images": {
             "full": {
@@ -18734,6 +19746,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Sagiri"
     },
     "1472": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Richelieu Class",
         "images": {
             "full": {
@@ -18771,6 +19785,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Richelieu"
     },
     "1473": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Ark Royal Class",
         "images": {
             "full": {
@@ -18808,6 +19824,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Ark_Royal"
     },
     "1474": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "J Class",
         "images": {
             "full": {
@@ -18845,6 +19863,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Jervis"
     },
     "1475": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Tashkent Class",
         "images": {
             "full": {
@@ -18882,6 +19902,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Tashkent"
     },
     "1476": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Casablanca Class",
         "images": {
             "full": {
@@ -18919,6 +19941,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Gambier_Bay"
     },
     "1477": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Essex Class",
         "images": {
             "full": {
@@ -18956,6 +19980,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Intrepid"
     },
     "1478": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hiburi Class",
         "images": {
             "full": {
@@ -18993,6 +20019,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hiburi"
     },
     "1479": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Hiburi Class",
         "images": {
             "full": {
@@ -19030,6 +20058,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Daitou"
     },
     "1480": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Yuugumo Class",
         "images": {
             "full": {
@@ -19067,6 +20097,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Hamanami"
     },
     "1481": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "John C.Butler Class",
         "images": {
             "full": {
@@ -19104,6 +20136,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Samuel_B._Roberts"
     },
     "1485": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Etorofu Class",
         "images": {
             "full": {
@@ -19141,6 +20175,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Fukae"
     },
     "1498": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Kaidai VI Class",
         "images": {
             "full": {
@@ -19178,6 +20214,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-168"
     },
     "1499": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Junsen B Class Kai Ni",
         "images": {
             "full": {
@@ -19215,6 +20253,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-58"
     },
     "1500": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Junsen 3 Class",
         "images": {
             "full": {
@@ -19252,6 +20292,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-8"
     },
     "1501": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Junsen B Class",
         "images": {
             "full": {
@@ -19289,6 +20331,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-19"
     },
     "1502": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Type 3 Submergence Transport Vehicle",
         "images": {
             "full": {
@@ -19326,6 +20370,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Maruyu"
     },
     "1503": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Sentoku Class (I-400 Class)",
         "images": {
             "full": {
@@ -19363,6 +20409,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/I-401"
     },
     "1504": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Type IXC U-boat",
         "images": {
             "full": {
@@ -19403,6 +20451,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/U-511"
     },
     "1505": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Guglielmo Marconi Class",
         "images": {
             "full": {
@@ -19440,6 +20490,8 @@
         "wiki_link": "http://kancolle.wikia.com/wiki/Luigi_Torelli"
     },
     "1506": {
+        "can_craft": true,
+        "can_drop": true,
         "class_name": "Sentoku Class (I-400 Class)",
         "images": {
             "full": {
