@@ -38,14 +38,10 @@ async def show(ctx, shipid: int):
         ship_instance = ins.pop()
         base = ship_instance.base()
         image_file = imggen.generate_ship_card(ctx.bot, ship_instance)
-        quotes_check = []
         if (ship_instance.level >= 100):
-            quotes_check.append('Married')
-        quotes_check.extend(['Idle', 'Poke(1)', 'Poke(2)', 'Poke(3)'])
-        for q in quotes_check:
-            quote = base.get_quote(q)
-            if (quote != '???'):
-                break
+            quote = base.get_quote('married')
+        else:
+            quote = base.get_quote('idle')
         await ctx.send(file=discord.File(io.BytesIO(image_file.getvalue()),
                                          filename="image.png"),
                        content="%s: *%s*" % (base.name, quote))
@@ -78,7 +74,7 @@ async def drop(ctx):
                 content="%s got %s! (%s)\n\n%s: *%s*" % (
                         ctx.author.display_name, ship_name,
                         rarity[ship_rarity - 1], ship_name,
-                        ship_base.get_quote('Intro')))
+                        ship_base.get_quote('intro')))
             logging.info("[Drop] %s (%s) received %s from a drop" %
                          (str(ctx.author), did, ship_name))
         else:
@@ -130,7 +126,7 @@ async def craft(ctx, fuel: int, ammo: int, steel: int, bauxite: int):
                                           filename="image.png"),
                         content="%s just crafted %s!\n\n%s: *%s*" % (
                             ctx.author.display_name, ship_base.name,
-                            ship_base.name, ship_base.get_quote('Intro')))
+                            ship_base.name, ship_base.get_quote('intro')))
                     logging.info("[Craft] %s (%s) crafted %s using recipe "
                                  "%s/%s/%s/%s" %
                                  (str(ctx.author), did, ship_base.name,
@@ -207,7 +203,7 @@ async def remodel(ctx, shipid: int):
                     io.BytesIO(image_file.getvalue()),
                     filename="image.png"),
                                content="%s: *%s*" % (new_name,
-                                                     base.get_quote('Equip(3)')
+                                                     base.get_quote('remodel')
                                                      ))
                 logging.info("[Remodel] %s (%s) remodelled %s into %s" %
                              (str(ctx.author), did, old_name, new_name))
@@ -375,7 +371,7 @@ async def marry(ctx, shipid: int):
                 await ctx.send(file=discord.File(
                     io.BytesIO(image_file.getvalue()), filename="image.png"),
                                content="%s: *%s*" % (ship_name,
-                                                     base.get_quote('Wedding')
+                                                     base.get_quote('married')
                                                      ))
                 logging.info("[Marriage] %s (%s) married their %s" %
                              (str(ctx.author), did, ship_name))
@@ -474,7 +470,7 @@ async def f_add(ctx, shipid: int):
                     fleet.update()
                     await ctx.send("Added %s to fleet %s\n\n%s: *%s*" % (
                         ins.base().name, 1, ins.base().name,
-                        ins.base().get_quote('Join')))
+                        ins.base().get_quote('fleet_join')))
                 else:
                     await ctx.send("Fleet %s is full!" % (1))
             else:
@@ -520,11 +516,11 @@ async def f_set(ctx, flagship: int, ship2: int=-1, ship3: int=-1,
         if (len(strs) > 0):
             await ctx.send("Set fleet %s to: Flagship %s, ships %s\n\n%s: *%s*"
                            % (1, flag, ", ".join(strs), line_base.name,
-                              line_base.get_quote('Join')))
+                              line_base.get_quote('fleet_join')))
         else:
             await ctx.send("Set fleet %s to: Flagship %s\n\n%s: *%s*"
                            % (1, flag, line_base.name,
-                              line_base.get_quote('Join')))
+                              line_base.get_quote('fleet_join')))
 
 
 @fleet.command(help="Set a fleet's flagship", name="flag", usage="[Flagship]",
@@ -565,7 +561,7 @@ async def f_flag(ctx, flagship: int):
             fleet.update()
             await ctx.send("Set %s as the flagship of fleet %s\n\n%s: *%s*" % (
                 ins.base().name, 1, ins.base().name,
-                ins.base().get_quote('Join')))
+                ins.base().get_quote('fleet_join')))
     else:
         await ctx.send("Ship with ID %s not found in your inventory" % (
             flagship))

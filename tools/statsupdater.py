@@ -1,25 +1,19 @@
-"""Local tool used to update KC3 data."""
-from selenium import webdriver
-import os
-import time
+"""Updates the ship file with any changes needed."""
+import json
 
-HOME_DIR = os.path.expanduser("~")
+with open('../ships.json', 'r', encoding='utf-8') as jsonfile:
+    data = json.load(jsonfile)
 
-chrome_path = r"C:\chromedriver.exe"
-local_data = os.path.join(HOME_DIR, r'AppData\Local\Google\Chrome\User Data')
 
-opts = webdriver.ChromeOptions()
-opts.add_argument('user-data-dir=' + local_data)
-cap = opts.to_capabilities()
+def modify(sid, ship_data):
+    """Do any changes needed to the ship data."""
+    return ship_data
 
-driver = webdriver.Chrome(desired_capabilities=cap,
-                          executable_path=chrome_path)
-driver.get("chrome-extension://hkgmldnainaglpjngpajnnjfhpdjkohh/"
-           "pages/strategy/strategy.html")
 
-time.sleep(1)
-data = driver.execute_script('return window.localStorage.raw;')
-driver.quit()
+new_data = {}
+for sid, ship in data.items():
+    mod_data = modify(sid, ship)
+    new_data[int(sid)] = mod_data
 
-with open('../data.json', 'w', encoding='utf-8') as outfile:
-    outfile.write(data)
+with open('../ships_mod.json', 'w', encoding='utf-8') as jsonfile:
+    jsonfile.write(json.dumps(new_data, sort_keys=True, indent=4))

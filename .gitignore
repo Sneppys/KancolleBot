@@ -3,7 +3,6 @@
 /kantaibot/botinfo.json
 /tools/__pycache__/
 /tools/debug.log
-/cgs/*
 /db_backup/*
 usersdb.db
 data.json
