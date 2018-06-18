@@ -3971,9 +3971,9 @@
             "remodel": "Aren't these great?"
         },
         "rarity": 6,
-        "remodel_level": null,
+        "remodel_level": 88,
         "remodels_from": 3,
-        "remodels_into": null,
+        "remodels_into": 353,
         "stype": "BBV",
         "wiki_link": "http://kancolle.wikia.com/wiki/Ise"
     },
@@ -14354,9 +14354,9 @@
             "remodel": "Bit-by-bit~"
         },
         "rarity": 4,
-        "remodel_level": null,
+        "remodel_level": 73,
         "remodels_from": 93,
-        "remodels_into": null,
+        "remodels_into": 368,
         "stype": "DD",
         "wiki_link": "http://kancolle.wikia.com/wiki/Kuroshio"
     },
@@ -20527,5 +20527,83 @@
         "remodels_into": null,
         "stype": "SSV",
         "wiki_link": "http://kancolle.wikia.com/wiki/I-400"
-    }
+    },
+	"353": {
+		"can_craft": true,
+		"can_drop": true,
+		"class_name": "Ise Class",
+		"images": {
+		    "full": {
+                "file_name": "353.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9f/BBV_Ise_Kai_Ni_553_Full.png/revision/latest/scale-to-width-down/300?cb=20180613122903"
+            },
+            "full_damaged": {
+                "file_name": "353_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/3e/BBV_Ise_Kai_Ni_553_Full_Damaged.png/revision/latest/scale-to-width-down/300?cb=20180613122922"
+            },
+            "small": {
+                "file_name": "553.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "553_d.png",
+                "url": null
+            }
+		},
+		"kc3id": 553,
+		"name": "Ise Kai Ni",
+		"quotes": {
+			"fleet_join": "Carrier, Ise. I'll be in charge of the Carrier Division! Alright, Hyuuga?",
+			"idle": "Yes, Admiral?",
+			"intro": "Admiral, I'm the remodelled aircraft carrier, Ise; ready to head out with my full-scale flight deck!",
+			"marriage": "Hey, Admiral, could we talk about the positioning of the 5th gun turret? Eh? You don't get the meaning? Kuu... no good, huh...",
+			"married": "Hmm?",
+			"remodel": "Aren't these great?"
+		},
+		"rarity": 7,
+		"remodel_level": null,
+		"remodels_from": 102,
+		"remodels_into": null,
+		"stype": "BBV",
+		"wiki_link": "http://kancolle.wikia.com/wiki/Ise_Kai_Ni"
+	},
+	"368": {
+		"can_craft": true,
+		"can_drop": true,
+		"class_name": "Kagerou Class",
+		"images": {
+		    "full": {
+                "file_name": "368.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f2/DD_Kuroshio_Kai_Ni_568_Full.png/revision/latest?cb=20180613123415"
+            },
+            "full_damaged": {
+                "file_name": "368_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/cc/DD_Kuroshio_Kai_Ni_568_Full_Damaged.png/revision/latest/scale-to-width-down/300?cb=20180613123434"
+            },
+            "small": {
+                "file_name": "568.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "568_d.png",
+                "url": null
+            }
+		},
+		"kc3id": 568,
+		"name": "Kuroshio Kai Ni",
+		"quotes": {
+			"fleet_join": "DesDiv15, Kuroshio, here I go!",
+			"idle": "Chief? Chieeef? Can yoouu heeeear me? ...Oh well. Guess I'll just take it easy then.",
+			"intro": "I'm Kuroshio. I'm countin' on ya. Let's get along today too!",
+			"marriage": "I... I'm... always lookin' at the chief, y'know? Really! C'mon, believe me...",
+			"married": "It's no good to overwork yourself, chief. It worries us when we see it.",
+			"remodel": "Bit-by-bit~"
+		},
+		"rarity": 7,
+		"remodel_level": null,
+		"remodels_from": 1327,
+		"remodels_into": null,
+		"stype": "DD",
+		"wiki_link": "http://kancolle.wikia.com/wiki/Kuroshio_Kai_Ni"
+	}
 }
