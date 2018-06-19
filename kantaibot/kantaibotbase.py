@@ -21,7 +21,10 @@ import logging
 
 COMMAND_PREFIX = "bg!"
 
-bot = commands.Bot(command_prefix=COMMAND_PREFIX)
+bot = commands.Bot(command_prefix=COMMAND_PREFIX, case_insensitive=True,
+                   activity=discord.Game(type=0,
+                                         name='with cute ships | '
+                                         '%shelp' % COMMAND_PREFIX))
 
 DROP_COOLDOWN = 4 * 60 * 60
 CRAFTING_COOLDOWN = 15 * 60
@@ -384,7 +387,7 @@ async def marry(ctx, shipid: int):
             shipid))
 
 
-@bot.command(help="Show the sortie map")
+@bot.command(help="Show the sortie map", hidden=True)
 @commands.is_owner()
 async def newmap(ctx):
     """Debug function to show a generated map."""
@@ -394,7 +397,8 @@ async def newmap(ctx):
                                      filename="image.png"))
 
 
-@bot.command(help="Admin command to add a ship to someone's inventory")
+@bot.command(help="Admin command to add a ship to someone's inventory",
+             hidden=True)
 @commands.is_owner()
 async def add_ship(ctx, user: discord.Member, ship_name):
     """Admin command to add a ship to a user's inventory."""
@@ -425,7 +429,8 @@ def fleet_strings(inv, fleet_s):
     return ship_data
 
 
-@bot.group(help="View your fleet (Subcommands for fleet management)")
+@bot.group(help="View your fleet (Subcommands for fleet management)",
+           case_insensitive=True)
 async def fleet(ctx):
     """Base command for fleet management, shows the current fleet."""
     if (not ctx.invoked_subcommand):
@@ -603,9 +608,6 @@ async def f_clear(ctx):
 async def on_ready():
     """Run when the bot initializes fully."""
     print("Ready on {} ({})".format(bot.user.name, bot.user.id))
-    await bot.change_presence(activity=discord.Game(type=0,
-                                                    name='with cute ships | '
-                                                    '%shelp' % COMMAND_PREFIX))
     logging.info("Loading ships...")
     ship_stats.get_all_ships()  # add ships to cache
     logging.info("Ships loaded")
@@ -656,7 +658,7 @@ async def birthday_task():
     current_time = datetime.datetime.now(tz=datetime.timezone.utc)
     day = current_time.day
     mon = current_time.month
-    with open(os.path.join(DIR_PATH, "birthdays.json"), 'r') as jd:
+    with open(os.path.join(DIR_PATH, "../birthdays.json"), 'r') as jd:
         bdays = json.load(jd)
     clist = bdays['_send_channels']
     for c in clist:
@@ -739,7 +741,7 @@ if __name__ == '__main__':
         filename=logpath, format='[%(asctime)s] [%(levelname)s] %(message)s',
         datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.INFO)
     logging.info("Starting bot...")
-    with open(os.path.join(DIR_PATH, "botinfo.json"), 'r') as bi:
+    with open(os.path.join(DIR_PATH, "../botinfo.json"), 'r') as bi:
         info = json.load(bi)
         key = info['key']  # yeah, no, I'm keeping this secret
     logging.info("Creating async tasks...")

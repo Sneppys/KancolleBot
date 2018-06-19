@@ -247,7 +247,7 @@ def get_rarity_backdrop(rarity, size):
         The image resized to the given size.
     """
     rarity -= 1
-    rimg = Image.open(DIR_PATH + '/Rarity_colors.jpg')
+    rimg = Image.open(DIR_PATH + '/images/Rarity_colors.jpg')
     w, h = rimg.size
     start_x = int(rarity % 4 * (w / 4)) + 10
     start_y = int(rarity // 4 * (h / 2)) + 15

@@ -8,10 +8,10 @@ import math
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
-small_ico_mask_img = os.path.join(DIR_PATH, "mask_small.png")
-small_ico_ring_img = os.path.join(DIR_PATH, "ring_icon.png")
+small_ico_mask_img = os.path.join(DIR_PATH, "images/mask_small.png")
+small_ico_ring_img = os.path.join(DIR_PATH, "images/ring_icon.png")
 
-large_bg_map_img = os.path.join(DIR_PATH, "map_bg.jpg")
+large_bg_map_img = os.path.join(DIR_PATH, "images/map_bg.jpg")
 
 INVENTORY_SIZE = (800, 400)
 INV_SLOTS = (7, 12)
