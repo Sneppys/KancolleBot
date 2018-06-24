@@ -1,7 +1,6 @@
 """Handles sortie generation and rules."""
 import random
 import geomutils
-import ship_stats
 
 
 def random_sortie():
@@ -510,12 +509,11 @@ def count(fleet, types):
     fleet : list
         List of ShipInstance representing the fleet.
     types : list
-        List of ship type IDs to count.
+        List of ship type discriminators to count.
     """
     c = 0
-    typediscrims = [x.discriminator for x in types]
     for si in fleet:
-        if (si.base().stype in typediscrims):
+        if (si.base().stype in types):
             c += 1
     return c
 
@@ -595,58 +593,19 @@ class RoutingTypeMaximum(RoutingType):
 
 
 ROUTING_TYPES = []
-ROUTING_TYPE_LIMIT_DESTROYER = RoutingTypeMaximum(
-    10, "DD/DE", [ship_stats.TYPE_DESTROYER, ship_stats.TYPE_DESTROYER_ESCORT],
-    max=3, excludes=[20])
-ROUTING_TYPE_LIMIT_DD = RoutingTypeMaximum(
-    11, "DD", [ship_stats.TYPE_DESTROYER], max=3, excludes=[20])
-ROUTING_TYPE_LIMIT_CARRIER = RoutingTypeMaximum(
-    12, "carriers", [ship_stats.TYPE_CARRIER, ship_stats.TYPE_ARMORED_CARRIER,
-                     ship_stats.TYPE_LIGHT_CARRIER], max=2, excludes=[21, 22])
-ROUTING_TYPE_LIMIT_CV = RoutingTypeMaximum(
-    13, "CV(B)", [ship_stats.TYPE_CARRIER, ship_stats.TYPE_ARMORED_CARRIER],
-    max=2, excludes=[21, 22])
-ROUTING_TYPE_LIMIT_BATTLESHIP = RoutingTypeMaximum(
-    14, "(F)BB(V)", [ship_stats.TYPE_BATTLESHIP,
-                     ship_stats.TYPE_FAST_BATTLESHIP,
-                     ship_stats.TYPE_AVIATION_BATTLESHIP], max=2,
-    excludes=[22, 23, 24])
-ROUTING_TYPE_LIMIT_BBV = RoutingTypeMaximum(
-    15, "BBV", [ship_stats.TYPE_AVIATION_BATTLESHIP], max=2, weight=3,
-    excludes=[22, 23, 24])
-ROUTING_TYPE_LIMIT_FBB = RoutingTypeMaximum(
-    16, "FBB", [ship_stats.TYPE_FAST_BATTLESHIP], max=2, weight=2,
-    excludes=[22, 23, 24])
-ROUTING_TYPE_LIMIT_SUBMARINE = RoutingTypeMaximum(
-    17, "SS(V)", [ship_stats.TYPE_SUBMARINE,
-                  ship_stats.TYPE_AIRCRAFT_CARRYING_SUBMARINE], max=2,
-    excludes=[26])
-ROUTING_TYPE_LIMIT_CA = RoutingTypeMaximum(
-    18, "CA(V)", [ship_stats.TYPE_HEAVY_CRUISER,
-                  ship_stats.TYPE_AVIATION_CRUISER], max=2, excludes=[25])
-ROUTING_TYPE_MIN_DESTROYER = RoutingTypeMinimum(
-    20, "DD/DE", [ship_stats.TYPE_DESTROYER, ship_stats.TYPE_DESTROYER_ESCORT],
-    min=1, max=2, excludes=[10, 11])
-ROUTING_TYPE_MIN_CARRIER = RoutingTypeMinimum(
-    21, "carriers", [ship_stats.TYPE_CARRIER, ship_stats.TYPE_ARMORED_CARRIER,
-                     ship_stats.TYPE_LIGHT_CARRIER], min=1, max=2,
-    excludes=[12, 13])
-ROUTING_TYPE_MIN_BATTLESHIP = RoutingTypeMinimum(
-    22, "(F)BB(V)", [ship_stats.TYPE_BATTLESHIP,
-                     ship_stats.TYPE_FAST_BATTLESHIP,
-                     ship_stats.TYPE_AVIATION_BATTLESHIP], min=1, max=2,
-    excludes=[14, 15, 16])
-ROUTING_TYPE_MIN_FBB = RoutingTypeMinimum(
-    23, "FBB", [ship_stats.TYPE_FAST_BATTLESHIP], min=1, max=2, weight=2,
-    excludes=[14, 15, 16])
-ROUTING_TYPE_MIN_BBV = RoutingTypeMinimum(
-    24, "BBV", [ship_stats.TYPE_AVIATION_BATTLESHIP], min=1, max=2, weight=3,
-    excludes=[14, 15, 16])
-ROUTING_TYPE_MIN_CA = RoutingTypeMinimum(
-    25, "CA(V)", [ship_stats.TYPE_HEAVY_CRUISER,
-                  ship_stats.TYPE_AVIATION_CRUISER], min=1, max=2,
-    excludes=[18])
-ROUTING_TYPE_MIN_SUBMARINE = RoutingTypeMinimum(
-    26, "SS(V)", [ship_stats.TYPE_SUBMARINE,
-                  ship_stats.TYPE_AIRCRAFT_CARRYING_SUBMARINE], min=1, max=2,
-    excludes=[17])
+ROUTING_TYPE_LIMIT_DESTROYER = RoutingTypeMaximum(10, "DD/DE", ["DD", "DE"], max=3, excludes=[20])
+ROUTING_TYPE_LIMIT_DD = RoutingTypeMaximum(11, "DD", ["DD"], max=3, excludes=[20])
+ROUTING_TYPE_LIMIT_CARRIER = RoutingTypeMaximum(12, "carriers", ["CV", "CVB", "CVL"], max=2, excludes=[21, 22])
+ROUTING_TYPE_LIMIT_CV = RoutingTypeMaximum(13, "CV(B)", ["CV", "CVB"], max=2, excludes=[21, 22])
+ROUTING_TYPE_LIMIT_BATTLESHIP = RoutingTypeMaximum(14, "(F)BB(V)", ["FBB", "BB", "BBV"], max=2, excludes=[22, 23, 24])
+ROUTING_TYPE_LIMIT_BBV = RoutingTypeMaximum(15, "BBV", ["BBV"], max=2, weight=3, excludes=[22, 23, 24])
+ROUTING_TYPE_LIMIT_FBB = RoutingTypeMaximum(16, "FBB", ["FBB"], max=2, weight=2, excludes=[22, 23, 24])
+ROUTING_TYPE_LIMIT_SUBMARINE = RoutingTypeMaximum(17, "SS(V)", ["SS", "SSV"], max=2, excludes=[26])
+ROUTING_TYPE_LIMIT_CA = RoutingTypeMaximum(18, "CA(V)", ["CA", "CAV"], max=2, excludes=[25])
+ROUTING_TYPE_MIN_DESTROYER = RoutingTypeMinimum(20, "DD/DE", ["DD", "DE"], min=1, max=2, excludes=[10, 11])
+ROUTING_TYPE_MIN_CARRIER = RoutingTypeMinimum(21, "carriers", ["CV", "CVL", "CVB"], min=1, max=2, excludes=[12, 13])
+ROUTING_TYPE_MIN_BATTLESHIP = RoutingTypeMinimum(22, "(F)BB(V)", ["FBB", "BB", "BBV"], min=1, max=2, excludes=[14, 15, 16])
+ROUTING_TYPE_MIN_FBB = RoutingTypeMinimum(23, "FBB", ["FBB"], min=1, max=2, weight=2, excludes=[14, 15, 16])
+ROUTING_TYPE_MIN_BBV = RoutingTypeMinimum(24, "BBV", ["BBV"], min=1, max=2, weight=3, excludes=[14, 15, 16])
+ROUTING_TYPE_MIN_CA = RoutingTypeMinimum(25, "CA(V)", ["CA", "CAV"], min=1, max=2, excludes=[18])
+ROUTING_TYPE_MIN_SUBMARINE = RoutingTypeMinimum(26, "SS(V)", ["SS", "SSV"], min=1, max=2, excludes=[17])

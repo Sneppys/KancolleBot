@@ -2,7 +2,7 @@
 import os
 import userinfo
 import json
-import urllib
+import urllib.request
 from io import BytesIO
 from PIL import Image
 
@@ -25,6 +25,9 @@ SHIP_DATA_FILE = os.path.join(DIR_PATH, "../ships.json")
 SHIP_DATA = read_json(SHIP_DATA_FILE)
 
 TYPE_DATA_FILE = os.path.join(DIR_PATH, "../types.json")
+
+SEASONAL_DATA_FILE = os.path.join(DIR_PATH, "../seasonal.json")
+SEASONAL_DATA = read_json(SEASONAL_DATA_FILE)
 
 _sbase_cache = {}
 
@@ -107,11 +110,14 @@ class ShipBase:
         PIL.Image
             The CG requested, in its native size
         """
-        file_dir = "../icos/" if ico else "../cgs/"
+        seasonal = str(self.sid) in SEASONAL_DATA
+        file_dir = "../seasonal_cg/" if seasonal else ("../icos/" if
+                                                       ico else "../cgs/")
         file_dir = os.path.join(DIR_PATH, file_dir)
         info_name = 'small' if ico else 'full'
         info_name += '_damaged' if dmg else ''
-        image_info = self.images[info_name]
+        image_info = (SEASONAL_DATA[str(self.sid)]['images'][info_name] if
+                      seasonal else self.images[info_name])
 
         try:
             img = Image.open(file_dir + image_info['file_name'])

@@ -6262,7 +6262,7 @@
             }
         },
         "kc3id": 161,
-        "name": "Akitsumaru",
+        "name": "Akitsu Maru",
         "quotes": {
             "fleet_join": "Akitsu Maru, ready for departure!",
             "idle": "Admiral, I am aware that being on standby is part of my duties, but... after I've been assigned to this fleet I started to... feel a bit lonely, sir...",
@@ -6457,7 +6457,7 @@
             }
         },
         "kc3id": 166,
-        "name": "Akitsumaru Kai",
+        "name": "Akitsu Maru Kai",
         "quotes": {
             "fleet_join": "Akitsu Maru, Daihatsu and Ka-types are ready to go.",
             "idle": "Admiral, I am aware that being on standby is part of my duties, but... after I've been assigned to this fleet I started to... feel a bit lonely, sir...",
@@ -12062,7 +12062,7 @@
     "321": {
         "can_craft": false,
         "can_drop": true,
-        "class_name": "Kasugamaru Class",
+        "class_name": "Kasuga Maru Class",
         "images": {
             "full": {
                 "file_name": "321.png",
@@ -12082,7 +12082,7 @@
             }
         },
         "kc3id": 521,
-        "name": "Kasugamaru",
+        "name": "Kasuga Maru",
         "quotes": {
             "fleet_join": "Converted aircraft carrier, Kasuga Maru, will now be sortieing!",
             "idle": "I'll need to thoroughly maintain these little ones...! ... ...Ah... Admiral, what's the matter? Ah, these little ones? Aren't they such good girls? They've been getting a little better at detecting submarines. Isn't raising them fun?",
