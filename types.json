@@ -1,0 +1,82 @@
+{
+    "DD": {
+        "name": "Destroyer",
+        "resource_mult": 0.5
+    },
+    "CL": {
+        "name": "Light Cruiser",
+        "resource_mult": 0.75
+    },
+    "CLT": {
+        "name": "Torpedo Cruiser",
+        "resource_mult": 1.5
+    },
+    "CA": {
+        "name": "Heavy Cruiser",
+        "resource_mult": 1.5
+    },
+    "CAV": {
+        "name": "Aviation Cruiser",
+        "resource_mult": 1.5
+    },
+    "BB": {
+        "name": "Battleship",
+        "resource_mult": 3.0
+    },
+    "FBB": {
+        "name": "Fast Battleship",
+        "resource_mult": 3.0
+    },
+    "BBV": {
+        "name": "Aviation Battleship",
+        "resource_mult": 3.0
+    },
+    "CVL": {
+        "name": "Light Carrier",
+        "resource_mult": 1.25
+    },
+    "CV": {
+        "name": "Carrier",
+        "resource_mult": 2.0
+    },
+    "CVB": {
+        "name": "Armored Carrier",
+        "resource_mult": 2.25
+    },
+    "AV": {
+        "name": "Seaplane Tender",
+        "resource_mult": 1.0
+    },
+    "SS": {
+        "name": "Submarine",
+        "resource_mult": 0.4
+    },
+    "SSV": {
+        "name": "Aircraft Carrying Submarine",
+        "resource_mult": 0.5
+    },
+    "LHA": {
+        "name": "Amphibious Assault Ship",
+        "resource_mult": 1.0
+    },
+    "AR": {
+        "name": "Repair Ship",
+        "resource_mult": 1.0
+    },
+    "AS": {
+        "name": "Submarine Tender",
+        "resource_mult": 0.5
+    },
+    "CT": {
+        "name": "Training Cruiser",
+        "resource_mult": 1.0
+    },
+    "AO": {
+        "name": "Fleet Oiler",
+        "resource_mult": 1.0
+    },
+    "DE": {
+        "name": "Coastal Defense Ship",
+        "resource_mult": 0.5
+    }
+}

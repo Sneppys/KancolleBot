@@ -1,0 +1,91 @@
+{
+    "recipes": [
+        {
+            "resources": [30, 30, 30, 30],
+            "rarity": 2,
+            "types": ["DD", "CL"]
+        },
+        {
+            "resources": [250, 130, 200, 30],
+            "rarity": 2,
+            "types": ["DD", "CL", "SS", "CA"]
+        },
+        {
+            "resources": [300, 30, 150, 400],
+            "rarity": 2,
+            "types": ["CVL", "AV"]
+        },
+        {
+            "resources": [250, 30, 200, 30],
+            "rarity": 3,
+            "types": ["DD", "CL", "CA", "SS", "CT"]
+        },
+        {
+            "resources": [270, 30, 330, 130],
+            "rarity": 2,
+            "types": ["CA", "SS", "DD"]
+        },
+        {
+            "resources": [400, 100, 600, 30],
+            "rarity": 2,
+            "types": ["CA", "BB", "FBB", "CL"]
+        },
+        {
+            "resources": [500, 30, 600, 30],
+            "rarity": 4,
+            "types": ["CA", "BB", "CL"]
+        },
+        {
+            "resources": [300, 30, 400, 300],
+            "rarity": 3,
+            "types": ["CVL", "CV", "AV"]
+        },
+        {
+            "resources": [350, 30, 400, 400],
+            "rarity": 3,
+            "types": ["CVL", "CV", "AV"]
+        },
+        {
+            "resources": [300, 300, 600, 600],
+            "rarity": 4,
+            "types": ["CV", "CVL"]
+        },
+        {
+            "resources": [400, 200, 500, 700],
+            "rarity": 4,
+            "types": ["CV", "CVL"]
+        },
+        {
+            "resources": [1000, 1000, 1000, 200],
+            "rarity": 5,
+            "types": ["BB", "FBB", "CA"]
+        },
+        {
+            "resources": [2000, 2000, 2000, 2000],
+            "rarity": 5,
+            "types": ["CA", "BB", "FBB", "AO", "AS"]
+        },
+        {
+            "resources": [1500, 1500, 2000, 1000],
+            "rarity": 5,
+            "types": ["BB", "FBB", "CA", "CL"]
+        },
+        {
+            "resources": [3000, 1500, 4000, 3000],
+            "rarity": 6,
+            "types": ["CVL", "CV", "CVB"]
+        },
+        {
+            "resources": [4000, 2000, 5500, 7000],
+            "rarity": 6,
+            "types": ["CVB", "CV", "LHA"]
+        },
+        {
+            "resources": [5000, 6000, 6000, 3000],
+            "rarity": 6,
+            "types": ["BB", "LHA"]
+        }
+    ],
+    "weight_bonus_type": 50000,
+    "weight_bonus_rarity": 50000
+}

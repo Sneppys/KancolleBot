@@ -3,10 +3,30 @@ import ship_stats
 import math
 import drophandler
 import os
+import json
 
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 RECIPE_LIST = []
+
+_json_cache = {}
+
+
+def read_json(filepath):
+    """Return the JSON inside of the given JSON file."""
+    if (filepath in _json_cache):
+        return _json_cache[filepath]
+    with open(filepath, 'r', encoding='utf-8') as fileinfo:
+        data = json.load(fileinfo)
+        _json_cache[filepath] = data
+        return data
+
+
+RECIPE_DATA_FILE = os.path.join(DIR_PATH, "../recipes.json")
+RECIPE_DATA = read_json(RECIPE_DATA_FILE)
+
+WEIGHT_BONUS_TYPE = RECIPE_DATA['weight_bonus_type']
+WEIGHT_BONUS_RARITY = RECIPE_DATA['weight_bonus_rarity']
 
 
 class BaseRecipe():
@@ -39,61 +59,14 @@ class BaseRecipe():
         RECIPE_LIST.append(self)
 
 
-BaseRecipe(30, 30, 30, 30, 2, [ship_stats.TYPE_DESTROYER,
-                               ship_stats.TYPE_LIGHT_CRUISER])
-BaseRecipe(250, 130, 200, 30, 2, [ship_stats.TYPE_DESTROYER,
-                                  ship_stats.TYPE_LIGHT_CRUISER,
-                                  ship_stats.TYPE_SUBMARINE,
-                                  ship_stats.TYPE_HEAVY_CRUISER])
-BaseRecipe(300, 30, 150, 400, 2, [ship_stats.TYPE_LIGHT_CARRIER,
-                                  ship_stats.TYPE_SEAPLANE_TENDER])
-BaseRecipe(250, 30, 200, 30, 3, [ship_stats.TYPE_DESTROYER,
-                                 ship_stats.TYPE_LIGHT_CRUISER,
-                                 ship_stats.TYPE_HEAVY_CRUISER,
-                                 ship_stats.TYPE_SUBMARINE,
-                                 ship_stats.TYPE_TRAINING_CRUISER])
-BaseRecipe(270, 30, 330, 130, 2, [ship_stats.TYPE_HEAVY_CRUISER,
-                                  ship_stats.TYPE_SUBMARINE,
-                                  ship_stats.TYPE_DESTROYER])
-BaseRecipe(400, 100, 600, 30, 2, [ship_stats.TYPE_HEAVY_CRUISER,
-                                  ship_stats.TYPE_BATTLESHIP,
-                                  ship_stats.TYPE_FAST_BATTLESHIP,
-                                  ship_stats.TYPE_LIGHT_CRUISER])
-BaseRecipe(500, 30, 600, 30, 4, [ship_stats.TYPE_HEAVY_CRUISER,
-                                 ship_stats.TYPE_BATTLESHIP,
-                                 ship_stats.TYPE_LIGHT_CRUISER])
-BaseRecipe(300, 30, 400, 300, 3, [ship_stats.TYPE_LIGHT_CARRIER,
-                                  ship_stats.TYPE_CARRIER,
-                                  ship_stats.TYPE_SEAPLANE_TENDER])
-BaseRecipe(350, 30, 400, 400, 3, [ship_stats.TYPE_LIGHT_CARRIER,
-                                  ship_stats.TYPE_CARRIER,
-                                  ship_stats.TYPE_SEAPLANE_TENDER])
-BaseRecipe(300, 300, 600, 600, 4, [ship_stats.TYPE_CARRIER,
-                                   ship_stats.TYPE_LIGHT_CARRIER])
-BaseRecipe(400, 200, 500, 700, 4, [ship_stats.TYPE_CARRIER,
-                                   ship_stats.TYPE_LIGHT_CARRIER])
-BaseRecipe(1000, 1000, 1000, 200, 5, [ship_stats.TYPE_BATTLESHIP,
-                                      ship_stats.TYPE_FAST_BATTLESHIP,
-                                      ship_stats.TYPE_HEAVY_CRUISER])
-BaseRecipe(2000, 2000, 2000, 2000, 5, [ship_stats.TYPE_HEAVY_CRUISER,
-                                       ship_stats.TYPE_BATTLESHIP,
-                                       ship_stats.TYPE_FAST_BATTLESHIP,
-                                       ship_stats.TYPE_FLEET_OILER,
-                                       ship_stats.TYPE_SUBMARINE_TENDER])
-BaseRecipe(1500, 1500, 2000, 1000, 5, [ship_stats.TYPE_BATTLESHIP,
-                                       ship_stats.TYPE_FAST_BATTLESHIP,
-                                       ship_stats.TYPE_HEAVY_CRUISER,
-                                       ship_stats.TYPE_LIGHT_CRUISER])
-BaseRecipe(3000, 1500, 4000, 3000, 6, [ship_stats.TYPE_LIGHT_CARRIER,
-                                       ship_stats.TYPE_CARRIER,
-                                       ship_stats.TYPE_ARMORED_CARRIER])
-BaseRecipe(4000, 2000, 5500, 7000, 6,
-           [ship_stats.TYPE_ARMORED_CARRIER,
-            ship_stats.TYPE_CARRIER,
-            ship_stats.TYPE_AMPHIBIOUS_ASSAULT_SHIP])
-BaseRecipe(5000, 6000, 6000, 3000, 6,
-           [ship_stats.TYPE_BATTLESHIP,
-            ship_stats.TYPE_AMPHIBIOUS_ASSAULT_SHIP])
+for recipe in RECIPE_DATA['recipes']:
+    rs = recipe['resources']
+    ra = recipe['rarity']
+    ty = recipe['types']
+    types = []
+    for t in ty:
+        types.append(ship_stats.get_ship_type(t))
+    BaseRecipe(rs[0], rs[1], rs[2], rs[3], ra, types)
 
 
 # returns list of tuples with (recipe, distSq)
@@ -112,9 +85,6 @@ def nearest_n_recipes(f, a, s, b, n=3):
 def get_craft_from_resources(owner, f, a, s, b):
     """Get a random ship craft given the resource amounts to use."""
     nnr = nearest_n_recipes(f, a, s, b)
-
-    total_weight_bonus_shiptype = 50000
-    total_weight_bonus_rarity = 50000
 
     # this is complicated so here's a simple explanation:
     # in (n - 1) steps where n is # of recipes taken from above:
@@ -145,9 +115,9 @@ def get_craft_from_resources(owner, f, a, s, b):
     final_map.append((last[0], 1 - total_pcnt))
 
     weight_bonus_shiptype = list(map(
-        lambda x: (x[0], int(x[1] * total_weight_bonus_shiptype)), final_map))
+        lambda x: (x[0], int(x[1] * WEIGHT_BONUS_TYPE)), final_map))
     weight_bonus_rarity = list(map(
-        lambda x: (x[0], int(x[1] * total_weight_bonus_rarity)), final_map))
+        lambda x: (x[0], int(x[1] * WEIGHT_BONUS_RARITY)), final_map))
 
     weight_boost = {}
 

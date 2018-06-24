@@ -24,6 +24,8 @@ def read_json(filepath):
 SHIP_DATA_FILE = os.path.join(DIR_PATH, "../ships.json")
 SHIP_DATA = read_json(SHIP_DATA_FILE)
 
+TYPE_DATA_FILE = os.path.join(DIR_PATH, "../types.json")
+
 _sbase_cache = {}
 
 
@@ -276,7 +278,7 @@ ALL_SHIP_TYPES = []
 class ShipType:
     """Type or class of a ship."""
 
-    def __init__(self, discriminator, full_name, resource_mult=1.0):
+    def __init__(self, discriminator, full_name, resource_mult):
         """Initialize the ship type.
 
         Parameters
@@ -299,30 +301,9 @@ class ShipType:
         return self.full_name
 
 
-TYPE_DESTROYER = ShipType("DD", "Destroyer", resource_mult=0.5)
-TYPE_LIGHT_CRUISER = ShipType("CL", "Light Cruiser", resource_mult=0.75)
-TYPE_TORPEDO_CRUISER = ShipType("CLT", "Torpedo Cruiser", resource_mult=1.5)
-TYPE_HEAVY_CRUISER = ShipType("CA", "Heavy Cruiser", resource_mult=1.5)
-TYPE_AVIATION_CRUISER = ShipType("CAV", "Aviation Cruiser", resource_mult=1.5)
-TYPE_BATTLESHIP = ShipType("BB", "Battleship", resource_mult=3.0)
-TYPE_FAST_BATTLESHIP = ShipType("FBB", "Fast Battleship", resource_mult=3.0)
-TYPE_AVIATION_BATTLESHIP = ShipType("BBV", "Aviation Battleship",
-                                    resource_mult=3.0)
-TYPE_LIGHT_CARRIER = ShipType("CVL", "Light Carrier", resource_mult=1.25)
-TYPE_CARRIER = ShipType("CV", "Carrier", resource_mult=2)
-TYPE_ARMORED_CARRIER = ShipType("CVB", "Armored Carrier", resource_mult=2.25)
-TYPE_SEAPLANE_TENDER = ShipType("AV", "Seaplane Tender")
-TYPE_SUBMARINE = ShipType("SS", "Submarine", resource_mult=0.4)
-TYPE_AIRCRAFT_CARRYING_SUBMARINE = ShipType("SSV",
-                                            "Aircraft Carrying Submarine",
-                                            resource_mult=0.5)
-TYPE_AMPHIBIOUS_ASSAULT_SHIP = ShipType("LHA", "Amphibious Assault Ship")
-TYPE_REPAIR_SHIP = ShipType("AR", "Repair Ship")
-TYPE_SUBMARINE_TENDER = ShipType("AS", "Submarine Tender", resource_mult=0.5)
-TYPE_TRAINING_CRUISER = ShipType("CT", "Training Cruiser")
-TYPE_FLEET_OILER = ShipType("AO", "Fleet Oiler")
-TYPE_DESTROYER_ESCORT = ShipType("DE", "Coastal Defense Ship",
-                                 resource_mult=0.5)
+type_data = read_json(TYPE_DATA_FILE)
+for k, v in type_data.items():
+    ShipType(k, v['name'], v['resource_mult'])
 
 
 def get_ship_type(discrim):
