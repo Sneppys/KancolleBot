@@ -4,6 +4,7 @@ import os
 import ship_stats
 import sqlutils
 import time
+from settings import setting
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 DB_PATH = os.path.join(DIR_PATH, "../usersdb.db")  # hidden to git
@@ -17,7 +18,7 @@ def get_connection():
 USER_TABLE_NAME = "INV_%s"
 BASIC_TABLE_NAME = "INV_BASIC"
 
-RESOURCE_CAP = 99999  # max # of any resource a user can have
+RESOURCE_CAP = setting('resources.resource_cap')
 
 
 class User:
@@ -81,9 +82,10 @@ class User:
         delta : int
             Amount to add, can be negative.
         """
-        self.fuel += delta
-        self.fuel = max(0, min(RESOURCE_CAP, self.fuel))
-        self.set_col("RFuel", self.fuel)
+        if (setting('features.resources_enabled')):
+            self.fuel += delta
+            self.fuel = max(0, min(RESOURCE_CAP, self.fuel))
+            self.set_col("RFuel", self.fuel)
 
     def mod_ammo(self, delta):
         """Add ammo to the user.
@@ -93,9 +95,10 @@ class User:
         delta : int
             Amount to add, can be negative.
         """
-        self.ammo += delta
-        self.ammo = max(0, min(RESOURCE_CAP, self.ammo))
-        self.set_col("RAmmo", self.ammo)
+        if (setting('features.resources_enabled')):
+            self.ammo += delta
+            self.ammo = max(0, min(RESOURCE_CAP, self.ammo))
+            self.set_col("RAmmo", self.ammo)
 
     def mod_steel(self, delta):
         """Add steel to the user.
@@ -105,9 +108,10 @@ class User:
         delta : int
             Amount to add, can be negative.
         """
-        self.steel += delta
-        self.steel = max(0, min(RESOURCE_CAP, self.steel))
-        self.set_col("RSteel", self.steel)
+        if (setting('features.resources_enabled')):
+            self.steel += delta
+            self.steel = max(0, min(RESOURCE_CAP, self.steel))
+            self.set_col("RSteel", self.steel)
 
     def mod_bauxite(self, delta):
         """Add bauxite to the user.
@@ -117,9 +121,10 @@ class User:
         delta : int
             Amount to add, can be negative.
         """
-        self.bauxite += delta
-        self.bauxite = max(0, min(RESOURCE_CAP, self.bauxite))
-        self.set_col("RBauxite", self.bauxite)
+        if (setting('features.resources_enabled')):
+            self.bauxite += delta
+            self.bauxite = max(0, min(RESOURCE_CAP, self.bauxite))
+            self.set_col("RBauxite", self.bauxite)
 
     def use_ring(self):
         """Remove 1 ring from the user's inventory."""
@@ -129,8 +134,10 @@ class User:
 
     def has_enough(self, f, a, s, b):
         """Return if the user has enough of each given resource."""
-        return self.fuel >= f and self.ammo >= a and self.steel >= s and \
-            self.bauxite >= b
+        if (setting('features.resources_enabled')):
+            return self.fuel >= f and self.ammo >= a and self.steel >= s and \
+                self.bauxite >= b
+        return True
 
 
 class UserInventory:

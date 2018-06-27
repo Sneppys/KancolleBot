@@ -5,6 +5,7 @@ import os
 import ship_stats
 import userinfo
 import math
+from settings import setting, namesub
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
@@ -96,19 +97,21 @@ def generate_inventory_screen(member, page, only_dupes=False):
             if (ship):
                 base = ship.base()
                 font = ImageFont.truetype("trebucbd.ttf", ch * 5 // 8)
-                num_str = "%04d" % (ship.invid)  # TODO make ship id
+                num_str = "%04d" % (ship.invid)
                 draw_squish_text(img, (x + cw // 8, y + ch // 2), num_str,
                                  font, cw // 4 - 4, color=(0, 0, 0))
 
                 font = ImageFont.truetype("trebucbd.ttf", ch * 3 // 4)
-                lvl_str = "L%02d %s" % (ship.level, base.stype)
-                if (ship.level > 99):
-                    ring = Image.open(small_ico_ring_img)
-                    ring = ring.resize((ch - 4, ch - 4))
-                    img.paste(ring, (x + 2 + cw * 1 // 2, y + 2), mask=ring)
+                lvl_str = base.stype
+                if (setting('features.levels_enabled')):
+                    lvl_str = "L%02d %s" % (ship.level, base.stype)
+                    if (setting('features.marriage_enabled') and ship.level > setting('levels.level_cap')):
+                        ring = Image.open(small_ico_ring_img)
+                        ring = ring.resize((ch - 4, ch - 4))
+                        img.paste(ring, (x + 2 + cw * 1 // 2, y + 2), mask=ring)
                 draw_squish_text(img, (x + 2 + cw * 3 // 4, y + ch // 2),
                                  lvl_str, font, cw // 2 - 4, color=(0, 0, 0))
-                if (ship.is_remodel_ready()):
+                if (setting('features.levels_enabled') and ship.is_remodel_ready()):
                     draw.rectangle((x + 2 + cw * 1 // 2, y + 4,
                                     x + cw * 3 // 4 + 4, y + ch - 4),
                                    outline=(50, 0, 250))
@@ -136,7 +139,7 @@ def generate_inventory_screen(member, page, only_dupes=False):
 
     display_name = "%s#%s" % (member.name, member.discriminator)
     font = ImageFont.truetype("framd.ttf", fh * 3 // 4)
-    o_txt = "Ships" if not only_dupes else "Dupes"
+    o_txt = namesub("%ship_plural.title%") if not only_dupes else "Dupes"
     draw.text((x + 10, y + fh // 8), "%s's %s" % (display_name, o_txt),
               font=font, fill=(0, 0, 0))
 
@@ -159,42 +162,48 @@ def generate_inventory_screen(member, page, only_dupes=False):
     txt_w, txt_h = draw.textsize(txt_fuel, font)
 
     ico_size = (fh * 3 // 8 + 2, fh * 3 // 8 + 2)
-    ico_fuel = Image.open(DIR_PATH + '/icons/fuel.png').resize(ico_size,
-                                                               Image.LINEAR)
-    ico_ammo = Image.open(DIR_PATH + '/icons/ammo.png').resize(ico_size,
-                                                               Image.LINEAR)
-    ico_steel = Image.open(DIR_PATH + '/icons/steel.png').resize(ico_size,
-                                                                 Image.LINEAR)
-    ico_bauxite = Image.open(DIR_PATH + '/icons/bauxite.png') \
-        .resize(ico_size, Image.LINEAR)
+    if (setting('features.resources_enabled')):
+        ico_fuel = Image.open(DIR_PATH + '/icons/fuel.png').resize(ico_size,
+                                                                   Image.LINEAR)
+        ico_ammo = Image.open(DIR_PATH + '/icons/ammo.png').resize(ico_size,
+                                                                   Image.LINEAR)
+        ico_steel = Image.open(DIR_PATH + '/icons/steel.png').resize(ico_size,
+                                                                     Image.LINEAR)
+        ico_bauxite = Image.open(DIR_PATH + '/icons/bauxite.png') \
+            .resize(ico_size, Image.LINEAR)
     ico_ships = Image.open(DIR_PATH + '/icons/ship.png').resize(ico_size,
                                                                 Image.LINEAR)
-    ico_rings = Image.open(DIR_PATH + '/icons/marriagepapers.png') \
-        .resize(ico_size, Image.LINEAR)
+    if (setting('features.marriage_enabled') and setting('levels.marriage_ring_required')):
+        ico_rings = Image.open(DIR_PATH + '/icons/marriagepapers.png') \
+            .resize(ico_size, Image.LINEAR)
 
     x_off = ico_size[0] + txt_w + 6
     y_off = ico_size[1] + 2
     toff_x, toff_y = (ico_size[0] + 2, (ico_size[1] - txt_h) // 2)
 
-    draw.text((rsc_x + toff_x, rsc_y + toff_y), txt_fuel, font=font,
-              fill=(0, 0, 0))
-    draw.text((rsc_x + toff_x, rsc_y + toff_y + y_off), txt_ammo, font=font,
-              fill=(0, 0, 0))
-    draw.text((rsc_x + toff_x + x_off, rsc_y + toff_y), txt_steel, font=font,
-              fill=(0, 0, 0))
-    draw.text((rsc_x + toff_x + x_off, rsc_y + toff_y + y_off), txt_bauxite,
-              font=font, fill=(0, 0, 0))
+    if (setting('features.resources_enabled')):
+        draw.text((rsc_x + toff_x, rsc_y + toff_y), txt_fuel, font=font,
+                  fill=(0, 0, 0))
+        draw.text((rsc_x + toff_x, rsc_y + toff_y + y_off), txt_ammo, font=font,
+                  fill=(0, 0, 0))
+        draw.text((rsc_x + toff_x + x_off, rsc_y + toff_y), txt_steel, font=font,
+                  fill=(0, 0, 0))
+        draw.text((rsc_x + toff_x + x_off, rsc_y + toff_y + y_off), txt_bauxite,
+                  font=font, fill=(0, 0, 0))
     draw.text((rsc_x + toff_x + x_off * 2, rsc_y + toff_y), txt_ships,
               font=font, fill=(0, 0, 0))
-    draw.text((rsc_x + toff_x + x_off * 3 + 32, rsc_y + toff_y), txt_rings,
-              font=font, fill=(0, 0, 0))
+    if (setting('features.marriage_enabled') and setting('levels.marriage_ring_required')):
+        draw.text((rsc_x + toff_x + x_off * 3 + 32, rsc_y + toff_y), txt_rings,
+                  font=font, fill=(0, 0, 0))
 
-    img.paste(ico_fuel, (rsc_x, rsc_y), mask=ico_fuel)
-    img.paste(ico_ammo, (rsc_x, rsc_y + y_off), mask=ico_fuel)
-    img.paste(ico_steel, (rsc_x + x_off, rsc_y), mask=ico_fuel)
-    img.paste(ico_bauxite, (rsc_x + x_off, rsc_y + y_off), mask=ico_fuel)
+    if (setting('features.resources_enabled')):
+        img.paste(ico_fuel, (rsc_x, rsc_y), mask=ico_fuel)
+        img.paste(ico_ammo, (rsc_x, rsc_y + y_off), mask=ico_fuel)
+        img.paste(ico_steel, (rsc_x + x_off, rsc_y), mask=ico_fuel)
+        img.paste(ico_bauxite, (rsc_x + x_off, rsc_y + y_off), mask=ico_fuel)
     img.paste(ico_ships, (rsc_x + x_off * 2, rsc_y), mask=ico_ships)
-    img.paste(ico_rings, (rsc_x + x_off * 3 + 30, rsc_y), mask=ico_rings)
+    if (setting('features.marriage_enabled') and setting('levels.marriage_ring_required')):
+        img.paste(ico_rings, (rsc_x + x_off * 3 + 30, rsc_y), mask=ico_rings)
 
     r = io.BytesIO()
     img.save(r, format="PNG")
@@ -231,7 +240,7 @@ def generate_ship_card(bot, ship_instance):
     img_full = img_full.resize((targ_width, 500), Image.BICUBIC)
     img.paste(img_full, (x_offset, 0), mask=img_full)
 
-    if (ship_instance.level > 99):
+    if (ship_instance.level > setting('levels.level_cap')):
         ring = Image.open(small_ico_ring_img)
         ring = ring.resize((60, 60))
         img.paste(ring, (20, 20), mask=ring)
@@ -244,20 +253,21 @@ def generate_ship_card(bot, ship_instance):
     draw_squish_text(img, (550, 230), "%s %s" % (base.class_name,
                      ship_stats.get_ship_type(base.stype).full_name),
                      font_tiny, 490, color=(0, 0, 0), outline=(125, 125, 125))
-    draw_squish_text(img, (550, 300), "Level %s" % (ship_instance.level),
-                     font_small, 490, color=(0, 0, 0), outline=(125, 125, 125))
-    if ((ship_instance.level > 1 or ship_instance.exp > 0)
-            and ship_instance.level != 99 and ship_instance.level < 165):
-        exp = ship_instance.exp
-        req = ship_instance.exp_req()
-        draw_squish_text(img, (550, 340), "%s / %s EXP (%.02f%%)"
-                         % (exp, req, 100.0 * exp / req), font_tiny,
-                         490, color=(0, 0, 0), outline=(125, 125, 125))
-    if (base.remodels_into):
-        r_base = ship_stats.ShipBase.instance(base.remodels_into)
-        draw_squish_text(img, (550, 400), "Next Remodel: %s (Level %s)"
-                         % (r_base.name, base.remodel_level), font_tiny, 490,
-                         color=(0, 0, 0), outline=(125, 125, 125))
+    if (setting('features.levels_enabled')):
+        draw_squish_text(img, (550, 300), "Level %s" % (ship_instance.level),
+                         font_small, 490, color=(0, 0, 0), outline=(125, 125, 125))
+        if ((ship_instance.level > 1 or ship_instance.exp > 0)
+                and ship_instance.level != setting('levels.level_cap') and ship_instance.level < setting('levels.level_cap_married')):
+            exp = ship_instance.exp
+            req = ship_instance.exp_req()
+            draw_squish_text(img, (550, 340), "%s / %s EXP (%.02f%%)"
+                             % (exp, req, 100.0 * exp / req), font_tiny,
+                             490, color=(0, 0, 0), outline=(125, 125, 125))
+        if (base.remodels_into):
+            r_base = ship_stats.ShipBase.instance(base.remodels_into)
+            draw_squish_text(img, (550, 400), "Next Remodel: %s (Level %s)"
+                             % (r_base.name, base.remodel_level), font_tiny, 490,
+                             color=(0, 0, 0), outline=(125, 125, 125))
 
     font_corner = ImageFont.truetype("framd.ttf", 60)
     draw_squish_text(img, (630, 40), "%s-%04d"
@@ -273,7 +283,7 @@ def generate_ship_card(bot, ship_instance):
         if (owner):
             display_name = "%s#%s" % (owner.name, owner.discriminator)
             break
-    draw_squish_text(img, (550, 475), "Part of %s's fleet" % (display_name),
+    draw_squish_text(img, (550, 475), "Owned by %s" % (display_name),
                      font, 490, color=(25, 25, 25), outline=(175, 175, 175))
 
     r = io.BytesIO(b'')

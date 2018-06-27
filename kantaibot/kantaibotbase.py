@@ -8,7 +8,6 @@ import drophandler
 import craftinghandler
 import userinfo
 import os
-import random
 import traceback
 import sys
 import fleet_training
@@ -18,20 +17,19 @@ import json
 import datetime
 import subprocess
 import logging
+from settings import setting, namesub, setting_random
 
-COMMAND_PREFIX = "bg!"
+COMMAND_PREFIX = setting('command_prefix')
 
 bot = commands.Bot(command_prefix=COMMAND_PREFIX, case_insensitive=True,
-                   activity=discord.Game(type=0,
-                                         name='with cute ships | '
-                                         '%shelp' % COMMAND_PREFIX))
+                   activity=discord.Game(type=0, name=setting('bot_playing')))
 
-DROP_COOLDOWN = 4 * 60 * 60
-CRAFTING_COOLDOWN = 15 * 60
-TRAINING_COOLDOWN = 60 * 60
+DROP_COOLDOWN = setting('cooldowns.drop')
+CRAFTING_COOLDOWN = setting('cooldowns.craft')
+TRAINING_COOLDOWN = setting('cooldowns.train')
 
 
-@bot.command(help="Show a ship from your inventory", usage="[Ship ID]")
+@bot.command(help=namesub("Show a %ship% from your inventory"), usage="[Ship ID]")
 async def show(ctx, shipid: int):
     """Show the specified ship from the user's inventory."""
     did = ctx.author.id
@@ -41,7 +39,7 @@ async def show(ctx, shipid: int):
         ship_instance = ins.pop()
         base = ship_instance.base()
         image_file = imggen.generate_ship_card(ctx.bot, ship_instance)
-        if (ship_instance.level >= 100):
+        if (ship_instance.level > setting('levels.level_cap')):
             quote = base.get_quote('married')
         else:
             quote = base.get_quote('idle')
@@ -49,14 +47,18 @@ async def show(ctx, shipid: int):
                                          filename="image.png"),
                        content="%s: *%s*" % (base.name, quote))
     else:
-        await ctx.send("Ship with ID %s not found in your inventory" % (
+        await ctx.send(namesub("%ship.title% with ID %s not found in your inventory") % (
             shipid))
 
 
-@bot.command(help="Get a random ship drop, cooldown of 4h")
+@bot.command(help="Get a random ship drop, cooldown of 4h",
+             hidden=not setting('features.drop_enabled'))
 async def drop(ctx):
     """Drop a random ship for the user."""
     did = ctx.author.id
+    if (not setting('features.drop_enabled')):
+        await ctx.send("That feature is not enabled.")
+        return
     if (userinfo.has_space_in_inventory(did)):
         cd = userinfo.check_cooldown(did, 'Last_Drop', DROP_COOLDOWN)
         if (cd == 0):
@@ -64,8 +66,7 @@ async def drop(ctx):
             ship_base = drop.base()
             ship_name = ship_base.name
             ship_rarity = ship_base.rarity
-            rarity = ['Common', 'Common', 'Common', 'Uncommon',
-                      'Rare', 'Very Rare', 'Extremely Rare', '**Legendary**']
+            rarity = setting('rarities')
             inv = userinfo.get_user_inventory(did)
             inv.add_to_inventory(drop)
             image_file = imggen.generate_ship_card(ctx.bot, drop)
@@ -87,8 +88,8 @@ async def drop(ctx):
             await ctx.send("You have %dh%02dm%02ds remaining until you can"
                            " get your next drop" % (hrs, min, sec))
     else:
-        await ctx.send("Your inventory is full! You can scrap a ship with"
-                       " `%sscrap [Ship ID]`" % COMMAND_PREFIX)
+        await ctx.send(namesub("Your inventory is full! You can scrap a %ship% with"
+                       " `%sscrap [%ship.title% ID]`") % COMMAND_PREFIX)
 
 
 @bot.command(help="Show your inventory", usage="(Page #)")
@@ -99,17 +100,23 @@ async def inv(ctx, page: int=1):
                                      filename="image.png"))
 
 
-@bot.command(help="Craft a ship with the given resources, 15min cooldown",
-             usage="[Fuel] [Ammo] [Steel] [Bauxite]")
+@bot.command(help=namesub("Craft a %ship% with the given resources"),
+             usage=namesub("[%fuel.title%] [%ammo.title%] [%steel.title%] [%bauxite.title]"),
+             hidden=not setting('features.crafting_enabled') or not setting('features.resources_enabled'))
 async def craft(ctx, fuel: int, ammo: int, steel: int, bauxite: int):
     """Craft a random ship based on the user's inputted resources."""
     did = ctx.author.id
     user = userinfo.get_user(did)
+    if (not setting('features.crafting_enabled') or not setting('features.resources_enabled')):
+        await ctx.send("That feature is not enabled.")
+        return
     if (userinfo.has_space_in_inventory(did)):
         cd = userinfo.check_cooldown(
             did, 'Last_Craft', CRAFTING_COOLDOWN, set_if_off=False)
         if (cd == 0):
-            if (fuel >= 30 and ammo >= 30 and steel >= 30 and bauxite >= 30):
+            min_craft = setting('resources.min_crafting')
+            if (fuel >= min_craft[0] and ammo >= min_craft[1] and
+                    steel >= min_craft[2] and bauxite >= min_craft[3]):
                 if (user.has_enough(fuel, ammo, steel, bauxite)):
                     craft = craftinghandler.get_craft_from_resources(
                         did, fuel, ammo, steel, bauxite)
@@ -144,12 +151,12 @@ async def craft(ctx, fuel: int, ammo: int, steel: int, bauxite: int):
             await ctx.send("You have %dm%02ds remaining until you can craft "
                            "another ship" % (min, sec))
     else:
-        await ctx.send("Your inventory is full! You can scrap a ship with "
-                       "`%sscrap [Ship ID]`" % COMMAND_PREFIX)
+        await ctx.send(namesub("Your inventory is full! You can scrap a %ship% with "
+                       "`%sscrap [%ship.title% ID]`") % COMMAND_PREFIX)
 
 
-@bot.command(help="Scraps a ship, removing it for a tiny amount of resources",
-             usage="[Ship ID]")
+@bot.command(help=namesub("Scraps a %ship%, removing it for a tiny amount of resources"),
+             usage=namesub("[%ship.title% ID]"))
 async def scrap(ctx, shipid: int):
     """Scrap the given ship from the user's inventory."""
     did = ctx.author.id
@@ -159,22 +166,21 @@ async def scrap(ctx, shipid: int):
     if (len(ins) > 0):
         ship_instance = ins.pop()
         base = ship_instance.base()
-        # MAYBE: change award amount based on ship type
-        user.mod_fuel(random.randrange(8) + 5)
-        user.mod_ammo(random.randrange(8) + 5)
-        user.mod_steel(random.randrange(10) + 7)
-        user.mod_bauxite(random.randrange(5) + 3)
+        user.mod_fuel(setting_random('resources.scrap_gain.fuel'))
+        user.mod_ammo(setting_random('resources.scrap_gain.ammo'))
+        user.mod_steel(setting_random('resources.scrap_gain.steel'))
+        user.mod_bauxite(setting_random('resources.scrap_gain.bauxite'))
         inv.remove_from_inventory(shipid)
         await ctx.send("Scrapped %s... <:roosad:434916104268152853>" % (
             base.name))
         logging.info("[Scrap] %s (%s) scrapped ship %s with inv id %s" %
                      (str(ctx.author), did, base.name, shipid))
     else:
-        await ctx.send("Ship with ID %s not found in your inventory" % (
+        await ctx.send(namesub("%ship.title% with ID %s not found in your inventory") % (
             shipid))
 
 
-@bot.command(help="Shows your inventory, hiding all ships except duplicates",
+@bot.command(help=namesub("Shows your inventory, hiding all %ship_plural% except duplicates"),
              usage="(Page #)")
 async def dupes(ctx, page: int=1):
     """Show all the ships the user has two or more of."""
@@ -184,10 +190,13 @@ async def dupes(ctx, page: int=1):
                                      filename="image.png"))
 
 
-@bot.command(help="Remodel a ship if it is a high enough level",
-             usage="[Ship ID]")
+@bot.command(help=namesub("Remodel a %ship% if it is a high enough level"),
+             usage=namesub("[%ship.title% ID]"), hidden=not setting('features.levels_enabled'))
 async def remodel(ctx, shipid: int):
     """Remodel the given ship."""
+    if (not setting('features.levels_enabled')):
+        await ctx.send("That feature is not enabled.")
+        return
     did = ctx.author.id
     inv = userinfo.get_user_inventory(did)
     ins = [x for x in inv.inventory if x.invid == shipid]
@@ -216,27 +225,33 @@ async def remodel(ctx, shipid: int):
         else:
             await ctx.send("%s doesn't have another remodel." % (base.name))
     else:
-        await ctx.send("Ship with ID %s not found in your inventory" % (
+        await ctx.send(namesub("%ship.title% with ID %s not found in your inventory") % (
             shipid))
 
 
-@bot.command(help="Show all training difficulties or train a fleet on one",
-             usage="(Difficulty #)")
+@bot.command(help=namesub("Show all training difficulties or train your %fleet% on one"),
+             usage="(Difficulty #)",
+             hidden=(not setting('features.training_enabled') or not setting('features.levels_enabled')
+                     or not setting('features.fleets_enabled')))
 async def train(ctx, dif: int=-1):
     """Train a user's fleet given the difficulty, or show training options."""
     did = ctx.author.id
     difs = fleet_training.ALL_DIFFICULTIES
+    if (not setting('features.training_enabled') or not setting('features.levels_enabled')
+            or not setting('features.fleets_enabled')):
+        await ctx.send("That feature is not enabled.")
+        return
     if (dif == -1):
         description = "Difficulties:\n"
-        description += "\n".join(["#%s. %s: Min Flagship level %s, Recommended"
-                                  " fleet level %s." % (x + 1,
-                                                        difs[x].name,
-                                                        difs[x].min_flag,
-                                                        difs[x].avg_lvl)
+        description += "\n".join([namesub("#%s. %s: Min %flagship% level %s, Recommended"
+                                  " %fleet% level %s.") % (x + 1,
+                                                           difs[x].name,
+                                                           difs[x].min_flag,
+                                                           difs[x].avg_lvl)
                                   for x in range(len(difs))])
         footer = "Type %strain (#) to train a fleet with a difficulty" % (
             COMMAND_PREFIX)
-        embed = discord.Embed(title="Fleet Training", description=description)
+        embed = discord.Embed(title=namesub("%fleet.title% Training"), description=description)
         embed.set_footer(text=footer)
 
         await ctx.send(embed=embed)
@@ -297,9 +312,10 @@ async def train(ctx, dif: int=-1):
                             embed.add_field(name="--------", value="\n".join(
                                 ["Level %s (+%s)" % (ins[i].level, lvl_dif[i])
                                  for i in range(len(ins))]))
-                            embed.set_footer(
-                                text="Used %g fuel, %g ammo, %g steel, %g "
-                                "bauxite" % rsc)
+                            if (setting('features.resources_enabled')):
+                                embed.set_footer(
+                                    text=namesub("Used %g %fuel%, %g %ammo%, %g %steel%, %g "
+                                                 "%bauxite%") % rsc)
 
                             await ctx.send(embed=embed)
                             logging.info("[Training] %s (%s) completed "
@@ -311,19 +327,19 @@ async def train(ctx, dif: int=-1):
                             hrs = cd // 3600
                             min = cd // 60 % 60
                             sec = cd % 60
-                            await ctx.send("You have %dh%02dm%02ds remaining "
-                                           "until you can train your fleet "
-                                           "again" % (hrs, min, sec))
+                            await ctx.send(namesub("You have %dh%02dm%02ds remaining "
+                                                   "until you can train your %fleet% "
+                                                   "again") % (hrs, min, sec))
                     else:
-                        await ctx.send("Not enough resources! (Required: %g "
-                                       "fuel, %g ammo, %g steel, %g bauxite)"
+                        await ctx.send(namesub("Not enough resources! (Required: %g "
+                                       "%fuel%, %g %ammo%, %g %steel%, %g %bauxite%)")
                                        % rsc)
                 else:
-                    await ctx.send("Flagship isn't a high enough level! "
-                                   "(Needs to be at least %s)" % (
+                    await ctx.send(namesub("%flagship.title% isn't a high enough level! "
+                                   "(Needs to be at least %s)") % (
                                        dif_targ.min_flag))
             else:
-                await ctx.send("Fleet %s is empty!" % (1))
+                await ctx.send(namesub("%fleet.title% %s is empty!") % (1))
         else:
             await ctx.send("No such difficulty #%s" % dif)
 
@@ -332,10 +348,16 @@ async def train(ctx, dif: int=-1):
 async def cooldowns(ctx):
     """Show how much time left the user has before performing actions."""
     did = ctx.author.id
-    cd_check = [("Last_Drop", "Drop", DROP_COOLDOWN),
-                ("Last_Training", "Fleet Training", TRAINING_COOLDOWN),
-                ("Last_Craft", "Crafting", CRAFTING_COOLDOWN),
-                ]
+    cd_check = []
+    if (setting('features.drop_enabled')):
+        cd_check.append(("Last_Drop", "Drop", DROP_COOLDOWN))
+    if (setting('features.training_enabled')):
+        cd_check.append(("Last_Training", namesub("%fleet.title% Training"), TRAINING_COOLDOWN))
+    if (setting('features.crafting_enabled')):
+        cd_check.append(("Last_Craft", "Crafting", CRAFTING_COOLDOWN))
+    if (len(cd_check) == 0):
+        await ctx.send("That feature is not enabled.")
+        return
     msg = "Current cooldowns for %s:\n" % ctx.author.display_name
     msg += "```\n"
     for cd, name, cd_s in cd_check:
@@ -351,10 +373,13 @@ async def cooldowns(ctx):
     await ctx.send(msg)
 
 
-@bot.command(help="Using a Ring, marry a max level ship to increase their "
-             "level cap", aliases=["ring"])
+@bot.command(help=namesub("Using a Ring, marry a max level %ship% to increase their "
+             "level cap"), aliases=["ring"],
+             hidden=not setting('features.marriage_enabled') or not setting('features.levels_enabled'))
 async def marry(ctx, shipid: int):
     """Allow the user to marry a level 99 ship, increasing its level cap."""
+    if (not setting('features.marriage_enabled') or not setting('features.levels_enabled')):
+        await ctx.send("This feature is not enabled.")
     did = ctx.author.id
     user = userinfo.get_user(did)
     inv = userinfo.get_user_inventory(did)
@@ -362,13 +387,15 @@ async def marry(ctx, shipid: int):
     if (len(ins) > 0):
         ship_instance = ins.pop()
         base = ship_instance.base()
-        if (ship_instance.level == 99):
+        if (ship_instance.level == setting('levels.level_cap')):
+            ring_req = setting('levels.marriage_ring_required')
             rings = user.rings
-            if (rings > 0):
-                ship_instance.level = 100
+            if (rings > 0 or not ring_req):
+                ship_instance.level = setting('levels.level_cap') + 1
                 ship_instance.exp = 0
                 ship_instance.add_exp(0)
-                user.use_ring()
+                if (ring_req):
+                    user.use_ring()
                 ship_name = base.name
                 image_file = imggen.generate_ship_card(ctx.bot, ship_instance)
                 await ctx.send(file=discord.File(
@@ -383,11 +410,11 @@ async def marry(ctx, shipid: int):
         else:
             await ctx.send("%s isn't ready for marriage yet." % (base.name))
     else:
-        await ctx.send("Ship with ID %s not found in your inventory" % (
+        await ctx.send(namesub("%ship.title% with ID %s not found in your inventory") % (
             shipid))
 
 
-@bot.command(help="Show the sortie map", hidden=True)
+@bot.command(help=namesub("Show the %sortie% map"), hidden=True)
 @commands.is_owner()
 async def newmap(ctx):
     """Debug function to show a generated map."""
@@ -397,7 +424,7 @@ async def newmap(ctx):
                                      filename="image.png"))
 
 
-@bot.command(help="Admin command to add a ship to someone's inventory",
+@bot.command(help=namesub("Admin command to add a %ship% to someone's inventory"),
              hidden=True)
 @commands.is_owner()
 async def add_ship(ctx, user: discord.Member, ship_name):
@@ -416,7 +443,7 @@ async def add_ship(ctx, user: discord.Member, ship_name):
         logging.info("[ADMIN_ADD] Added %s to %s's (%s) inventory" %
                      (targ.name, str(user), user.id))
     else:
-        await ctx.send("Cannot find ship '%s'" % ship_name)
+        await ctx.send(namesub("Cannot find %ship% '%s'") % ship_name)
 
 
 def fleet_strings(inv, fleet_s):
@@ -429,10 +456,14 @@ def fleet_strings(inv, fleet_s):
     return ship_data
 
 
-@bot.group(help="View your fleet (Subcommands for fleet management)",
-           case_insensitive=True)
+@bot.group(help=namesub("View your %fleet% (Subcommands for %fleet% management)"),
+           case_insensitive=True, hidden=not setting('features.fleets_enabled'),
+           name=setting('commands.fleet'))
 async def fleet(ctx):
     """Base command for fleet management, shows the current fleet."""
+    if (not setting('features.fleets_enabled')):
+        await ctx.send("That feature is not enabled.")
+        return
     if (not ctx.invoked_subcommand):
         did = ctx.author.id
         fleet = userinfo.UserFleet.instance(1, did)
@@ -440,10 +471,10 @@ async def fleet(ctx):
             ins = fleet.get_ship_instances()
             fleet_lvl = sum(x.level for x in ins) // len(ins)
 
-            embed = discord.Embed(title="%s's Fleet" % str(ctx.author))
+            embed = discord.Embed(title=namesub("%s's %fleet.title%") % str(ctx.author))
             embed.color = 524358
             flag = ins.pop(0)
-            embed.add_field(name="Ship", value=flag.base().stype + " "
+            embed.add_field(name=namesub('%ship.title%'), value=flag.base().stype + " "
                             + flag.base().name + " (*)\n" +
                             "\n".join([x.base().stype + " " + x.base().name
                                        for x in ins]), inline=True)
@@ -452,16 +483,20 @@ async def fleet(ctx):
                 [str(x.level) for x in ins]), inline=True)
             embed.add_field(name="ID", value="\n".join(
                 ["%04d" % (x.invid) for x in ins]), inline=True)
-            embed.set_footer(text="Fleet level %d" % fleet_lvl)
+            embed.set_footer(text=namesub("%fleet.title% level %d") % fleet_lvl)
 
             await ctx.send(embed=embed)
         else:
-            await ctx.send("Fleet %s is empty!" % (1))
+            await ctx.send(namesub("%fleet.title% %s is empty!" % (1)))
 
 
-@fleet.command(help="Add a ship to a fleet", name="add", usage="[Ship ID]")
+@fleet.command(help=namesub("Add a %ship% to a %fleet%"), name="add", usage=namesub("[%ship.title% ID]"),
+               hidden=not setting('features.fleets_enabled'))
 async def f_add(ctx, shipid: int):
     """Add a ship to the user's fleet."""
+    if (not setting('features.fleets_enabled')):
+        await ctx.send("That feature is not enabled.")
+        return
     did = ctx.author.id
     fleet = userinfo.UserFleet.instance(1, did)
     inv = userinfo.get_user_inventory(did)
@@ -470,33 +505,36 @@ async def f_add(ctx, shipid: int):
         ins = ins.pop()
         if (shipid not in fleet.ships):
             if (not fleet.has_similar(ins.sid)):
-                if (len(fleet.ships) < 6):
+                if (len(fleet.ships) < setting('fleets.fleet_capacity')):
                     fleet.ships.append(shipid)
                     fleet.update()
-                    await ctx.send("Added %s to fleet %s\n\n%s: *%s*" % (
+                    await ctx.send(namesub("Added %s to %fleet% %s\n\n%s: *%s*") % (
                         ins.base().name, 1, ins.base().name,
                         ins.base().get_quote('fleet_join')))
                 else:
-                    await ctx.send("Fleet %s is full!" % (1))
+                    await ctx.send(namesub("%fleet.title% %s is full!" % (1)))
             else:
-                await ctx.send("You already have another %s in fleet %s!"
+                await ctx.send(namesub("You already have another %s in %fleet% %s!")
                                % (ins.base().name, 1))
         else:
-            await ctx.send("%s is already in fleet %s!" % (ins.base().name, 1))
+            await ctx.send(namesub("%s is already in %fleet% %s!") % (ins.base().name, 1))
     else:
-        await ctx.send("Ship with ID %s not found in your inventory" % (
+        await ctx.send(namesub("%ship.title% with ID %s not found in your inventory") % (
             shipid))
 
 
-@fleet.command(help="Set a fleet with up to 6 ships", name="set",
-               usage="[Flagship] (Ship2) (Ship3) ...")
-async def f_set(ctx, flagship: int, ship2: int=-1, ship3: int=-1,
-                ship4: int=-1, ship5: int=-1, ship6: int=-1):
+@fleet.command(help=namesub("Set a %fleet% with up to %d %ship_plural%") % (setting('fleets.fleet_capacity')),
+               name="set", usage=namesub("[%flagship.title%] (%ship.title%2) (%ship.title%3) ..."),
+               hidden=not setting('features.fleets_enabled'))
+async def f_set(ctx, *ships):
     """Set the user's fleet to the given ships."""
+    if (not setting('features.fleets_enabled')):
+        await ctx.send("That feature is not enabled.")
+        return
     did = ctx.author.id
     fleet = userinfo.UserFleet.instance(1, did)
     inv = userinfo.get_user_inventory(did)
-    sids_raw = [flagship, ship2, ship3, ship4, ship5, ship6]
+    sids_raw = map(int, ships)
     sids_raw = [x for x in sids_raw if x >
                 0 and x in map(lambda n: n.invid, inv.inventory)]
     # check for no dupes while still keeping order
@@ -510,7 +548,9 @@ async def f_set(ctx, flagship: int, ship2: int=-1, ship3: int=-1,
             continue
         sids.append(x)
     if (len(sids) == 0):
-        await ctx.send("Please include at least one valid ship ID")
+        await ctx.send(namesub("Please include at least one valid %ship% ID"))
+    elif(len(sids) > setting('fleets.fleet_capacity')):
+        await ctx.send(namesub("Too many %ship_plural% in the %fleet%!"))
     else:
         fleet.ships = sids
         fleet.update()
@@ -519,19 +559,24 @@ async def f_set(ctx, flagship: int, ship2: int=-1, ship3: int=-1,
         line_base = [x for x in inv.inventory if x.invid ==
                      sids[0]].pop().base()
         if (len(strs) > 0):
-            await ctx.send("Set fleet %s to: Flagship %s, ships %s\n\n%s: *%s*"
+            await ctx.send(namesub("Set %fleet% %s to: %flagship.title% %s, %ship_plural% %s\n\n%s: *%s*")
                            % (1, flag, ", ".join(strs), line_base.name,
                               line_base.get_quote('fleet_join')))
         else:
-            await ctx.send("Set fleet %s to: Flagship %s\n\n%s: *%s*"
+            await ctx.send(namesub("Set %fleet% %s to: %flagship.title% %s\n\n%s: *%s*")
                            % (1, flag, line_base.name,
                               line_base.get_quote('fleet_join')))
 
 
-@fleet.command(help="Set a fleet's flagship", name="flag", usage="[Flagship]",
-               aliases=["flagship"])
+@fleet.command(help=namesub("Set a %fleet%'s %flagship%"),
+               name=setting('commands.fleet_flag'),
+               usage=namesub("[%flagship.title%]"),
+               hidden=not setting('features.fleets_enabled'))
 async def f_flag(ctx, flagship: int):
     """Set the flagship for the user's fleet."""
+    if (not setting('features.fleets_enabled')):
+        await ctx.send("That feature is not enabled.")
+        return
     did = ctx.author.id
     fleet = userinfo.UserFleet.instance(1, did)
     inv = userinfo.get_user_inventory(did)
@@ -545,37 +590,41 @@ async def f_flag(ctx, flagship: int):
                 if (flagship in fleet.ships):
                     fleet.ships.remove(flagship)
                 else:
-                    if (len(fleet.ships) >= 5):
+                    if (len(fleet.ships) > setting('fleets.fleet_capacity')):
                         cancel = True
-                        await ctx.send("Fleet %s is full!" % (1))
+                        await ctx.send(namesub("%fleet.title% %s is full!") % (1))
                     if ins.sid in map(lambda x: [y for y in inv.inventory
                                                  if y.invid == x].pop().sid,
                                       fleet.ships):
                         cancel = True
-                        await ctx.send("You already have another %s in fleet "
-                                       "%s!" % (ins.base().name, 1))
+                        await ctx.send(namesub("You already have another %s in %fleet% "
+                                               "%s!") % (ins.base().name, 1))
                 fleet.ships.append(old_flag)
             else:
                 cancel = True
-                await ctx.send("%s is already flagship of fleet %s!" % (
+                await ctx.send(namesub("%s is already %flagship% of %fleet% %s!") % (
                     ins.base().name, 1))
             fleet.ships.insert(0, flagship)
         else:
             fleet.ships = [flagship, ]
         if (not cancel):
             fleet.update()
-            await ctx.send("Set %s as the flagship of fleet %s\n\n%s: *%s*" % (
+            await ctx.send(namesub("Set %s as the %flagship% of %fleet% %s\n\n%s: *%s*") % (
                 ins.base().name, 1, ins.base().name,
                 ins.base().get_quote('fleet_join')))
     else:
-        await ctx.send("Ship with ID %s not found in your inventory" % (
+        await ctx.send(namesub("%ship.title% with ID %s not found in your inventory") % (
             flagship))
 
 
-@fleet.command(help="Remove a ship from a fleet", name="rem",
-               usage="[Ship ID]", aliases=["remove"])
+@fleet.command(help=namesub("Remove a %ship% from a %fleet%"), name="rem",
+               usage=namesub("[%ship.title% ID]"), aliases=["remove"],
+               hidden=not setting('features.fleets_enabled'))
 async def f_rem(ctx, shipid: int):
     """Remove a ship from a user's fleet."""
+    if (not setting('features.fleets_enabled')):
+        await ctx.send("That feature is not enabled.")
+        return
     did = ctx.author.id
     fleet = userinfo.UserFleet.instance(1, did)
     inv = userinfo.get_user_inventory(did)
@@ -586,22 +635,26 @@ async def f_rem(ctx, shipid: int):
         if (shipid in fleet.ships):
             fleet.ships.remove(shipid)
             fleet.update()
-            await ctx.send("Removed %s from fleet %s!" % (base.name, 1))
+            await ctx.send(namesub("Removed %s from %fleet% %s!") % (base.name, 1))
         else:
-            await ctx.send("%s isn't in fleet %s!" % (base.name, 1))
+            await ctx.send(namesub("%s isn't in %fleet% %s!") % (base.name, 1))
     else:
-        await ctx.send("Ship with ID %s not found in your inventory" % (
+        await ctx.send(namesub("%ship.title% with ID %s not found in your inventory") % (
             shipid))
 
 
-@fleet.command(help="Clear a fleet", name="clear")
+@fleet.command(help=namesub("Clear a %fleet%"), name="clear",
+               hidden=not setting('features.fleets_enabled'))
 async def f_clear(ctx):
     """Clear a user's fleet."""
+    if (not setting('features.fleets_enabled')):
+        await ctx.send("That feature is not enabled.")
+        return
     did = ctx.author.id
     fleet = userinfo.UserFleet.instance(1, did)
     fleet.ships = []
     fleet.update()
-    await ctx.send("Cleared fleet %s!" % (1))
+    await ctx.send(namesub("Cleared %fleet% %s!") % (1))
 
 
 @bot.event
@@ -631,15 +684,15 @@ async def on_message(message):
             logging.info("[PM] %s" % msg)
         elif (userinfo.check_cooldown(did, 'Last_Bonus', BONUS_COOLDOWN) == 0):
             user = userinfo.get_user(did)
-            user.mod_fuel(random.randrange(50) + 40)
-            user.mod_ammo(random.randrange(50) + 40)
-            user.mod_steel(random.randrange(50) + 40)
-            user.mod_bauxite(random.randrange(35) + 20)
+            user.mod_fuel(setting_random('resources.passive_gain.fuel'))
+            user.mod_ammo(setting_random('resources.passive_gain.ammo'))
+            user.mod_steel(setting_random('resources.passive_gain.steel'))
+            user.mod_bauxite(setting_random('resources.passive_gain.bauxite'))
 
             fleet = userinfo.UserFleet.instance(1, did)
-            if (len(fleet.ships) > 0):
+            if (setting('features.levels_enabled') and len(fleet.ships) > 0):
                 si_flag = fleet.get_ship_instances()[0]
-                flag_exp = random.randrange(20) + 40
+                flag_exp = setting_random('levels.passive_flag_bonus')
                 lvl = si_flag.add_exp(flag_exp)
                 if (lvl):
                     await message.channel.send("**%s** - *%s* has leveled up! "
@@ -694,7 +747,7 @@ async def birthday_task():
                                 await c.send(file=file, content=(
                                     msg % sb.name))
             else:
-                msg = "There are no birthdays today. (%s/%s)" % (day, mon)
+                msg = "There are no birthdays today. (%02d/%02d)" % (day, mon)
                 for c in channels:
                     await c.send(content=msg)
         await asyncio.sleep(30)
@@ -703,9 +756,12 @@ async def birthday_task():
 async def backup_task():
     """Automatically back up the user database."""
     await bot.wait_until_ready()
+    if (not setting('backups.enabled')):
+        logging.info("Backups not enabled, stopping task...")
+        return
     DIR_PATH = os.path.dirname(os.path.realpath(__file__))
     DB_PATH = os.path.join(DIR_PATH, "../usersdb.db")  # hidden to git
-    BACKUP_DIR = os.path.join(DIR_PATH, "../db_backup/")
+    BACKUP_DIR = os.path.join(DIR_PATH, setting('backups.backup_folder_local'))
     await asyncio.sleep(20)
     while not bot.is_closed():
         now = datetime.datetime.now()
@@ -717,7 +773,7 @@ async def backup_task():
         logging.info("Creating backup %s..." % backup_file)
         subprocess.check_output(
             ['sqlite3', db_loc, '.backup %s' % backup_file])
-        await asyncio.sleep(3600 * 2)
+        await asyncio.sleep(setting('backups.backup_time'))
 
 
 @bot.event

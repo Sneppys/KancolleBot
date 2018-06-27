@@ -1,0 +1,75 @@
+{
+    "command_prefix": "bg!",
+    "bot_playing": "with cute ships | bg!help",
+    "names": {
+        "ship": "ship",
+        "ship_plural": "ships",
+        "fleet": "fleet",
+        "flagship": "flagship",
+        "sortie": "sortie",
+        "fuel": "fuel",
+        "ammo": "ammo",
+        "steel": "steel",
+        "bauxite": "bauxite"
+    },
+    "commands": {
+        "fleet": "fleet",
+        "fleet_flag": "flag"
+    },
+    "cooldowns": {
+        "drop": 14400,
+        "craft": 900,
+        "train": 3600,
+        "resource_gain": 120
+    },
+    "features": {
+        "drop_enabled": true,
+        "crafting_enabled": true,
+        "fleets_enabled": true,
+        "training_enabled": true,
+        "resources_enabled": true,
+        "levels_enabled": true,
+        "marriage_enabled": true,
+        "sorties_enabled": false
+    },
+    "resources": {
+        "resource_cap": 99999,
+        "passive_gain": {
+            "fuel": [40, 90],
+            "ammo": [40, 90],
+            "steel": [40, 90],
+            "bauxite": [20, 55]
+        },
+        "scrap_gain": {
+            "fuel": [5, 12],
+            "ammo": [5, 12],
+            "steel": [7, 16],
+            "bauxite": [3, 7]
+        },
+        "min_crafting": [30, 30, 30, 30]
+    },
+    "levels": {
+        "level_cap": 99,
+        "level_cap_married": 165,
+        "marriage_ring_required": true,
+        "passive_flag_bonus": [40, 60]
+    },
+    "fleets": {
+        "fleet_capacity": 6
+    },
+    "rarities": [
+        "Common",
+        "Common",
+        "Common",
+        "Uncommon",
+        "Rare",
+        "Very Rare",
+        "Extremely Rare",
+        "**Legendary**"
+    ],
+    "backups": {
+        "enabled": true,
+        "backup_time": 7200,
+        "backup_folder_local": "../db_backup/"
+    }
+}

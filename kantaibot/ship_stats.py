@@ -5,6 +5,7 @@ import json
 import urllib.request
 from io import BytesIO
 from PIL import Image
+from settings import setting
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
@@ -171,10 +172,12 @@ class ShipInstance:
         bool
             Whether or not the ship levelled up in the process.
         """
+        if (not setting('features.levels_enabled')):
+            return None
         req = self.exp_req()
         self.exp += exp
         lvl = False
-        if (self.level != 99 and self.level < 165):
+        if (self.level != setting('levels.level_cap') and self.level < setting('levels.level_cap_married')):
             if (self.exp > req):
                 self.level += 1
                 self.exp -= req
