@@ -63,9 +63,7 @@ for recipe in RECIPE_DATA['recipes']:
     rs = recipe['resources']
     ra = recipe['rarity']
     ty = recipe['types']
-    types = []
-    for t in ty:
-        types.append(ship_stats.get_ship_type(t))
+    types = [ship_stats.get_ship_type(t) for t in ty]
     BaseRecipe(rs[0], rs[1], rs[2], rs[3], ra, types)
 
 

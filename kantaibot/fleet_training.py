@@ -1,9 +1,29 @@
 """Handles fleet training."""
 import ship_stats
 import random
+import os
+import json
 
 SUCCESS_THRESHOLD = 0.6
 ALL_RANKS = []
+
+DIR_PATH = os.path.dirname(os.path.realpath(__file__))
+
+_json_cache = {}
+
+
+def read_json(filepath):
+    """Return the JSON inside of the given JSON file."""
+    if (filepath in _json_cache):
+        return _json_cache[filepath]
+    with open(filepath, 'r', encoding='utf-8') as fileinfo:
+        data = json.load(fileinfo)
+        _json_cache[filepath] = data
+        return data
+
+
+TRAINING_DATA_FILE = os.path.join(DIR_PATH, "../training.json")
+TRAINING_DATA = read_json(TRAINING_DATA_FILE)
 
 
 class TrainingRank():
@@ -117,9 +137,6 @@ class TrainingDifficulty():
         return tuple(map(lambda x: x * mult, base))
 
 
-TrainingDifficulty("Simple", 1, 1, 350, 50)
-TrainingDifficulty("Easy", 10, 5, 700, 100)
-TrainingDifficulty("Medium", 20, 10, 1000, 100)
-TrainingDifficulty("Hard", 35, 15, 2500, 500)
-TrainingDifficulty("Difficult", 45, 20, 6000, 1000)
-TrainingDifficulty("Extreme", 65, 40, 10000, 2000)
+for entry in TRAINING_DATA['levels']:
+    TrainingDifficulty(entry['name'], entry['recommended_level'], entry['minimum_flag'],
+                       entry['exp_reward_base'], entry['exp_reward_split'])

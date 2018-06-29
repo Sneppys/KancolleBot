@@ -1,0 +1,86 @@
+{
+    "ship_card": {
+        "small_identifier": {
+            "enabled": true,
+            "font_size": 60,
+            "font": "framd.ttf",
+            "color": [0, 0, 0],
+            "outline": [125, 125, 125],
+            "position": [630, 40],
+            "width": 160
+        },
+        "name": {
+            "enabled": true,
+            "font_size": 70,
+            "font": "impact.ttf",
+            "color": [0, 0, 0],
+            "outline": [125, 125, 125],
+            "position": [550, 170],
+            "width": 490
+        },
+        "class_name": {
+            "enabled": true,
+            "font_size": 30,
+            "font": "framd.ttf",
+            "color": [0, 0, 0],
+            "outline": [125, 125, 125],
+            "position": [550, 230],
+            "width": 490
+        },
+        "level_indicator": {
+            "enabled": true,
+            "font_size": 40,
+            "font": "framd.ttf",
+            "color": [0, 0, 0],
+            "outline": [125, 125, 125],
+            "position": [550, 300],
+            "width": 490
+        },
+        "level_progress": {
+            "enabled": true,
+            "font_size": 30,
+            "font": "framd.ttf",
+            "color": [0, 0, 0],
+            "outline": [125, 125, 125],
+            "position": [550, 340],
+            "width": 490
+        },
+        "next_remodel": {
+            "enabled": true,
+            "font_size": 30,
+            "font": "framd.ttf",
+            "color": [0, 0, 0],
+            "outline": [125, 125, 125],
+            "position": [550, 400],
+            "width": 490
+        },
+        "owned_by": {
+            "enabled": true,
+            "font_size": 35,
+            "font": "framdit.ttf",
+            "color": [25, 25, 25],
+            "outline": [175, 175, 175],
+            "position": [550, 475],
+            "width": 490
+        },
+        "main_image": {
+            "enabled": true,
+            "x_offset": 200,
+            "y_offset": 0,
+            "targ_height": 500
+        }
+    },
+    "inventory": {
+        "image_size": [800, 400],
+        "lower_padding": 40,
+        "per_row": 7,
+        "per_column": 11,
+        "filled_color1": [200, 200, 200],
+        "filled_color2": [255, 255, 255],
+        "empty_color1": [50, 50, 50],
+        "empty_color2": [75, 75, 75],
+        "fleet_color1": [200, 200, 150],
+        "fleet_color2": [255, 255, 200],
+        "flag_border_color": [250, 100, 0]
+    }
+}

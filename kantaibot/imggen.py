@@ -5,18 +5,31 @@ import os
 import ship_stats
 import userinfo
 import math
+import json
 from settings import setting, namesub
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
+
+_json_cache = {}
+
+
+def read_json(filepath):
+    """Return the JSON inside of the given JSON file."""
+    if (filepath in _json_cache):
+        return _json_cache[filepath]
+    with open(filepath, 'r', encoding='utf-8') as fileinfo:
+        data = json.load(fileinfo)
+        _json_cache[filepath] = data
+        return data
+
+
+CONFIG_DATA_FILE = os.path.join(DIR_PATH, "../layout.json")
+CONFIG_DATA = read_json(CONFIG_DATA_FILE)
 
 small_ico_mask_img = os.path.join(DIR_PATH, "images/mask_small.png")
 small_ico_ring_img = os.path.join(DIR_PATH, "images/ring_icon.png")
 
 large_bg_map_img = os.path.join(DIR_PATH, "images/map_bg.jpg")
-
-INVENTORY_SIZE = (800, 400)
-INV_SLOTS = (7, 12)
-LOWER_PADDING = 40
 
 
 def generate_inventory_screen(member, page, only_dupes=False):
@@ -34,11 +47,12 @@ def generate_inventory_screen(member, page, only_dupes=False):
     discord_id = member.id
     user = userinfo.get_user(discord_id)
     inv = userinfo.get_user_inventory(discord_id)
-    w, h = INVENTORY_SIZE
-    sx, sy = INV_SLOTS
+    layout = CONFIG_DATA['inventory']
+    w, h = layout['image_size']
+    sx, sy = layout['per_row'], layout['per_column']
     cw = int(w / sx)
     ch = int(h / sy)
-    h += LOWER_PADDING
+    h += layout['lower_padding']
 
     ship_pool = inv.inventory
     if (only_dupes):
@@ -75,18 +89,19 @@ def generate_inventory_screen(member, page, only_dupes=False):
         for yi in range(sy):
             ship = ship_pool[indx] if indx < len(ship_pool) else None
 
-            shade_color = (((200, 200, 200) if shade else (255, 255, 255))
-                           if ship else ((50, 50, 50) if shade
-                                         else (75, 75, 75)))
+            shade_color = (("filled_color1" if shade else "filled_color2")
+                           if ship else ("empty_color1" if shade else "empty_color2"))
+            shade_color = tuple(layout[shade_color])
             border_color = None
 
             if (ship):
                 fleet = userinfo.UserFleet.instance(1, discord_id)
                 if (ship.invid in fleet.ships):
                     flag = fleet.ships.index(ship.invid) == 0
-                    shade_color = (200, 200, 150) if shade else (255, 255, 200)
+                    shade_color = "fleet_color1" if shade else "fleet_color2"
+                    shade_color = tuple(layout[shade_color])
                     if flag:
-                        border_color = (250, 100, 0)
+                        border_color = tuple(layout['flag_border_color'])
 
             x, y = (xi * cw, yi * ch)
             draw.rectangle((x, y, x + cw, y + ch), fill=shade_color)
@@ -134,8 +149,8 @@ def generate_inventory_screen(member, page, only_dupes=False):
             shade = not shade
 
     draw = ImageDraw.Draw(img)
-    x, y = (0, INVENTORY_SIZE[1])  # start position of footer
-    fw, fh = (w, LOWER_PADDING)  # size of footer
+    x, y = (0, layout['image_size'][1])  # start position of footer
+    fw, fh = (w, layout['lower_padding'])  # size of footer
 
     display_name = "%s#%s" % (member.name, member.discriminator)
     font = ImageFont.truetype("framd.ttf", fh * 3 // 4)
@@ -210,9 +225,6 @@ def generate_inventory_screen(member, page, only_dupes=False):
     return r
 
 
-CARD_SIZE = (800, 500)
-
-
 def generate_ship_card(bot, ship_instance):
     """Return a BytesIO object of a card image of the given ship.
 
@@ -223,68 +235,64 @@ def generate_ship_card(bot, ship_instance):
     ship_instance : ShipInstance
         The ship to display.
     """
-    img = Image.new(size=CARD_SIZE, mode="RGB", color=(0, 0, 0))
-
     base = ship_instance.base()
 
-    backdrop = ship_stats.get_rarity_backdrop(base.rarity, CARD_SIZE)
-    img.paste(backdrop)
+    img = ship_stats.get_rarity_backdrop(base.rarity)
+
+    layout = CONFIG_DATA['ship_card']
+    obj_small_identifier = layout['small_identifier']
+    obj_name = layout['name']
+    obj_class_name = layout['class_name']
+    obj_level_indicator = layout['level_indicator']
+    obj_level_progress = layout['level_progress']
+    obj_next_remodel = layout['next_remodel']
+    obj_owned_by = layout['owned_by']
+    obj_main_image = layout['main_image']
 
     use_damaged = False  # TODO make this check if ship is damaged
 
     img_full = base.get_cg(dmg=use_damaged)
 
-    img_w, img_h = img_full.size
-    targ_width = int(500 * (img_w / img_h))
-    x_offset = int(200 - (targ_width / 2))
-    img_full = img_full.resize((targ_width, 500), Image.BICUBIC)
-    img.paste(img_full, (x_offset, 0), mask=img_full)
+    if (obj_main_image['enabled']):
+        img_w, img_h = img_full.size
+        targ_width = int(obj_main_image['targ_height'] * (img_w / img_h))
+        x_offset = int(obj_main_image['x_offset'] - (targ_width / 2))
+        img_full = img_full.resize((targ_width, obj_main_image['targ_height']),
+                                   Image.BICUBIC)
+        img.paste(img_full, (x_offset, obj_main_image['y_offset']), mask=img_full)
 
     if (ship_instance.level > setting('levels.level_cap')):
         ring = Image.open(small_ico_ring_img)
         ring = ring.resize((60, 60))
         img.paste(ring, (20, 20), mask=ring)
 
-    font = ImageFont.truetype("impact.ttf", 70)
-    font_small = ImageFont.truetype("framd.ttf", 40)
-    font_tiny = ImageFont.truetype("framd.ttf", 30)
-    draw_squish_text(img, (550, 170), base.name, font, 490, color=(0, 0, 0),
-                     outline=(125, 125, 125))
-    draw_squish_text(img, (550, 230), "%s %s" % (base.class_name,
-                     ship_stats.get_ship_type(base.stype).full_name),
-                     font_tiny, 490, color=(0, 0, 0), outline=(125, 125, 125))
+    if (obj_name['enabled']):
+        draw_object(img, obj_name, base.name)
+    if (obj_class_name['enabled']):
+        draw_object(img, obj_class_name, "%s %s" % (base.class_name, ship_stats.get_ship_type(base.stype).full_name))
     if (setting('features.levels_enabled')):
-        draw_squish_text(img, (550, 300), "Level %s" % (ship_instance.level),
-                         font_small, 490, color=(0, 0, 0), outline=(125, 125, 125))
-        if ((ship_instance.level > 1 or ship_instance.exp > 0)
+        if (obj_level_indicator['enabled']):
+            draw_object(img, obj_level_indicator, "Level %s" % (ship_instance.level))
+        if (obj_level_progress['enabled'] and (ship_instance.level > 1 or ship_instance.exp > 0)
                 and ship_instance.level != setting('levels.level_cap') and ship_instance.level < setting('levels.level_cap_married')):
             exp = ship_instance.exp
             req = ship_instance.exp_req()
-            draw_squish_text(img, (550, 340), "%s / %s EXP (%.02f%%)"
-                             % (exp, req, 100.0 * exp / req), font_tiny,
-                             490, color=(0, 0, 0), outline=(125, 125, 125))
-        if (base.remodels_into):
+            draw_object(img, obj_level_progress, "%s / %s EXP (%.02f%%)" % (exp, req, 100.0 * exp / req))
+        if (base.remodels_into and obj_next_remodel['enabled']):
             r_base = ship_stats.ShipBase.instance(base.remodels_into)
-            draw_squish_text(img, (550, 400), "Next Remodel: %s (Level %s)"
-                             % (r_base.name, base.remodel_level), font_tiny, 490,
-                             color=(0, 0, 0), outline=(125, 125, 125))
+            draw_object(img, obj_next_remodel, "Next Remodel: %s (Level %s)" % (r_base.name, base.remodel_level))
 
-    font_corner = ImageFont.truetype("framd.ttf", 60)
-    draw_squish_text(img, (630, 40), "%s-%04d"
-                     % (base.stype, ship_instance.invid),
-                     font_corner, 160, color=(0, 0, 0),
-                     outline=(125, 125, 125))
+    if (obj_small_identifier['enabled']):
+        draw_object(img, obj_small_identifier, "%s-%04d" % (base.stype, ship_instance.invid))
 
-    font = ImageFont.truetype("framdit.ttf", 35)
-
-    display_name = "Unknown User"
-    for g in bot.guilds:
-        owner = g.get_member(ship_instance.owner)
-        if (owner):
-            display_name = "%s#%s" % (owner.name, owner.discriminator)
-            break
-    draw_squish_text(img, (550, 475), "Owned by %s" % (display_name),
-                     font, 490, color=(25, 25, 25), outline=(175, 175, 175))
+    if (obj_owned_by['enabled']):
+        display_name = "Unknown User"
+        for g in bot.guilds:
+            owner = g.get_member(ship_instance.owner)
+            if (owner):
+                display_name = "%s#%s" % (owner.name, owner.discriminator)
+                break
+        draw_object(img, obj_owned_by, "Owned by %s" % (display_name))
 
     r = io.BytesIO(b'')
     img.save(r, format="PNG")
@@ -302,7 +310,7 @@ def get_birthday_image(base):
     img_size = (600, 800)
     img = Image.new(size=img_size, mode="RGB", color=(0, 0, 0))
 
-    backdrop = ship_stats.get_rarity_backdrop(8, img_size)
+    backdrop = Image.open(DIR_PATH + '/images/bday_bg.jpg')
     img.paste(backdrop)
 
     cg = base.get_cg()
@@ -410,6 +418,13 @@ def generate_sortie_card(sortie):
     r = io.BytesIO(b'')
     img.save(r, format="PNG")
     return r
+
+
+def draw_object(img, obj, text, center_height=True, repeat=1):
+    """Draw a configuration object using its JSON Parameters."""
+    font = ImageFont.truetype(obj['font'], obj['font_size'])
+    draw_squish_text(img, tuple(obj['position']), text, font, obj['width'], color=tuple(obj['color']),
+                     outline=tuple(obj['outline']), center_height=center_height, repeat=repeat)
 
 
 def draw_squish_text(img, position, text, font, max_width,

@@ -247,10 +247,8 @@ RARITY_COLORS = [(150, 150, 150), (150, 150, 150), (150, 150, 150),
                  (250, 25, 25), (255, 0, 234)]
 
 
-def get_rarity_backdrop(rarity, size):
+def get_rarity_backdrop(rarity):
     """Return an image of the corresponding rarity background.
-
-    Uses an 8-tiled image (Rarity_colors.jpg)
 
     Returns
     -------
@@ -258,26 +256,7 @@ def get_rarity_backdrop(rarity, size):
         The image resized to the given size.
     """
     rarity -= 1
-    rimg = Image.open(DIR_PATH + '/images/Rarity_colors.jpg')
-    w, h = rimg.size
-    start_x = int(rarity % 4 * (w / 4)) + 10
-    start_y = int(rarity // 4 * (h / 2)) + 15
-    max_w = int(w / 4) - 20
-    max_h = int(h / 2) - 30
-    if (w > h):
-        targ_w = max_w
-        targ_h = (h / w) * targ_w
-    else:
-        targ_h = max_h
-        targ_w = (w / h) * targ_h
-    if (targ_h > max_h):
-        targ_h = max_h
-    if (targ_w > max_w):
-        targ_w = max_w
-    targ_w = int(targ_w)
-    targ_h = int(targ_h)
-    rimg = rimg.crop((start_x, start_y, start_x + targ_w, start_y + targ_h))
-    rimg = rimg.resize(size, resample=Image.BICUBIC)
+    rimg = Image.open(DIR_PATH + '/images/bg_%d.png' % (rarity))
     return rimg
 
 

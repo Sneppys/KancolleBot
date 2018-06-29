@@ -1,0 +1,46 @@
+{
+    "levels": [
+        {
+            "name": "Simple",
+            "recommended_level": 1,
+            "minimum_flag": 1,
+            "exp_reward_base": 350,
+            "exp_reward_split": 100
+        },
+        {
+            "name": "Easy",
+            "recommended_level": 10,
+            "minimum_flag": 8,
+            "exp_reward_base": 700,
+            "exp_reward_split": 300
+        },
+        {
+            "name": "Medium",
+            "recommended_level": 20,
+            "minimum_flag": 15,
+            "exp_reward_base": 1000,
+            "exp_reward_split": 400
+        },
+        {
+            "name": "Hard",
+            "recommended_level": 35,
+            "minimum_flag": 20,
+            "exp_reward_base": 2400,
+            "exp_reward_split": 900
+        },
+        {
+            "name": "Difficult",
+            "recommended_level": 45,
+            "minimum_flag": 30,
+            "exp_reward_base": 5000,
+            "exp_reward_split": 2000
+        },
+        {
+            "name": "Extreme",
+            "recommended_level": 65,
+            "minimum_flag": 50,
+            "exp_reward_base": 9000,
+            "exp_reward_split": 3500
+        }
+    ]
+}
