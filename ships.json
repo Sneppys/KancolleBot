@@ -13808,9 +13808,9 @@
             "remodel": "Hell yeah!"
         },
         "rarity": 4,
-        "remodel_level": null,
+        "remodel_level": 84,
         "remodels_from": 28,
-        "remodels_into": null,
+        "remodels_into": 277,
         "stype": "CL",
         "wiki_link": "http://kancolle.wikia.com/wiki/Tenryuu"
     },
@@ -14939,9 +14939,9 @@
             "remodel": "Number o~ne!"
         },
         "rarity": 4,
-        "remodel_level": null,
+        "remodel_level": 77,
         "remodels_from": 79,
-        "remodels_into": null,
+        "remodels_into": 297,
         "stype": "DD",
         "wiki_link": "http://kancolle.wikia.com/wiki/Shiratsuyu"
     },
@@ -17123,9 +17123,9 @@
             "remodel": "Thank you, I'll take it."
         },
         "rarity": 5,
-        "remodel_level": null,
+        "remodel_level": 75,
         "remodels_from": 133,
-        "remodels_into": null,
+        "remodels_into": 342,
         "stype": "DD",
         "wiki_link": "http://kancolle.wikia.com/wiki/Yuugumo"
     },
@@ -20605,5 +20605,122 @@
 		"remodels_into": null,
 		"stype": "DD",
 		"wiki_link": "http://kancolle.wikia.com/wiki/Kuroshio_Kai_Ni"
-	}
+	},
+    "297": {
+        "can_craft": true,
+		"can_drop": true,
+		"class_name": "Shiratsuyu Class",
+		"images": {
+		    "full": {
+                "file_name": "297.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f4/DD_Shiratsuyu_Kai_Ni_497_Full.png/revision/latest/scale-to-width-down/300?cb=20180712135737"
+            },
+            "full_damaged": {
+                "file_name": "297_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e8/DD_Shiratsuyu_Kai_Ni_497_Full_Damaged.png/revision/latest/scale-to-width-down/300?cb=20180712135740"
+            },
+            "small": {
+                "file_name": "497.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "497_d.png",
+                "url": null
+            }
+		},
+		"kc3id": 497,
+		"name": "Shiratsuyu Kai Ni",
+        "quotes": {
+            "fleet_join": "Ok~ay, let's go all out!",
+            "idle": "Admiral\u00a0! work a little harder\u00a0! aim to be number one\u00a0!",
+            "intro": "First ship of the Shiratsuyu-class destroyers, 'Shiratsuyu'!. Yes, the first ship!",
+            "marriage": "*laugh* Admiral, what a nice feeling. My number one favourite thing? It's a se~cret!",
+            "married": "I want the admiral to become everybody's number one~ Yeah! Today's a number one smile!",
+            "remodel": "Number o~ne!"
+        },
+		"rarity": 7,
+		"remodel_level": null,
+		"remodels_from": 1342,
+		"remodels_into": null,
+		"stype": "DD",
+		"wiki_link": "http://kancolle.wikia.com/wiki/Shiratsuyu_Kai_Ni"
+    },
+    "277": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Tenryuu Class",
+        "images": {
+            "full": {
+                "file_name": "277.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e1/CL_Tenryuu_Kai_Ni_477_Full.png/revision/latest?cb=20180712135922"
+            },
+            "full_damaged": {
+                "file_name": "277_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/09/CL_Tenryuu_Kai_Ni_477_Full_Damaged.png/revision/latest?cb=20180712135937"
+            },
+            "small": {
+                "file_name": "477.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "477_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 477,
+        "name": "Tenryuu Kai Ni",
+        "quotes": {
+            "fleet_join": "Tenryuu, torpedo squadron. Movin' out!",
+            "idle": "Hey, hey! Put me in an operation right now! I'll lose my edge.",
+            "intro": "My name is Tenryuu. Heheh. Ya scared?",
+            "marriage": "Haha! Did ya fall in love with my power? Huh? Not my power, but me!? Ha! This is some kinda messed up dream, right!?",
+            "married": "Ahh? Well, that's just the kinda guy you are. It's all good!",
+            "remodel": "Hell yeah!"
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 1313,
+        "remodels_into": null,
+        "stype": "CL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Tenryuu"
+    },
+    "342": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Yuugumo Class",
+        "images": {
+            "full": {
+                "file_name": "342.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/02/DD_Yuugumo_Kai_Ni_542_Full.png/revision/latest/scale-to-width-down/300?cb=20180712140036"
+            },
+            "full_damaged": {
+                "file_name": "342_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f0/DD_Yuugumo_Kai_Ni_542_Full_Damaged.png/revision/latest/scale-to-width-down/300?cb=20180712140046"
+            },
+            "small": {
+                "file_name": "542.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "542_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 542,
+        "name": "Yuugumo Kai Ni",
+        "quotes": {
+            "fleet_join": "Destroyer Yuugumo, going with full force!",
+            "idle": "Aren't you tired Admiral? Yuugumo is quite worried you know...",
+            "intro": "First ship of the Yuugumo-class, Yuugumo, has arrived. Admiral, it's okay to spoil me a bit.",
+            "marriage": "Ah, Admiral~, your hat is askance again. You're the commander of such a big fleet, please do look the part. Just how much do I have to look after you\u2026 eh? It's fine to keep on doing it? Well, that's\u30fbjust\u30fblovely\u2661",
+            "married": "Admiral~ is it not a good time to take a quick break?",
+            "remodel": "Thank you, I'll take it."
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 1398,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Yuugumo"
+    }
 }
