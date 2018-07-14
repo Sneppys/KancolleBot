@@ -310,7 +310,7 @@ def get_birthday_image(base):
     img_size = (600, 800)
     img = Image.new(size=img_size, mode="RGB", color=(0, 0, 0))
 
-    backdrop = Image.open(DIR_PATH + '/images/bday_bg.jpg')
+    backdrop = Image.open(DIR_PATH + '/images/bday_bg.png')
     img.paste(backdrop)
 
     cg = base.get_cg()
