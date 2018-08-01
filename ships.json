@@ -20631,12 +20631,12 @@
 		"kc3id": 497,
 		"name": "Shiratsuyu Kai Ni",
         "quotes": {
-            "fleet_join": "Ok~ay, let's go all out!",
+            "fleet_join": "Ok~ay, let's get to work!",
             "idle": "Admiral\u00a0! work a little harder\u00a0! aim to be number one\u00a0!",
-            "intro": "First ship of the Shiratsuyu-class destroyers, 'Shiratsuyu'!. Yes, the first ship!",
+            "intro": "I'm Shiratsuyu that just received the greatest remodel, Admiral. I'm definitely the number one ship. Now, let's go!",
             "marriage": "*laugh* Admiral, what a nice feeling. My number one favourite thing? It's a se~cret!",
             "married": "I want the admiral to become everybody's number one~ Yeah! Today's a number one smile!",
-            "remodel": "Number o~ne!"
+            "remodel": "Fufu~ I got stronger."
         },
 		"rarity": 7,
 		"remodel_level": null,
@@ -20709,9 +20709,9 @@
         "kc3id": 542,
         "name": "Yuugumo Kai Ni",
         "quotes": {
-            "fleet_join": "Destroyer Yuugumo, going with full force!",
+            "fleet_join": "I'm going to set out at full force, Admiral. Destroyer Division 10, weigh anchor!",
             "idle": "Aren't you tired Admiral? Yuugumo is quite worried you know...",
-            "intro": "First ship of the Yuugumo-class, Yuugumo, has arrived. Admiral, it's okay to spoil me a bit.",
+            "intro": "First ship of the remodelled Yuugumo-class, Yuugumo, arriving on station. Admiral, it's okay to spoil me a bit.",
             "marriage": "Ah, Admiral~, your hat is askance again. You're the commander of such a big fleet, please do look the part. Just how much do I have to look after you\u2026 eh? It's fine to keep on doing it? Well, that's\u30fbjust\u30fblovely\u2661",
             "married": "Admiral~ is it not a good time to take a quick break?",
             "remodel": "Thank you, I'll take it."

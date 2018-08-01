@@ -57,7 +57,6 @@ class ShipBase:
         self.remodels_into = data['remodels_into']
         self.remodel_level = data['remodel_level']
         self.images = data['images']
-        self.wiki_link = data['wiki_link']
         self.can_drop = data['can_drop']
         self.can_craft = data['can_craft']
 
