@@ -81,6 +81,8 @@
         "empty_color2": [75, 75, 75],
         "fleet_color1": [200, 200, 150],
         "fleet_color2": [255, 255, 200],
+        "seasonal_color1": [200, 230, 200],
+        "seasonal_color2": [220, 255, 220],
         "flag_border_color": [250, 100, 0]
     }
 }

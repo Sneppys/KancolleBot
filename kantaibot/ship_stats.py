@@ -95,6 +95,10 @@ class ShipBase:
             pass
         return ship
 
+    def has_seasonal_cg(self):
+        """Return True if the ship has a seasonal artwork."""
+        return str(self.sid) in SEASONAL_DATA
+
     def get_cg(self, ico=False, dmg=False):
         """Return the full CG of the ship.
 
@@ -110,7 +114,7 @@ class ShipBase:
         PIL.Image
             The CG requested, in its native size
         """
-        seasonal = str(self.sid) in SEASONAL_DATA
+        seasonal = self.has_seasonal_cg()
         file_dir = "../seasonal_cg/" if seasonal else ("../icos/" if
                                                        ico else "../cgs/")
         file_dir = os.path.join(DIR_PATH, file_dir)

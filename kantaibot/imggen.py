@@ -91,7 +91,6 @@ def generate_inventory_screen(member, page, only_dupes=False):
 
             shade_color = (("filled_color1" if shade else "filled_color2")
                            if ship else ("empty_color1" if shade else "empty_color2"))
-            shade_color = tuple(layout[shade_color])
             border_color = None
 
             if (ship):
@@ -99,9 +98,12 @@ def generate_inventory_screen(member, page, only_dupes=False):
                 if (ship.invid in fleet.ships):
                     flag = fleet.ships.index(ship.invid) == 0
                     shade_color = "fleet_color1" if shade else "fleet_color2"
-                    shade_color = tuple(layout[shade_color])
                     if flag:
                         border_color = tuple(layout['flag_border_color'])
+                elif (ship.base().has_seasonal_cg()):
+                    shade_color = "seasonal_color1" if shade else "seasonal_color2"
+
+            shade_color = tuple(layout[shade_color])
 
             x, y = (xi * cw, yi * ch)
             draw.rectangle((x, y, x + cw, y + ch), fill=shade_color)
