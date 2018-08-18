@@ -50,7 +50,7 @@
     },
     "levels": {
         "level_cap": 99,
-        "level_cap_married": 165,
+        "level_cap_married": 175,
         "marriage_ring_required": true,
         "passive_flag_bonus": [40, 60]
     },

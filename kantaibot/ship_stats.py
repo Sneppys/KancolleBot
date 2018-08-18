@@ -208,7 +208,8 @@ class ShipInstance:
             for a, v in add.items():
                 if (self.level >= a):
                     base += v
-        elif (self.level == 99 or self.level >= 165):
+        elif (self.level == setting('levels.level_cap')
+              or self.level >= setting('levels.level_cap_married')):
             return 0
         else:
             base = self.level
@@ -233,7 +234,7 @@ class ShipInstance:
             upper_bases = {155: 2500, 156: 600, 157: 800, 158: 1100, 159: 1500,
                            160: 2000, 161: 2600, 162: 3300, 163: 4100,
                            164: 5000}
-            if (self.level >= 155):
+            if (self.level in upper_bases):
                 base = upper_bases[self.level]
         return base * 100
 
