@@ -1798,5 +1798,45 @@
                 "url": null
             }
         }
+    },
+    "332": {
+        "images": {
+            "full": {
+                "file_name": "332f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/38/Suzutsuki_Summer_Full.png/revision/latest?cb=20180817104240"
+            },
+            "full_damaged": {
+                "file_name": "332f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/84/Suzutsuki_Summer_Full_Damaged.png/revision/latest?cb=20180817104250"
+            },
+            "small": {
+                "file_name": "532.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "532_d.png",
+                "url": null
+            }
+        }
+    },
+    "337": {
+        "images": {
+            "full": {
+                "file_name": "337f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/38/Suzutsuki_Summer_Full.png/revision/latest?cb=20180817104240"
+            },
+            "full_damaged": {
+                "file_name": "337f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/84/Suzutsuki_Summer_Full_Damaged.png/revision/latest?cb=20180817104250"
+            },
+            "small": {
+                "file_name": "537.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "537_d.png",
+                "url": null
+            }
+        }
     }
 }
