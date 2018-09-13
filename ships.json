@@ -20722,5 +20722,434 @@
         "remodels_into": null,
         "stype": "DD",
         "wiki_link": "http://kancolle.wikia.com/wiki/Yuugumo"
+    },
+    "327": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Yuugumo Class",
+        "images": {
+            "full": {
+                "file_name": "327.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f2/Kishinami_Full.png/revision/latest?cb=20180909060939"
+            },
+            "full_damaged": {
+                "file_name": "327_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/22/Kishinami_Full_Damaged.png/revision/latest/scale-to-width-down/300?cb=20180909060956"
+            },
+            "small": {
+                "file_name": "527.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "527_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 527,
+        "name": "Kishinami",
+        "quotes": {
+            "fleet_join": "31st Destroyer Division, Kishinami, sortieing!",
+            "idle": "Ah... Oh it's you, Asa-chan. No, I'm not expecting anyone in particular. Stop that, I'm... I'm fine. I'm happy enough to have all of you here with me. Yup.",
+            "intro": "I'm the 15th ship of the Yuugumo-class destroyers, Kishinami. You're the Admiral? I see, that's fine then. Kishinami, reporting to the 31st Destroyer Division.",
+            "marriage": "What is it, Admiral? You might not notice, but I don't have time to spare. Eh, what's wrong? Your face is red. Do you have a cold? Come here a bit... Whoa, you've got a bit of a temperature and you're sweating too... Sigh, come here. There, keep warm and get some rest. I'll go make something. Jeez, treasure your body. I swear.",
+            "married": "Would you... like some tea, Admiral? I see, roger. I'll leave it here. No, don't worry. I've already gotten Oki-nee some. Ah, I think it'd be good if you took a break sometimes.",
+            "remodel": "Well that's how it is."
+        },
+        "rarity": 4,
+        "remodel_level": 35,
+        "remodels_from": null,
+        "remodels_into": 1486,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Kishinami"
+    },
+    "1486": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Yuugumo Class",
+        "images": {
+            "full": {
+                "file_name": "1486.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f2/Kishinami_Full.png/revision/latest?cb=20180909060939"
+            },
+            "full_damaged": {
+                "file_name": "1486_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/22/Kishinami_Full_Damaged.png/revision/latest/scale-to-width-down/300?cb=20180909060956"
+            },
+            "small": {
+                "file_name": "686.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "686_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 686,
+        "name": "Kishinami Kai",
+        "quotes": {
+            "fleet_join": "31st Destroyer Division, Kishinami, sortieing!",
+            "idle": "Ah... Oh it's you, Asa-chan. No, I'm not expecting anyone in particular. Stop that, I'm... I'm fine. I'm happy enough to have all of you here with me. Yup.",
+            "intro": "I'm the 15th ship of the Yuugumo-class destroyers, Kishinami. The 31st Destroyer Division have completed our sortie preparations, Admiral. Please take care of me today too.",
+            "marriage": "What is it, Admiral? You might not notice, but I don't have time to spare. Eh, what's wrong? Your face is red. Do you have a cold? Come here a bit... Whoa, you've got a bit of a temperature and you're sweating too... Sigh, come here. There, keep warm and get some rest. I'll go make something. Jeez, treasure your body. I swear.",
+            "married": "Would you... like some tea, Admiral? I see, roger. I'll leave it here. No, don't worry. I've already gotten Oki-nee some. Ah, I think it'd be good if you took a break sometimes.",
+            "remodel": "Well that's how it is."
+        },
+        "rarity": 5,
+        "remodel_level": null,
+        "remodels_from": 327,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Kishinami"
+    },
+    "324": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Shinyou Class",
+        "images": {
+            "full": {
+                "file_name": "324.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/51/Shinyou_Full.png/revision/latest?cb=20180909060942"
+            },
+            "full_damaged": {
+                "file_name": "324_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/ff/Shinyou_Full_Damaged.png/revision/latest?cb=20180909060959"
+            },
+            "small": {
+                "file_name": "534.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "534_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 534,
+        "name": "Shinyou",
+        "quotes": {
+            "fleet_join": "Marine escort corps, aircraft carrier Shinyou...ready to sortie.",
+            "idle": "Kobe...was a great city...I couldn't move an inch at the time...but now...no...one day I'll be a passenger ship...again!",
+            "intro": "Guten Tag...I-I mean...hello...my name's Shinyou...I'm an aircraft carrier...I'm sorry...I'm still getting used to things... but, I'll do my best.",
+            "marriage": "Did you call, Admiral? Ah, um, I um...ah...yes! The Maritime Escort Division...has been gradually getting...eh? It's not about that...? Um...what is that box...?",
+            "married": "Um...is Kobe Beef...oh, I've never had it... Um, the one heavy cruiser said she liked it...sounds nice...one day when it becomes peaceful...I would like to try it...as well.",
+            "remodel": "I'm sorry."
+        },
+        "rarity": 4,
+        "remodel_level": 60,
+        "remodels_from": null,
+        "remodels_into": 1461,
+        "stype": "CVL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Shinyou"
+    },
+    "1461": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Shinyou Class",
+        "images": {
+            "full": {
+                "file_name": "1461.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/38/Shinyou_Kai_Full.png/revision/latest/scale-to-width-down/300?cb=20180909060945"
+            },
+            "full_damaged": {
+                "file_name": "1461_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c3/Shinyou_Kai_Full_Damaged.png/revision/latest?cb=20180909061002"
+            },
+            "small": {
+                "file_name": "381.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "381_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 381,
+        "name": "Shinyou Kai",
+        "quotes": {
+            "fleet_join": "Marine escort corps, aircraft carrier Shinyou...ready to sortie.",
+            "idle": "Kobe...was a great city...I couldn't move an inch at the time...but now...no...one day I'll be a passenger ship...again!",
+            "intro": "Guten! I mean, good morning, Admiral. Aircraft carrier Shinyou reporting in...I'm sorry I'm still getting used to things... but, I'll do my best today as well.",
+            "marriage": "Did you call, Admiral? Ah, um, I um...ah...yes! The Maritime Escort Division...has been gradually getting...eh? It's not about that...? Um...what is that box...?",
+            "married": "Um...is Kobe Beef...oh, I've never had it... Um, the one heavy cruiser said she liked it...sounds nice...one day when it becomes peaceful...I would like to try it...as well.",
+            "remodel": "I'm sorry."
+        },
+        "rarity": 6,
+        "remodel_level": 85,
+        "remodels_from": 324,
+        "remodels_into": 336,
+        "stype": "CVL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Shinyou"
+    },
+    "336": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Shinyou Class",
+        "images": {
+            "full": {
+                "file_name": "336.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/39/Shinyou_Kai_Ni_Full.png/revision/latest?cb=20180909060948"
+            },
+            "full_damaged": {
+                "file_name": "336_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/3a/Shinyou_Kai_Ni_Full_Damaged.png/revision/latest?cb=20180909061007"
+            },
+            "small": {
+                "file_name": "536.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "536_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 536,
+        "name": "Shinyou Kai Ni",
+        "quotes": {
+            "fleet_join": "Marine escort corps, aircraft carrier Shinyou...ready to sortie.",
+            "idle": "Kobe...was a great city...I couldn't move an inch at the time...but now...no...one day I'll be a passenger ship...again!",
+            "intro": "Good morning, Admiral. Aircraft carrier Shinyou reporting in...I've gotten used to the fleet here a bit...I hope to do my best today to be of use to you and everyone else, Admiral.",
+            "marriage": "Did you call, Admiral? Ah, um, I um...ah...yes! The Maritime Escort Division...has been gradually getting...eh? It's not about that...? Um...what is that box...?",
+            "married": "Um...is Kobe Beef...oh, I've never had it... Um, the one heavy cruiser said she liked it...sounds nice...one day when it becomes peaceful...I would like to try it...as well.",
+            "remodel": "I'm sorry."
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 1461,
+        "remodels_into": null,
+        "stype": "CVL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Shinyou"
+    },
+    "375": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Maestrale Class",
+        "images": {
+            "full": {
+                "file_name": "375.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1e/Maestrale_Full.png/revision/latest?cb=20180912152502"
+            },
+            "full_damaged": {
+                "file_name": "375_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/75/Maestrale_Full_Damaged.png/revision/latest?cb=20180912152820"
+            },
+            "small": {
+                "file_name": "575.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "575_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 575,
+        "name": "Maestrale",
+        "quotes": {
+            "fleet_join": "10th Destroyer Division Maestrale, heading out!",
+            "idle": "Hello! Admiral! Sammy! This? I connected the chain of an anchor with another chain! Look how long it is! This will definitely be helpful when the time comes! Oh? You look very interested in this Sammy-san.",
+            "intro": "Good day! I'm Maestrale, the eldest of the Maestrale-class destroyers. Please take good care of me, Admiral! I'll do my be~st!",
+            "marriage": "What is it...Admiral? Are you looking for Libe? Or perhaps Zara? Eh? Me? What is...it? Ah, my butt has fully recovered! Eh? Mines? Of course I don't like them? It's not that? Ah...AHH! It's not that! Ahh...no way...I'm...so happy!",
+            "married": "Are you hungry, Admiral? Hehe~ I lived in Naples for a long time, so I Maestrale, made a special fleet napolitan! How is it? It looks like the Japanese napolitan, but it's different right? Zara-san taught me the recipe! There's more if you want!",
+            "remodel": "This is great! I'll be able to do this won't I?"
+        },
+        "rarity": 6,
+        "remodel_level": 35,
+        "remodels_from": null,
+        "remodels_into": 380,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Maestrale"
+    },
+    "380": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Maestrale Class",
+        "images": {
+            "full": {
+                "file_name": "380.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/03/Maestrale_Kai_Full.png/revision/latest?cb=20180912152726"
+            },
+            "full_damaged": {
+                "file_name": "380_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/a4/Maestrale_Kai_Full_Damaged.png/revision/latest?cb=20180912152834"
+            },
+            "small": {
+                "file_name": "580.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "580_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 580,
+        "name": "Maestrale Kai",
+        "quotes": {
+            "fleet_join": "Fleet flagship, Maestrale heading out! Everyone ready?",
+            "idle": "Hello! Admiral! Sammy! This? I connected the chain of an anchor with another chain! Look how long it is! This will definitely be helpful when the time comes! Oh? You look very interested in this Sammy-san.",
+            "intro": "Good day! I'm Maestrale, the eldest of the Maestrale-class destroyers. I'll do my best today as well! Admiral, please give me orders. Now, let's get started!",
+            "marriage": "What is it...Admiral? Are you looking for Libe? Or perhaps Zara? Eh? Me? What is...it? Ah, my butt has fully recovered! Eh? Mines? Of course I don't like them? It's not that? Ah...AHH! It's not that! Ahh...no way...I'm...so happy!",
+            "married": "Are you hungry, Admiral? Hehe~ I lived in Naples for a long time, so I Maestrale, made a special fleet napolitan! How is it? It looks like the Japanese napolitan, but it's different right? Zara-san taught me the recipe! There's more if you want!",
+            "remodel": "This is great! I'll be able to do this won't I?"
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 375,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Maestrale"
+    },
+    "374": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Gotland Class",
+        "images": {
+            "full": {
+                "file_name": "374.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f1/Gotland_Full.png/revision/latest?cb=20180912152444"
+            },
+            "full_damaged": {
+                "file_name": "374_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/17/Gotland_Full_Damaged.png/revision/latest?cb=20180912152758"
+            },
+            "small": {
+                "file_name": "574.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "574_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 574,
+        "name": "Gotland",
+        "quotes": {
+            "fleet_join": "Aviation Cruiser Gotland weighing anchor. Watch me do my best.",
+            "idle": "The Admiral is...oh, seems like he's busy. Alright! It's my free time then! I wonder what I should do with it? Maybe I should head out to see Mogami and Choukai? Wha! Admiral! What, you surprised me for a minute there.",
+            "intro": "I'm the Aviation Cruiser from the Nordic Country of Sweden, Gotland. Admiral, I'll be in your care from now on. I'll be sure to do my best to provide recon for your naval battles.",
+            "marriage": "What are you waiting around for, you're acting strange, this isn't how it usually is with us. Why are you talking so formally all of a sudden? Huh, you have something important for me? Mm? Well, okay, it'll make a good memory. Wow, this is beautiful. I'll accept this gladly. Was it expensive? It was? Tack.",
+            "married": "Are you tired? Then should we get changed? What, you want the fleet.... Huh, just a joke? Well that sort of thing is fine too from time to time. <dunno> Just what are you looking at? You sure seem like you have plenty of energy now.",
+            "remodel": "I should have known, my homeland's weapons are pretty good. Yup, they're the best."
+        },
+        "rarity": 6,
+        "remodel_level": 55,
+        "remodels_from": null,
+        "remodels_into": 379,
+        "stype": "CL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Gotland"
+    },
+    "379": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Gotland Class",
+        "images": {
+            "full": {
+                "file_name": "379.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/04/Gotland_Kai_Full.png/revision/latest?cb=20180912152453"
+            },
+            "full_damaged": {
+                "file_name": "379_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9b/Gotland_Kai_Full_Damaged.png/revision/latest?cb=20180912152810"
+            },
+            "small": {
+                "file_name": "579.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "579_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 579,
+        "name": "Gotland Kai",
+        "quotes": {
+            "fleet_join": "Anti-Air Cruiser Gotland weighing anchor. Watch me do my best.",
+            "idle": "The Admiral is...oh, seems like he's busy. Alright! It's my free time then! I wonder what I should do with it? Maybe I should head out to see Mogami and Choukai? Wha! Admiral! What, you surprised me for a minute there.",
+            "intro": "I'm the Aviation Cruiser remodeled into an Anti-Air Cruiser from the Nordic Country of Sweden, Gotland. Admiral, once again, I'll be in your care. Oh? Would you prefer if I returned to being an Aviation Cruiser?",
+            "marriage": "What are you waiting around for, you're acting strange, this isn't how it usually is with us. Why are you talking so formally all of a sudden? Huh, you have something important for me? Mm? Well, okay, it'll make a good memory. Wow, this is beautiful. I'll accept this gladly. Was it expensive? It was? Tack.",
+            "married": "Are you tired? Then should we get changed? What, you want the fleet.... Huh, just a joke? Well that sort of thing is fine too from time to time. <dunno> Just what are you looking at? You sure seem like you have plenty of energy now.",
+            "remodel": "Yeah, my homeland's weapons are good. I'm not wrong am I?"
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 374,
+        "remodels_into": null,
+        "stype": "CL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Gotland"
+    },
+    "371": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Nelson Class",
+        "images": {
+            "full": {
+                "file_name": "371.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/15/Nelson_Full.png/revision/latest?cb=20180912191933"
+            },
+            "full_damaged": {
+                "file_name": "371_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/dc/Nelson_Full_Damaged.png/revision/latest?cb=20180912192019"
+            },
+            "small": {
+                "file_name": "571.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "571_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 571,
+        "name": "Nelson",
+        "quotes": {
+            "fleet_join": "Yes, I'm heading out. No, this is what a Big 7 does. Don't worry.",
+            "idle": "My Admiral, Zuiun, Ashika... what are you talking about? Ah, about Operation Sea Lion? Don't worry, I have it all planned out. Leave it to me. Eh, that's not it?",
+            "intro": "My name is Nelson. So you're my Admiral? Humph, I see. Good. Show me how you command. I have high expectations.",
+            "marriage": "What are you being so formal for, Admiral? Are you giving that small box to me? What's going on? This isn't like you. Since you've gone through the trouble, I'm opening it...... Whoa, how is it? Does it suit me? Aha! Ahem, I adore you too.",
+            "married": "What's wrong, my Admiral? You've got a long face. Mmm, I know, let's have tea time. Hot black tea is the best thing for times like this. Come on, I'll go make some. Just wait a while.",
+            "remodel": "Alright, let's bring out the rum!"
+        },
+        "rarity": 7,
+        "remodel_level": 50,
+        "remodels_from": null,
+        "remodels_into": 376,
+        "stype": "BB",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Nelson"
+    },
+    "376": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Nelson Class",
+        "images": {
+            "full": {
+                "file_name": "376.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/15/Nelson_Full.png/revision/latest?cb=20180912191933"
+            },
+            "full_damaged": {
+                "file_name": "376_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/dc/Nelson_Full_Damaged.png/revision/latest?cb=20180912192019"
+            },
+            "small": {
+                "file_name": "576.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "576_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 576,
+        "name": "Nelson Kai",
+        "quotes": {
+            "fleet_join": "Yes, I'm heading out. No, this is what a Big 7 does. Don't worry.",
+            "idle": "My Admiral, Zuiun, Ashika... what are you talking about? Ah, about Operation Sea Lion? Don't worry, I have it all planned out. Leave it to me. Eh, that's not it?",
+            "intro": "My name is Nelson. So you're my Admiral? Humph, I see. Good. Show me how you command. I have high expectations.",
+            "marriage": "What are you being so formal for, Admiral? Are you giving that small box to me? What's going on? This isn't like you. Since you've gone through the trouble, I'm opening it...... Whoa, how is it? Does it suit me? Aha! Ahem, I adore you too.",
+            "married": "What's wrong, my Admiral? You've got a long face. Mmm, I know, let's have tea time. Hot black tea is the best thing for times like this. Come on, I'll go make some. Just wait a while.",
+            "remodel": "Alright, let's bring out the rum!"
+        },
+        "rarity": 8,
+        "remodel_level": null,
+        "remodels_from": 371,
+        "remodels_into": null,
+        "stype": "BB",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Nelson"
     }
 }
