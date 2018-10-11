@@ -7,3 +7,4 @@ botinfo.json
 usersdb.db
 output.log
 *.pyc
+.vscode/
