@@ -31,6 +31,10 @@ small_ico_ring_img = os.path.join(DIR_PATH, "images/ring_icon.png")
 
 large_bg_map_img = os.path.join(DIR_PATH, "images/map_bg.jpg")
 
+RARITY_COLORS = [(150, 150, 150), (150, 150, 150), (150, 150, 150),
+                 (0, 122, 103), (255, 255, 50), (0, 255, 84),
+                 (250, 25, 25), (255, 0, 234)]
+
 
 def generate_inventory_screen(member, page, only_dupes=False):
     """Return a BytesIO object of the user's inventory image.
@@ -49,10 +53,13 @@ def generate_inventory_screen(member, page, only_dupes=False):
     inv = userinfo.get_user_inventory(discord_id)
     layout = CONFIG_DATA['inventory']
     w, h = layout['image_size']
+    antialias_value = 2
+    w *= antialias_value
+    h *= antialias_value
     sx, sy = layout['per_row'], layout['per_column']
     cw = int(w / sx)
     ch = int(h / sy)
-    h += layout['lower_padding']
+    h += layout['lower_padding'] * antialias_value
 
     ship_pool = inv.inventory
     if (only_dupes):
@@ -138,7 +145,7 @@ def generate_inventory_screen(member, page, only_dupes=False):
                 use_damaged = False  # TODO check if use damaged image
                 ico = base.get_cg(ico=True, dmg=use_damaged)
                 ico = ico.resize((ch - 4, ch - 4), Image.BILINEAR)
-                border_color = ship_stats.RARITY_COLORS[base.rarity - 1]
+                border_color = RARITY_COLORS[base.rarity - 1]
                 draw.ellipse((cir_start_x - 1, cir_start_y - 1,
                               cir_start_x + ch - 3, cir_start_y + ch - 3),
                              fill=border_color)
@@ -151,8 +158,8 @@ def generate_inventory_screen(member, page, only_dupes=False):
             shade = not shade
 
     draw = ImageDraw.Draw(img)
-    x, y = (0, layout['image_size'][1])  # start position of footer
-    fw, fh = (w, layout['lower_padding'])  # size of footer
+    x, y = (0, layout['image_size'][1] * antialias_value)  # start position of footer
+    fw, fh = (w, layout['lower_padding'] * antialias_value)  # size of footer
 
     display_name = "%s#%s" % (member.name, member.discriminator)
     font = ImageFont.truetype("framd.ttf", fh * 3 // 4)
@@ -210,7 +217,7 @@ def generate_inventory_screen(member, page, only_dupes=False):
     draw.text((rsc_x + toff_x + x_off * 2, rsc_y + toff_y), txt_ships,
               font=font, fill=(0, 0, 0))
     if (setting('features.marriage_enabled') and setting('levels.marriage_ring_required')):
-        draw.text((rsc_x + toff_x + x_off * 3 + 32, rsc_y + toff_y), txt_rings,
+        draw.text((rsc_x + toff_x + int(x_off * 3.5), rsc_y + toff_y), txt_rings,
                   font=font, fill=(0, 0, 0))
 
     if (setting('features.resources_enabled')):
@@ -220,7 +227,9 @@ def generate_inventory_screen(member, page, only_dupes=False):
         img.paste(ico_bauxite, (rsc_x + x_off, rsc_y + y_off), mask=ico_fuel)
     img.paste(ico_ships, (rsc_x + x_off * 2, rsc_y), mask=ico_ships)
     if (setting('features.marriage_enabled') and setting('levels.marriage_ring_required')):
-        img.paste(ico_rings, (rsc_x + x_off * 3 + 30, rsc_y), mask=ico_rings)
+        img.paste(ico_rings, (rsc_x + int(x_off * 3.5), rsc_y), mask=ico_rings)
+
+    img = img.resize((w // antialias_value, h // antialias_value), Image.ANTIALIAS)
 
     r = io.BytesIO()
     img.save(r, format="PNG")

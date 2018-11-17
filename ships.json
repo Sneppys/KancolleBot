@@ -17162,9 +17162,9 @@
             "remodel": "How useful!"
         },
         "rarity": 5,
-        "remodel_level": null,
+        "remodel_level": 75,
         "remodels_from": 134,
-        "remodels_into": null,
+        "remodels_into": 363,
         "stype": "DD",
         "wiki_link": "http://kancolle.wikia.com/wiki/Makigumo"
     },
@@ -17552,9 +17552,9 @@
             "remodel": "Wow, how generous you are!"
         },
         "rarity": 5,
-        "remodel_level": null,
+        "remodel_level": 70,
         "remodels_from": 169,
-        "remodels_into": null,
+        "remodels_into": 359,
         "stype": "DD",
         "wiki_link": "http://kancolle.wikia.com/wiki/Tanikaze"
     },
@@ -21151,5 +21151,83 @@
         "remodels_into": null,
         "stype": "BB",
         "wiki_link": "http://kancolle.wikia.com/wiki/Nelson"
+    },
+    "359": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Kagerou Class",
+        "images": {
+            "full": {
+                "file_name": "359.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/63/Tanikaze_D_Kai_Full.png/revision/latest?cb=20181026114958"
+            },
+            "full_damaged": {
+                "file_name": "359_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e8/Tanikaze_D_Kai_Full_Damaged.png/revision/latest?cb=20181026115009"
+            },
+            "small": {
+                "file_name": "559.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "559_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 559,
+        "name": "Tanikaze D Kai",
+        "quotes": {
+            "fleet_join": "Just leave it to Tanikaze! Sortie!",
+            "idle": "Well, what can I say? Don't underestimate the enemy air raids! Those bastards aren't gonna go easy on us!",
+            "intro": "It's the me who got a bit stronger, Admiral. Ehehe, now, let's get started for today!",
+            "marriage": "What a strange admiral you are to be interested in me, Tanikaze! Then, tell me how you get to love me from the beginning. Hehe, it's fine, the night is long, you know.",
+            "married": "Oh, oh, lookin good. Yer lookin' damn good! I'll be here to watch yer back. So just go out and live it up!",
+            "remodel": "Wow, how generous you are!"
+        },
+        "rarity": 6,
+        "remodel_level": null,
+        "remodels_from": 1409,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Tanikaze"
+    },
+    "363": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Yuugumo Class",
+        "images": {
+            "full": {
+                "file_name": "363.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/cc/Makigumo_Kai_Ni_Full.png/revision/latest?cb=20181116135933"
+            },
+            "full_damaged": {
+                "file_name": "363_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/69/Makigumo_Kai_Ni_Full_Damaged.png/revision/latest?cb=20181116135943"
+            },
+            "small": {
+                "file_name": "563.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "563_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 563,
+        "name": "Makigumo Kai Ni",
+        "quotes": {
+            "fleet_join": "It's Makigumo's turn, I'll do my best!",
+            "idle": "...I'm always looking at Commander-sama from the screen.",
+            "intro": "Yuugumo-class destroyer, I am Makigumo. Following Yuugumo-neesan's example, I'll do my best!",
+            "marriage": "Commander-sama, thank you very much for letting me take my time today. Makigumo too, has to graduate from Yuugumo-neesan some time. Is that okay?",
+            "married": "Commander-sama, do your be~st! Makigumo will too!",
+            "remodel": "How useful!"
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 1399,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Makigumo"
     }
 }

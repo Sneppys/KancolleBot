@@ -30,6 +30,9 @@ TYPE_DATA_FILE = os.path.join(DIR_PATH, "../types.json")
 SEASONAL_DATA_FILE = os.path.join(DIR_PATH, "../seasonal.json")
 SEASONAL_DATA = read_json(SEASONAL_DATA_FILE)
 
+EXPERIENCE_DATA_FILE = os.path.join(DIR_PATH, "../experience.json")
+EXPERIENCE_DATA = read_json(EXPERIENCE_DATA_FILE)
+
 _sbase_cache = {}
 
 
@@ -60,6 +63,7 @@ class ShipBase:
         self.can_drop = data['can_drop']
         self.can_craft = data['can_craft']
 
+    @staticmethod
     def instance(shipid):
         """Get an instance of ShipBase for the given ship id."""
         if (shipid in _sbase_cache):
@@ -163,6 +167,7 @@ class ShipInstance:
         """Return the ShipBase corresponding to this ship."""
         return ShipBase.instance(self.sid)
 
+    @staticmethod
     def new(sid, owner):
         """Make a new ship with the given shipid owned by the given owner."""
         return ShipInstance(-1, sid, owner)
@@ -193,50 +198,8 @@ class ShipInstance:
 
     def exp_req(self):
         """Get the amount of EXP required for the next level."""
-        if (self.level < 99):
-            base = self.level
-            if (self.level > 50):
-                base += self.level - 50
-            if (self.level > 60):
-                base += self.level - 60
-            if (self.level > 70):
-                base += self.level - 70
-            if (self.level > 80):
-                base += self.level - 80
-            add = {91: 5, 92: 15, 93: 25, 94: 45, 95: 95, 96: 195, 97: 295,
-                   98: 580}
-            for a, v in add.items():
-                if (self.level >= a):
-                    base += v
-        elif (self.level == setting('levels.level_cap')
-              or self.level >= setting('levels.level_cap_married')):
-            return 0
-        else:
-            base = self.level
-            lvl = self.level - 100
-            if (self.level > 100):
-                base -= 100
-                base += lvl * 9
-            if (self.level > 110):
-                base += (lvl - 10) * 10
-            if (self.level > 115):
-                base += (lvl - 15) * 10
-            if (self.level > 120):
-                base += (lvl - 20) * 10
-            if (self.level > 130):
-                base += (lvl - 30) * 10
-            if (self.level >= 140):
-                base += (lvl - 39) * 20
-            if (self.level >= 145):
-                base += (lvl - 44) * 10
-            if (self.level >= 150):
-                base += (lvl - 49) * 10
-            upper_bases = {155: 2500, 156: 600, 157: 800, 158: 1100, 159: 1500,
-                           160: 2000, 161: 2600, 162: 3300, 163: 4100,
-                           164: 5000}
-            if (self.level in upper_bases):
-                base = upper_bases[self.level]
-        return base * 100
+        lvl = min(setting('levels.level_cap_married'), max(1, self.level))
+        return EXPERIENCE_DATA['exp'][str(lvl)]
 
     def is_remodel_ready(self):
         """Return true if the ship's level is high enough for a remodel."""
@@ -244,11 +207,6 @@ class ShipInstance:
         if (not base.remodels_into):
             return False
         return self.level >= base.remodel_level
-
-
-RARITY_COLORS = [(150, 150, 150), (150, 150, 150), (150, 150, 150),
-                 (0, 122, 103), (255, 255, 50), (0, 255, 84),
-                 (250, 25, 25), (255, 0, 234)]
 
 
 def get_rarity_backdrop(rarity):

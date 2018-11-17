@@ -1,300 +1,160 @@
 {
-    "11": {
+    "100": {
         "images": {
             "full": {
-                "file_name": "11f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9d/Fubuki_Happi_Full.png/revision/latest/scale-to-width-down/300?cb=20160831120438"
+                "file_name": "100f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f3/Chiyoda_Yukata_Full.png/revision/latest?cb=20150925084017"
             },
             "full_damaged": {
-                "file_name": "11f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d8/Fubuki_Happi_Full_Damaged.png/revision/latest?cb=20160831120450"
+                "file_name": "100f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e1/Chiyoda_Yukata_Full_Damaged.png/revision/latest?cb=20150925084039"
             },
             "small": {
-                "file_name": "9.png",
+                "file_name": "107.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "9_d.png",
+                "file_name": "107_d.png",
                 "url": null
             }
         }
     },
-    "1301": {
+    "104": {
         "images": {
             "full": {
-                "file_name": "1301f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9d/Fubuki_Happi_Full.png/revision/latest/scale-to-width-down/300?cb=20160831120438"
+                "file_name": "104f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/73/Chitose_Yukata_Full.png/revision/latest?cb=20150925083839"
             },
             "full_damaged": {
-                "file_name": "1301f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d8/Fubuki_Happi_Full_Damaged.png/revision/latest?cb=20160831120450"
+                "file_name": "104f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e0/Chitose_Yukata_Full_Damaged.png/revision/latest?cb=20150925083917"
             },
             "small": {
-                "file_name": "201.png",
+                "file_name": "108.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "201_d.png",
+                "file_name": "108_d.png",
                 "url": null
             }
         }
     },
-    "1307": {
+    "105": {
         "images": {
             "full": {
-                "file_name": "1307f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/69/Ayanami_Yukata_Full.png/revision/latest?cb=20170731104937"
+                "file_name": "105f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f3/Chiyoda_Yukata_Full.png/revision/latest?cb=20150925084017"
             },
             "full_damaged": {
-                "file_name": "1307f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8c/Ayanami_Yukata_Full_Damaged.png/revision/latest?cb=20170731104944"
+                "file_name": "105f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e1/Chiyoda_Yukata_Full_Damaged.png/revision/latest?cb=20150925084039"
             },
             "small": {
-                "file_name": "207.png",
+                "file_name": "109.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "207_d.png",
+                "file_name": "109_d.png",
                 "url": null
             }
         }
     },
-    "1308": {
+    "121": {
         "images": {
             "full": {
-                "file_name": "1308f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e0/Shikinami_Yukata_Full.png/revision/latest?cb=20170731110041"
+                "file_name": "121f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/73/Chitose_Yukata_Full.png/revision/latest?cb=20150925083839"
             },
             "full_damaged": {
-                "file_name": "1308f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/97/Shikinami_Yukata_Full_Damaged.png/revision/latest?cb=20170731110041"
+                "file_name": "121f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e0/Chitose_Yukata_Full_Damaged.png/revision/latest?cb=20150925083917"
             },
             "small": {
-                "file_name": "208.png",
+                "file_name": "296.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "208_d.png",
+                "file_name": "296_d.png",
                 "url": null
             }
         }
     },
-    "1315": {
+    "122": {
         "images": {
             "full": {
-                "file_name": "1315f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/84/Kuma_Yukata_Full.png/revision/latest?cb=20150925081929"
+                "file_name": "122f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f3/Chiyoda_Yukata_Full.png/revision/latest?cb=20150925084017"
             },
             "full_damaged": {
-                "file_name": "1315f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d0/Kuma_Yukata_Full_Damaged.png/revision/latest?cb=20150925081948"
+                "file_name": "122f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e1/Chiyoda_Yukata_Full_Damaged.png/revision/latest?cb=20150925084039"
             },
             "small": {
-                "file_name": "215.png",
+                "file_name": "297.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "215_d.png",
+                "file_name": "297_d.png",
                 "url": null
             }
         }
     },
-    "1316": {
+    "132": {
         "images": {
             "full": {
-                "file_name": "1316f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/5f/Tama_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20161021094836"
+                "file_name": "132f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/70/Akigumo_Autumn_Casual_Full.png/revision/latest?cb=20181026132718"
             },
             "full_damaged": {
-                "file_name": "1316f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/26/Tama_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20161021094840"
+                "file_name": "132f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ef/Akigumo_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181026132725"
             },
             "small": {
-                "file_name": "216.png",
+                "file_name": "132.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "216_d.png",
+                "file_name": "132_d.png",
                 "url": null
             }
         }
     },
-    "1318": {
+    "1322": {
         "images": {
             "full": {
-                "file_name": "1318f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/dd/Nagara_Yukata_Full.png/revision/latest?cb=20150907160452"
+                "file_name": "1322f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Sendai_Autumn_Casual_Full.png/revision/latest?cb=20171018105831"
             },
             "full_damaged": {
-                "file_name": "1318f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f1/Nagara_Yukata_Full_Damaged.png/revision/latest?cb=20150907160453"
+                "file_name": "1322f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/34/Sendai_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105834"
             },
             "small": {
-                "file_name": "218.png",
+                "file_name": "222.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "218_d.png",
+                "file_name": "222_d.png",
                 "url": null
             }
         }
     },
-    "1320": {
+    "1326": {
         "images": {
             "full": {
-                "file_name": "1320f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/59/Yura_Yukata_Full.png/revision/latest/scale-to-width-down/300?cb=20160831121314"
+                "file_name": "1326f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/53/Shiranui_Autumn_Casual_Full.png/revision/latest?cb=20171018105042"
             },
             "full_damaged": {
-                "file_name": "1320f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d1/Yura_Yukata_Full_Damaged.png/revision/latest/scale-to-width-down/300?cb=20160831121326"
+                "file_name": "1326f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/60/Shiranui_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105047"
             },
             "small": {
-                "file_name": "220.png",
+                "file_name": "226.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "220_d.png",
-                "url": null
-            }
-        }
-    },
-    "1321": {
-        "images": {
-            "full": {
-                "file_name": "1321f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f6/Natori_Yukata_Full.png/revision/latest?cb=20150907160721"
-            },
-            "full_damaged": {
-                "file_name": "1321f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b5/Natori_Yukata_Full_Damaged.png/revision/latest?cb=20150907160723"
-            },
-            "small": {
-                "file_name": "221.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "221_d.png",
-                "url": null
-            }
-        }
-    },
-    "133": {
-        "images": {
-            "full": {
-                "file_name": "133f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/76/Yuugumo_Happi_Full.png/revision/latest?cb=20161021094653"
-            },
-            "full_damaged": {
-                "file_name": "133f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/27/Yuugumo_Happi_Full_Damaged.png/revision/latest?cb=20161021094656"
-            },
-            "small": {
-                "file_name": "133.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "133_d.png",
-                "url": null
-            }
-        }
-    },
-    "1330": {
-        "images": {
-            "full": {
-                "file_name": "1330f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/12/Oboro_Yukata_Full.png/revision/latest?cb=20150907161103"
-            },
-            "full_damaged": {
-                "file_name": "1330f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/47/Oboro_Yukata_Full_Damaged.png/revision/latest?cb=20150907161108"
-            },
-            "small": {
-                "file_name": "230.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "230_d.png",
-                "url": null
-            }
-        }
-    },
-    "1331": {
-        "images": {
-            "full": {
-                "file_name": "1331f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/af/Akebono_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20151009083027"
-            },
-            "full_damaged": {
-                "file_name": "1331f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/18/Akebono_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20151009083055"
-            },
-            "small": {
-                "file_name": "231.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "231_d.png",
-                "url": null
-            }
-        }
-    },
-    "1333": {
-        "images": {
-            "full": {
-                "file_name": "1333f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d3/Ushio_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20151009084008"
-            },
-            "full_damaged": {
-                "file_name": "1333f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Ushio_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20151009084033"
-            },
-            "small": {
-                "file_name": "233.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "233_d.png",
-                "url": null
-            }
-        }
-    },
-    "1336": {
-        "images": {
-            "full": {
-                "file_name": "1336f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0d/Ikazuchi_Yukata_Full.png/revision/latest?cb=20150925082321"
-            },
-            "full_damaged": {
-                "file_name": "1336f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1b/Ikazuchi_Yukata_Full_Damaged.png/revision/latest?cb=20150925082337"
-            },
-            "small": {
-                "file_name": "236.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "236_d.png",
-                "url": null
-            }
-        }
-    },
-    "1337": {
-        "images": {
-            "full": {
-                "file_name": "1337f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0e/Inazuma_Yukata_Full.png/revision/latest?cb=20150925082548"
-            },
-            "full_damaged": {
-                "file_name": "1337f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/30/Inazuma_Yukata_Full_Damaged.png/revision/latest?cb=20150925082605"
-            },
-            "small": {
-                "file_name": "237.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "237_d.png",
+                "file_name": "226_d.png",
                 "url": null
             }
         }
@@ -303,11 +163,11 @@
         "images": {
             "full": {
                 "file_name": "1342f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d1/Shiratsuyu_Yukata_Full.png/revision/latest?cb=20160831121706"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8e/Shiratsuyu_Autumn_Casual_Full.png/revision/latest?cb=20170929105825"
             },
             "full_damaged": {
                 "file_name": "1342f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c8/Shiratsuyu_Yukata_Full_Damaged.png/revision/latest?cb=20160831121716"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/28/Shiratsuyu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20170929105830"
             },
             "small": {
                 "file_name": "242.png",
@@ -319,382 +179,82 @@
             }
         }
     },
-    "1344": {
+    "1379": {
         "images": {
             "full": {
-                "file_name": "1344f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/51/Murasame_Kai_Summer_Full.png/revision/latest?cb=20150626105015"
+                "file_name": "1379f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6d/Souryuu_Autumn_Casual_Full.png/revision/latest?cb=20171018105226"
             },
             "full_damaged": {
-                "file_name": "1344f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/26/Murasame_Kai_Summer_Full_Damaged.png/revision/latest?cb=20150626105028"
+                "file_name": "1379f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6e/Souryuu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105233"
             },
             "small": {
-                "file_name": "244.png",
+                "file_name": "279.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "244_d.png",
+                "file_name": "279_d.png",
                 "url": null
             }
         }
     },
-    "135": {
+    "1391": {
         "images": {
             "full": {
-                "file_name": "135f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/81/Naganami_Yukata_Full.png/revision/latest?cb=20160916081456"
+                "file_name": "1391f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/73/Chitose_Yukata_Full.png/revision/latest?cb=20150925083839"
             },
             "full_damaged": {
-                "file_name": "135f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/a2/Naganami_Yukata_Full_Damaged.png/revision/latest?cb=20160916081459"
+                "file_name": "1391f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e0/Chitose_Yukata_Full_Damaged.png/revision/latest?cb=20150925083917"
             },
             "small": {
-                "file_name": "135.png",
+                "file_name": "291.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "135_d.png",
+                "file_name": "291_d.png",
                 "url": null
             }
         }
     },
-    "1350": {
+    "1392": {
         "images": {
             "full": {
-                "file_name": "1350f.png",
-                "url": "https://i.imgur.com/IFusHD0.png"
+                "file_name": "1392f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f3/Chiyoda_Yukata_Full.png/revision/latest?cb=20150925084017"
             },
             "full_damaged": {
-                "file_name": "1350f_d.png",
-                "url": "https://i.imgur.com/RDFmukY.png"
+                "file_name": "1392f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e1/Chiyoda_Yukata_Full_Damaged.png/revision/latest?cb=20150925084039"
             },
             "small": {
-                "file_name": "250.png",
+                "file_name": "292.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "250_d.png",
+                "file_name": "292_d.png",
                 "url": null
             }
         }
     },
-    "1362": {
+    "1397": {
         "images": {
             "full": {
-                "file_name": "1362f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/da/Furutaka_Yukata_Full.png/revision/latest?cb=20170731105239"
+                "file_name": "1397f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/70/Akigumo_Autumn_Casual_Full.png/revision/latest?cb=20181026132718"
             },
             "full_damaged": {
-                "file_name": "1362f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/94/Furutaka_Yukata_Full_Damaged.png/revision/latest?cb=20170731105243\\"
+                "file_name": "1397f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ef/Akigumo_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181026132725"
             },
             "small": {
-                "file_name": "262.png",
+                "file_name": "301.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "262_d.png",
-                "url": null
-            }
-        }
-    },
-    "1376": {
-        "images": {
-            "full": {
-                "file_name": "1376f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/05/Mutsu_Yukata_Full.png/revision/latest?cb=20160916081723"
-            },
-            "full_damaged": {
-                "file_name": "1376f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/ac/Mutsu_Yukata_Full_Damaged.png/revision/latest?cb=20160916081723"
-            },
-            "small": {
-                "file_name": "276.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "276_d.png",
-                "url": null
-            }
-        }
-    },
-    "1382": {
-        "images": {
-            "full": {
-                "file_name": "1382f.png",
-                "url": "https://i.imgur.com/DaRvuLI.png"
-            },
-            "full_damaged": {
-                "file_name": "1382f_d.png",
-                "url": "https://i.imgur.com/0ne63dr.png"
-            },
-            "small": {
-                "file_name": "282.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "282_d.png",
-                "url": null
-            }
-        }
-    },
-    "1386": {
-        "images": {
-            "full": {
-                "file_name": "1386f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b7/Fusou_Happi_Full.png/revision/latest?cb=20161021094304"
-            },
-            "full_damaged": {
-                "file_name": "1386f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9d/Fusou_Happi_Full_Damaged.png/revision/latest?cb=20161021094309"
-            },
-            "small": {
-                "file_name": "286.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "286_d.png",
-                "url": null
-            }
-        }
-    },
-    "1398": {
-        "images": {
-            "full": {
-                "file_name": "1398f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/76/Yuugumo_Happi_Full.png/revision/latest?cb=20161021094653"
-            },
-            "full_damaged": {
-                "file_name": "1398f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/27/Yuugumo_Happi_Full_Damaged.png/revision/latest?cb=20161021094656"
-            },
-            "small": {
-                "file_name": "302.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "302_d.png",
-                "url": null
-            }
-        }
-    },
-    "1400": {
-        "images": {
-            "full": {
-                "file_name": "1400f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/81/Naganami_Yukata_Full.png/revision/latest?cb=20160916081456"
-            },
-            "full_damaged": {
-                "file_name": "1400f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/a2/Naganami_Yukata_Full_Damaged.png/revision/latest?cb=20160916081459"
-            },
-            "small": {
-                "file_name": "304.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "304_d.png",
-                "url": null
-            }
-        }
-    },
-    "1405": {
-        "images": {
-            "full": {
-                "file_name": "1405f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f1/Uzuki_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20170929102938"
-            },
-            "full_damaged": {
-                "file_name": "1405f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/28/Uzuki_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20170929102942"
-            },
-            "small": {
-                "file_name": "309.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "309_d.png",
-                "url": null
-            }
-        }
-    },
-    "1406": {
-        "images": {
-            "full": {
-                "file_name": "1406f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/33/Z1_Oktoberfest_Full.png/revision/latest?cb=20150920071531"
-            },
-            "full_damaged": {
-                "file_name": "1406f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/de/Z1_Oktoberfest_Full_Damaged.png/revision/latest?cb=20150920072032"
-            },
-            "small": {
-                "file_name": "310.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "310_d.png",
-                "url": null
-            }
-        }
-    },
-    "1408": {
-        "images": {
-            "full": {
-                "file_name": "1408f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/78/Hamakaze_Yukata_Full.png/revision/latest?cb=20150907161502"
-            },
-            "full_damaged": {
-                "file_name": "1408f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/3f/Hamakaze_Yukata_Full_Damaged.png/revision/latest?cb=20150907161503"
-            },
-            "small": {
-                "file_name": "312.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "312_d.png",
-                "url": null
-            }
-        }
-    },
-    "1412": {
-        "images": {
-            "full": {
-                "file_name": "1412f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d2/Urakaze_Yukata_Full.png/revision/latest?cb=20150907161710"
-            },
-            "full_damaged": {
-                "file_name": "1412f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/98/Urakaze_Yukata_Full_Damaged.png/revision/latest?cb=20150907161714"
-            },
-            "small": {
-                "file_name": "317.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "317_d.png",
-                "url": null
-            }
-        }
-    },
-    "1413": {
-        "images": {
-            "full": {
-                "file_name": "1413f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0b/Isokaze_Kai_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20151009082236"
-            },
-            "full_damaged": {
-                "file_name": "1413f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/2a/Isokaze_Kai_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20151009082248"
-            },
-            "small": {
-                "file_name": "320.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "320_d.png",
-                "url": null
-            }
-        }
-    },
-    "1414": {
-        "images": {
-            "full": {
-                "file_name": "1414f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/44/Ooyodo_Kai_Yukata_Full.png/revision/latest?cb=20150907162113"
-            },
-            "full_damaged": {
-                "file_name": "1414f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/46/Ooyodo_Kai_Yukata_Full_Damaged.png/revision/latest?cb=20150907162118"
-            },
-            "small": {
-                "file_name": "321.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "321_d.png",
-                "url": null
-            }
-        }
-    },
-    "1416": {
-        "images": {
-            "full": {
-                "file_name": "1416f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0c/Harusame_Fall_Full.png/revision/latest?cb=20150925083035"
-            },
-            "full_damaged": {
-                "file_name": "1416f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/fd/Harusame_Fall_Full_Damaged.png/revision/latest?cb=20150925083059"
-            },
-            "small": {
-                "file_name": "323.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "323_d.png",
-                "url": null
-            }
-        }
-    },
-    "1422": {
-        "images": {
-            "full": {
-                "file_name": "1422f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0c/Akizuki_Yukata_Full.png/revision/latest?cb=20160831120931"
-            },
-            "full_damaged": {
-                "file_name": "1422f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b6/Akizuki_Yukata_Full_Damaged.png/revision/latest?cb=20160831120944"
-            },
-            "small": {
-                "file_name": "330.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "330_d.png",
-                "url": null
-            }
-        }
-    },
-    "1424": {
-        "images": {
-            "full": {
-                "file_name": "1424f.png",
-                "url": "https://i.imgur.com/O4nAXAk.png"
-            },
-            "full_damaged": {
-                "file_name": "1424f_d.png",
-                "url": "https://i.imgur.com/lg172NA.png"
-            },
-            "small": {
-                "file_name": "344.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "344_d.png",
-                "url": null
-            }
-        }
-    },
-    "1427": {
-        "images": {
-            "full": {
-                "file_name": "1427f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d2/Libeccio_Yukata_Full.png/revision/latest?cb=20170912132218"
-            },
-            "full_damaged": {
-                "file_name": "1427f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/80/Libeccio_Yukata_Full_Damaged.png/revision/latest?cb=20170912132218"
-            },
-            "small": {
-                "file_name": "347.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "347_d.png",
+                "file_name": "301_d.png",
                 "url": null
             }
         }
@@ -703,11 +263,11 @@
         "images": {
             "full": {
                 "file_name": "1428f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ea/Mizuho_Summer_2018_Full.png/revision/latest?cb=20180801122918"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1c/Mizuho_Late_Fall_Full.png/revision/latest?cb=20181116162948"
             },
             "full_damaged": {
                 "file_name": "1428f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/29/Mizuho_Summer_2018_Full_Damaged.png/revision/latest?cb=20180801122923"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e6/Mizuho_Late_Fall_Full_Damaged.png/revision/latest?cb=20181116163033"
             },
             "small": {
                 "file_name": "348.png",
@@ -719,182 +279,42 @@
             }
         }
     },
-    "1431": {
+    "1466": {
         "images": {
             "full": {
-                "file_name": "1431f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/81/Kawakaze_Yukata_Full.png/revision/latest?cb=20150907162543"
+                "file_name": "1466f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1c/Tsushima_Late_Fall_Casual_Full.png/revision/latest?cb=20181116171902"
             },
             "full_damaged": {
-                "file_name": "1431f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0f/Kawakaze_Yukata_Full_Damaged.png/revision/latest?cb=20150907162550"
+                "file_name": "1466f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/4d/Tsushima_Late_Fall_Casual_Full_Damaged.png/revision/latest?cb=20181116172033"
             },
             "small": {
-                "file_name": "351.png",
+                "file_name": "386.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "351_d.png",
+                "file_name": "386_d.png",
                 "url": null
             }
         }
     },
-    "1438": {
+    "1470": {
         "images": {
             "full": {
-                "file_name": "1438f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/cf/Zara_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20161021094047"
+                "file_name": "1470f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Amagiri_Autumn_Casual_Full.png/revision/latest?cb=20171018102126"
             },
             "full_damaged": {
-                "file_name": "1438f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/cd/Zara_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20161021094052"
+                "file_name": "1470f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/21/Amagiri_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018102133"
             },
             "small": {
-                "file_name": "358.png",
+                "file_name": "390.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "358_d.png",
-                "url": null
-            }
-        }
-    },
-    "1439": {
-        "images": {
-            "full": {
-                "file_name": "1439f.png",
-                "url": "https://i.imgur.com/fh7I4Eh.png"
-            },
-            "full_damaged": {
-                "file_name": "1439f_d.png",
-                "url": "https://i.imgur.com/xwulpIl.png"
-            },
-            "small": {
-                "file_name": "359.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "359_d.png",
-                "url": null
-            }
-        }
-    },
-    "145": {
-        "images": {
-            "full": {
-                "file_name": "145f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8a/Shigure_Kai_Ni_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20161021095043"
-            },
-            "full_damaged": {
-                "file_name": "145f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f7/Shigure_Kai_Ni_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20161021095047"
-            },
-            "small": {
-                "file_name": "145.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "145_d.png",
-                "url": null
-            }
-        }
-    },
-    "1452": {
-        "images": {
-            "full": {
-                "file_name": "1452f.png",
-                "url": "https://i.imgur.com/VZLU4I5.png"
-            },
-            "full_damaged": {
-                "file_name": "1452f_d.png",
-                "url": "https://i.imgur.com/xx7smKQ.png"
-            },
-            "small": {
-                "file_name": "372.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "372_d.png",
-                "url": null
-            }
-        }
-    },
-    "1453": {
-        "images": {
-            "full": {
-                "file_name": "1453f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ee/Fujinami_Yukata_Full.png/revision/latest?cb=20170731105129"
-            },
-            "full_damaged": {
-                "file_name": "1453f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9a/Fujinami_Yukata_Full_Damaged.png/revision/latest?cb=20170731105130"
-            },
-            "small": {
-                "file_name": "373.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "373_d.png",
-                "url": null
-            }
-        }
-    },
-    "1463": {
-        "images": {
-            "full": {
-                "file_name": "1463f.png",
-                "url": "https://i.imgur.com/QIXjITW.png"
-            },
-            "full_damaged": {
-                "file_name": "1463f_d.png",
-                "url": "https://i.imgur.com/XFN2ETM.png"
-            },
-            "small": {
-                "file_name": "383.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "383_d.png",
-                "url": null
-            }
-        }
-    },
-    "1464": {
-        "images": {
-            "full": {
-                "file_name": "1464f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0c/Matsuwa_Yukata_Full.png/revision/latest?cb=20170912132355"
-            },
-            "full_damaged": {
-                "file_name": "1464f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6c/Matsuwa_Yukata_Full_Damaged.png/revision/latest?cb=20170912132359"
-            },
-            "small": {
-                "file_name": "384.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "384_d.png",
-                "url": null
-            }
-        }
-    },
-    "147": {
-        "images": {
-            "full": {
-                "file_name": "147f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c8/%D0%92%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20170929103204"
-            },
-            "full_damaged": {
-                "file_name": "147f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/fd/%D0%92%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20170929105026"
-            },
-            "small": {
-                "file_name": "147.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "147_d.png",
+                "file_name": "390_d.png",
                 "url": null
             }
         }
@@ -903,11 +323,11 @@
         "images": {
             "full": {
                 "file_name": "1471f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/aa/Sagiri_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20170929103923"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b2/Sagiri_Late_Fall_Casual_Full.png/revision/latest?cb=20181026132109"
             },
             "full_damaged": {
                 "file_name": "1471f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8b/Sagiri_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20170929103931"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/fd/Sagiri_Late_Fall_Casual_Full_Damaged.png/revision/latest?cb=20171110083152"
             },
             "small": {
                 "file_name": "391.png",
@@ -923,11 +343,11 @@
         "images": {
             "full": {
                 "file_name": "1472f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/ad/Richelieu_Autumn_Casual_Full.png/revision/latest?cb=20170929103741"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c3/Richelieu_Cream_Puffs_Full.png/revision/latest?cb=20181116171647"
             },
             "full_damaged": {
                 "file_name": "1472f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9c/Richelieu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20170929103750"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/4b/Richelieu_Cream_Puffs_Full_Damaged.png/revision/latest?cb=20181116171712"
             },
             "small": {
                 "file_name": "392.png",
@@ -939,582 +359,42 @@
             }
         }
     },
-    "1476": {
+    "158": {
         "images": {
             "full": {
-                "file_name": "1476f.png",
-                "url": "https://i.imgur.com/AjMkMZf.png"
+                "file_name": "158f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Sendai_Autumn_Casual_Full.png/revision/latest?cb=20171018105831"
             },
             "full_damaged": {
-                "file_name": "1476f_d.png",
-                "url": "https://i.imgur.com/anH8f71.png"
+                "file_name": "158f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/34/Sendai_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105834"
             },
             "small": {
-                "file_name": "396.png",
+                "file_name": "158.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "396_d.png",
+                "file_name": "158_d.png",
                 "url": null
             }
         }
     },
-    "1485": {
+    "197": {
         "images": {
             "full": {
-                "file_name": "1485f.png",
-                "url": "https://i.imgur.com/kw62H0X.png"
+                "file_name": "197f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6d/Souryuu_Autumn_Casual_Full.png/revision/latest?cb=20171018105226"
             },
             "full_damaged": {
-                "file_name": "1485f_d.png",
-                "url": "https://i.imgur.com/UzH0zsS.png"
+                "file_name": "197f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6e/Souryuu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105233"
             },
             "small": {
-                "file_name": "685.png",
+                "file_name": "197.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "685_d.png",
-                "url": null
-            }
-        }
-    },
-    "1486": {
-        "images": {
-            "full": {
-                "file_name": "1486f.png",
-                "url": "https://i.imgur.com/4ki2Wtf.png"
-            },
-            "full_damaged": {
-                "file_name": "1486f_d.png",
-                "url": "https://i.imgur.com/AeDkSRy.png"
-            },
-            "small": {
-                "file_name": "686.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "686_d.png",
-                "url": null
-            }
-        }
-    },
-    "159": {
-        "images": {
-            "full": {
-                "file_name": "159f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/a9/Jintsuu_Kai_Ni_Yukata_Full.png/revision/latest?cb=20150907160042"
-            },
-            "full_damaged": {
-                "file_name": "159f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9b/Jintsuu_Kai_Ni_Yukata_Full_Damaged.png/revision/latest?cb=20150907160048"
-            },
-            "small": {
-                "file_name": "159.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "159_d.png",
-                "url": null
-            }
-        }
-    },
-    "161": {
-        "images": {
-            "full": {
-                "file_name": "161f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/bb/Akitsu_Maru_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20161021093805"
-            },
-            "full_damaged": {
-                "file_name": "161f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/08/Akitsu_Maru_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20161021093809"
-            },
-            "small": {
-                "file_name": "161.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "161_d.png",
-                "url": null
-            }
-        }
-    },
-    "162": {
-        "images": {
-            "full": {
-                "file_name": "162f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ec/Kamoi_Yukata_Full.png/revision/latest?cb=20170912132306"
-            },
-            "full_damaged": {
-                "file_name": "162f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/50/Kamoi_Yukata_Full_Damaged.png/revision/latest?cb=20170912132307"
-            },
-            "small": {
-                "file_name": "162.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "162_d.png",
-                "url": null
-            }
-        }
-    },
-    "165": {
-        "images": {
-            "full": {
-                "file_name": "165f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f1/Uzuki_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20170929102938"
-            },
-            "full_damaged": {
-                "file_name": "165f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/28/Uzuki_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20170929102942"
-            },
-            "small": {
-                "file_name": "165.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "165_d.png",
-                "url": null
-            }
-        }
-    },
-    "166": {
-        "images": {
-            "full": {
-                "file_name": "166f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/bb/Akitsu_Maru_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20161021093805"
-            },
-            "full_damaged": {
-                "file_name": "166f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/08/Akitsu_Maru_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20161021093809"
-            },
-            "small": {
-                "file_name": "166.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "166_d.png",
-                "url": null
-            }
-        }
-    },
-    "167": {
-        "images": {
-            "full": {
-                "file_name": "167f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e1/Isokaze_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20151009081634"
-            },
-            "full_damaged": {
-                "file_name": "167f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6a/Isokaze_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20151009081640"
-            },
-            "small": {
-                "file_name": "167.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "167_d.png",
-                "url": null
-            }
-        }
-    },
-    "168": {
-        "images": {
-            "full": {
-                "file_name": "168f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d2/Urakaze_Yukata_Full.png/revision/latest?cb=20150907161710"
-            },
-            "full_damaged": {
-                "file_name": "168f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/98/Urakaze_Yukata_Full_Damaged.png/revision/latest?cb=20150907161714"
-            },
-            "small": {
-                "file_name": "168.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "168_d.png",
-                "url": null
-            }
-        }
-    },
-    "17": {
-        "images": {
-            "full": {
-                "file_name": "17f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/69/Ayanami_Yukata_Full.png/revision/latest?cb=20170731104937"
-            },
-            "full_damaged": {
-                "file_name": "17f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8c/Ayanami_Yukata_Full_Damaged.png/revision/latest?cb=20170731104944"
-            },
-            "small": {
-                "file_name": "13.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "13_d.png",
-                "url": null
-            }
-        }
-    },
-    "170": {
-        "images": {
-            "full": {
-                "file_name": "170f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/78/Hamakaze_Yukata_Full.png/revision/latest?cb=20150907161502"
-            },
-            "full_damaged": {
-                "file_name": "170f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/3f/Hamakaze_Yukata_Full_Damaged.png/revision/latest?cb=20150907161503"
-            },
-            "small": {
-                "file_name": "170.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "170_d.png",
-                "url": null
-            }
-        }
-    },
-    "174": {
-        "images": {
-            "full": {
-                "file_name": "174f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/33/Z1_Oktoberfest_Full.png/revision/latest?cb=20150920071531"
-            },
-            "full_damaged": {
-                "file_name": "174f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/de/Z1_Oktoberfest_Full_Damaged.png/revision/latest?cb=20150920072032"
-            },
-            "small": {
-                "file_name": "174.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "174_d.png",
-                "url": null
-            }
-        }
-    },
-    "179": {
-        "images": {
-            "full": {
-                "file_name": "179f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/33/Z1_Oktoberfest_Full.png/revision/latest?cb=20150920071531"
-            },
-            "full_damaged": {
-                "file_name": "179f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/de/Z1_Oktoberfest_Full_Damaged.png/revision/latest?cb=20150920072032"
-            },
-            "small": {
-                "file_name": "179.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "179_d.png",
-                "url": null
-            }
-        }
-    },
-    "18": {
-        "images": {
-            "full": {
-                "file_name": "18f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e0/Shikinami_Yukata_Full.png/revision/latest?cb=20170731110041"
-            },
-            "full_damaged": {
-                "file_name": "18f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/97/Shikinami_Yukata_Full_Damaged.png/revision/latest?cb=20170731110041"
-            },
-            "small": {
-                "file_name": "14.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "14_d.png",
-                "url": null
-            }
-        }
-    },
-    "184": {
-        "images": {
-            "full": {
-                "file_name": "184f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b6/Taigei_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20161021093048"
-            },
-            "full_damaged": {
-                "file_name": "184f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d4/Taigei_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20161021093051"
-            },
-            "small": {
-                "file_name": "184.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "184_d.png",
-                "url": null
-            }
-        }
-    },
-    "185": {
-        "images": {
-            "full": {
-                "file_name": "185f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/cb/Ryuuhou_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20161021095631"
-            },
-            "full_damaged": {
-                "file_name": "185f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/ad/Ryuuhou_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20161021095635"
-            },
-            "small": {
-                "file_name": "185.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "185_d.png",
-                "url": null
-            }
-        }
-    },
-    "190": {
-        "images": {
-            "full": {
-                "file_name": "190f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/cb/Ryuuhou_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20161021095631"
-            },
-            "full_damaged": {
-                "file_name": "190f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/ad/Ryuuhou_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20161021095635"
-            },
-            "small": {
-                "file_name": "318.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "318_d.png",
-                "url": null
-            }
-        }
-    },
-    "195": {
-        "images": {
-            "full": {
-                "file_name": "195f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/69/Ayanami_Yukata_Full.png/revision/latest?cb=20170731104937"
-            },
-            "full_damaged": {
-                "file_name": "195f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8c/Ayanami_Yukata_Full_Damaged.png/revision/latest?cb=20170731104944"
-            },
-            "small": {
-                "file_name": "195.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "195_d.png",
-                "url": null
-            }
-        }
-    },
-    "2": {
-        "images": {
-            "full": {
-                "file_name": "2f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/05/Mutsu_Yukata_Full.png/revision/latest?cb=20160916081723"
-            },
-            "full_damaged": {
-                "file_name": "2f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/ac/Mutsu_Yukata_Full_Damaged.png/revision/latest?cb=20160916081723"
-            },
-            "small": {
-                "file_name": "81.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "81_d.png",
-                "url": null
-            }
-        }
-    },
-    "205": {
-        "images": {
-            "full": {
-                "file_name": "205f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0c/Harusame_Fall_Full.png/revision/latest?cb=20150925083035"
-            },
-            "full_damaged": {
-                "file_name": "205f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/fd/Harusame_Fall_Full_Damaged.png/revision/latest?cb=20150925083059"
-            },
-            "small": {
-                "file_name": "405.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "405_d.png",
-                "url": null
-            }
-        }
-    },
-    "207": {
-        "images": {
-            "full": {
-                "file_name": "207f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/a1/Ushio_Kai_Ni_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20151009084107"
-            },
-            "full_damaged": {
-                "file_name": "207f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c5/Ushio_Kai_Ni_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20151009084123"
-            },
-            "small": {
-                "file_name": "407.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "407_d.png",
-                "url": null
-            }
-        }
-    },
-    "211": {
-        "images": {
-            "full": {
-                "file_name": "211f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b7/Fusou_Happi_Full.png/revision/latest?cb=20161021094304"
-            },
-            "full_damaged": {
-                "file_name": "211f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9d/Fusou_Happi_Full_Damaged.png/revision/latest?cb=20161021094309"
-            },
-            "small": {
-                "file_name": "411.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "411_d.png",
-                "url": null
-            }
-        }
-    },
-    "216": {
-        "images": {
-            "full": {
-                "file_name": "216f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/da/Furutaka_Yukata_Full.png/revision/latest?cb=20170731105239"
-            },
-            "full_damaged": {
-                "file_name": "216f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/94/Furutaka_Yukata_Full_Damaged.png/revision/latest?cb=20170731105243"
-            },
-            "small": {
-                "file_name": "416.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "416_d.png",
-                "url": null
-            }
-        }
-    },
-    "221": {
-        "images": {
-            "full": {
-                "file_name": "221f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0c/Akizuki_Yukata_Full.png/revision/latest?cb=20160831120931"
-            },
-            "full_damaged": {
-                "file_name": "221f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b6/Akizuki_Yukata_Full_Damaged.png/revision/latest?cb=20160831120944"
-            },
-            "small": {
-                "file_name": "421.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "421_d.png",
-                "url": null
-            }
-        }
-    },
-    "225": {
-        "images": {
-            "full": {
-                "file_name": "225f.png",
-                "url": "https://i.imgur.com/O4nAXAk.png"
-            },
-            "full_damaged": {
-                "file_name": "225f_d.png",
-                "url": "https://i.imgur.com/lg172NA.png"
-            },
-            "small": {
-                "file_name": "425.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "425_d.png",
-                "url": null
-            }
-        }
-    },
-    "226": {
-        "images": {
-            "full": {
-                "file_name": "226f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/62/Fubuki_Kai_Ni_Happi_Full.png/revision/latest?cb=20160831132039"
-            },
-            "full_damaged": {
-                "file_name": "226f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/a5/Fubuki_Kai_Ni_Happi_Full_Damaged.png/revision/latest?cb=20160831132050"
-            },
-            "small": {
-                "file_name": "426.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "426_d.png",
-                "url": null
-            }
-        }
-    },
-    "243": {
-        "images": {
-            "full": {
-                "file_name": "243f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d2/Libeccio_Yukata_Full.png/revision/latest?cb=20170912132218"
-            },
-            "full_damaged": {
-                "file_name": "243f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/80/Libeccio_Yukata_Full_Damaged.png/revision/latest?cb=20170912132218"
-            },
-            "small": {
-                "file_name": "443.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "443_d.png",
-                "url": null
-            }
-        }
-    },
-    "248": {
-        "images": {
-            "full": {
-                "file_name": "248f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/cf/Zara_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20161021094047"
-            },
-            "full_damaged": {
-                "file_name": "248f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/cd/Zara_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20161021094052"
-            },
-            "small": {
-                "file_name": "448.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "448_d.png",
+                "file_name": "197_d.png",
                 "url": null
             }
         }
@@ -1523,11 +403,11 @@
         "images": {
             "full": {
                 "file_name": "251f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ea/Mizuho_Summer_2018_Full.png/revision/latest?cb=20180801122918"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1c/Mizuho_Late_Fall_Full.png/revision/latest?cb=20181116162948"
             },
             "full_damaged": {
                 "file_name": "251f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/29/Mizuho_Summer_2018_Full_Damaged.png/revision/latest?cb=20180801122923"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e6/Mizuho_Late_Fall_Full_Damaged.png/revision/latest?cb=20181116163033"
             },
             "small": {
                 "file_name": "451.png",
@@ -1539,82 +419,22 @@
             }
         }
     },
-    "252": {
+    "279": {
         "images": {
             "full": {
-                "file_name": "252f.png",
-                "url": "https://i.imgur.com/fh7I4Eh.png"
+                "file_name": "279f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Amagiri_Autumn_Casual_Full.png/revision/latest?cb=20171018102126"
             },
             "full_damaged": {
-                "file_name": "252f_d.png",
-                "url": "https://i.imgur.com/xwulpIl.png"
+                "file_name": "279f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/21/Amagiri_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018102133"
             },
             "small": {
-                "file_name": "452.png",
+                "file_name": "479.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "452_d.png",
-                "url": null
-            }
-        }
-    },
-    "259": {
-        "images": {
-            "full": {
-                "file_name": "259f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/81/Kawakaze_Yukata_Full.png/revision/latest?cb=20150907162543"
-            },
-            "full_damaged": {
-                "file_name": "259f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0f/Kawakaze_Yukata_Full_Damaged.png/revision/latest?cb=20150907162550"
-            },
-            "small": {
-                "file_name": "459.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "459_d.png",
-                "url": null
-            }
-        }
-    },
-    "26": {
-        "images": {
-            "full": {
-                "file_name": "26f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b7/Fusou_Happi_Full.png/revision/latest?cb=20161021094304"
-            },
-            "full_damaged": {
-                "file_name": "26f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9d/Fusou_Happi_Full_Damaged.png/revision/latest?cb=20161021094309"
-            },
-            "small": {
-                "file_name": "26.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "26_d.png",
-                "url": null
-            }
-        }
-    },
-    "269": {
-        "images": {
-            "full": {
-                "file_name": "269f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/81/Kawakaze_Yukata_Full.png/revision/latest?cb=20150907162543"
-            },
-            "full_damaged": {
-                "file_name": "269f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0f/Kawakaze_Yukata_Full_Damaged.png/revision/latest?cb=20150907162550"
-            },
-            "small": {
-                "file_name": "469.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "469_d.png",
+                "file_name": "479_d.png",
                 "url": null
             }
         }
@@ -1623,11 +443,11 @@
         "images": {
             "full": {
                 "file_name": "280f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/aa/Sagiri_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20170929103923"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b2/Sagiri_Late_Fall_Casual_Full.png/revision/latest?cb=20181026132109"
             },
             "full_damaged": {
                 "file_name": "280f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8b/Sagiri_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20170929103931"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/fd/Sagiri_Late_Fall_Casual_Full_Damaged.png/revision/latest?cb=20171110083152"
             },
             "small": {
                 "file_name": "480.png",
@@ -1639,95 +459,15 @@
             }
         }
     },
-    "285": {
-        "images": {
-            "full": {
-                "file_name": "285f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ee/Fujinami_Yukata_Full.png/revision/latest?cb=20170731105129"
-            },
-            "full_damaged": {
-                "file_name": "285f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9a/Fujinami_Yukata_Full_Damaged.png/revision/latest?cb=20170731105130"
-            },
-            "small": {
-                "file_name": "485.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "485_d.png",
-                "url": null
-            }
-        }
-    },
-    "288": {
-        "images": {
-            "full": {
-                "file_name": "288f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/2b/Yura_Kai_Ni_Yukata_Full.png/revision/latest?cb=20170912132527"
-            },
-            "full_damaged": {
-                "file_name": "288f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/89/Yura_Kai_Ni_Yukata_Full_Damaged.png/revision/latest?cb=20170912132531"
-            },
-            "small": {
-                "file_name": "488.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "488_d.png",
-                "url": null
-            }
-        }
-    },
-    "289": {
-        "images": {
-            "full": {
-                "file_name": "289f.png",
-                "url": "https://i.imgur.com/IFusHD0.png"
-            },
-            "full_damaged": {
-                "file_name": "289f_d.png",
-                "url": "https://i.imgur.com/RDFmukY.png"
-            },
-            "small": {
-                "file_name": "489.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "489_d.png",
-                "url": null
-            }
-        }
-    },
-    "291": {
-        "images": {
-            "full": {
-                "file_name": "291f.png",
-                "url": "https://i.imgur.com/VZLU4I5.png"
-            },
-            "full_damaged": {
-                "file_name": "291f_d.png",
-                "url": "https://i.imgur.com/xx7smKQ.png"
-            },
-            "small": {
-                "file_name": "491.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "491_d.png",
-                "url": null
-            }
-        }
-    },
     "292": {
         "images": {
             "full": {
                 "file_name": "292f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/ad/Richelieu_Autumn_Casual_Full.png/revision/latest?cb=20170929103741"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c3/Richelieu_Cream_Puffs_Full.png/revision/latest?cb=20181116171647"
             },
             "full_damaged": {
                 "file_name": "292f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9c/Richelieu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20170929103750"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/4b/Richelieu_Cream_Puffs_Full_Damaged.png/revision/latest?cb=20181116171712"
             },
             "small": {
                 "file_name": "492.png",
@@ -1739,522 +479,122 @@
             }
         }
     },
-    "296": {
+    "297": {
         "images": {
             "full": {
-                "file_name": "296f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/cf/Zara_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20161021094047"
+                "file_name": "297f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/60/Shiratsuyu_Kai_Ni_Autumn_Casual_Full.png/revision/latest?cb=20181116185028"
             },
             "full_damaged": {
-                "file_name": "296f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/cd/Zara_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20161021094052"
+                "file_name": "297f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/10/Shiratsuyu_Kai_Ni_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181116185103"
             },
             "small": {
-                "file_name": "496.png",
+                "file_name": "497.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "496_d.png",
+                "file_name": "497_d.png",
                 "url": null
             }
         }
     },
-    "299": {
+    "340": {
         "images": {
             "full": {
-                "file_name": "299f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d7/Kamoi_Kai_Yukata_Full.png/revision/latest?cb=20171114073052"
+                "file_name": "340f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1c/Tsushima_Late_Fall_Casual_Full.png/revision/latest?cb=20181116171902"
             },
             "full_damaged": {
-                "file_name": "299f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e4/Kamoi_Kai_Yukata_Full_Damaged.png/revision/latest?cb=20171114073101"
+                "file_name": "340f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/4d/Tsushima_Late_Fall_Casual_Full_Damaged.png/revision/latest?cb=20181116172033"
             },
             "small": {
-                "file_name": "499.png",
+                "file_name": "540.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "499_d.png",
+                "file_name": "540_d.png",
                 "url": null
             }
         }
     },
-    "300": {
+    "367": {
         "images": {
             "full": {
-                "file_name": "300f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/46/Kamoi_Kai_Bo_Yukata_Full.png/revision/latest?cb=20171114073113"
+                "file_name": "367f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9d/Shiranui_Kai_Ni_Autumn_Casual_Full.png/revision/latest?cb=20181116172248"
             },
             "full_damaged": {
-                "file_name": "300f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d0/Kamoi_Kai_Bo_Yukata_Full_Damaged.png/revision/latest?cb=20171114073123"
+                "file_name": "367f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9f/Shiranui_Kai_Ni_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181116172317"
             },
             "small": {
-                "file_name": "500.png",
+                "file_name": "567.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "500_d.png",
+                "file_name": "567_d.png",
                 "url": null
             }
         }
     },
-    "327": {
+    "46": {
         "images": {
             "full": {
-                "file_name": "327f.png",
-                "url": "https://i.imgur.com/4ki2Wtf.png"
+                "file_name": "46f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Sendai_Autumn_Casual_Full.png/revision/latest?cb=20171018105831"
             },
             "full_damaged": {
-                "file_name": "327f_d.png",
-                "url": "https://i.imgur.com/AeDkSRy.png"
+                "file_name": "46f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/34/Sendai_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105834"
             },
             "small": {
-                "file_name": "527.png",
+                "file_name": "54.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "527_d.png",
+                "file_name": "54_d.png",
                 "url": null
             }
         }
     },
-    "334": {
+    "49": {
         "images": {
             "full": {
-                "file_name": "334f.png",
-                "url": "https://i.imgur.com/QIXjITW.png"
+                "file_name": "49f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/73/Chitose_Yukata_Full.png/revision/latest?cb=20150925083839"
             },
             "full_damaged": {
-                "file_name": "334f_d.png",
-                "url": "https://i.imgur.com/XFN2ETM.png"
+                "file_name": "49f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e0/Chitose_Yukata_Full_Damaged.png/revision/latest?cb=20150925083917"
             },
             "small": {
-                "file_name": "524.png",
+                "file_name": "102.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "524_d.png",
+                "file_name": "102_d.png",
                 "url": null
             }
         }
     },
-    "335": {
+    "50": {
         "images": {
             "full": {
-                "file_name": "335f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0c/Matsuwa_Yukata_Full.png/revision/latest?cb=20170912132355"
+                "file_name": "50f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f3/Chiyoda_Yukata_Full.png/revision/latest?cb=20150925084017"
             },
             "full_damaged": {
-                "file_name": "335f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6c/Matsuwa_Yukata_Full_Damaged.png/revision/latest?cb=20170912132359"
+                "file_name": "50f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e1/Chiyoda_Yukata_Full_Damaged.png/revision/latest?cb=20150925084039"
             },
             "small": {
-                "file_name": "525.png",
+                "file_name": "103.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "525_d.png",
-                "url": null
-            }
-        }
-    },
-    "342": {
-        "images": {
-            "full": {
-                "file_name": "342f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/76/Yuugumo_Happi_Full.png/revision/latest?cb=20161021094653"
-            },
-            "full_damaged": {
-                "file_name": "342f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/27/Yuugumo_Happi_Full_Damaged.png/revision/latest?cb=20161021094656"
-            },
-            "small": {
-                "file_name": "542.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "542_d.png",
-                "url": null
-            }
-        }
-    },
-    "343": {
-        "images": {
-            "full": {
-                "file_name": "343f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/81/Naganami_Yukata_Full.png/revision/latest?cb=20160916081456"
-            },
-            "full_damaged": {
-                "file_name": "343f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/a2/Naganami_Yukata_Full_Damaged.png/revision/latest?cb=20160916081459"
-            },
-            "small": {
-                "file_name": "543.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "543_d.png",
-                "url": null
-            }
-        }
-    },
-    "344": {
-        "images": {
-            "full": {
-                "file_name": "344f.png",
-                "url": "https://i.imgur.com/AjMkMZf.png"
-            },
-            "full_damaged": {
-                "file_name": "344f_d.png",
-                "url": "https://i.imgur.com/anH8f71.png"
-            },
-            "small": {
-                "file_name": "544.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "544_d.png",
-                "url": null
-            }
-        }
-    },
-    "347": {
-        "images": {
-            "full": {
-                "file_name": "347f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/5f/Tama_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20161021094836"
-            },
-            "full_damaged": {
-                "file_name": "347f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/26/Tama_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20161021094840"
-            },
-            "small": {
-                "file_name": "547.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "547_d.png",
-                "url": null
-            }
-        }
-    },
-    "356": {
-        "images": {
-            "full": {
-                "file_name": "356f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d2/Urakaze_Yukata_Full.png/revision/latest?cb=20150907161710"
-            },
-            "full_damaged": {
-                "file_name": "356f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/98/Urakaze_Yukata_Full_Damaged.png/revision/latest?cb=20150907161714"
-            },
-            "small": {
-                "file_name": "556.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "556_d.png",
-                "url": null
-            }
-        }
-    },
-    "358": {
-        "images": {
-            "full": {
-                "file_name": "358f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/78/Hamakaze_Yukata_Full.png/revision/latest?cb=20150907161502"
-            },
-            "full_damaged": {
-                "file_name": "358f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/3f/Hamakaze_Yukata_Full_Damaged.png/revision/latest?cb=20150907161503"
-            },
-            "small": {
-                "file_name": "558.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "558_d.png",
-                "url": null
-            }
-        }
-    },
-    "365": {
-        "images": {
-            "full": {
-                "file_name": "365f.png",
-                "url": "https://i.imgur.com/kw62H0X.png"
-            },
-            "full_damaged": {
-                "file_name": "365f_d.png",
-                "url": "https://i.imgur.com/UzH0zsS.png"
-            },
-            "small": {
-                "file_name": "565.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "565_d.png",
-                "url": null
-            }
-        }
-    },
-    "374": {
-        "images": {
-            "full": {
-                "file_name": "374f.png",
-                "url": "https://i.imgur.com/3HxupGA.png"
-            },
-            "full_damaged": {
-                "file_name": "374f_d.png",
-                "url": "https://i.imgur.com/KA2VeQJ.png"
-            },
-            "small": {
-                "file_name": "574.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "574_d.png",
-                "url": null
-            }
-        }
-    },
-    "379": {
-        "images": {
-            "full": {
-                "file_name": "379f.png",
-                "url": "https://i.imgur.com/3HxupGA.png"
-            },
-            "full_damaged": {
-                "file_name": "379f_d.png",
-                "url": "https://i.imgur.com/KA2VeQJ.png"
-            },
-            "small": {
-                "file_name": "579.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "579_d.png",
-                "url": null
-            }
-        }
-    },
-    "39": {
-        "images": {
-            "full": {
-                "file_name": "39f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/84/Kuma_Yukata_Full.png/revision/latest?cb=20150925081929"
-            },
-            "full_damaged": {
-                "file_name": "39f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d0/Kuma_Yukata_Full_Damaged.png/revision/latest?cb=20150925081948"
-            },
-            "small": {
-                "file_name": "99.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "99_d.png",
-                "url": null
-            }
-        }
-    },
-    "40": {
-        "images": {
-            "full": {
-                "file_name": "40f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/5f/Tama_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20161021094836"
-            },
-            "full_damaged": {
-                "file_name": "40f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/26/Tama_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20161021094840"
-            },
-            "small": {
-                "file_name": "100.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "100_d.png",
-                "url": null
-            }
-        }
-    },
-    "42": {
-        "images": {
-            "full": {
-                "file_name": "42f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/dd/Nagara_Yukata_Full.png/revision/latest?cb=20150907160452"
-            },
-            "full_damaged": {
-                "file_name": "42f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f1/Nagara_Yukata_Full_Damaged.png/revision/latest?cb=20150907160453"
-            },
-            "small": {
-                "file_name": "21.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "21_d.png",
-                "url": null
-            }
-        }
-    },
-    "44": {
-        "images": {
-            "full": {
-                "file_name": "44f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f6/Natori_Yukata_Full.png/revision/latest?cb=20150907160721"
-            },
-            "full_damaged": {
-                "file_name": "44f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b5/Natori_Yukata_Full_Damaged.png/revision/latest?cb=20150907160723"
-            },
-            "small": {
-                "file_name": "53.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "53_d.png",
-                "url": null
-            }
-        }
-    },
-    "45": {
-        "images": {
-            "full": {
-                "file_name": "45f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/59/Yura_Yukata_Full.png/revision/latest?cb=20160831121314"
-            },
-            "full_damaged": {
-                "file_name": "45f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d1/Yura_Yukata_Full_Damaged.png/revision/latest/scale-to-width-down/300?cb=20160831121326"
-            },
-            "small": {
-                "file_name": "23.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "23_d.png",
-                "url": null
-            }
-        }
-    },
-    "52": {
-        "images": {
-            "full": {
-                "file_name": "52f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/da/Furutaka_Yukata_Full.png/revision/latest?cb=20170731105239"
-            },
-            "full_damaged": {
-                "file_name": "52f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/94/Furutaka_Yukata_Full_Damaged.png/revision/latest?cb=20170731105243"
-            },
-            "small": {
-                "file_name": "59.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "59_d.png",
-                "url": null
-            }
-        }
-    },
-    "67": {
-        "images": {
-            "full": {
-                "file_name": "67f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/12/Oboro_Yukata_Full.png/revision/latest?cb=20150907161103"
-            },
-            "full_damaged": {
-                "file_name": "67f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/47/Oboro_Yukata_Full_Damaged.png/revision/latest?cb=20150907161108"
-            },
-            "small": {
-                "file_name": "93.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "93_d.png",
-                "url": null
-            }
-        }
-    },
-    "68": {
-        "images": {
-            "full": {
-                "file_name": "68f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/af/Akebono_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20151009083027"
-            },
-            "full_damaged": {
-                "file_name": "68f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/18/Akebono_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20151009083055"
-            },
-            "small": {
-                "file_name": "15.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "15_d.png",
-                "url": null
-            }
-        }
-    },
-    "70": {
-        "images": {
-            "full": {
-                "file_name": "70f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d3/Ushio_Mackerel_Pike_Festival_Full.png/revision/latest?cb=20151009084008"
-            },
-            "full_damaged": {
-                "file_name": "70f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Ushio_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20151009084033"
-            },
-            "small": {
-                "file_name": "16.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "16_d.png",
-                "url": null
-            }
-        }
-    },
-    "73": {
-        "images": {
-            "full": {
-                "file_name": "73f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0d/Ikazuchi_Yukata_Full.png/revision/latest?cb=20150925082321"
-            },
-            "full_damaged": {
-                "file_name": "73f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1b/Ikazuchi_Yukata_Full_Damaged.png/revision/latest?cb=20150925082337"
-            },
-            "small": {
-                "file_name": "36.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "36_d.png",
-                "url": null
-            }
-        }
-    },
-    "74": {
-        "images": {
-            "full": {
-                "file_name": "74f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0e/Inazuma_Yukata_Full.png/revision/latest?cb=20150925082548"
-            },
-            "full_damaged": {
-                "file_name": "74f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/30/Inazuma_Yukata_Full_Damaged.png/revision/latest?cb=20150925082605"
-            },
-            "small": {
-                "file_name": "37.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "37_d.png",
+                "file_name": "103_d.png",
                 "url": null
             }
         }
@@ -2263,11 +603,11 @@
         "images": {
             "full": {
                 "file_name": "79f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d1/Shiratsuyu_Yukata_Full.png/revision/latest?cb=20160831121706"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8e/Shiratsuyu_Autumn_Casual_Full.png/revision/latest?cb=20170929105825"
             },
             "full_damaged": {
                 "file_name": "79f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c8/Shiratsuyu_Yukata_Full_Damaged.png/revision/latest?cb=20160831121716"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/28/Shiratsuyu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20170929105830"
             },
             "small": {
                 "file_name": "42.png",
@@ -2279,62 +619,102 @@
             }
         }
     },
-    "81": {
+    "8": {
         "images": {
             "full": {
-                "file_name": "81f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c8/Shiratsuyu_Yukata_Full_Damaged.png/revision/latest?cb=20160831121716"
+                "file_name": "8f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6d/Souryuu_Autumn_Casual_Full.png/revision/latest?cb=20171018105226"
             },
             "full_damaged": {
-                "file_name": "81f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1e/Murasame_Mackerel_Pike_Festival_Full_Damaged.png/revision/latest?cb=20151009083454"
+                "file_name": "8f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6e/Souryuu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105233"
             },
             "small": {
-                "file_name": "44.png",
+                "file_name": "90.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "44_d.png",
+                "file_name": "90_d.png",
                 "url": null
             }
         }
     },
-    "87": {
+    "92": {
         "images": {
             "full": {
-                "file_name": "87f.png",
-                "url": "https://i.imgur.com/IFusHD0.png"
+                "file_name": "92f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/53/Shiranui_Autumn_Casual_Full.png/revision/latest?cb=20171018105042"
             },
             "full_damaged": {
-                "file_name": "87f_d.png",
-                "url": "https://i.imgur.com/RDFmukY.png"
+                "file_name": "92f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/60/Shiranui_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105047"
             },
             "small": {
-                "file_name": "97.png",
+                "file_name": "18.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "97_d.png",
+                "file_name": "18_d.png",
                 "url": null
             }
         }
     },
-    "94": {
+    "95": {
         "images": {
             "full": {
-                "file_name": "94f.png",
-                "url": "https://i.imgur.com/DaRvuLI.png"
+                "file_name": "95f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/73/Chitose_Yukata_Full.png/revision/latest?cb=20150925083839"
             },
             "full_damaged": {
-                "file_name": "94f_d.png",
-                "url": "https://i.imgur.com/0ne63dr.png"
+                "file_name": "95f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e0/Chitose_Yukata_Full_Damaged.png/revision/latest?cb=20150925083917"
             },
             "small": {
-                "file_name": "74.png",
+                "file_name": "104.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "74_d.png",
+                "file_name": "104_d.png",
+                "url": null
+            }
+        }
+    },
+    "96": {
+        "images": {
+            "full": {
+                "file_name": "96f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f3/Chiyoda_Yukata_Full.png/revision/latest?cb=20150925084017"
+            },
+            "full_damaged": {
+                "file_name": "96f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e1/Chiyoda_Yukata_Full_Damaged.png/revision/latest?cb=20150925084039"
+            },
+            "small": {
+                "file_name": "105.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "105_d.png",
+                "url": null
+            }
+        }
+    },
+    "99": {
+        "images": {
+            "full": {
+                "file_name": "99f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/73/Chitose_Yukata_Full.png/revision/latest?cb=20150925083839"
+            },
+            "full_damaged": {
+                "file_name": "99f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e0/Chitose_Yukata_Full_Damaged.png/revision/latest?cb=20150925083917"
+            },
+            "small": {
+                "file_name": "106.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "106_d.png",
                 "url": null
             }
         }
