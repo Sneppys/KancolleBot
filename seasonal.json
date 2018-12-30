@@ -1,233 +1,13 @@
 {
-    "106": {
-        "images": {
-            "full": {
-                "file_name": "106f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/97/Shoukaku_Christmas_Full.png/revision/latest?cb=20181207164949"
-            },
-            "full_damaged": {
-                "file_name": "106f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b3/Shoukaku_Christmas_Full_Damaged.png/revision/latest?cb=20181209055502"
-            },
-            "small": {
-                "file_name": "110.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "110_d.png",
-                "url": null
-            }
-        }
-    },
-    "107": {
-        "images": {
-            "full": {
-                "file_name": "107f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/ce/Zuikaku_Christmas_Full.png/revision/latest?cb=20181207151027"
-            },
-            "full_damaged": {
-                "file_name": "107f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/84/Zuikaku_Christmas_Full_Damaged.png/revision/latest?cb=20181207151027"
-            },
-            "small": {
-                "file_name": "111.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "111_d.png",
-                "url": null
-            }
-        }
-    },
-    "108": {
-        "images": {
-            "full": {
-                "file_name": "108f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/ce/Zuikaku_Christmas_Full.png/revision/latest?cb=20181207151027"
-            },
-            "full_damaged": {
-                "file_name": "108f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/84/Zuikaku_Christmas_Full_Damaged.png/revision/latest?cb=20181207151027"
-            },
-            "small": {
-                "file_name": "112.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "112_d.png",
-                "url": null
-            }
-        }
-    },
-    "118": {
-        "images": {
-            "full": {
-                "file_name": "118f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/77/Hatsukaze_Christmas_Full.png/revision/latest?cb=20181207164117"
-            },
-            "full_damaged": {
-                "file_name": "118f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/71/Hatsukaze_Christmas_Full_Damaged.png/revision/latest?cb=20181207164117"
-            },
-            "small": {
-                "file_name": "190.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "190_d.png",
-                "url": null
-            }
-        }
-    },
-    "120": {
-        "images": {
-            "full": {
-                "file_name": "120f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/86/Kinugasa_Christmas_Full.png/revision/latest?cb=20181207164703"
-            },
-            "full_damaged": {
-                "file_name": "120f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0a/Kinugasa_Christmas_Full_Damaged.png/revision/latest?cb=20181207164702"
-            },
-            "small": {
-                "file_name": "123.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "123_d.png",
-                "url": null
-            }
-        }
-    },
-    "124": {
-        "images": {
-            "full": {
-                "file_name": "124f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/06/Suzuya_Christmas_Full.png/revision/latest?cb=20181207164949"
-            },
-            "full_damaged": {
-                "file_name": "124f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c6/Suzuya_Christmas_Full_Damaged.png/revision/latest?cb=20181207164949"
-            },
-            "small": {
-                "file_name": "124.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "124_d.png",
-                "url": null
-            }
-        }
-    },
-    "125": {
-        "images": {
-            "full": {
-                "file_name": "125f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/3d/Kumano_Christmas_Full.png/revision/latest?cb=20181207164707"
-            },
-            "full_damaged": {
-                "file_name": "125f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/59/Kumano_Christmas_Full_Damaged.png/revision/latest?cb=20181207164707"
-            },
-            "small": {
-                "file_name": "125.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "125_d.png",
-                "url": null
-            }
-        }
-    },
-    "128": {
-        "images": {
-            "full": {
-                "file_name": "128f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/77/I-8_Christmas_Full.png/revision/latest?cb=20181207164118"
-            },
-            "full_damaged": {
-                "file_name": "128f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8b/I-8_Christmas_Full_Damaged.png/revision/latest?cb=20181207164118"
-            },
-            "small": {
-                "file_name": "128.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "128_d.png",
-                "url": null
-            }
-        }
-    },
-    "129": {
-        "images": {
-            "full": {
-                "file_name": "129f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/06/Suzuya_Christmas_Full.png/revision/latest?cb=20181207164949"
-            },
-            "full_damaged": {
-                "file_name": "129f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c6/Suzuya_Christmas_Full_Damaged.png/revision/latest?cb=20181207164949"
-            },
-            "small": {
-                "file_name": "129.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "129_d.png",
-                "url": null
-            }
-        }
-    },
-    "130": {
-        "images": {
-            "full": {
-                "file_name": "130f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/3d/Kumano_Christmas_Full.png/revision/latest?cb=20181207164707"
-            },
-            "full_damaged": {
-                "file_name": "130f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/59/Kumano_Christmas_Full_Damaged.png/revision/latest?cb=20181207164707"
-            },
-            "small": {
-                "file_name": "130.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "130_d.png",
-                "url": null
-            }
-        }
-    },
-    "1315": {
-        "images": {
-            "full": {
-                "file_name": "1315f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/4f/Kuma_Christmas_Full.png/revision/latest?cb=20181207164706"
-            },
-            "full_damaged": {
-                "file_name": "1315f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/40/Kuma_Christmas_Full_Damaged.png/revision/latest?cb=20181207164706"
-            },
-            "small": {
-                "file_name": "215.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "215_d.png",
-                "url": null
-            }
-        }
-    },
     "132": {
         "images": {
             "full": {
                 "file_name": "132f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/70/Akigumo_Autumn_Casual_Full.png/revision/latest?cb=20181026132718"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/7a/Akigumo_Super_Duper_Crunch_Time_Full.png/revision/latest?cb=20181223112200"
             },
             "full_damaged": {
                 "file_name": "132f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ef/Akigumo_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181026132725"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/34/Akigumo_Super_Duper_Crunch_Time_Full_Damaged.png/revision/latest?cb=20181223112214"
             },
             "small": {
                 "file_name": "132.png",
@@ -243,11 +23,11 @@
         "images": {
             "full": {
                 "file_name": "1322f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Sendai_Autumn_Casual_Full.png/revision/latest?cb=20171018105831"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Sendai_Autumn_Casual_Full.png/revision/latest?cb=20181122182037"
             },
             "full_damaged": {
                 "file_name": "1322f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/34/Sendai_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105834"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/34/Sendai_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181122181959"
             },
             "small": {
                 "file_name": "222.png",
@@ -259,35 +39,15 @@
             }
         }
     },
-    "1324": {
-        "images": {
-            "full": {
-                "file_name": "1324f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/dc/Naka_Christmas_Full.png/revision/latest?cb=20181207164824"
-            },
-            "full_damaged": {
-                "file_name": "1324f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/87/Naka_Christmas_Full_Damaged.png/revision/latest?cb=20181207164824"
-            },
-            "small": {
-                "file_name": "224.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "224_d.png",
-                "url": null
-            }
-        }
-    },
     "1326": {
         "images": {
             "full": {
                 "file_name": "1326f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/53/Shiranui_Autumn_Casual_Full.png/revision/latest?cb=20171018105042"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/53/Shiranui_Autumn_Casual_Full.png/revision/latest?cb=20181122175317"
             },
             "full_damaged": {
                 "file_name": "1326f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/60/Shiranui_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105047"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/60/Shiranui_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181122175415"
             },
             "small": {
                 "file_name": "226.png",
@@ -299,22 +59,22 @@
             }
         }
     },
-    "1332": {
+    "1331": {
         "images": {
             "full": {
-                "file_name": "1332f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/26/Sazanami_Christmas_2016_Full.png/revision/latest?cb=20181207164829"
+                "file_name": "1331f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/33/Akebono_Year_End_Full.png/revision/latest/scale-to-width-down/300?cb=20181226110758"
             },
             "full_damaged": {
-                "file_name": "1332f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/a6/Sazanami_Christmas_2016_Full_Damaged.png/revision/latest?cb=20181207164829"
+                "file_name": "1331f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/21/Akebono_Year_End_Full_Damaged.png/revision/latest/scale-to-width-down/300?cb=20181226110744"
             },
             "small": {
-                "file_name": "232.png",
+                "file_name": "231.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "232_d.png",
+                "file_name": "231_d.png",
                 "url": null
             }
         }
@@ -323,11 +83,11 @@
         "images": {
             "full": {
                 "file_name": "1342f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8e/Shiratsuyu_Autumn_Casual_Full.png/revision/latest?cb=20170929105825"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8e/Shiratsuyu_Autumn_Casual_Full.png/revision/latest?cb=20181122175645"
             },
             "full_damaged": {
                 "file_name": "1342f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/28/Shiratsuyu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20170929105830"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/28/Shiratsuyu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181122175701"
             },
             "small": {
                 "file_name": "242.png",
@@ -339,55 +99,15 @@
             }
         }
     },
-    "1352": {
-        "images": {
-            "full": {
-                "file_name": "1352f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/67/Arare_Christmas_Full.png/revision/latest?cb=20181207164115"
-            },
-            "full_damaged": {
-                "file_name": "1352f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/da/Arare_Christmas_Full_Damaged.png/revision/latest?cb=20181207164115"
-            },
-            "small": {
-                "file_name": "252.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "252_d.png",
-                "url": null
-            }
-        }
-    },
-    "1358": {
-        "images": {
-            "full": {
-                "file_name": "1358f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ee/Nagatsuki_Christmas_Full.png/revision/latest?cb=20181207164823"
-            },
-            "full_damaged": {
-                "file_name": "1358f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/16/Nagatsuki_Christmas_Full_Damaged.png/revision/latest?cb=20181207164823"
-            },
-            "small": {
-                "file_name": "258.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "258_d.png",
-                "url": null
-            }
-        }
-    },
     "1379": {
         "images": {
             "full": {
                 "file_name": "1379f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6d/Souryuu_Autumn_Casual_Full.png/revision/latest?cb=20171018105226"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6d/Souryuu_Autumn_Casual_Full.png/revision/latest?cb=20181122182213"
             },
             "full_damaged": {
                 "file_name": "1379f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6e/Souryuu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105233"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6e/Souryuu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181122182200"
             },
             "small": {
                 "file_name": "279.png",
@@ -399,75 +119,15 @@
             }
         }
     },
-    "1381": {
-        "images": {
-            "full": {
-                "file_name": "1381f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d8/Ryuujou_Christmas_Full.png/revision/latest?cb=20181207164827"
-            },
-            "full_damaged": {
-                "file_name": "1381f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0d/Ryuujou_Christmas_Full_Damaged.png/revision/latest?cb=20181207164826"
-            },
-            "small": {
-                "file_name": "281.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "281_d.png",
-                "url": null
-            }
-        }
-    },
-    "1388": {
-        "images": {
-            "full": {
-                "file_name": "1388f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/97/Shoukaku_Christmas_Full.png/revision/latest?cb=20181207164949"
-            },
-            "full_damaged": {
-                "file_name": "1388f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b3/Shoukaku_Christmas_Full_Damaged.png/revision/latest?cb=20181209055502"
-            },
-            "small": {
-                "file_name": "288.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "288_d.png",
-                "url": null
-            }
-        }
-    },
-    "1395": {
-        "images": {
-            "full": {
-                "file_name": "1395f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/86/Kinugasa_Christmas_Full.png/revision/latest?cb=20181207164703"
-            },
-            "full_damaged": {
-                "file_name": "1395f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0a/Kinugasa_Christmas_Full_Damaged.png/revision/latest?cb=20181207164702"
-            },
-            "small": {
-                "file_name": "295.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "295_d.png",
-                "url": null
-            }
-        }
-    },
     "1397": {
         "images": {
             "full": {
                 "file_name": "1397f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/70/Akigumo_Autumn_Casual_Full.png/revision/latest?cb=20181026132718"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/7a/Akigumo_Super_Duper_Crunch_Time_Full.png/revision/latest?cb=20181223112200"
             },
             "full_damaged": {
                 "file_name": "1397f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ef/Akigumo_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181026132725"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/34/Akigumo_Super_Duper_Crunch_Time_Full_Damaged.png/revision/latest?cb=20181223112214"
             },
             "small": {
                 "file_name": "301.png",
@@ -479,55 +139,15 @@
             }
         }
     },
-    "1409": {
-        "images": {
-            "full": {
-                "file_name": "1409f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/57/Tanikaze_Christmas_Full.png/revision/latest?cb=20181207164950"
-            },
-            "full_damaged": {
-                "file_name": "1409f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/27/Tanikaze_Christmas_Full_Damaged.png/revision/latest?cb=20181207164950"
-            },
-            "small": {
-                "file_name": "313.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "313_d.png",
-                "url": null
-            }
-        }
-    },
-    "1414": {
-        "images": {
-            "full": {
-                "file_name": "1414f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6b/Ooyodo_Kai_Christmas_Full.png/revision/latest?cb=20181207164826"
-            },
-            "full_damaged": {
-                "file_name": "1414f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e1/Ooyodo_Kai_Christmas_Full_Damaged.png/revision/latest?cb=20181207164826"
-            },
-            "small": {
-                "file_name": "321.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "321_d.png",
-                "url": null
-            }
-        }
-    },
     "1419": {
         "images": {
             "full": {
                 "file_name": "1419f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0c/Asagumo_Christmas_Full.png/revision/latest?cb=20181207164116"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0b/Asagumo_Fall_Uniform_2018_Full.png/revision/latest?cb=20181226111219"
             },
             "full_damaged": {
                 "file_name": "1419f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/23/Asagumo_Christmas_Full_Damaged.png/revision/latest?cb=20181207164115"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8f/Asagumo_Fall_Uniform_2018_Full_Damaged.png/revision/latest?cb=20181026135251"
             },
             "small": {
                 "file_name": "327.png",
@@ -539,35 +159,15 @@
             }
         }
     },
-    "142": {
-        "images": {
-            "full": {
-                "file_name": "142f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8f/Kinugasa_Kai_Ni_Christmas_Full.png/revision/latest?cb=20181207164704"
-            },
-            "full_damaged": {
-                "file_name": "142f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/48/Kinugasa_Kai_Ni_Christmas_Full_Damaged.png/revision/latest?cb=20181207164703"
-            },
-            "small": {
-                "file_name": "142.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "142_d.png",
-                "url": null
-            }
-        }
-    },
     "1420": {
         "images": {
             "full": {
                 "file_name": "1420f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/37/Yamagumo_Christmas_Full.png/revision/latest?cb=20181207164952"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/fe/Yamagumo_Fall_Uniform_2018_Full.png/revision/latest?cb=20181226111338"
             },
             "full_damaged": {
                 "file_name": "1420f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/cc/Yamagumo_Christmas_Full_Damaged.png/revision/latest?cb=20181207164951"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/70/Yamagumo_Fall_Uniform_2018_Full_Damaged.png/revision/latest?cb=20181226110952"
             },
             "small": {
                 "file_name": "328.png",
@@ -579,162 +179,22 @@
             }
         }
     },
-    "1427": {
+    "1429": {
         "images": {
             "full": {
-                "file_name": "1427f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0e/Libeccio_Christmas_Full.png/revision/latest?cb=20181207164708"
+                "file_name": "1429f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/85/Kazagumo_End_of_Year_Full.png/revision/latest?cb=20181226212417"
             },
             "full_damaged": {
-                "file_name": "1427f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/3f/Libeccio_Christmas_Full_Damaged.png/revision/latest?cb=20181207164708"
+                "file_name": "1429f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/90/Kazagumo_End_of_Year_Full_Damaged.png/revision/latest?cb=20181226212425"
             },
             "small": {
-                "file_name": "347.png",
+                "file_name": "349.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "347_d.png",
-                "url": null
-            }
-        }
-    },
-    "1428": {
-        "images": {
-            "full": {
-                "file_name": "1428f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d1/Mizuho_Christmas_Full.png/revision/latest?cb=20181207164709"
-            },
-            "full_damaged": {
-                "file_name": "1428f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/96/Mizuho_Christmas_Full_Damaged.png/revision/latest?cb=20181207164709"
-            },
-            "small": {
-                "file_name": "348.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "348_d.png",
-                "url": null
-            }
-        }
-    },
-    "1431": {
-        "images": {
-            "full": {
-                "file_name": "1431f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/3b/Kawakaze_Christmas_Full.png/revision/latest?cb=20181207164702"
-            },
-            "full_damaged": {
-                "file_name": "1431f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/57/Kawakaze_Christmas_Full_Damaged.png/revision/latest?cb=20181207164701"
-            },
-            "small": {
-                "file_name": "351.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "351_d.png",
-                "url": null
-            }
-        }
-    },
-    "1436": {
-        "images": {
-            "full": {
-                "file_name": "1436f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b7/Kashima_Christmas_Full.png/revision/latest?cb=20181207164701"
-            },
-            "full_damaged": {
-                "file_name": "1436f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6d/Kashima_Christmas_Full_Damaged.png/revision/latest?cb=20181207164701"
-            },
-            "small": {
-                "file_name": "356.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "356_d.png",
-                "url": null
-            }
-        }
-    },
-    "145": {
-        "images": {
-            "full": {
-                "file_name": "145f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/7e/Shigure_Kai_Ni_Christmas_Full.png/revision/latest?cb=20181207164948"
-            },
-            "full_damaged": {
-                "file_name": "145f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/57/Shigure_Kai_Ni_Christmas_Full_Damaged.png/revision/latest?cb=20181207164948"
-            },
-            "small": {
-                "file_name": "145.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "145_d.png",
-                "url": null
-            }
-        }
-    },
-    "1452": {
-        "images": {
-            "full": {
-                "file_name": "1452f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/98/Commandant_Teste_Christmas_Full.png/revision/latest?cb=20181207164117"
-            },
-            "full_damaged": {
-                "file_name": "1452f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/80/Commandant_Teste_Christmas_Full_Damaged.png/revision/latest?cb=20181207164117"
-            },
-            "small": {
-                "file_name": "372.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "372_d.png",
-                "url": null
-            }
-        }
-    },
-    "1464": {
-        "images": {
-            "full": {
-                "file_name": "1464f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/25/Matsuwa_Christmas_Full.png/revision/latest?cb=20181207151026"
-            },
-            "full_damaged": {
-                "file_name": "1464f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/5b/Matsuwa_Christmas_Full_Damaged.png/revision/latest?cb=20181207151027"
-            },
-            "small": {
-                "file_name": "384.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "384_d.png",
-                "url": null
-            }
-        }
-    },
-    "1465": {
-        "images": {
-            "full": {
-                "file_name": "1465f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c1/Sado_Christmas_Full.png/revision/latest?cb=20181207164828"
-            },
-            "full_damaged": {
-                "file_name": "1465f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/91/Sado_Christmas_Full_Damaged.png/revision/latest?cb=20181207164827"
-            },
-            "small": {
-                "file_name": "385.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "385_d.png",
+                "file_name": "349_d.png",
                 "url": null
             }
         }
@@ -743,11 +203,11 @@
         "images": {
             "full": {
                 "file_name": "1466f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1c/Tsushima_Late_Fall_Casual_Full.png/revision/latest?cb=20181116171902"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/11/Tsushima_End_of_Year_Full.png/revision/latest?cb=20181226110204"
             },
             "full_damaged": {
                 "file_name": "1466f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/4d/Tsushima_Late_Fall_Casual_Full_Damaged.png/revision/latest?cb=20181116172033"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/84/Tsushima_End_of_Year_Full_Damaged.png/revision/latest?cb=20181226110234"
             },
             "small": {
                 "file_name": "386.png",
@@ -763,11 +223,11 @@
         "images": {
             "full": {
                 "file_name": "1470f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Amagiri_Autumn_Casual_Full.png/revision/latest?cb=20171018102126"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Amagiri_Autumn_Casual_Full.png/revision/latest?cb=20181122180729"
             },
             "full_damaged": {
                 "file_name": "1470f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/21/Amagiri_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018102133"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/21/Amagiri_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181122180714"
             },
             "small": {
                 "file_name": "390.png",
@@ -775,26 +235,6 @@
             },
             "small_damaged": {
                 "file_name": "390_d.png",
-                "url": null
-            }
-        }
-    },
-    "1471": {
-        "images": {
-            "full": {
-                "file_name": "1471f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/40/Sagiri_Christmas_Full.png/revision/latest?cb=20181207164829"
-            },
-            "full_damaged": {
-                "file_name": "1471f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/36/Sagiri_Christmas_Full_Damaged.png/revision/latest?cb=20181207164828"
-            },
-            "small": {
-                "file_name": "391.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "391_d.png",
                 "url": null
             }
         }
@@ -819,115 +259,15 @@
             }
         }
     },
-    "1480": {
-        "images": {
-            "full": {
-                "file_name": "1480f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/80/Hamanami_Christmas_Full.png/revision/latest?cb=20181207151027"
-            },
-            "full_damaged": {
-                "file_name": "1480f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/20/Hamanami_Christmas_Full_Damaged.png/revision/latest?cb=20181207151027"
-            },
-            "small": {
-                "file_name": "680.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "680_d.png",
-                "url": null
-            }
-        }
-    },
-    "1486": {
-        "images": {
-            "full": {
-                "file_name": "1486f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/02/Kishinami_Christmas_Full.png/revision/latest?cb=20181207151027"
-            },
-            "full_damaged": {
-                "file_name": "1486f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1b/Kishinami_Christmas_Full_Damaged.png/revision/latest?cb=20181207151027"
-            },
-            "small": {
-                "file_name": "686.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "686_d.png",
-                "url": null
-            }
-        }
-    },
-    "1500": {
-        "images": {
-            "full": {
-                "file_name": "1500f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/77/I-8_Christmas_Full.png/revision/latest?cb=20181207164118"
-            },
-            "full_damaged": {
-                "file_name": "1500f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8b/I-8_Christmas_Full_Damaged.png/revision/latest?cb=20181207164118"
-            },
-            "small": {
-                "file_name": "400.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "400_d.png",
-                "url": null
-            }
-        }
-    },
-    "1502": {
-        "images": {
-            "full": {
-                "file_name": "1502f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d1/Maruyu_Christmas_Full.png/revision/latest?cb=20181207164708"
-            },
-            "full_damaged": {
-                "file_name": "1502f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b3/Maruyu_Christmas_Full_Damaged.png/revision/latest?cb=20181207164708"
-            },
-            "small": {
-                "file_name": "402.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "402_d.png",
-                "url": null
-            }
-        }
-    },
-    "157": {
-        "images": {
-            "full": {
-                "file_name": "157f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/a1/Ryuujou_Kai_Ni_Christmas_Full.png/revision/latest?cb=20181207164827"
-            },
-            "full_damaged": {
-                "file_name": "157f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/5a/Ryuujou_Kai_Ni_Christmas_Full_Damaged.png/revision/latest?cb=20181207164827"
-            },
-            "small": {
-                "file_name": "157.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "157_d.png",
-                "url": null
-            }
-        }
-    },
     "158": {
         "images": {
             "full": {
                 "file_name": "158f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Sendai_Autumn_Casual_Full.png/revision/latest?cb=20171018105831"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Sendai_Autumn_Casual_Full.png/revision/latest?cb=20181122182037"
             },
             "full_damaged": {
                 "file_name": "158f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/34/Sendai_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105834"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/34/Sendai_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181122181959"
             },
             "small": {
                 "file_name": "158.png",
@@ -939,195 +279,15 @@
             }
         }
     },
-    "160": {
-        "images": {
-            "full": {
-                "file_name": "160f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/2c/Naka_Kai_Ni_Christmas_Full.png/revision/latest?cb=20181207164825"
-            },
-            "full_damaged": {
-                "file_name": "160f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d4/Naka_Kai_Ni_Christmas_Full_Damaged.png/revision/latest?cb=20181207164824"
-            },
-            "small": {
-                "file_name": "160.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "160_d.png",
-                "url": null
-            }
-        }
-    },
-    "162": {
-        "images": {
-            "full": {
-                "file_name": "162f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/99/Kamoi_Christmas_Full.png/revision/latest?cb=20181207164701"
-            },
-            "full_damaged": {
-                "file_name": "162f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/62/Kamoi_Christmas_Full_Damaged.png/revision/latest?cb=20181207164700"
-            },
-            "small": {
-                "file_name": "162.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "162_d.png",
-                "url": null
-            }
-        }
-    },
-    "163": {
-        "images": {
-            "full": {
-                "file_name": "163f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d1/Maruyu_Christmas_Full.png/revision/latest?cb=20181207164708"
-            },
-            "full_damaged": {
-                "file_name": "163f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b3/Maruyu_Christmas_Full_Damaged.png/revision/latest?cb=20181207164708"
-            },
-            "small": {
-                "file_name": "163.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "163_d.png",
-                "url": null
-            }
-        }
-    },
-    "169": {
-        "images": {
-            "full": {
-                "file_name": "169f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/57/Tanikaze_Christmas_Full.png/revision/latest?cb=20181207164950"
-            },
-            "full_damaged": {
-                "file_name": "169f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/27/Tanikaze_Christmas_Full_Damaged.png/revision/latest?cb=20181207164950"
-            },
-            "small": {
-                "file_name": "169.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "169_d.png",
-                "url": null
-            }
-        }
-    },
-    "182": {
-        "images": {
-            "full": {
-                "file_name": "182f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Akashi_Christmas_Full.png/revision/latest?cb=20181207164113"
-            },
-            "full_damaged": {
-                "file_name": "182f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/af/Akashi_Christmas_Full_Damaged.png/revision/latest?cb=20181207164112"
-            },
-            "small": {
-                "file_name": "182.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "182_d.png",
-                "url": null
-            }
-        }
-    },
-    "183": {
-        "images": {
-            "full": {
-                "file_name": "183f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/a2/Ooyodo_Christmas_Full.png/revision/latest?cb=20181207164825"
-            },
-            "full_damaged": {
-                "file_name": "183f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6b/Ooyodo_Christmas_Full_Damaged.png/revision/latest?cb=20181207164825"
-            },
-            "small": {
-                "file_name": "183.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "183_d.png",
-                "url": null
-            }
-        }
-    },
-    "187": {
-        "images": {
-            "full": {
-                "file_name": "187f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/98/Akashi_Kai_Christmas_Full.png/revision/latest?cb=20181207164114"
-            },
-            "full_damaged": {
-                "file_name": "187f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/67/Akashi_Kai_Christmas_Full_Damaged.png/revision/latest?cb=20181207164114"
-            },
-            "small": {
-                "file_name": "187.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "187_d.png",
-                "url": null
-            }
-        }
-    },
-    "188": {
-        "images": {
-            "full": {
-                "file_name": "188f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/2c/Tone_Kai_Ni_Christmas_Full.png/revision/latest?cb=20181207164951"
-            },
-            "full_damaged": {
-                "file_name": "188f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Tone_Kai_Ni_Christmas_Full_Damaged.png/revision/latest?cb=20181207164951"
-            },
-            "small": {
-                "file_name": "188.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "188_d.png",
-                "url": null
-            }
-        }
-    },
-    "189": {
-        "images": {
-            "full": {
-                "file_name": "189f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/77/Chikuma_Kai_Ni_Christmas_Full.png/revision/latest?cb=20181207164116"
-            },
-            "full_damaged": {
-                "file_name": "189f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/a7/Chikuma_Kai_Ni_Christmas_Full_Damaged.png/revision/latest?cb=20181207164116"
-            },
-            "small": {
-                "file_name": "189.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "189_d.png",
-                "url": null
-            }
-        }
-    },
     "197": {
         "images": {
             "full": {
                 "file_name": "197f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6d/Souryuu_Autumn_Casual_Full.png/revision/latest?cb=20171018105226"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6d/Souryuu_Autumn_Casual_Full.png/revision/latest?cb=20181122182213"
             },
             "full_damaged": {
                 "file_name": "197f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6e/Souryuu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105233"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6e/Souryuu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181122182200"
             },
             "small": {
                 "file_name": "197.png",
@@ -1139,35 +299,15 @@
             }
         }
     },
-    "198": {
-        "images": {
-            "full": {
-                "file_name": "198f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/67/Arare_Christmas_Full.png/revision/latest?cb=20181207164115"
-            },
-            "full_damaged": {
-                "file_name": "198f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/da/Arare_Christmas_Full_Damaged.png/revision/latest?cb=20181207164115"
-            },
-            "small": {
-                "file_name": "198.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "198_d.png",
-                "url": null
-            }
-        }
-    },
     "213": {
         "images": {
             "full": {
                 "file_name": "213f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0c/Asagumo_Christmas_Full.png/revision/latest?cb=20181207164116"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0b/Asagumo_Fall_Uniform_2018_Full.png/revision/latest?cb=20181226111219"
             },
             "full_damaged": {
                 "file_name": "213f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/23/Asagumo_Christmas_Full_Damaged.png/revision/latest?cb=20181207164115"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8f/Asagumo_Fall_Uniform_2018_Full_Damaged.png/revision/latest?cb=20181026135251"
             },
             "small": {
                 "file_name": "413.png",
@@ -1183,11 +323,11 @@
         "images": {
             "full": {
                 "file_name": "214f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/37/Yamagumo_Christmas_Full.png/revision/latest?cb=20181207164952"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/fe/Yamagumo_Fall_Uniform_2018_Full.png/revision/latest?cb=20181226111338"
             },
             "full_damaged": {
                 "file_name": "214f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/cc/Yamagumo_Christmas_Full_Damaged.png/revision/latest?cb=20181207164951"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/70/Yamagumo_Fall_Uniform_2018_Full_Damaged.png/revision/latest?cb=20181226110952"
             },
             "small": {
                 "file_name": "414.png",
@@ -1199,222 +339,22 @@
             }
         }
     },
-    "241": {
+    "253": {
         "images": {
             "full": {
-                "file_name": "241f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f6/Littorio_Christmas_Full.png/revision/latest?cb=20181207164119"
+                "file_name": "253f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/85/Kazagumo_End_of_Year_Full.png/revision/latest?cb=20181226212417"
             },
             "full_damaged": {
-                "file_name": "241f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e9/Littorio_Christmas_Full_Damaged.png/revision/latest?cb=20181207164119"
+                "file_name": "253f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/90/Kazagumo_End_of_Year_Full_Damaged.png/revision/latest?cb=20181226212425"
             },
             "small": {
-                "file_name": "441.png",
+                "file_name": "453.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "441_d.png",
-                "url": null
-            }
-        }
-    },
-    "243": {
-        "images": {
-            "full": {
-                "file_name": "243f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0e/Libeccio_Christmas_Full.png/revision/latest?cb=20181207164708"
-            },
-            "full_damaged": {
-                "file_name": "243f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/3f/Libeccio_Christmas_Full_Damaged.png/revision/latest?cb=20181207164708"
-            },
-            "small": {
-                "file_name": "443.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "443_d.png",
-                "url": null
-            }
-        }
-    },
-    "246": {
-        "images": {
-            "full": {
-                "file_name": "246f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c3/Italia_Christmas_Full.png/revision/latest?cb=20181207164119"
-            },
-            "full_damaged": {
-                "file_name": "246f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/4f/Italia_Christmas_Full_Damaged.png/revision/latest?cb=20181207164118"
-            },
-            "small": {
-                "file_name": "446.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "446_d.png",
-                "url": null
-            }
-        }
-    },
-    "251": {
-        "images": {
-            "full": {
-                "file_name": "251f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d1/Mizuho_Christmas_Full.png/revision/latest?cb=20181207164709"
-            },
-            "full_damaged": {
-                "file_name": "251f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/96/Mizuho_Christmas_Full_Damaged.png/revision/latest?cb=20181207164709"
-            },
-            "small": {
-                "file_name": "451.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "451_d.png",
-                "url": null
-            }
-        }
-    },
-    "259": {
-        "images": {
-            "full": {
-                "file_name": "259f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/3b/Kawakaze_Christmas_Full.png/revision/latest?cb=20181207164702"
-            },
-            "full_damaged": {
-                "file_name": "259f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/57/Kawakaze_Christmas_Full_Damaged.png/revision/latest?cb=20181207164701"
-            },
-            "small": {
-                "file_name": "459.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "459_d.png",
-                "url": null
-            }
-        }
-    },
-    "261": {
-        "images": {
-            "full": {
-                "file_name": "261f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/97/Shoukaku_Christmas_Full.png/revision/latest?cb=20181207164949"
-            },
-            "full_damaged": {
-                "file_name": "261f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b3/Shoukaku_Christmas_Full_Damaged.png/revision/latest?cb=20181209055502"
-            },
-            "small": {
-                "file_name": "461.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "461_d.png",
-                "url": null
-            }
-        }
-    },
-    "262": {
-        "images": {
-            "full": {
-                "file_name": "262f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/ce/Zuikaku_Christmas_Full.png/revision/latest?cb=20181207151027"
-            },
-            "full_damaged": {
-                "file_name": "262f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/84/Zuikaku_Christmas_Full_Damaged.png/revision/latest?cb=20181207151027"
-            },
-            "small": {
-                "file_name": "462.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "462_d.png",
-                "url": null
-            }
-        }
-    },
-    "265": {
-        "images": {
-            "full": {
-                "file_name": "265f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b7/Kashima_Christmas_Full.png/revision/latest?cb=20181207164701"
-            },
-            "full_damaged": {
-                "file_name": "265f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6d/Kashima_Christmas_Full_Damaged.png/revision/latest?cb=20181207164701"
-            },
-            "small": {
-                "file_name": "465.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "465_d.png",
-                "url": null
-            }
-        }
-    },
-    "266": {
-        "images": {
-            "full": {
-                "file_name": "266f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/97/Shoukaku_Christmas_Full.png/revision/latest?cb=20181207164949"
-            },
-            "full_damaged": {
-                "file_name": "266f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b3/Shoukaku_Christmas_Full_Damaged.png/revision/latest?cb=20181209055502"
-            },
-            "small": {
-                "file_name": "466.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "466_d.png",
-                "url": null
-            }
-        }
-    },
-    "267": {
-        "images": {
-            "full": {
-                "file_name": "267f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/ce/Zuikaku_Christmas_Full.png/revision/latest?cb=20181207151027"
-            },
-            "full_damaged": {
-                "file_name": "267f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/84/Zuikaku_Christmas_Full_Damaged.png/revision/latest?cb=20181207151027"
-            },
-            "small": {
-                "file_name": "467.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "467_d.png",
-                "url": null
-            }
-        }
-    },
-    "269": {
-        "images": {
-            "full": {
-                "file_name": "269f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/3b/Kawakaze_Christmas_Full.png/revision/latest?cb=20181207164702"
-            },
-            "full_damaged": {
-                "file_name": "269f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/57/Kawakaze_Christmas_Full_Damaged.png/revision/latest?cb=20181207164701"
-            },
-            "small": {
-                "file_name": "469.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "469_d.png",
+                "file_name": "453_d.png",
                 "url": null
             }
         }
@@ -1423,11 +363,11 @@
         "images": {
             "full": {
                 "file_name": "279f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Amagiri_Autumn_Casual_Full.png/revision/latest?cb=20171018102126"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Amagiri_Autumn_Casual_Full.png/revision/latest?cb=20181122180729"
             },
             "full_damaged": {
                 "file_name": "279f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/21/Amagiri_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018102133"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/21/Amagiri_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181122180714"
             },
             "small": {
                 "file_name": "479.png",
@@ -1435,66 +375,6 @@
             },
             "small_damaged": {
                 "file_name": "479_d.png",
-                "url": null
-            }
-        }
-    },
-    "280": {
-        "images": {
-            "full": {
-                "file_name": "280f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/40/Sagiri_Christmas_Full.png/revision/latest?cb=20181207164829"
-            },
-            "full_damaged": {
-                "file_name": "280f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/36/Sagiri_Christmas_Full_Damaged.png/revision/latest?cb=20181207164828"
-            },
-            "small": {
-                "file_name": "480.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "480_d.png",
-                "url": null
-            }
-        }
-    },
-    "284": {
-        "images": {
-            "full": {
-                "file_name": "284f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/80/Hamanami_Christmas_Full.png/revision/latest?cb=20181207151027"
-            },
-            "full_damaged": {
-                "file_name": "284f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/20/Hamanami_Christmas_Full_Damaged.png/revision/latest?cb=20181207151027"
-            },
-            "small": {
-                "file_name": "484.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "484_d.png",
-                "url": null
-            }
-        }
-    },
-    "291": {
-        "images": {
-            "full": {
-                "file_name": "291f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/98/Commandant_Teste_Christmas_Full.png/revision/latest?cb=20181207164117"
-            },
-            "full_damaged": {
-                "file_name": "291f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/80/Commandant_Teste_Christmas_Full_Damaged.png/revision/latest?cb=20181207164117"
-            },
-            "small": {
-                "file_name": "491.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "491_d.png",
                 "url": null
             }
         }
@@ -1539,215 +419,15 @@
             }
         }
     },
-    "299": {
-        "images": {
-            "full": {
-                "file_name": "299f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/99/Kamoi_Christmas_Full.png/revision/latest?cb=20181207164701"
-            },
-            "full_damaged": {
-                "file_name": "299f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/62/Kamoi_Christmas_Full_Damaged.png/revision/latest?cb=20181207164700"
-            },
-            "small": {
-                "file_name": "499.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "499_d.png",
-                "url": null
-            }
-        }
-    },
-    "30": {
-        "images": {
-            "full": {
-                "file_name": "30f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d8/Ryuujou_Christmas_Full.png/revision/latest?cb=20181207164827"
-            },
-            "full_damaged": {
-                "file_name": "30f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0d/Ryuujou_Christmas_Full_Damaged.png/revision/latest?cb=20181207164826"
-            },
-            "small": {
-                "file_name": "76.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "76_d.png",
-                "url": null
-            }
-        }
-    },
-    "300": {
-        "images": {
-            "full": {
-                "file_name": "300f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/99/Kamoi_Christmas_Full.png/revision/latest?cb=20181207164701"
-            },
-            "full_damaged": {
-                "file_name": "300f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/62/Kamoi_Christmas_Full_Damaged.png/revision/latest?cb=20181207164700"
-            },
-            "small": {
-                "file_name": "500.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "500_d.png",
-                "url": null
-            }
-        }
-    },
-    "303": {
-        "images": {
-            "full": {
-                "file_name": "303f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/06/Suzuya_Christmas_Full.png/revision/latest?cb=20181207164949"
-            },
-            "full_damaged": {
-                "file_name": "303f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c6/Suzuya_Christmas_Full_Damaged.png/revision/latest?cb=20181207164949"
-            },
-            "small": {
-                "file_name": "503.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "503_d.png",
-                "url": null
-            }
-        }
-    },
-    "304": {
-        "images": {
-            "full": {
-                "file_name": "304f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/3d/Kumano_Christmas_Full.png/revision/latest?cb=20181207164707"
-            },
-            "full_damaged": {
-                "file_name": "304f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/59/Kumano_Christmas_Full_Damaged.png/revision/latest?cb=20181207164707"
-            },
-            "small": {
-                "file_name": "504.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "504_d.png",
-                "url": null
-            }
-        }
-    },
-    "308": {
-        "images": {
-            "full": {
-                "file_name": "308f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/06/Suzuya_Christmas_Full.png/revision/latest?cb=20181207164949"
-            },
-            "full_damaged": {
-                "file_name": "308f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c6/Suzuya_Christmas_Full_Damaged.png/revision/latest?cb=20181207164949"
-            },
-            "small": {
-                "file_name": "508.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "508_d.png",
-                "url": null
-            }
-        }
-    },
-    "309": {
-        "images": {
-            "full": {
-                "file_name": "309f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/3d/Kumano_Christmas_Full.png/revision/latest?cb=20181207164707"
-            },
-            "full_damaged": {
-                "file_name": "309f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/59/Kumano_Christmas_Full_Damaged.png/revision/latest?cb=20181207164707"
-            },
-            "small": {
-                "file_name": "509.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "509_d.png",
-                "url": null
-            }
-        }
-    },
-    "327": {
-        "images": {
-            "full": {
-                "file_name": "327f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/02/Kishinami_Christmas_Full.png/revision/latest?cb=20181207151027"
-            },
-            "full_damaged": {
-                "file_name": "327f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1b/Kishinami_Christmas_Full_Damaged.png/revision/latest?cb=20181207151027"
-            },
-            "small": {
-                "file_name": "527.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "527_d.png",
-                "url": null
-            }
-        }
-    },
-    "335": {
-        "images": {
-            "full": {
-                "file_name": "335f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/25/Matsuwa_Christmas_Full.png/revision/latest?cb=20181207151026"
-            },
-            "full_damaged": {
-                "file_name": "335f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/5b/Matsuwa_Christmas_Full_Damaged.png/revision/latest?cb=20181207151027"
-            },
-            "small": {
-                "file_name": "525.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "525_d.png",
-                "url": null
-            }
-        }
-    },
-    "339": {
-        "images": {
-            "full": {
-                "file_name": "339f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c1/Sado_Christmas_Full.png/revision/latest?cb=20181207164828"
-            },
-            "full_damaged": {
-                "file_name": "339f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/91/Sado_Christmas_Full_Damaged.png/revision/latest?cb=20181207164827"
-            },
-            "small": {
-                "file_name": "531.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "531_d.png",
-                "url": null
-            }
-        }
-    },
     "340": {
         "images": {
             "full": {
                 "file_name": "340f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1c/Tsushima_Late_Fall_Casual_Full.png/revision/latest?cb=20181116171902"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/11/Tsushima_End_of_Year_Full.png/revision/latest?cb=20181226110204"
             },
             "full_damaged": {
                 "file_name": "340f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/4d/Tsushima_Late_Fall_Casual_Full_Damaged.png/revision/latest?cb=20181116172033"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/84/Tsushima_End_of_Year_Full_Damaged.png/revision/latest?cb=20181226110234"
             },
             "small": {
                 "file_name": "540.png",
@@ -1755,46 +435,6 @@
             },
             "small_damaged": {
                 "file_name": "540_d.png",
-                "url": null
-            }
-        }
-    },
-    "35": {
-        "images": {
-            "full": {
-                "file_name": "35f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ee/Nagatsuki_Christmas_Full.png/revision/latest?cb=20181207164823"
-            },
-            "full_damaged": {
-                "file_name": "35f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/16/Nagatsuki_Christmas_Full_Damaged.png/revision/latest?cb=20181207164823"
-            },
-            "small": {
-                "file_name": "6.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "6_d.png",
-                "url": null
-            }
-        }
-    },
-    "359": {
-        "images": {
-            "full": {
-                "file_name": "359f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/57/Tanikaze_Christmas_Full.png/revision/latest?cb=20181207164950"
-            },
-            "full_damaged": {
-                "file_name": "359f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/27/Tanikaze_Christmas_Full_Damaged.png/revision/latest?cb=20181207164950"
-            },
-            "small": {
-                "file_name": "559.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "559_d.png",
                 "url": null
             }
         }
@@ -1819,75 +459,15 @@
             }
         }
     },
-    "374": {
-        "images": {
-            "full": {
-                "file_name": "374f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/20/Gotland_Christmas_Full.png/revision/latest?cb=20181207151027"
-            },
-            "full_damaged": {
-                "file_name": "374f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/7f/Gotland_Christmas_Full_Damaged.png/revision/latest?cb=20181207151027"
-            },
-            "small": {
-                "file_name": "574.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "574_d.png",
-                "url": null
-            }
-        }
-    },
-    "379": {
-        "images": {
-            "full": {
-                "file_name": "379f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/20/Gotland_Christmas_Full.png/revision/latest?cb=20181207151027"
-            },
-            "full_damaged": {
-                "file_name": "379f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/7f/Gotland_Christmas_Full_Damaged.png/revision/latest?cb=20181207151027"
-            },
-            "small": {
-                "file_name": "579.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "579_d.png",
-                "url": null
-            }
-        }
-    },
-    "39": {
-        "images": {
-            "full": {
-                "file_name": "39f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/4f/Kuma_Christmas_Full.png/revision/latest?cb=20181207164706"
-            },
-            "full_damaged": {
-                "file_name": "39f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/40/Kuma_Christmas_Full_Damaged.png/revision/latest?cb=20181207164706"
-            },
-            "small": {
-                "file_name": "99.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "99_d.png",
-                "url": null
-            }
-        }
-    },
     "46": {
         "images": {
             "full": {
                 "file_name": "46f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Sendai_Autumn_Casual_Full.png/revision/latest?cb=20171018105831"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Sendai_Autumn_Casual_Full.png/revision/latest?cb=20181122182037"
             },
             "full_damaged": {
                 "file_name": "46f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/34/Sendai_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105834"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/34/Sendai_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181122181959"
             },
             "small": {
                 "file_name": "54.png",
@@ -1899,42 +479,22 @@
             }
         }
     },
-    "48": {
+    "68": {
         "images": {
             "full": {
-                "file_name": "48f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/dc/Naka_Christmas_Full.png/revision/latest?cb=20181207164824"
+                "file_name": "68f.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/33/Akebono_Year_End_Full.png/revision/latest/scale-to-width-down/300?cb=20181226110758"
             },
             "full_damaged": {
-                "file_name": "48f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/87/Naka_Christmas_Full_Damaged.png/revision/latest?cb=20181207164824"
+                "file_name": "68f_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/21/Akebono_Year_End_Full_Damaged.png/revision/latest/scale-to-width-down/300?cb=20181226110744"
             },
             "small": {
-                "file_name": "56.png",
+                "file_name": "15.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "56_d.png",
-                "url": null
-            }
-        }
-    },
-    "69": {
-        "images": {
-            "full": {
-                "file_name": "69f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/26/Sazanami_Christmas_2016_Full.png/revision/latest?cb=20181207164829"
-            },
-            "full_damaged": {
-                "file_name": "69f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/a6/Sazanami_Christmas_2016_Full_Damaged.png/revision/latest?cb=20181207164829"
-            },
-            "small": {
-                "file_name": "94.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "94_d.png",
+                "file_name": "15_d.png",
                 "url": null
             }
         }
@@ -1943,11 +503,11 @@
         "images": {
             "full": {
                 "file_name": "79f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8e/Shiratsuyu_Autumn_Casual_Full.png/revision/latest?cb=20170929105825"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/8e/Shiratsuyu_Autumn_Casual_Full.png/revision/latest?cb=20181122175645"
             },
             "full_damaged": {
                 "file_name": "79f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/28/Shiratsuyu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20170929105830"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/28/Shiratsuyu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181122175701"
             },
             "small": {
                 "file_name": "42.png",
@@ -1963,11 +523,11 @@
         "images": {
             "full": {
                 "file_name": "8f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6d/Souryuu_Autumn_Casual_Full.png/revision/latest?cb=20171018105226"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6d/Souryuu_Autumn_Casual_Full.png/revision/latest?cb=20181122182213"
             },
             "full_damaged": {
                 "file_name": "8f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6e/Souryuu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105233"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6e/Souryuu_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181122182200"
             },
             "small": {
                 "file_name": "90.png",
@@ -1979,35 +539,15 @@
             }
         }
     },
-    "89": {
-        "images": {
-            "full": {
-                "file_name": "89f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/67/Arare_Christmas_Full.png/revision/latest?cb=20181207164115"
-            },
-            "full_damaged": {
-                "file_name": "89f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/da/Arare_Christmas_Full_Damaged.png/revision/latest?cb=20181207164115"
-            },
-            "small": {
-                "file_name": "48.png",
-                "url": null
-            },
-            "small_damaged": {
-                "file_name": "48_d.png",
-                "url": null
-            }
-        }
-    },
     "92": {
         "images": {
             "full": {
                 "file_name": "92f.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/53/Shiranui_Autumn_Casual_Full.png/revision/latest?cb=20171018105042"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/53/Shiranui_Autumn_Casual_Full.png/revision/latest?cb=20181122175317"
             },
             "full_damaged": {
                 "file_name": "92f_d.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/60/Shiranui_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20171018105047"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/60/Shiranui_Autumn_Casual_Full_Damaged.png/revision/latest?cb=20181122175415"
             },
             "small": {
                 "file_name": "18.png",

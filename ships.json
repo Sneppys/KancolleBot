@@ -21229,5 +21229,356 @@
         "remodels_into": null,
         "stype": "DD",
         "wiki_link": "http://kancolle.wikia.com/wiki/Makigumo"
+    },
+    "328": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Yuugumo Class",
+        "images": {
+            "full": {
+                "file_name": "328.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d5/Hayanami_Full.png/revision/latest/scale-to-width-down/300?cb=20181226194028"
+            },
+            "full_damaged": {
+                "file_name": "328_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/46/Hayanami_Full_Damaged.png/revision/latest?cb=20181226194037"
+            },
+            "small": {
+                "file_name": "528.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "528_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 528,
+        "name": "Hayanami",
+        "quotes": {
+            "fleet_join": "32nd Destroyer Division, Hayanami, setting sail! Onee-chan, Commander; I'm off.",
+            "idle": "Ngh, that... that place is dangerous, Suzunami-oneechan. Run... if you don't... [heavy breathing] A dream... It was just a dream... Ah, onee-chan, Commander; Uhmm, did you need something? ...No, I see. I'll go wash my face a bit.",
+            "intro": "Onee-chan, Commander; thank you. 12th ship of the Yuugumo-class, Hayanami, has arrived.",
+            "marriage": "Commander, did you call me? Eh, onee-chan? No, I don't know where she is. Maybe she's on an expedition? Eh, shut the door? Why? ...What's this box? Is it for me? ...I'll open it ok? Huh... what's this? Eh, me? It's for me!? ...No way, for me? It's for me? Really!? ...Yay!",
+            "married": "Commader, since I made some tea for onee-chan. Here you go. Also while I'm at it, I cut some youkan too. It's really just because I was already making some. Yup, that's right. So don't mind me.",
+            "remodel": "Onee-chan, take a look at this."
+        },
+        "rarity": 4,
+        "remodel_level": 35,
+        "remodels_from": null,
+        "remodels_into": 1488,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Hayanami"
+    },
+    "1488": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Yuugumo Class",
+        "images": {
+            "full": {
+                "file_name": "1488.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d5/Hayanami_Full.png/revision/latest/scale-to-width-down/300?cb=20181226194028"
+            },
+            "full_damaged": {
+                "file_name": "1488_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/46/Hayanami_Full_Damaged.png/revision/latest?cb=20181226194037"
+            },
+            "small": {
+                "file_name": "688.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "688_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 688,
+        "name": "Hayanami Kai",
+        "quotes": {
+            "fleet_join": "32nd Destroyer Division, Hayanami, setting sail! Onee-chan, Commander; I'm off.",
+            "idle": "Ngh, that... that place is dangerous, Suzunami-oneechan. Run... if you don't... [heavy breathing] A dream... It was just a dream... Ah, onee-chan, Commander; Uhmm, did you need something? ...No, I see. I'll go wash my face a bit.",
+            "intro": "Onee-chan, Commander; thank you. 12th ship of the Yuugumo-class, Hayanami, has arrived today too.",
+            "marriage": "Commander, did you call me? Eh, onee-chan? No, I don't know where she is. Maybe she's on an expedition? Eh, shut the door? Why? ...What's this box? Is it for me? ...I'll open it ok? Huh... what's this? Eh, me? It's for me!? ...No way, for me? It's for me? Really!? ...Yay!",
+            "married": "Commader, since I made some tea for onee-chan. Here you go. Also while I'm at it, I cut some youkan too. It's really just because I was already making some. Yup, that's right. So don't mind me.",
+            "remodel": "Onee-chan, take a look at this."
+        },
+        "rarity": 5,
+        "remodel_level": null,
+        "remodels_from": 328,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Hayanami"
+    },
+    "362": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Fletcher Class",
+        "images": {
+            "full": {
+                "file_name": "362.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/03/Johnston_Full.png/revision/latest?cb=20181226194910"
+            },
+            "full_damaged": {
+                "file_name": "362_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/60/Johnston_Full_Damaged.png/revision/latest?cb=20181226194920"
+            },
+            "small": {
+                "file_name": "562.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "562_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 562,
+        "name": "Johnston",
+        "quotes": {
+            "fleet_join": "Weigh anchor! USS Johnston... sortieing!",
+            "idle": "Hi Sam! You bored? I'm bored too...you want to play some cards? What game? Poker? What do you want to bet today~ cause I'm not going lose!",
+            "intro": "Hi! I'm USS Johnston of the Fletcher-class! I'm going to be a fighting ship. That means I'll keep on fighting until I run out of shells! Once again... I'll protect all of you!",
+            "marriage": "Ah, Sam? I dunno, she's probably lurking around? Oh, me? What's up? What's this? I can open it? Alright... Eh!? Ehh!? Ehhhh!?",
+            "married": "What's wrong, dear...? You're not looking too well. Are you tired...? Oh well... then... do you want my special good luck charm? Don't tell anyone else...",
+            "remodel": "Who cares~"
+        },
+        "rarity": 5,
+        "remodel_level": 55,
+        "remodels_from": null,
+        "remodels_into": 1489,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Johnston"
+    },
+    "1489": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Fletcher Class",
+        "images": {
+            "full": {
+                "file_name": "1489.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d2/Johnston_Kai_Full.png/revision/latest?cb=20181226202239"
+            },
+            "full_damaged": {
+                "file_name": "1489_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ef/Johnston_Kai_Full_Damaged.png/revision/latest?cb=20181226202245"
+            },
+            "small": {
+                "file_name": "689.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "689_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 689,
+        "name": "Johnston Kai",
+        "quotes": {
+            "fleet_join": "Weigh anchor! USS Johnston... sortieing!",
+            "idle": "Hi Sam! You bored? I'm bored too...you want to play some cards? What game? Poker? What do you want to bet today~ cause I'm not going lose!",
+            "intro": "Hi! I'm USS Johnston of the Fletcher-class! Today I'll protect you again, until I run out of shells! ...What, yeah... it's cause I want to do it!",
+            "marriage": "Ah, Sam? I dunno, she's probably lurking around? Oh, me? What's up? What's this? I can open it? Alright... Eh!? Ehh!? Ehhhh!?",
+            "married": "What's wrong, dear...? You're not looking too well. Are you tired...? Oh well... then... do you want my special good luck charm? Don't tell anyone else...",
+            "remodel": "Who cares~"
+        },
+        "rarity": 6,
+        "remodel_level": null,
+        "remodels_from": 362,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Johnston"
+    },
+    "381": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Nisshin Class",
+        "images": {
+            "full": {
+                "file_name": "381.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/bf/Nisshin_Full.png/revision/latest?cb=20181226200015"
+            },
+            "full_damaged": {
+                "file_name": "381_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/10/Nisshin_Full_Damaged.png/revision/latest?cb=20181226200025"
+            },
+            "small": {
+                "file_name": "581.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "581_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 581,
+        "name": "Nisshin",
+        "quotes": {
+            "fleet_join": "Nisshin, the seaplane tender. Preparing for sortie!",
+            "idle": "Admiral... You seem busy... oh? Mizuho? What's up? You made some rice balls? How kind of you, thank you. Nom...Mmm~ it's great!",
+            "intro": "You're my admiral? Ahh, you have fearless look. I'm Nisshin, a seaplane tender. I'll be in your care.",
+            "marriage": "Admiral, what's wrong? ...Ah, you're looking for Chitose and Chiyoda? I'll go look for them... No? Then you're looking for Mizuho? ...That's not it either? Huh? Me? Oh, me! Sigh~ you scared me! Don't worry, I'm doing well. You have an eye for people.",
+            "married": "Dear, it's good to drink some hot tea and eat some sweets when you're tired... Let's see, I'll pour you some tea myself. Hmmm~, where's the tea kettle... or tea pot? Oh, is this it?",
+            "remodel": "I'm feeling good."
+        },
+        "rarity": 6,
+        "remodel_level": 40,
+        "remodels_from": null,
+        "remodels_into": 1490,
+        "stype": "AV",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Nisshin"
+    },
+    "1490": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Nisshin Class",
+        "images": {
+            "full": {
+                "file_name": "1490.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/bf/Nisshin_Full.png/revision/latest?cb=20181226200015"
+            },
+            "full_damaged": {
+                "file_name": "1490_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/10/Nisshin_Full_Damaged.png/revision/latest?cb=20181226200025"
+            },
+            "small": {
+                "file_name": "690.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "690_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 690,
+        "name": "Nisshin Kai",
+        "quotes": {
+            "fleet_join": "Nisshin, the seaplane tender. Preparing for sortie!",
+            "idle": "Admiral... You seem busy... oh? Mizuho? What's up? You made some rice balls? How kind of you, thank you. Nom...Mmm~ it's great!",
+            "intro": "You're my admiral? Ahh, you have fearless look. I'm Nisshin, a seaplane tender. I'll be in your care.",
+            "marriage": "Admiral, what's wrong? ...Ah, you're looking for Chitose and Chiyoda? I'll go look for them... No? Then you're looking for Mizuho? ...That's not it either? Huh? Me? Oh, me! Sigh~ you scared me! Don't worry, I'm doing well. You have an eye for people.",
+            "married": "Dear, it's good to drink some hot tea and eat some sweets when you're tired... Let's see, I'll pour you some tea myself. Hmmm~, where's the tea kettle... or tea pot? Oh, is this it?",
+            "remodel": "I'm feeling good."
+        },
+        "rarity": 7,
+        "remodel_level": 60,
+        "remodels_from": 381,
+        "remodels_into": 386,
+        "stype": "AV",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Nisshin"
+    },
+    "386": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Nisshin Class",
+        "images": {
+            "full": {
+                "file_name": "386.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/fe/Nisshin_A_Full.png/revision/latest/scale-to-width-down/300?cb=20181226203552"
+            },
+            "full_damaged": {
+                "file_name": "386_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/63/Nisshin_A_Full_Damaged.png/revision/latest/scale-to-width-down/300?cb=20181226203603"
+            },
+            "small": {
+                "file_name": "586.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "586_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 586,
+        "name": "Nisshin A",
+        "quotes": {
+            "fleet_join": "Nisshin, the midget submarine tender. Ready... to Weigh Anchor!",
+            "idle": "Admiral... You seem busy... oh? Mizuho? What's up? You made some rice balls? How kind of you, thank you. Nom...Mmm~ it's great!",
+            "intro": "Hey admiral~ you're looking fearless as ever. Nisshin, the midget submarine tender, will weigh anchor today as well!",
+            "marriage": "Admiral, what's wrong? ...Ah, you're looking for Chitose and Chiyoda? I'll go look for them... No? Then you're looking for Mizuho? ...That's not it either? Huh? Me? Oh, me! Sigh~ you scared me! Don't worry, I'm doing well. You have an eye for people.",
+            "married": "Dear, it's good to drink some hot tea and eat some sweets when you're tired... Let's see, I'll pour you some tea myself. Hmmm~, where's the tea kettle... or tea pot? Oh, is this it?",
+            "remodel": "I'm feeling good."
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 1490,
+        "remodels_into": null,
+        "stype": "AV",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Nisshin"
+    },
+    "383": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Asashio Class",
+        "images": {
+            "full": {
+                "file_name": "383.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/99/Minegumo_Full.png/revision/latest?cb=20181226202755"
+            },
+            "full_damaged": {
+                "file_name": "383_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/66/Minegumo_Full_Damaged.png/revision/latest?cb=20181226202807"
+            },
+            "small": {
+                "file_name": "583.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "583_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 583,
+        "name": "Minegumo",
+        "quotes": {
+            "fleet_join": "9th Destroyer Division, Minegumo, sortieing. Everyone... let's go!",
+            "idle": "Good work, Nacchan! ...Eh, the Admiral? I haven't seen him in a while... Ah, that's right, listen to this... Just now, Murasame... Ah, hey, I said listen... H-hey!",
+            "intro": "Admiral, good morning. Asashio-class destroyer, Minegumo, reporting for duty.",
+            "marriage": "Murasame was nice yesterday too... Ah, oh, Admiral, sorry. I wasn't looking where I was going... Eh? You have something to tell me? ...Th-this is for me!? No... no way! Really!? ...Umm, I... No, but... I'm happy. Thank you very much, Admiral.",
+            "married": "Admiral, would you like some tea? I have some tea that I got from Murasame. I'll also go cut some Mamiya youkan. Just take a short break with me... Here.",
+            "remodel": "I just don't... feel safe."
+        },
+        "rarity": 4,
+        "remodel_level": 38,
+        "remodels_from": null,
+        "remodels_into": 1487,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Minegumo"
+    },
+    "1487": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Asashio Class",
+        "images": {
+            "full": {
+                "file_name": "1487.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/99/Minegumo_Full.png/revision/latest?cb=20181226202755"
+            },
+            "full_damaged": {
+                "file_name": "1487_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/66/Minegumo_Full_Damaged.png/revision/latest?cb=20181226202807"
+            },
+            "small": {
+                "file_name": "687.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "687_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 687,
+        "name": "Minegumo Kai",
+        "quotes": {
+            "fleet_join": "9th Destroyer Division flagship, Minegumo, sortieing. Everyone... let's go!",
+            "idle": "Good work, Nacchan! ...Eh, the Admiral? I haven't seen him in a while... Ah, that's right, listen to this... Just now, Murasame... Ah, hey, I said listen... H-hey!",
+            "intro": "Admiral, good morning. Asashio-class destroyer, Minegumo, reporting for duty today too.",
+            "marriage": "Murasame was nice yesterday too... Ah, oh, Admiral, sorry. I wasn't looking where I was going... Eh? You have something to tell me? ...Th-this is for me!? No... no way! Really!? ...Umm, I... No, but... I'm happy. Thank you very much, Admiral.",
+            "married": "Admiral, would you like some tea? I have some tea that I got from Murasame. I'll also go cut some Mamiya youkan. Just take a short break with me... Here.",
+            "remodel": "I just don't... feel safe."
+        },
+        "rarity": 5,
+        "remodel_level": null,
+        "remodels_from": 383,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Minegumo"
     }
 }
