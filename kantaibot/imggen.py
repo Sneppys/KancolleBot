@@ -163,7 +163,7 @@ def generate_inventory_screen(member, page, only_dupes=False):
 
     display_name = "%s#%s" % (member.name, member.discriminator)
     font = ImageFont.truetype("framd.ttf", fh * 3 // 4)
-    o_txt = namesub("%ship_plural.title%") if not only_dupes else "Dupes"
+    o_txt = namesub("<ship_plural.title>") if not only_dupes else "Dupes"
     draw.text((x + 10, y + fh // 8), "%s's %s" % (display_name, o_txt),
               font=font, fill=(0, 0, 0))
 
