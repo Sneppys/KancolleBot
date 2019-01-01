@@ -69,7 +69,7 @@
     ],
     "backups": {
         "enabled": true,
-        "backup_time": 7200,
+        "backup_time": 43200,
         "backup_folder_local": "../db_backup/"
     }
 }
