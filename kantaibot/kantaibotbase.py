@@ -314,8 +314,8 @@ async def train(ctx, dif: int=-1):
                                  for i in range(len(ins))]))
                             if (setting('features.resources_enabled')):
                                 embed.set_footer(
-                                    text=namesub("Used %g %fuel%, %g %ammo%, %g %steel%, %g "
-                                                 "%bauxite%") % rsc)
+                                    text=namesub("Used %g <fuel>, %g <ammo>, %g <steel>, %g "
+                                                 "<bauxite>") % rsc)
 
                             await ctx.send(embed=embed)
                             logging.info("[Training] %s (%s) completed "
@@ -332,7 +332,7 @@ async def train(ctx, dif: int=-1):
                                                    "again") % (hrs, min, sec))
                     else:
                         await ctx.send(namesub("Not enough resources! (Required: %g "
-                                       "%fuel%, %g %ammo%, %g %steel%, %g %bauxite%)")
+                                       "<fuel>, %g <ammo>, %g <steel>, %g <bauxite>)")
                                        % rsc)
                 else:
                     await ctx.send(namesub("<flagship.title> isn't a high enough level! "
