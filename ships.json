@@ -18332,9 +18332,9 @@
             "remodel": "Hmm... This might be good!"
         },
         "rarity": 5,
-        "remodel_level": null,
+        "remodel_level": 75,
         "remodels_from": 253,
-        "remodels_into": null,
+        "remodels_into": 364,
         "stype": "DD",
         "wiki_link": "http://kancolle.wikia.com/wiki/Kazagumo"
     },
@@ -21580,5 +21580,44 @@
         "remodels_into": null,
         "stype": "DD",
         "wiki_link": "http://kancolle.wikia.com/wiki/Minegumo"
+    },
+    "364": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Yuugumo Class",
+        "images": {
+            "full": {
+                "file_name": "364.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f5/Kazagumo_Kai_Ni_Full.png/revision/latest/scale-to-width-down/300?cb=20190208115111"
+            },
+            "full_damaged": {
+                "file_name": "364_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d0/Kazagumo_Kai_Ni_Full_Damaged.png/revision/latest?cb=20190208115116"
+            },
+            "small": {
+                "file_name": "564.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "564_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 564,
+        "name": "Kazagumo Kai Ni",
+        "quotes": {
+            "fleet_join": "10th Squadron, remodeled Yuugumo-class, Kazagumo, heading out! Fleet sortie! Follow me.",
+            "idle": "Hey? What is my next mission...? Huh, even though you're that busy... Admiral, I... Ahh... It is okay? Take it easy once in a while? Okay...",
+            "intro": "I'm the remodeled Yuugumo-class destroyer, Kazagumo. Admiral, what's wrong? You're not looking very well, are you? It'll be fine, I'll be right here so let's head out together alright?",
+            "marriage": "What? Calling me to a place like this, Admiral, do you have a new task or something? Eh...! The new task is... meaning, this... put it on... eh...! Me?",
+            "married": "What is it? Get it together. If you're not well, I won't be able to do my best either.",
+            "remodel": "Hmm... This might be good!"
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 1429,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Kazagumo"
     }
 }
