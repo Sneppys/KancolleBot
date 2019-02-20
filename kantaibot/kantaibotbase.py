@@ -704,6 +704,32 @@ async def on_message(message):
     await bot.process_commands(message)
 
 
+async def show_birthdays(bdays, channels, mon, day):
+    ship_names = []
+    look = "%02d-%02d" % (day, mon)
+    for k, v in bdays.items():
+        if (v == look):
+            ship_names.append(k)
+    if (len(ship_names) > 0):
+        ships = ship_stats.get_all_ships(allow_remodel=False)
+        msg = "Happy birthday, %s!"
+        files = []
+        for sn in ship_names:
+            for sb in ships:
+                if (sb.name.lower() == sn.lower()):
+                    bio = imggen.get_birthday_image(sb)
+                    files.append((bio, sb.name))
+        for c in channels:
+            for ft in files:
+                bio, sbname = ft
+                f = discord.File(io.BytesIO(bio.getvalue()), filename="image.png")
+                await c.send(file=f, content=(msg % sbname))
+    else:
+        msg = "There are no birthdays today. (%02d/%02d)" % (day, mon)
+        send_task = [c.send(content=msg) for c in channels]
+        await asyncio.gather(*send_task)
+
+
 async def birthday_task():
     """Handle the kanmusu birthday channel(s)."""
     await bot.wait_until_ready()
@@ -729,27 +755,7 @@ async def birthday_task():
             day = cur_day
             mon = cur_mon
 
-            ship_names = []
-            look = "%02d-%02d" % (day, mon)
-            for k, v in bdays.items():
-                if (v == look):
-                    ship_names.append(k)
-            if (len(ship_names) > 0):
-                ships = ship_stats.get_all_ships(allow_remodel=False)
-                msg = "Happy birthday, %s!"
-                for sn in ship_names:
-                    for sb in ships:
-                        if (sb.name.lower() == sn.lower()):
-                            bio = imggen.get_birthday_image(sb)
-                            file = discord.File(io.BytesIO(
-                                bio.getvalue()), filename="image.png")
-                            for c in channels:
-                                await c.send(file=file, content=(
-                                    msg % sb.name))
-            else:
-                msg = "There are no birthdays today. (%02d/%02d)" % (day, mon)
-                for c in channels:
-                    await c.send(content=msg)
+            await show_birthdays(bdays, channels, mon, day)
         await asyncio.sleep(30)
 
 
