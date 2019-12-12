@@ -1,7 +1,8 @@
 """Updates the ship file with any changes needed."""
 import json
+import os
 
-with open('../ships.json', 'r', encoding='utf-8') as jsonfile:
+with open(os.path.join(os.path.dirname(__file__), '../ships.json'), 'r', encoding='utf-8') as jsonfile:
     data = json.load(jsonfile)
 
 

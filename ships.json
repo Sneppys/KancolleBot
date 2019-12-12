@@ -4012,7 +4012,7 @@
         "rarity": 6,
         "remodel_level": 90,
         "remodels_from": 4,
-        "remodels_into": 103,
+        "remodels_into": 354,
         "stype": "BBV",
         "wiki_link": "http://kancolle.wikia.com/wiki/Hyuuga"
     },
@@ -21712,15 +21712,15 @@
                 "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1e/Kongou_Kai_Ni_C_Full_Damaged.png/revision/latest?cb=20190422145132"
             },
             "small": {
-                "file_name": "149.png",
+                "file_name": "591.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "149_d.png",
+                "file_name": "591_d.png",
                 "url": null
             }
         },
-        "kc3id": 149,
+        "kc3id": 591,
         "name": "Kongou Kai Ni C",
         "quotes": {
             "fleet_join": "1st Striking Force, 2nd Section, now it's our turn! Follow me! Everyone, please don't fall behind!",
@@ -21946,11 +21946,11 @@
                 "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/5f/Hachijou_Full_Damaged.png/revision/latest?cb=20190521015020"
             },
             "small": {
-                "file_name": "584.png",
+                "file_name": "378.png",
                 "url": null
             },
             "small_damaged": {
-                "file_name": "584_d.png",
+                "file_name": "378_d.png",
                 "url": null
             }
         },
