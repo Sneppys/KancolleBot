@@ -3,7 +3,7 @@
         "small_identifier": {
             "enabled": true,
             "font_size": 60,
-            "font": "framd.ttf",
+            "font": "fonts/framd.ttf",
             "color": [0, 0, 0],
             "outline": [125, 125, 125],
             "position": [630, 40],
@@ -12,7 +12,7 @@
         "name": {
             "enabled": true,
             "font_size": 70,
-            "font": "impact.ttf",
+            "font": "fonts/impact.ttf",
             "color": [0, 0, 0],
             "outline": [125, 125, 125],
             "position": [550, 170],
@@ -21,7 +21,7 @@
         "class_name": {
             "enabled": true,
             "font_size": 30,
-            "font": "framd.ttf",
+            "font": "fonts/framd.ttf",
             "color": [0, 0, 0],
             "outline": [125, 125, 125],
             "position": [550, 230],
@@ -30,7 +30,7 @@
         "level_indicator": {
             "enabled": true,
             "font_size": 40,
-            "font": "framd.ttf",
+            "font": "fonts/framd.ttf",
             "color": [0, 0, 0],
             "outline": [125, 125, 125],
             "position": [550, 300],
@@ -39,7 +39,7 @@
         "level_progress": {
             "enabled": true,
             "font_size": 30,
-            "font": "framd.ttf",
+            "font": "fonts/framd.ttf",
             "color": [0, 0, 0],
             "outline": [125, 125, 125],
             "position": [550, 340],
@@ -48,7 +48,7 @@
         "next_remodel": {
             "enabled": true,
             "font_size": 30,
-            "font": "framd.ttf",
+            "font": "fonts/framd.ttf",
             "color": [0, 0, 0],
             "outline": [125, 125, 125],
             "position": [550, 400],
@@ -57,7 +57,7 @@
         "owned_by": {
             "enabled": true,
             "font_size": 35,
-            "font": "framdit.ttf",
+            "font": "fonts/framdit.ttf",
             "color": [25, 25, 25],
             "outline": [175, 175, 175],
             "position": [550, 475],

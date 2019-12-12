@@ -120,12 +120,12 @@ def generate_inventory_screen(member, page, only_dupes=False):
                                 y + ch - b_in - 1), outline=border_color)
             if (ship):
                 base = ship.base()
-                font = ImageFont.truetype("trebucbd.ttf", ch * 5 // 8)
+                font = ImageFont.truetype("fonts/trebucbd.ttf", ch * 5 // 8)
                 num_str = "%04d" % (ship.invid)
                 draw_squish_text(img, (x + cw // 8, y + ch // 2), num_str,
                                  font, cw // 4 - 4, color=(0, 0, 0))
 
-                font = ImageFont.truetype("trebucbd.ttf", ch * 3 // 4)
+                font = ImageFont.truetype("fonts/trebucbd.ttf", ch * 3 // 4)
                 lvl_str = base.stype
                 if (setting('features.levels_enabled')):
                     lvl_str = "L%02d %s" % (ship.level, base.stype)
@@ -162,18 +162,18 @@ def generate_inventory_screen(member, page, only_dupes=False):
     fw, fh = (w, layout['lower_padding'] * antialias_value)  # size of footer
 
     display_name = "%s#%s" % (member.name, member.discriminator)
-    font = ImageFont.truetype("framd.ttf", fh * 3 // 4)
+    font = ImageFont.truetype("fonts/framd.ttf", fh * 3 // 4)
     o_txt = namesub("<ship_plural.title>") if not only_dupes else "Dupes"
     draw.text((x + 10, y + fh // 8), "%s's %s" % (display_name, o_txt),
               font=font, fill=(0, 0, 0))
 
-    font = ImageFont.truetype("framdit.ttf", fh // 2)
+    font = ImageFont.truetype("fonts/framdit.ttf", fh // 2)
     pg_txt = "Page %s of %s" % (page, pages_needed)
     pgw, pgh = draw.textsize(pg_txt, font=font)
     pgx, pgy = (fw - pgw - 2, y + fh - pgh - 2)
     draw.text((pgx, pgy), pg_txt, font=font, fill=(50, 50, 50))
 
-    font = ImageFont.truetype("trebucbd.ttf", fh * 3 // 8)
+    font = ImageFont.truetype("fonts/trebucbd.ttf", fh * 3 // 8)
     rsc_x, rsc_y = (fw * 21 // 32, y + 1)
 
     txt_fuel = "%05d" % (user.fuel)
@@ -333,11 +333,11 @@ def get_birthday_image(base):
     cg = cg.resize((targ_width, targ_height), Image.BICUBIC)
     img.paste(cg, (x_offset, 0), mask=cg)
 
-    font = ImageFont.truetype("impact.ttf", 60)
+    font = ImageFont.truetype("fonts/impact.ttf", 60)
     draw_squish_text(img, (img_size[0] // 2, targ_height + 20),
                      "Happy Birthday", font, img_size[0] - 20, color=(0, 0, 0),
                      outline=(125, 125, 125))
-    font_2 = ImageFont.truetype("impact.ttf", 80)
+    font_2 = ImageFont.truetype("fonts/impact.ttf", 80)
     draw_squish_text(img, (img_size[0] // 2, targ_height + 110), "%s!"
                      % (base.name), font_2, img_size[0] - 20, color=(0, 0, 0),
                      outline=(125, 125, 125))
@@ -375,7 +375,7 @@ def generate_sortie_card(sortie):
     bg = bg.resize((orig_w + padding_s, orig_h + padding_s), Image.LINEAR)
     img.paste(bg, (0, 0))
 
-    font = ImageFont.truetype("framd.ttf", 20)
+    font = ImageFont.truetype("fonts/framd.ttf", 20)
     draw = ImageDraw.Draw(img)
     for pos, node in sortie.nodes:
         pos = (pos[0] + padding, pos[1] + padding)
