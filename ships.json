@@ -20528,12 +20528,12 @@
         "stype": "SSV",
         "wiki_link": "http://kancolle.wikia.com/wiki/I-400"
     },
-	"353": {
-		"can_craft": true,
-		"can_drop": true,
-		"class_name": "Ise Class",
-		"images": {
-		    "full": {
+    "353": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Ise Class",
+        "images": {
+            "full": {
                 "file_name": "353.png",
                 "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9f/BBV_Ise_Kai_Ni_553_Full.png/revision/latest/scale-to-width-down/300?cb=20180613122903"
             },
@@ -20549,30 +20549,30 @@
                 "file_name": "553_d.png",
                 "url": null
             }
-		},
-		"kc3id": 553,
-		"name": "Ise Kai Ni",
-		"quotes": {
-			"fleet_join": "Carrier, Ise. I'll be in charge of the Carrier Division! Alright, Hyuuga?",
-			"idle": "Yes, Admiral?",
-			"intro": "Admiral, I'm the remodelled aircraft carrier, Ise; ready to head out with my full-scale flight deck!",
-			"marriage": "Hey, Admiral, could we talk about the positioning of the 5th gun turret? Eh? You don't get the meaning? Kuu... no good, huh...",
-			"married": "Hmm?",
-			"remodel": "Aren't these great?"
-		},
-		"rarity": 7,
-		"remodel_level": null,
-		"remodels_from": 102,
-		"remodels_into": null,
-		"stype": "BBV",
-		"wiki_link": "http://kancolle.wikia.com/wiki/Ise_Kai_Ni"
-	},
-	"368": {
-		"can_craft": true,
-		"can_drop": true,
-		"class_name": "Kagerou Class",
-		"images": {
-		    "full": {
+        },
+        "kc3id": 553,
+        "name": "Ise Kai Ni",
+        "quotes": {
+            "fleet_join": "Carrier, Ise. I'll be in charge of the Carrier Division! Alright, Hyuuga?",
+            "idle": "Yes, Admiral?",
+            "intro": "Admiral, I'm the remodelled aircraft carrier, Ise; ready to head out with my full-scale flight deck!",
+            "marriage": "Hey, Admiral, could we talk about the positioning of the 5th gun turret? Eh? You don't get the meaning? Kuu... no good, huh...",
+            "married": "Hmm?",
+            "remodel": "Aren't these great?"
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 102,
+        "remodels_into": null,
+        "stype": "BBV",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Ise_Kai_Ni"
+    },
+    "368": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Kagerou Class",
+        "images": {
+            "full": {
                 "file_name": "368.png",
                 "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f2/DD_Kuroshio_Kai_Ni_568_Full.png/revision/latest?cb=20180613123415"
             },
@@ -20588,30 +20588,30 @@
                 "file_name": "568_d.png",
                 "url": null
             }
-		},
-		"kc3id": 568,
-		"name": "Kuroshio Kai Ni",
-		"quotes": {
-			"fleet_join": "DesDiv15, Kuroshio, here I go!",
-			"idle": "Chief? Chieeef? Can yoouu heeeear me? ...Oh well. Guess I'll just take it easy then.",
-			"intro": "I'm Kuroshio. I'm countin' on ya. Let's get along today too!",
-			"marriage": "I... I'm... always lookin' at the chief, y'know? Really! C'mon, believe me...",
-			"married": "It's no good to overwork yourself, chief. It worries us when we see it.",
-			"remodel": "Bit-by-bit~"
-		},
-		"rarity": 7,
-		"remodel_level": null,
-		"remodels_from": 1327,
-		"remodels_into": null,
-		"stype": "DD",
-		"wiki_link": "http://kancolle.wikia.com/wiki/Kuroshio_Kai_Ni"
-	},
+        },
+        "kc3id": 568,
+        "name": "Kuroshio Kai Ni",
+        "quotes": {
+            "fleet_join": "DesDiv15, Kuroshio, here I go!",
+            "idle": "Chief? Chieeef? Can yoouu heeeear me? ...Oh well. Guess I'll just take it easy then.",
+            "intro": "I'm Kuroshio. I'm countin' on ya. Let's get along today too!",
+            "marriage": "I... I'm... always lookin' at the chief, y'know? Really! C'mon, believe me...",
+            "married": "It's no good to overwork yourself, chief. It worries us when we see it.",
+            "remodel": "Bit-by-bit~"
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 1327,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Kuroshio_Kai_Ni"
+    },
     "297": {
         "can_craft": true,
-		"can_drop": true,
-		"class_name": "Shiratsuyu Class",
-		"images": {
-		    "full": {
+        "can_drop": true,
+        "class_name": "Shiratsuyu Class",
+        "images": {
+            "full": {
                 "file_name": "297.png",
                 "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f4/DD_Shiratsuyu_Kai_Ni_497_Full.png/revision/latest/scale-to-width-down/300?cb=20180712135737"
             },
@@ -20627,9 +20627,9 @@
                 "file_name": "497_d.png",
                 "url": null
             }
-		},
-		"kc3id": 497,
-		"name": "Shiratsuyu Kai Ni",
+        },
+        "kc3id": 497,
+        "name": "Shiratsuyu Kai Ni",
         "quotes": {
             "fleet_join": "Ok~ay, let's get to work!",
             "idle": "Admiral\u00a0! work a little harder\u00a0! aim to be number one\u00a0!",
@@ -20638,12 +20638,12 @@
             "married": "I want the admiral to become everybody's number one~ Yeah! Today's a number one smile!",
             "remodel": "Fufu~ I got stronger."
         },
-		"rarity": 7,
-		"remodel_level": null,
-		"remodels_from": 1342,
-		"remodels_into": null,
-		"stype": "DD",
-		"wiki_link": "http://kancolle.wikia.com/wiki/Shiratsuyu_Kai_Ni"
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 1342,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Shiratsuyu_Kai_Ni"
     },
     "277": {
         "can_craft": true,
@@ -22282,5 +22282,863 @@
         "remodels_into": null,
         "stype": "CV",
         "wiki_link": "http://kancolle.wikia.com/wiki/Akagi"
+    },
+    "411": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Mikura Class",
+        "images": {
+            "full": {
+                "file_name": "411.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1a/Mikura_Full.png/revision/latest?cb=20190830160936"
+            },
+            "full_damaged": {
+                "file_name": "411_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d6/Mikura_Full_Damaged.png/revision/latest?cb=20190830160950"
+            },
+            "small": {
+                "file_name": "611.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "611_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 611,
+        "name": "Mikura",
+        "quotes": {
+            "fleet_join": "1st Maritime Escort Division, Mikura, sortieing. All ships, please follow me.",
+            "idle": "What should I do? The threat of enemy submarines and aircraft will keep on increasing. The maritime escort missions are important. We must do what we can. Wouldn't it... wouldn't it be nice if there came a day when the fighting would end?",
+            "intro": "I'm the 1st ship of the Mikura-class coastal defense ships, Mikura. Reporting for duty. Admiral, the Mikura-class will be in your care. I may be small, but I'll try to do my best.",
+            "marriage": "Admiral, did you call me? What did you need me for at this time? Eh, for me? Surely you're joking, please stop that. ...You're not? ...You truly feel this way? ...Umm... Umm... Thank you very much. I'm happy you feel this way.",
+            "married": "Admiral, you look tired. Even if it's just a little while, won't you rest? Have some tea. I'm here, so please rest.",
+            "remodel": "Don't let your guard down."
+        },
+        "rarity": 4,
+        "remodel_level": 45,
+        "remodels_from": null,
+        "remodels_into": 416,
+        "stype": "DE",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Mikura"
+    },
+    "416": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Mikura Class",
+        "images": {
+            "full": {
+                "file_name": "416.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/7c/Mikura_Kai_Full.png/revision/latest?cb=20190830161536"
+            },
+            "full_damaged": {
+                "file_name": "416_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/06/Mikura_Kai_Full_Damaged.png/revision/latest?cb=20190830161542"
+            },
+            "small": {
+                "file_name": "616.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "616_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 616,
+        "name": "Mikura Kai",
+        "quotes": {
+            "fleet_join": "102nd Squadron, Mikura, sortieing. All ships, please follow me.",
+            "idle": "What should I do? The threat of enemy submarines and aircraft will keep on increasing. The maritime escort missions are important. We must do what we can. Wouldn't it... wouldn't it be nice if there came a day when the fighting would end?",
+            "intro": "I'm the 1st ship of the Mikura-class coastal defense ships, Mikura. On alert. Admiral, please continue to care for the coastal defense ships and the Maritime Escort Division. I'll continue to give my best.",
+            "marriage": "Admiral, did you call me? What did you need me for at this time? Eh, for me? Surely you're joking, please stop that. ...You're not? ...You truly feel this way? ...Umm... Umm... Thank you very much. I'm happy you feel this way.",
+            "married": "Admiral, you look tired. Even if it's just a little while, won't you rest? Have some tea. I'm here, so please rest.",
+            "remodel": "Don't let your guard down."
+        },
+        "rarity": 5,
+        "remodel_level": null,
+        "remodels_from": 411,
+        "remodels_into": null,
+        "stype": "DE",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Mikura"
+    },
+    "414": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Maestrale Class",
+        "images": {
+            "full": {
+                "file_name": "414.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/43/Grecale_Full.png/revision/latest?cb=20190830161419"
+            },
+            "full_damaged": {
+                "file_name": "414_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/48/Grecale_Full_Damaged.png/revision/latest?cb=20190830161425"
+            },
+            "small": {
+                "file_name": "614.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "614_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 614,
+        "name": "Grecale",
+        "quotes": {
+            "fleet_join": "10th Destroyer Division, Grecale, setting off!",
+            "idle": "Oh, it's Garibaldi! Hello! Yeah, I'm bored now. You know, back when you were being remodelled, I was put in charge! Nearly all of my weapons were stripped to make room for the command facilities. It was really troublesome!",
+            "intro": "Good day! I'm the 2nd of the Maestrale-class destroyers, Grecale. Admiral, you better treat me nicely, alright? Ufu, you're cute!",
+            "marriage": "Admiral, what is it? To call me out to a place like this... You're being so formal. Could it be a confession or proposal? Ufu, just kidding... Eh? Ah, it is? No way, seriously? ...Ah, so it is. I see... Aha, yes. I accept. Admiral, this new side of you is surprising.",
+            "married": "Ah, Ooyodo? Yeah, I feel a kind of kinship with her. I wonder why. Why do you ask? Ah, do you like her? You seriously do? ...\"Don't make fun of adults\"? Come on, it's fine! You're cute!",
+            "remodel": "Hmm, it's pretty good."
+        },
+        "rarity": 6,
+        "remodel_level": 35,
+        "remodels_from": null,
+        "remodels_into": 419,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Grecale"
+    },
+    "419": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Maestrale Class",
+        "images": {
+            "full": {
+                "file_name": "419.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/a5/Grecale_Kai_Full.png/revision/latest?cb=20190830161642"
+            },
+            "full_damaged": {
+                "file_name": "419_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/80/Grecale_Kai_Full_Damaged.png/revision/latest?cb=20190830161649"
+            },
+            "small": {
+                "file_name": "619.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "619_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 619,
+        "name": "Grecale Kai",
+        "quotes": {
+            "fleet_join": "10th Destroyer Division, Grecale, setting off!",
+            "idle": "Oh, it's Garibaldi! Hello! Yeah, I'm bored now. You know, back when you were being remodelled, I was put in charge! Nearly all of my weapons were stripped to make room for the command facilities. It was really troublesome!",
+            "intro": "Good day! I'm the 2nd of the Maestrale-class destroyers, Grecale. Admiral, you better treat me really nicely, alright? I don't know what I'll do... if you don't.",
+            "marriage": "Admiral, what is it? To call me out to a place like this... You're being so formal. Could it be a confession or proposal? Ufu, just kidding... Eh? Ah, it is? No way, seriously? ...Ah, so it is. I see... Aha, yes. I accept. Admiral, this new side of you is surprising.",
+            "married": "Ah, Ooyodo? Yeah, I feel a kind of kinship with her. I wonder why. Why do you ask? Ah, do you like her? You seriously do? ...\"Don't make fun of adults\"? Come on, it's fine! You're cute!",
+            "remodel": "Hmm, it's pretty good."
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 414,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Grecale"
+    },
+    "389": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Duca degli Abruzzi Class",
+        "images": {
+            "full": {
+                "file_name": "389.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/73/Duca_degli_Abruzzi_Full.png/revision/latest?cb=20190830160759"
+            },
+            "full_damaged": {
+                "file_name": "389_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6f/Duca_degli_Abruzzi_Full_Damaged.png/revision/latest?cb=20190830160812"
+            },
+            "small": {
+                "file_name": "589.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "589_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 589,
+        "name": "Duca degli Abruzzi",
+        "quotes": {
+            "fleet_join": "Fleet, sortie! Cruiser Abruzzi, weighing anchor! Everyone, please follow me.",
+            "idle": "I wonder if my sister... if Garibaldi is doing her job... Ah... Yeah, I'm sure she's fine. It's her after all. Right?",
+            "intro": "Good day! I'm the up and coming light cruiser from Italy, Luigi di Savoia Duca degli Abruzzi. Ufuu, it's long, isn't it? I'm fine with just being called Abruzzi. Admiral, my sister and I are looking forward to your guidance.",
+            "marriage": "Ah, I'm sorry. With my sister, I'm... Eh, even then... even then, you're fine with me? ...Thank you very much, Admiral. I gladly accept this honour. Yup, I accept!",
+            "married": "Admiral, how does my skin look today? Ah, is that... so. Great! I wonder if it's because I'm with you. Ufufu.",
+            "remodel": "This is wonderful."
+        },
+        "rarity": 6,
+        "remodel_level": 45,
+        "remodels_from": null,
+        "remodels_into": 1483,
+        "stype": "CL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Duca_degli_Abruzzi"
+    },
+    "1483": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Duca degli Abruzzi Class",
+        "images": {
+            "full": {
+                "file_name": "1483.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/73/Duca_degli_Abruzzi_Full.png/revision/latest?cb=20190830160759"
+            },
+            "full_damaged": {
+                "file_name": "1483_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6f/Duca_degli_Abruzzi_Full_Damaged.png/revision/latest?cb=20190830160812"
+            },
+            "small": {
+                "file_name": "693.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "693_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 693,
+        "name": "Duca degli Abruzzi Kai",
+        "quotes": {
+            "fleet_join": "Fleet, sortie! Cruiser Abruzzi, weighing anchor! Everyone, please follow me.",
+            "idle": "I wonder if my sister... if Garibaldi is doing her job... Ah... Yeah, I'm sure she's fine. It's her after all. Right?",
+            "intro": "Good day! I'm the up and coming light cruiser from Italy, Luigi di Savoia Duca degli Abruzzi. Ufu, Admiral, just Abruzzi is fine. Please continue to give my sister and me your guidance.",
+            "marriage": "Ah, I'm sorry. With my sister, I'm... Eh, even then... even then, you're fine with me? ...Thank you very much, Admiral. I gladly accept this honour. Yup, I accept!",
+            "married": "Admiral, how does my skin look today? Ah, is that... so. Great! I wonder if it's because I'm with you. Ufufu.",
+            "remodel": "This is wonderful."
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 389,
+        "remodels_into": null,
+        "stype": "CL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Duca_degli_Abruzzi"
+    },
+    "320": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "J Class",
+        "images": {
+            "full": {
+                "file_name": "320.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e3/Janus_Full.png/revision/latest?cb=20190904134821"
+            },
+            "full_damaged": {
+                "file_name": "320_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e3/Janus_Full_Damaged.png/revision/latest?cb=20190904135121"
+            },
+            "small": {
+                "file_name": "520.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "520_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 520,
+        "name": "Janus",
+        "quotes": {
+            "fleet_join": "Home Fleet, 7th Destroyer Flotilla, weigh anchor! Janus, sortieing!",
+            "idle": "Admiral? What is it? Eh, bogey? I don't know what that is. Do you mean an enemy? Outer space? A training ship? What are you talking about? Hmmm, Ginga? I know that, it's the new type of bomber here, right? You don't mean that?",
+            "intro": "Hi, my name is Janus. Yes, from the same flotilla as Jervis... Eh, you don't know me? You really are unqualified to be admiral. Listen up, alright? You better remember this.",
+            "marriage": "What is it, Admiral? Do you have orders for me? If you want Jervis, she's over there. ...Eh, you need me? F-for what? ...Ah, this box is... No way! Is it really for me? Are you fine with me? ...I see. So you are. Thanks a lot. I love you too!",
+            "married": "Ah, Jervis, is it tea time? I'll go get some tea for you and the Admiral. Just leave it to me, I'll be just fine. ...Ngh, what's with that look? I said I'll be fine!",
+            "remodel": "Yes, this is great."
+        },
+        "rarity": 6,
+        "remodel_level": 55,
+        "remodels_from": null,
+        "remodels_into": 1493,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Janus"
+    },
+    "1493": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "J Class",
+        "images": {
+            "full": {
+                "file_name": "1493.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e3/Janus_Full.png/revision/latest?cb=20190904134821"
+            },
+            "full_damaged": {
+                "file_name": "1493_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e3/Janus_Full_Damaged.png/revision/latest?cb=20190904135121"
+            },
+            "small": {
+                "file_name": "893.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "893_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 893,
+        "name": "Janus Kai",
+        "quotes": {
+            "fleet_join": "Mediterranean Fleet, 14th Destroyer Flotilla, weigh anchor! Janus, sortieing!",
+            "idle": "Admiral? What is it? Eh, bogey? I don't know what that is. Do you mean an enemy? Outer space? A training ship? What are you talking about? Hmmm, Ginga? I know that, it's the new type of bomber here, right? You don't mean that?",
+            "intro": "Hi, I'm the J-class destroyer, Janus. Admiral, let's work hard today too. Eh? Ah, what is it? Is there something on my face?",
+            "marriage": "What is it, Admiral? Do you have orders for me? If you want Jervis, she's over there. ...Eh, you need me? F-for what? ...Ah, this box is... No way! Is it really for me? Are you fine with me? ...I see. So you are. Thanks a lot. I love you too!",
+            "married": "Ah, Jervis, is it tea time? I'll go get some tea for you and the Admiral. Just leave it to me, I'll be just fine. ...Ngh, what's with that look? I said I'll be fine!",
+            "remodel": "Yes, this is great."
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 320,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Janus"
+    },
+    "399": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "De Ruyter Class",
+        "images": {
+            "full": {
+                "file_name": "399.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f6/De_Ruyter_Full.png/revision/latest?cb=20191130033407"
+            },
+            "full_damaged": {
+                "file_name": "399_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/85/De_Ruyter_Full_Damaged.png/revision/latest?cb=20191130033408"
+            },
+            "small": {
+                "file_name": "604.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "604_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 604,
+        "name": "De Ruyter",
+        "quotes": {
+            "fleet_join": "CL De Ruyter, heading out! Come on everyone, follow me. Let's sortie!",
+            "idle": "Admiral, what's that blueprint? Hmmm? \"Dentan\"? Eh, so the same thing as RADAR? I'm kinda interested in it. I'd like to try it out sometime... Can I?",
+            "intro": "Hi! So you're the Admiral of this fleet I've heard about? I'm the Dutch CL, De Ruyter. Do you recognise the name? Do you? Do you? That's right! I'm pretty good, after all! Just leave it to me.",
+            "marriage": "Really... You're sure? ...yeah, I... I do too! I love you!",
+            "married": "Ah, it's really time for me to head out? No, no, I'm fine with it. Alright then, give me a sec. I'll be ready in a flash.",
+            "remodel": "Yeah, oh wow!"
+        },
+        "rarity": 4,
+        "remodel_level": 50,
+        "remodels_from": null,
+        "remodels_into": 1494,
+        "stype": "CL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/De_Ruyter"
+    },
+    "1494": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "De Ruyter Class",
+        "images": {
+            "full": {
+                "file_name": "1494.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f6/De_Ruyter_Full.png/revision/latest?cb=20191130033407"
+            },
+            "full_damaged": {
+                "file_name": "1494_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/85/De_Ruyter_Full_Damaged.png/revision/latest?cb=20191130033408"
+            },
+            "small": {
+                "file_name": "609.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "609_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 609,
+        "name": "De Ruyter Kai",
+        "quotes": {
+            "fleet_join": "CL De Ruyter, heading out! Come on everyone, follow me. Let's sortie!",
+            "idle": "Admiral, what's that blueprint? Hmmm? \"Dentan\"? Eh, so the same thing as RADAR? I'm kinda interested in it. I'd like to try it out sometime... Can I?",
+            "intro": "Hi! Admiral, how are you today? I see, I see. I'm the Dutch CL, De Ruyter. That's right, just leave it to me again today.",
+            "marriage": "Really... You're sure? ...yeah, I... I do too! I love you!",
+            "married": "Ah, it's really time for me to head out? No, no, I'm fine with it. Alright then, give me a sec. I'll be ready in a flash.",
+            "remodel": "Yeah, oh wow!"
+        },
+        "rarity": 5,
+        "remodel_level": null,
+        "remodels_from": 399,
+        "remodels_into": null,
+        "stype": "CL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/De_Ruyter"
+    },
+    "413": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Perth Class",
+        "images": {
+            "full": {
+                "file_name": "413.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/fa/Perth_Full.png/revision/latest?cb=20191130031530"
+            },
+            "full_damaged": {
+                "file_name": "413_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/e6/Perth_Full_Damaged.png/revision/latest?cb=20191130031530"
+            },
+            "small": {
+                "file_name": "613.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "613_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 613,
+        "name": "Perth",
+        "quotes": {
+            "fleet_join": "Amphion... No wait... Perth, CL Perth, sortieing. Everyone, follow me. Let's go.",
+            "idle": "Houston? What's the matter? ...What? An ABDA Fleet strategy meeting? Here and now? Well, I don't mind. Right here?",
+            "intro": "How are you? I'm the Perth-class light cruiser, Perth. The HMAS Perth. I was born in England and raised in Australia.",
+            "marriage": "How's it going? Admiral, what is it? ...Is this for me? Re-really. I'll gladly consider it. N... No... I accept.",
+            "married": "How are you? ...Fair enough. That's good. I'm alright, thanks.",
+            "remodel": "Could be better."
+        },
+        "rarity": 4,
+        "remodel_level": 45,
+        "remodels_from": null,
+        "remodels_into": 418,
+        "stype": "CL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Perth"
+    },
+    "418": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Perth Class",
+        "images": {
+            "full": {
+                "file_name": "418.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1e/Perth_Kai_Full.png/revision/latest?cb=20191130031532"
+            },
+            "full_damaged": {
+                "file_name": "418_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0f/Perth_Kai_Full_Damaged.png/revision/latest?cb=20191130031532"
+            },
+            "small": {
+                "file_name": "618.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "618_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 618,
+        "name": "Perth Kai",
+        "quotes": {
+            "fleet_join": "CL Perth, sortieing. Everyone, follow me. Let's go.",
+            "idle": "Houston? What's the matter? ...What? An ABDA Fleet strategy meeting? Here and now? Well, I don't mind. Right here?",
+            "intro": "How are you? I'm the Perth-class light cruiser, Perth. HMAS Perth is here. Don't underestimate my strength - I was raised in Australia. Well, shall we get started?",
+            "marriage": "How's it going? Admiral, what is it? ...Is this for me? Re-really. I'll gladly consider it. N... No... I accept.",
+            "married": "How are you? ...Fair enough. That's good. I'm alright, thanks.",
+            "remodel": "Could be better."
+        },
+        "rarity": 5,
+        "remodel_level": null,
+        "remodels_from": 413,
+        "remodels_into": null,
+        "stype": "CL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Perth"
+    },
+    "395": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Northampton Class",
+        "images": {
+            "full": {
+                "file_name": "395.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/84/Houston_Full.png/revision/latest?cb=20191130033850"
+            },
+            "full_damaged": {
+                "file_name": "395_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b1/Houston_Full_Damaged.png/revision/latest?cb=20191130033851"
+            },
+            "small": {
+                "file_name": "595.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "595_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 595,
+        "name": "Houston",
+        "quotes": {
+            "fleet_join": "Asiatic Fleet flagship, Houston, weigh anchor. Sortieing!",
+            "idle": "The Admiral seems to be occupied. Let's hold an ABDA Fleet joint strategy meeting in the meanwhile. Perth, De Ruyter, everyone, what do you think?",
+            "intro": "My name is Houston. I served as part of the backbone of our forces in the Pacific, and as flagship of the Asiatic Fleet. Admiral, I'll be in your care.",
+            "marriage": "Admiral, is this...? For my service? No? Feelings? Yours? I'm honored, Admiral. I'll humbly accept it.",
+            "married": "Admiral, are you tired? I'll pour you some coffee. It's hot, please let it cool. Shall I make some pancakes as well? Mine are delicious. Wait just a moment.",
+            "remodel": "Not a problem."
+        },
+        "rarity": 6,
+        "remodel_level": 50,
+        "remodels_from": null,
+        "remodels_into": 400,
+        "stype": "CA",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Houston"
+    },
+    "400": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Northampton Class",
+        "images": {
+            "full": {
+                "file_name": "400.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/8/84/Houston_Kai_Full.png/revision/latest?cb=20191130033852"
+            },
+            "full_damaged": {
+                "file_name": "400_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c8/Houston_Kai_Full_Damaged.png/revision/latest?cb=20191130033853"
+            },
+            "small": {
+                "file_name": "600.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "600_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 600,
+        "name": "Houston Kai",
+        "quotes": {
+            "fleet_join": "Asiatic Fleet flagship, Houston, weigh anchor. Sortieing!",
+            "idle": "The Admiral seems to be occupied. Let's hold an ABDA Fleet joint strategy meeting in the meanwhile. Perth, De Ruyter, everyone, what do you think?",
+            "intro": "I'm Houston, of the Northampton-class. Admiral, let us protect the tranquility of the Pacific and the seas of Asia together. This time... this time I believe we can do it.",
+            "marriage": "Admiral, is this...? For my service? No? Feelings? Yours? I'm honored, Admiral. I'll humbly accept it.",
+            "married": "Admiral, are you tired? I'll pour you some coffee. It's hot, please let it cool. Shall I make some pancakes as well? Mine are delicious. Wait just a moment.",
+            "remodel": "Not a problem."
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 395,
+        "remodels_into": null,
+        "stype": "CA",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Houston"
+    },
+    "421": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "IJA R1",
+        "images": {
+            "full": {
+                "file_name": "421.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/3e/Shinshuu_Maru_Full.png/revision/latest?cb=20191130035505"
+            },
+            "full_damaged": {
+                "file_name": "421_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/7/77/Shinshuu_Maru_Full_Damaged.png/revision/latest?cb=20191130035505"
+            },
+            "small": {
+                "file_name": "621.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "621_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 621,
+        "name": "Shinshuu Maru",
+        "quotes": {
+            "fleet_join": "Army Special Ship, Shinshuu Maru, weighing anchor. Everyone, I'm counting on you.",
+            "idle": "GL... God Land. Even though it's pretty much the same, having a secret alias still feels really deep. Whew.",
+            "intro": "I'm the IJA Special Ship, Shinshuu Maru. I was built with the capability of combined-arms force projection during landings, and am the predecessor of all true amphibious assault ships. Please leave the landing operations to me.",
+            "marriage": "Admiral, is this for me? ...Really? ...I'm happy. I... I'll go and change.",
+            "married": "Admiral, I tried making some military rations... Could you try it... Ah, thanks. I-is it good?",
+            "remodel": "I'm launching daihatsu."
+        },
+        "rarity": 6,
+        "remodel_level": 48,
+        "remodels_from": null,
+        "remodels_into": 426,
+        "stype": "LHA",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Shinshuu_Maru"
+    },
+    "426": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "IJA R1",
+        "images": {
+            "full": {
+                "file_name": "426.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d8/Shinshuu_Maru_Kai_Full.png/revision/latest?cb=20191130035507"
+            },
+            "full_damaged": {
+                "file_name": "426_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b0/Shinshuu_Maru_Kai_Full_Damaged.png/revision/latest?cb=20191130035507"
+            },
+            "small": {
+                "file_name": "626.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "626_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 626,
+        "name": "Shinshuu Maru Kai",
+        "quotes": {
+            "fleet_join": "Army Special Ship, Shinshuu Maru, weighing anchor. Everyone, I'm counting on you.",
+            "idle": "GL... God Land. Even though it's pretty much the same, having a secret alias still feels really deep. Whew.",
+            "intro": "I'm the upgraded IJA Special Ship, Shinshuu Maru. Capable of combined-arms force projection during landings, I'm the predecessor of all true amphibious assault ships. My abilities have been improved even more. Please leave the landing operations to me.",
+            "marriage": "Admiral, is this for me? ...Really? ...I'm happy. I... I'll go and change.",
+            "married": "Admiral, I tried making some military rations... Could you try it... Ah, thanks. I-is it good?",
+            "remodel": "I'm launching daihatsu."
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 421,
+        "remodels_into": null,
+        "stype": "LHA",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Shinshuu_Maru"
+    },
+    "425": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Yuugumo Class",
+        "images": {
+            "full": {
+                "file_name": "425.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0f/Akishimo_Full.png/revision/latest?cb=20191207130309"
+            },
+            "full_damaged": {
+                "file_name": "425_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f6/Akishimo_Full_Damaged.png/revision/latest?cb=20191207130314"
+            },
+            "small": {
+                "file_name": "625.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "625_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 625,
+        "name": "Akishimo",
+        "quotes": {
+            "fleet_join": "Destroyer Division 2, Akishimo, heading out! Follow me!",
+            "idle": "Haya-Haya, hey, what do you think of this hair ornament? Ah, really? Then what about this one? Really? Good, good. I wonder which one I should wear tomorrow. Ah, really? I guess so. Ehehe.",
+            "intro": "I'm the 18th ship of the Yuugumo-class destroyers, Akishimo. \"Harshness\" that's what best describes the state of the war when I was active. Remember me too. Don't forget me alright?",
+            "marriage": "Commander, what is it? Aren't you being a bit strange? Ehe, i-is this... for me? Really? No way, my tears won't stop flowing...",
+            "married": "You know, I just tried making some tea so... you want some? Ah, you don't really need to have a cup. I can drink it myself... You will?",
+            "remodel": "Hmm, I think this works."
+        },
+        "rarity": 4,
+        "remodel_level": 30,
+        "remodels_from": null,
+        "remodels_into": 1495,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Akishimo"
+    },
+    "1495": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Yuugumo Class",
+        "images": {
+            "full": {
+                "file_name": "1495.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/0f/Akishimo_Full.png/revision/latest?cb=20191207130309"
+            },
+            "full_damaged": {
+                "file_name": "1495_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f6/Akishimo_Full_Damaged.png/revision/latest?cb=20191207130314"
+            },
+            "small": {
+                "file_name": "695.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "695_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 695,
+        "name": "Akishimo Kai",
+        "quotes": {
+            "fleet_join": "Destroyer Division 2, flagship Akishimo, heading out! Follow me!",
+            "idle": "Haya-Haya, hey, what do you think of this hair ornament? Ah, really? Then what about this one? Really? Good, good. I wonder which one I should wear tomorrow. Ah, really? I guess so. Ehehe.",
+            "intro": "Mornin! 18th ship of the Yuugumo-class destroyers, Akishimo, reporting in. Hey, no matter how hard it gets, we'll overcome it together! Now, let's go!",
+            "marriage": "Commander, what is it? Aren't you being a bit strange? Ehe, i-is this... for me? Really? No way, my tears won't stop flowing...",
+            "married": "You know, I just tried making some tea so... you want some? Ah, you don't really need to have a cup. I can drink it myself... You will?",
+            "remodel": "Hmm, I think this works."
+        },
+        "rarity": 5,
+        "remodel_level": null,
+        "remodels_from": 425,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Akishimo"
+    },
+    "370": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Etorofu Class",
+        "images": {
+            "full": {
+                "file_name": "370.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b4/Hirato_Full.png/revision/latest?cb=20191207125808"
+            },
+            "full_damaged": {
+                "file_name": "370_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/31/Hirato_Full_Damaged.png/revision/latest?cb=20191207125815"
+            },
+            "small": {
+                "file_name": "570.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "570_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 570,
+        "name": "Hirato",
+        "quotes": {
+            "fleet_join": "Yokosuka Defense Force, coastal defense ship Hirato, setting off.",
+            "idle": "Shikinami, Shikinami! Thanks for your work. If you don't mind, would you like to have some tea in my room? Ah, I'll go make some then. Yes!",
+            "intro": "Commander, I'm the Etorofu-class coastal defense ship, Hirato, reporting for duty. Let's work together. Don't worry. I won't let them lay a finger on you this time. I won't.",
+            "marriage": "Ummm... Did you call for me? Not Shikinami? Hmm? What's this box? Can I open it? ...Ah! Uh-ummm, Commander... *sharp breath* I'll keep protecting you and these seas forever!",
+            "married": "Commander, here's your tea. You like this don't you? Eh, \"mines\"? Those mines? Ah, that's right. I'm kind of interested in them. I should have left it to an expert. Ehe, how odd.",
+            "remodel": "Let's go."
+        },
+        "rarity": 4,
+        "remodel_level": 48,
+        "remodels_from": null,
+        "remodels_into": 1484,
+        "stype": "DE",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Hirato"
+    },
+    "1484": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Etorofu Class",
+        "images": {
+            "full": {
+                "file_name": "1484.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b4/Hirato_Full.png/revision/latest?cb=20191207125808"
+            },
+            "full_damaged": {
+                "file_name": "1484_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/31/Hirato_Full_Damaged.png/revision/latest?cb=20191207125815"
+            },
+            "small": {
+                "file_name": "684.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "684_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 684,
+        "name": "Hirato Kai",
+        "quotes": {
+            "fleet_join": "",
+            "idle": "Shikinami, Shikinami! Thanks for your work. If you don't mind, would you like to have some tea in my room? Ah, I'll go make some then. Yes!",
+            "intro": "Commander, I'm the Etorofu-class coastal defense ship, Hirato, reporting for duty. Let's work together today too. Don't worry. I won't let them lay a finger on you or anyone else, Commander. So relax.",
+            "marriage": "Ummm... Did you call for me? Not Shikinami? Hmm? What's this box? Can I open it? ...Ah! Uh-ummm, Commander... *sharp breath* I'll keep protecting you and these seas forever!",
+            "married": "Commander, here's your tea. You like this don't you? Eh, \"mines\"? Those mines? Ah, that's right. I'm kind of interested in them. I should have left it to an expert. Ehe, how odd.",
+            "remodel": "Let's go."
+        },
+        "rarity": 5,
+        "remodel_level": null,
+        "remodels_from": 370,
+        "remodels_into": null,
+        "stype": "DE",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Hirato"
+    },
+    "397": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Atlanta Class",
+        "images": {
+            "full": {
+                "file_name": "397.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d0/Atlanta_Full.png/revision/latest?cb=20191207130041"
+            },
+            "full_damaged": {
+                "file_name": "397_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/53/Atlanta_Full_Damaged.png/revision/latest?cb=20191207130048"
+            },
+            "small": {
+                "file_name": "597.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "597_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 597,
+        "name": "Atlanta",
+        "quotes": {
+            "fleet_join": "Are you OK? anti-air cruiser, Atlanta, sortieing.",
+            "idle": "I'm not really good with the Japanese Fleet. But surprisingly, some of them are good people once you get to know them. What a surprise.",
+            "intro": "How is everything? I'm the Atlanta-class anti-air cruiser, Atlanta. I'm from Brooklyn. Are you the Admiral? Nice to meet you.",
+            "marriage": "Admiral, what is it? What's up? Eh? What's this? Can I open it? ...Oh wow. Well, isn't this nice? Thanks, Admiral. I guess I'll accept.",
+            "married": "Are you alright, Admiral? ...Really? Well, that's fine then. I'll leave your coffee here.",
+            "remodel": "Well, I suppose this is enough."
+        },
+        "rarity": 6,
+        "remodel_level": 50,
+        "remodels_from": null,
+        "remodels_into": 1496,
+        "stype": "CL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Atlanta"
+    },
+    "1496": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Atlanta Class",
+        "images": {
+            "full": {
+                "file_name": "1496.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/d0/Atlanta_Full.png/revision/latest?cb=20191207130041"
+            },
+            "full_damaged": {
+                "file_name": "1496_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/53/Atlanta_Full_Damaged.png/revision/latest?cb=20191207130048"
+            },
+            "small": {
+                "file_name": "696.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "696_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 696,
+        "name": "Atlanta Kai",
+        "quotes": {
+            "fleet_join": "Are you OK? anti-air cruiser, Atlanta, sortieing.",
+            "idle": "I'm not really good with the Japanese Fleet. But surprisingly, some of them are good people once you get to know them. What a surprise.",
+            "intro": "How is everything? I'm the Atlanta-class anti-air cruiser, Atlanta. Reporting in. Admiral... well, I guess I'll work hard today too.",
+            "marriage": "Admiral, what is it? What's up? Eh? What's this? Can I open it? ...Oh wow. Well, isn't this nice? Thanks, Admiral. I guess I'll accept.",
+            "married": "Are you alright, Admiral? ...Really? Well, that's fine then. I'll leave your coffee here.",
+            "remodel": "Well, I suppose this is enough."
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 397,
+        "remodels_into": null,
+        "stype": "CL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Atlanta"
     }
 }
