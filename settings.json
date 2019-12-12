@@ -68,7 +68,7 @@
         "**Legendary**"
     ],
     "backups": {
-        "enabled": true,
+        "enabled": false,
         "backup_time": 43200,
         "backup_folder_local": "../db_backup/"
     }
