@@ -4010,9 +4010,9 @@
             "remodel": "Yeah... I expected that."
         },
         "rarity": 6,
-        "remodel_level": null,
+        "remodel_level": 90,
         "remodels_from": 4,
-        "remodels_into": null,
+        "remodels_into": 103,
         "stype": "BBV",
         "wiki_link": "http://kancolle.wikia.com/wiki/Hyuuga"
     },
@@ -5804,9 +5804,9 @@
             "remodel": "Wow! Presents from Admiral!"
         },
         "rarity": 7,
-        "remodel_level": null,
+        "remodel_level": 92,
         "remodels_from": 1309,
-        "remodels_into": null,
+        "remodels_into": 391,
         "stype": "FBB",
         "wiki_link": "http://kancolle.wikia.com/wiki/Kongou"
     },
@@ -16265,9 +16265,9 @@
             "remodel": "Oh... my, my."
         },
         "rarity": 7,
-        "remodel_level": null,
+        "remodel_level": 89,
         "remodels_from": 2,
-        "remodels_into": null,
+        "remodels_into": 373,
         "stype": "BB",
         "wiki_link": "http://kancolle.wikia.com/wiki/Mutsu"
     },
@@ -16304,9 +16304,9 @@
             "remodel": "Splendid."
         },
         "rarity": 7,
-        "remodel_level": null,
+        "remodel_level": 90,
         "remodels_from": 6,
-        "remodels_into": null,
+        "remodels_into": 404,
         "stype": "CV",
         "wiki_link": "http://kancolle.wikia.com/wiki/Akagi"
     },
@@ -18137,9 +18137,9 @@
             "remodel": "Yeah! Going!"
         },
         "rarity": 5,
-        "remodel_level": null,
+        "remodel_level": 77,
         "remodels_from": 225,
-        "remodels_into": null,
+        "remodels_into": 378,
         "stype": "DD",
         "wiki_link": "http://kancolle.wikia.com/wiki/Asashimo"
     },
@@ -18371,9 +18371,9 @@
             "remodel": "Ah, excuse me."
         },
         "rarity": 4,
-        "remodel_level": null,
+        "remodel_level": 82,
         "remodels_from": 258,
-        "remodels_into": null,
+        "remodels_into": 387,
         "stype": "DD",
         "wiki_link": "http://kancolle.wikia.com/wiki/Umikaze"
     },
@@ -21588,7 +21588,7 @@
         "images": {
             "full": {
                 "file_name": "364.png",
-                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f5/Kazagumo_Kai_Ni_Full.png/revision/latest/scale-to-width-down/300?cb=20190208115111"
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f5/Kazagumo_Kai_Ni_Full.png/revision/latest?cb=20190208115111"
             },
             "full_damaged": {
                 "file_name": "364_d.png",
@@ -21619,5 +21619,668 @@
         "remodels_into": null,
         "stype": "DD",
         "wiki_link": "http://kancolle.wikia.com/wiki/Kazagumo"
+    },
+    "373": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Nagato Class",
+        "images": {
+            "full": {
+                "file_name": "373.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/4/49/Mutsu_Kai_Ni_Full.png/revision/latest?cb=20190227111925"
+            },
+            "full_damaged": {
+                "file_name": "373_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/ac/Mutsu_Kai_Ni_Full_Damaged.png/revision/latest?cb=20190227112022"
+            },
+            "small": {
+                "file_name": "573.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "573_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 573,
+        "name": "Mutsu Kai Ni",
+        "quotes": {
+            "fleet_join": "Battleship Mutsu, weighing anchor! Sortieing!",
+            "idle": "My... my, my. You're leaving me all by my lonesome... My, oh, my!",
+            "intro": "I'm the 2nd ship of the Improved Nagato-class battleships, Mutsu. Admiral, I look forward to working with you today too. Please don't play with fire... Hmmm? Really? Ufufu. Well that makes me feel better.",
+            "marriage": "Admiral...! Why do you keep looking at my third turret? If you want to look, look over here\u2665",
+            "married": "Nagato... Ah, no... Admiral, should I put on my best big sister act for you today? ...Juuuuust kidding. Ufufu.",
+            "remodel": "Oh... my, my."
+        },
+        "rarity": 8,
+        "remodel_level": null,
+        "remodels_from": 1376,
+        "remodels_into": null,
+        "stype": "BB",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Mutsu"
+    },
+    "354": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Ise Class",
+        "images": {
+            "full": {
+                "file_name": "354.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/97/Hyuuga_Kai_Ni_Full.png/revision/latest?cb=20190327134916"
+            },
+            "full_damaged": {
+                "file_name": "354_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ee/Hyuuga_Kai_Ni_Full_Damaged.png/revision/latest?cb=20190327134935"
+            },
+            "small": {
+                "file_name": "554.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "554_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 554,
+        "name": "Hyuuga Kai Ni",
+        "quotes": {
+            "fleet_join": "Fourth Carrier Division, moving out!",
+            "idle": "You think so too, Admiral? You've finally realised how useful aviation battleships can be? Oh, that is great news. Yes, we have a lot we need to talk about.",
+            "intro": "I'm the remodelled aviation battleship, Hyuuga. Yes, I've strengthened my aviation equipment even more. What's that? Don't you worry. I can still use Zuiun. Let's go.",
+            "marriage": "Aviation Battleship... Got a nice ring to it, yeah? You get it, right? Alright... let's drink! We're not going back 'till morning!",
+            "married": "Yeah... I expected that.",
+            "remodel": "Yeah... I expected that."
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 103,
+        "remodels_into": null,
+        "stype": "BBV",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Hyuuga"
+    },
+    "391": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Kongou Class",
+        "images": {
+            "full": {
+                "file_name": "391.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/cd/Kongou_Kai_Ni_C_Full.png/revision/latest?cb=20190422145123"
+            },
+            "full_damaged": {
+                "file_name": "391_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/1e/Kongou_Kai_Ni_C_Full_Damaged.png/revision/latest?cb=20190422145132"
+            },
+            "small": {
+                "file_name": "149.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "149_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 149,
+        "name": "Kongou Kai Ni C",
+        "quotes": {
+            "fleet_join": "1st Striking Force, 2nd Section, now it's our turn! Follow me! Everyone, please don't fall behind!",
+            "idle": "I told you to keep your eyes on me~! Admiral~ just what are you doing, desu!?",
+            "intro": "I'm the English-born returnee, Kongou, with my 3rd remodel, desu! Admiral, please take good care of me!",
+            "marriage": "Admiral... Even though it's the time and place... If you forget the mood and timing, it'll be a \"no\", you know?",
+            "married": "Admiral... it's fine to hold me just a little tighter... Ngh... Ehehe. Thank you! I can keep working hard!",
+            "remodel": "Wow! Presents from Admiral!"
+        },
+        "rarity": 8,
+        "remodel_level": null,
+        "remodels_from": 149,
+        "remodels_into": null,
+        "stype": "FBB",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Kongou"
+    },
+    "387": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Shiratsuyu Class",
+        "images": {
+            "full": {
+                "file_name": "387.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/9e/Umikaze_Kai_Ni_Full.png/revision/latest?cb=20190625115003"
+            },
+            "full_damaged": {
+                "file_name": "387_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/2/20/Umikaze_Kai_Ni_Full_Damaged.png/revision/latest?cb=20190625115022"
+            },
+            "small": {
+                "file_name": "587.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "587_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 587,
+        "name": "Umikaze Kai Ni",
+        "quotes": {
+            "fleet_join": "First of the Upgraded Shiratsuyu-class, Umikaze, setting sail!",
+            "idle": "Admiral, I'll make some delicious tea, OK? It's hot, so be careful.",
+            "intro": "Improved Shiratsuyu-class destroyers' lead ship, Umikaze. Admiral, today, too, I look forward to working with you!",
+            "marriage": "Did you call for Umikaze, Admiral? You plan to summon the Revised Shiratsuyu-class and.. Ah, that's not it? This is... Really? Wow, I'm so happy!",
+            "married": "Admiral, are you not tired? Really? Are you okay? Your health is important. Please do not push yourself too hard. Ah, Umikaze will make some tea.",
+            "remodel": "Ah, excuse me."
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 1430,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Umikaze"
+    },
+    "378": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Yuugumo Class",
+        "images": {
+            "full": {
+                "file_name": "378.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/b5/Asashimo_Kai_Ni_Full.png/revision/latest?cb=20191025170949"
+            },
+            "full_damaged": {
+                "file_name": "378_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c8/Asashimo_Kai_Ni_Full_Damaged.png/revision/latest?cb=20191025171005"
+            },
+            "small": {
+                "file_name": "578.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "578_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 578,
+        "name": "Asashimo Kai Ni",
+        "quotes": {
+            "fleet_join": "21st Destroyer Division, Asashimo, heading out! Kasumi, Hatsushimo, follow me!",
+            "idle": "Oh yeah~ Going out with the likes of Yukikaze, Hamakaze and Isokaze once more would be nice. When that happened, you come along too, Commander. It'll be fun, yes.",
+            "intro": "Yo! The Yuugumo-class destroyer Asashimo is here! Let's do our best today too! Alright!?",
+            "marriage": "Hey, Admiral. Do you have business with me? What is it, can it be resolved by asking someone else? What, a ring? Wow it looks good! I'll take it! It's alright isn't it \u266a",
+            "married": "What's the matter, Admiral? You look down. Alright! I'll perk you up. Hmm? Want me to sing a song? Hmm?",
+            "remodel": "Yeah! Going!"
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 1424,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Asashimo"
+    },
+    "385": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Shimushu Class",
+        "images": {
+            "full": {
+                "file_name": "385.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/38/Ishigaki_Full.png/revision/latest?cb=20190521014605"
+            },
+            "full_damaged": {
+                "file_name": "385_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/90/Ishigaki_Full_Damaged.png/revision/latest?cb=20190521014816"
+            },
+            "small": {
+                "file_name": "585.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "585_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 585,
+        "name": "Ishigaki",
+        "quotes": {
+            "fleet_join": "Ishigaki, heading out.",
+            "idle": "Take this hand and... no. Um, Admiral, this hand, this isn't right. This is tough. Ah, Hachi-neesan? N-no! It's not like that!",
+            "intro": "I'm the Shimushu-class coastal defense ship, Ishigaki. What? Is there something on my face? ...Oh, alright then. Leave destroying submarines to me. I'm serious.",
+            "marriage": "You don't look so good. Shall I prepare some tea? Please rest. I'll watch over you. I will...",
+            "married": "There are no problems in particular. You don't need to worry so much. But it makes me a little happy.",
+            "remodel": "*Sigh* It's nothing."
+        },
+        "rarity": 4,
+        "remodel_level": 40,
+        "remodels_from": null,
+        "remodels_into": 9385,
+        "stype": "DE",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Ishigaki"
+    },
+    "9385": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Shimushu Class",
+        "images": {
+            "full": {
+                "file_name": "9385.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/38/Ishigaki_Full.png/revision/latest?cb=20190521014605"
+            },
+            "full_damaged": {
+                "file_name": "9385_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/9/90/Ishigaki_Full_Damaged.png/revision/latest?cb=20190521014816"
+            },
+            "small": {
+                "file_name": "379.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "379_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 379,
+        "name": "Ishigaki Kai",
+        "quotes": {
+            "fleet_join": "2nd Maritime Escort Fleet, Ishigaki, heading out.",
+            "idle": "Take this hand and... no. Um, Admiral, this hand, this isn't right. This is tough. Ah, Hachi-neesan? N-no! It's not like that!",
+            "intro": "I'm the Shimushu-class coastal defense ship, Ishigaki. What? Is there something on my face? ...Oh, alright then. I want to protect the fleet, and you. Please leave it to me.",
+            "marriage": "You don't look so good. Shall I prepare some tea? Please rest. I'll watch over you. I will...",
+            "married": "There are no problems in particular. You don't need to worry so much. But it makes me a little happy.",
+            "remodel": "*Sigh* It's nothing."
+        },
+        "rarity": 5,
+        "remodel_level": null,
+        "remodels_from": 385,
+        "remodels_into": null,
+        "stype": "DE",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Ishigaki"
+    },
+    "384": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Shimushu Class",
+        "images": {
+            "full": {
+                "file_name": "384.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ee/Hachijou_Full.png/revision/latest?cb=20190521015004"
+            },
+            "full_damaged": {
+                "file_name": "384_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/5f/Hachijou_Full_Damaged.png/revision/latest?cb=20190521015020"
+            },
+            "small": {
+                "file_name": "584.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "584_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 584,
+        "name": "Hachijou",
+        "quotes": {
+            "fleet_join": "Coastal defense ship, Hachijou, sortieing. Weigh anchor!",
+            "idle": "Uhm, what's wrong? You're always working hard on something. Aren't you? Admiral? Ah, he's not here right now.",
+            "intro": "Ah, me? I'm Hachijou. Yes, the Shimushu-class coastal defense ship. Hachi? Hmmm, well, that's fine. I'll let you call me that. Nice to meet you.",
+            "marriage": "Hmmm? Admiral, what is it? Eh!? This can't be happening, right...? Eeeeh, it's really happening? No way! But, that's fine. Thanks!",
+            "married": "What is it, Admiral? Are you a bit tired? It's fine to rest. Just a little while won't hurt. I'll be right here.",
+            "remodel": "So that's it! Why not?"
+        },
+        "rarity": 4,
+        "remodel_level": 40,
+        "remodels_from": null,
+        "remodels_into": 9384,
+        "stype": "DE",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Hachijou"
+    },
+    "9384": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Shimushu Class",
+        "images": {
+            "full": {
+                "file_name": "9384.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ee/Hachijou_Full.png/revision/latest?cb=20190521015004"
+            },
+            "full_damaged": {
+                "file_name": "9384_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/5f/Hachijou_Full_Damaged.png/revision/latest?cb=20190521015020"
+            },
+            "small": {
+                "file_name": "584.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "584_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 378,
+        "name": "Hachijou Kai",
+        "quotes": {
+            "fleet_join": "Coastal defense ship, Hachijou, sortieing. Weigh anchor!",
+            "idle": "Uhm, what's wrong? You're always working hard on something. Aren't you? Admiral? Ah, he's not here right now.",
+            "intro": "Ah, are you well? Of course, I, the Shimushu-class coastal defense ship Hachijou, am doing great. Admiral, you're... Yup, you look great! Alright, let's do our best today too. Treat me well.",
+            "marriage": "Hmmm? Admiral, what is it? Eh!? This can't be happening, right...? Eeeeh, it's really happening? No way! But, that's fine. Thanks!",
+            "married": "What is it, Admiral? Are you a bit tired? It's fine to rest. Just a little while won't hurt. I'll be right here.",
+            "remodel": "So that's it! Why not?"
+        },
+        "rarity": 5,
+        "remodel_level": null,
+        "remodels_from": 384,
+        "remodels_into": null,
+        "stype": "DE",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Hachijou"
+    },
+    "390": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Duca degli Abruzzi Class",
+        "images": {
+            "full": {
+                "file_name": "390.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/66/Giuseppe_Garibaldi_Full.png/revision/latest?cb=20190521013853"
+            },
+            "full_damaged": {
+                "file_name": "390_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/0/08/Giuseppe_Garibaldi_Full_Damaged.png/revision/latest?cb=20190521013911"
+            },
+            "small": {
+                "file_name": "590.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "590_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 590,
+        "name": "Giuseppe Garibaldi",
+        "quotes": {
+            "fleet_join": "Sorties really get you pumped up. State-of-the-art Abruzzi-class light cruiser, Garibaldi, heading out!",
+            "idle": "I wonder if my sister is doing well... I hope she hasn't gotten caught up in something strange again... The Admiral... looks kind of busy with something...",
+            "intro": "Hello, I'm the state-of-the-art light cruiser from Italy, Giuseppe Garibaldi. It's too long? Well then... Just Garibaldi is fine. Nice to meet you.",
+            "marriage": "Whoa, sorry, my sister and I are kind of... Eh, that's still... fine? Seriously? Th-then, I guess I'll accept.",
+            "married": "I made some cafe latte. How is it? Ah, it's hot.",
+            "remodel": "Ah, isn't this fine? Well?"
+        },
+        "rarity": 6,
+        "remodel_level": 45,
+        "remodels_from": null,
+        "remodels_into": 1491,
+        "stype": "CL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Giuseppe_Garibaldi"
+    },
+    "1491": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Duca degli Abruzzi Class",
+        "images": {
+            "full": {
+                "file_name": "1491.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/bb/Giuseppe_Garibaldi_Kai_Full.png/revision/latest?cb=20190521013948"
+            },
+            "full_damaged": {
+                "file_name": "1491_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/b/bc/Giuseppe_Garibaldi_Kai_Full_Damaged.png/revision/latest?cb=20190521014021"
+            },
+            "small": {
+                "file_name": "691.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "691_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 691,
+        "name": "Giuseppe Garibaldi Kai",
+        "quotes": {
+            "fleet_join": "Sorties really get you pumped up. State-of-the-art Abruzzi-class light cruiser, Garibaldi, heading out!",
+            "idle": "I wonder if my sister is doing well... I hope she hasn't gotten caught up in something strange again... The Admiral... looks kind of busy with something...",
+            "intro": "Hello, the state-of-the-art light cruiser, Giuseppe Garibaldi, reporting for duty. Ah, just leave it all to me! I got this!",
+            "marriage": "Whoa, sorry, my sister and I are kind of... Eh, that's still... fine? Seriously? Th-then, I guess I'll accept.",
+            "married": "I made some cafe latte. How is it? Ah, it's hot.",
+            "remodel": "Ah, isn't this fine? Well?"
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 390,
+        "remodels_into": null,
+        "stype": "CL",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Giuseppe_Garibaldi"
+    },
+    "396": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Fletcher Class",
+        "images": {
+            "full": {
+                "file_name": "396.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/d/dd/Fletcher_Full.png/revision/latest?cb=20190524222744"
+            },
+            "full_damaged": {
+                "file_name": "396_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/18/Fletcher_Full_Damaged.png/revision/latest?cb=20190524222757"
+            },
+            "small": {
+                "file_name": "596.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "596_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 596,
+        "name": "Fletcher",
+        "quotes": {
+            "fleet_join": "1st ship of the Fletcher-class destroyers, Fletcher, sortieing.",
+            "idle": "My sisters? Yes... I've never even met some of them... well... yes. There's easily over a hundred of them.",
+            "intro": "Thank you for your hard work. The nameship of the Fletcher-class destroyers, Fletcher, reporting for duty. A mother? Oh no, that's not... I'll try my best to be of use to everyone!",
+            "marriage": "Engagement ring? Really? I... I love you so much...",
+            "married": "Are you tired? Would you like some sweets to relieve you? I'll prepare some delicious pancakes and coffee.",
+            "remodel": "Everything is going well."
+        },
+        "rarity": 6,
+        "remodel_level": 55,
+        "remodels_from": null,
+        "remodels_into": 1492,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Fletcher"
+    },
+    "1492": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Fletcher Class",
+        "images": {
+            "full": {
+                "file_name": "1492.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/3/32/Fletcher_Kai_Full.png/revision/latest?cb=20190524224042"
+            },
+            "full_damaged": {
+                "file_name": "1492_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/f/f5/Fletcher_Kai_Full_Damaged.png/revision/latest?cb=20190524224050"
+            },
+            "small": {
+                "file_name": "692.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "692_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 692,
+        "name": "Fletcher Kai",
+        "quotes": {
+            "fleet_join": "1st ship of the Fletcher-class destroyers, Fletcher, sortieing.",
+            "idle": "My sisters? Yes... I've never even met some of them... well... yes. There's easily over a hundred of them.",
+            "intro": "Thank you for your hard work. The nameship of the Fletcher-class destroyers, Fletcher, reporting for duty. A mother? Oh no, that's not... I'll try my best to be of use to everyone!",
+            "marriage": "Engagement ring? Really? I... I love you so much...",
+            "married": "Are you tired? Would you like some sweets to relieve you? I'll prepare some delicious pancakes and coffee.",
+            "remodel": "Everything is going well."
+        },
+        "rarity": 7,
+        "remodel_level": null,
+        "remodels_from": 396,
+        "remodels_into": null,
+        "stype": "DD",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Fletcher"
+    },
+    "401": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Colorado Class",
+        "images": {
+            "full": {
+                "file_name": "401.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/a/ab/Colorado_Full.png/revision/latest?cb=20190524222924"
+            },
+            "full_damaged": {
+                "file_name": "401_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/53/Colorado_Full_Damaged.png/revision/latest?cb=20190524222934"
+            },
+            "small": {
+                "file_name": "601.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "601_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 601,
+        "name": "Colorado",
+        "quotes": {
+            "fleet_join": "USS BB-45, Colorado-class nameship, Colorado. I'm heading out. Follow... me!",
+            "idle": "Nagato, Mutsu, what's up? \"Teitoku\"? Ah, the Admiral. I don't know where he is. I haven't seen him for a while.",
+            "intro": "Hi, I'm one of the Big Seven from the States, the 1st ship of the Colorado-class battleships, USS Colorado. So you're the Admiral? Not too shabby. Make sure you stick real close to me. What do you say?",
+            "marriage": "Admiral? What's this ring for? ...Eh, it's for me? It's so beautiful! Thank~ you~! I'll always treasure it!",
+            "married": "Ahem. Admiral, I made some coffee. Please have some if you'd like. It's hot.",
+            "remodel": "OK!"
+        },
+        "rarity": 7,
+        "remodel_level": 45,
+        "remodels_from": null,
+        "remodels_into": 406,
+        "stype": "BB",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Colorado"
+    },
+    "406": {
+        "can_craft": false,
+        "can_drop": true,
+        "class_name": "Colorado Class",
+        "images": {
+            "full": {
+                "file_name": "406.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/5/5c/Colorado_Kai_Full.png/revision/latest?cb=20190524224116"
+            },
+            "full_damaged": {
+                "file_name": "406_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/1/19/Colorado_Kai_Full_Damaged.png/revision/latest?cb=20190524224122"
+            },
+            "small": {
+                "file_name": "1496.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "1496_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 1496,
+        "name": "Colorado Kai",
+        "quotes": {
+            "fleet_join": "USS BB-45, Colorado-class nameship, Colorado. I'm heading out. Follow... me!",
+            "idle": "Nagato, Mutsu, what's up? \"Teitoku\"? Ah, the Admiral. I don't know where he is. I haven't seen him for a while.",
+            "intro": "Hi, I'm one of the Big Seven from the States, the 1st ship of the Colorado-class battleships, USS Colorado. So you're the Admiral? Not too shabby. Make sure you stick real close to me. What do you say?",
+            "marriage": "Admiral? What's this ring for? ...Eh, it's for me? It's so beautiful! Thank~ you~! I'll always treasure it!",
+            "married": "Ahem. Admiral, I made some coffee. Please have some if you'd like. It's hot.",
+            "remodel": "OK!"
+        },
+        "rarity": 8,
+        "remodel_level": null,
+        "remodels_from": 401,
+        "remodels_into": null,
+        "stype": "BB",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Colorado"
+    },
+    "404": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Akagi Class",
+        "images": {
+            "full": {
+                "file_name": "404.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/6/6e/Akagi_Kai_Ni_Full.png/revision/latest?cb=20190521011028"
+            },
+            "full_damaged": {
+                "file_name": "404_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c7/Akagi_Kai_Ni_Full_Damaged.png/revision/latest?cb=20190521011049"
+            },
+            "small": {
+                "file_name": "594.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "594_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 594,
+        "name": "Akagi Kai Ni",
+        "quotes": {
+            "fleet_join": "We mustn't be overconfident. Let's move forward with all our might!",
+            "idle": "Um... Admiral? Is it mealti- no! Is it time to start the strategy meeting yet!?",
+            "intro": "I'm the aircraft carrier, Akagi. If you're forming a carrier task force, just leave it to me.",
+            "marriage": "Admiral... When I'm with you, I feel as though there is a way to change those fateful five minutes. I will do my best!",
+            "married": "1st CarDiv, Akagi, always ready to deploy! Admiral, please take a break sometimes.",
+            "remodel": "Splendid."
+        },
+        "rarity": 8,
+        "remodel_level": 92,
+        "remodels_from": 1377,
+        "remodels_into": 409,
+        "stype": "CV",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Akagi"
+    },
+    "409": {
+        "can_craft": true,
+        "can_drop": true,
+        "class_name": "Akagi Class",
+        "images": {
+            "full": {
+                "file_name": "409.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/c/c1/Akagi_Kai_Ni_E_Full.png/revision/latest?cb=20190521011134"
+            },
+            "full_damaged": {
+                "file_name": "409_d.png",
+                "url": "https://vignette.wikia.nocookie.net/kancolle/images/e/ee/Akagi_Kai_Ni_E_Full_Damaged.png/revision/latest?cb=20190521011158"
+            },
+            "small": {
+                "file_name": "599.png",
+                "url": null
+            },
+            "small_damaged": {
+                "file_name": "599_d.png",
+                "url": null
+            }
+        },
+        "kc3id": 599,
+        "name": "Akagi Kai Ni E",
+        "quotes": {
+            "fleet_join": "We mustn't be overconfident. Let's move forward with all our might!",
+            "idle": "Um... Admiral? Is it mealti- no! Is it time to start the strategy meeting yet!?",
+            "intro": "I'm the aircraft carrier, Akagi. If you're forming a carrier task force, just leave it to me.",
+            "marriage": "Admiral... When I'm with you, I feel as though there is a way to change those fateful five minutes. I will do my best!",
+            "married": "1st CarDiv, Akagi, always ready to deploy! Admiral, please take a break sometimes.",
+            "remodel": "Splendid."
+        },
+        "rarity": 8,
+        "remodel_level": null,
+        "remodels_from": 404,
+        "remodels_into": null,
+        "stype": "CV",
+        "wiki_link": "http://kancolle.wikia.com/wiki/Akagi"
     }
 }
