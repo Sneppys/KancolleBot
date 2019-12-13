@@ -26,7 +26,6 @@ def read_json(filepath):
 CONFIG_DATA_FILE = os.path.join(DIR_PATH, "../layout.json")
 CONFIG_DATA = read_json(CONFIG_DATA_FILE)
 
-small_ico_mask_img = os.path.join(DIR_PATH, "images/mask_small.png")
 small_ico_ring_img = os.path.join(DIR_PATH, "images/ring_icon.png")
 
 large_bg_map_img = os.path.join(DIR_PATH, "images/map_bg.jpg")
@@ -98,15 +97,18 @@ def generate_inventory_screen(member, page, only_dupes=False):
 
             shade_color = (("filled_color1" if shade else "filled_color2")
                            if ship else ("empty_color1" if shade else "empty_color2"))
-            border_color = None
+            rbg = None
 
             if (ship):
+                rbg = ship_stats.get_rarity_backdrop(ship.base().rarity)
+                rbg = rbg.resize((cw, ch))
                 fleet = userinfo.UserFleet.instance(1, discord_id)
                 if (ship.invid in fleet.ships):
                     flag = fleet.ships.index(ship.invid) == 0
-                    shade_color = "fleet_color1" if shade else "fleet_color2"
                     if flag:
-                        border_color = tuple(layout['flag_border_color'])
+                        shade_color = 'flag_border_color'
+                    else:
+                        shade_color = "fleet_color1" if shade else "fleet_color2"
                 elif (ship.base().has_seasonal_cg()):
                     shade_color = "seasonal_color1" if shade else "seasonal_color2"
 
@@ -114,51 +116,58 @@ def generate_inventory_screen(member, page, only_dupes=False):
 
             x, y = (xi * cw, yi * ch)
             draw.rectangle((x, y, x + cw, y + ch), fill=shade_color)
-            if (border_color):
-                b_in = 3
-                draw.rectangle((x + b_in, y + b_in, x + cw - b_in - 1,
-                                y + ch - b_in - 1), outline=border_color)
+            if (rbg):
+                img.paste(rbg, (x, y))
             if (ship):
                 base = ship.base()
-                font = ImageFont.truetype("fonts/trebucbd.ttf", ch * 5 // 8)
-                num_str = "%04d" % (ship.invid)
-                draw_squish_text(img, (x + cw // 8, y + ch // 2), num_str,
-                                 font, cw // 4 - 4, color=(0, 0, 0))
+                font = ImageFont.truetype("fonts/trebucbd.ttf", ch * 1 // 2)
+                num_str = "%s-%04d" % (base.stype, ship.invid)
+                draw_squish_text(img, (x + cw * 3 // 4, y + ch * 1 // 4), num_str,
+                                 font, cw * 7 // 16 - 2, color=(0, 0, 0))
 
-                font = ImageFont.truetype("fonts/trebucbd.ttf", ch * 3 // 4)
-                lvl_str = base.stype
                 if (setting('features.levels_enabled')):
-                    lvl_str = "L%02d %s" % (ship.level, base.stype)
                     if (setting('features.marriage_enabled') and ship.level > setting('levels.level_cap')):
                         ring = Image.open(small_ico_ring_img)
-                        ring = ring.resize((ch - 4, ch - 4))
-                        img.paste(ring, (x + 2 + cw * 1 // 2, y + 2), mask=ring)
-                draw_squish_text(img, (x + 2 + cw * 3 // 4, y + ch // 2),
-                                 lvl_str, font, cw // 2 - 4, color=(0, 0, 0))
-                if (setting('features.levels_enabled') and ship.is_remodel_ready()):
-                    draw.rectangle((x + 2 + cw * 1 // 2, y + 4,
-                                    x + cw * 3 // 4 + 4, y + ch - 4),
-                                   outline=(50, 0, 250))
+                        ring = ring.resize((ch // 3 - 4, ch // 3 - 4))
+                        ring_loc = (x + cw * 8 // 9 - 2, y + ch * 5 // 8 + 2)
+                        draw.ellipse(
+                            (ring_loc, tuple(map(sum, zip(ring_loc, ring.size)))), fill=(0, 0, 0))
+                        img.paste(ring, ring_loc, mask=ring)
+                    font = ImageFont.truetype(
+                        "fonts/trebucbd.ttf", ch * 3 // 8)
+                    lvl_str = "Lv. %02d" % (ship.level)
+                    draw_squish_text(img, (x + 2 + cw * 11 // 16, y + ch * 3 // 4 - 2),
+                                     lvl_str, font, cw // 3 - 4, color=(0, 0, 0))
+                    if (ship.is_remodel_ready()):
+                        draw.rectangle((x + cw // 2 + 2, y + ch * 9 // 16, x + cw * 31 // 32, y + ch * 15 // 16),
+                                       outline=(50, 0, 250), width=2)
 
-                cir_start_x = x + cw // 4
-                cir_start_y = y + 2
+                cir_start_x = x + 3
+                cir_start_y = y + 3
                 use_damaged = False  # TODO check if use damaged image
                 ico = base.get_cg(ico=True, dmg=use_damaged)
-                ico = ico.resize((ch - 4, ch - 4), Image.BILINEAR)
-                border_color = RARITY_COLORS[base.rarity - 1]
-                draw.ellipse((cir_start_x - 1, cir_start_y - 1,
-                              cir_start_x + ch - 3, cir_start_y + ch - 3),
-                             fill=border_color)
-                msk = Image.open(small_ico_mask_img)
-                msk = msk.resize(ico.size)
-                img.paste(ico, (cir_start_x, cir_start_y), mask=msk)
+                ico = ico.resize((int(ch * 1.5) - 6, ch - 6), Image.BILINEAR)
+                pxls = ico.load()
+                grad_start = int(ico.size[0] * 0.75)
+                grad_end = ico.size[0]
+                for ix in range(grad_start, grad_end):
+                    for iy in range(ico.size[1]):
+                        fade_amt = (ix - grad_start) / (grad_end - grad_start)
+                        fade_amt *= fade_amt
+                        new_alpha = int(pxls[ix, iy][3] * (1 - fade_amt))
+                        pxls[ix, iy] = pxls[ix, iy][:3] + (new_alpha,)
+                img.paste(ico, (cir_start_x, cir_start_y), ico)
+
+                draw.rectangle((x, y, x + cw - 1,
+                                y + ch - 1), outline=shade_color, width=3)
             shade = not shade
             indx += 1
         if(sy % 2 == 0):
             shade = not shade
 
     draw = ImageDraw.Draw(img)
-    x, y = (0, layout['image_size'][1] * antialias_value)  # start position of footer
+    # start position of footer
+    x, y = (0, layout['image_size'][1] * antialias_value)
     fw, fh = (w, layout['lower_padding'] * antialias_value)  # size of footer
 
     display_name = "%s#%s" % (member.name, member.discriminator)
@@ -229,7 +238,8 @@ def generate_inventory_screen(member, page, only_dupes=False):
     if (setting('features.marriage_enabled') and setting('levels.marriage_ring_required')):
         img.paste(ico_rings, (rsc_x + int(x_off * 3.5), rsc_y), mask=ico_rings)
 
-    img = img.resize((w // antialias_value, h // antialias_value), Image.ANTIALIAS)
+    img = img.resize((w // antialias_value, h //
+                      antialias_value), Image.ANTIALIAS)
 
     r = io.BytesIO()
     img.save(r, format="PNG")
@@ -270,7 +280,8 @@ def generate_ship_card(bot, ship_instance):
         x_offset = int(obj_main_image['x_offset'] - (targ_width / 2))
         img_full = img_full.resize((targ_width, obj_main_image['targ_height']),
                                    Image.BICUBIC)
-        img.paste(img_full, (x_offset, obj_main_image['y_offset']), mask=img_full)
+        img.paste(
+            img_full, (x_offset, obj_main_image['y_offset']), mask=img_full)
 
     if (ship_instance.level > setting('levels.level_cap')):
         ring = Image.open(small_ico_ring_img)
@@ -280,21 +291,26 @@ def generate_ship_card(bot, ship_instance):
     if (obj_name['enabled']):
         draw_object(img, obj_name, base.name)
     if (obj_class_name['enabled']):
-        draw_object(img, obj_class_name, "%s %s" % (base.class_name, ship_stats.get_ship_type(base.stype).full_name))
+        draw_object(img, obj_class_name, "%s %s" % (base.class_name,
+                                                    ship_stats.get_ship_type(base.stype).full_name))
     if (setting('features.levels_enabled')):
         if (obj_level_indicator['enabled']):
-            draw_object(img, obj_level_indicator, "Level %s" % (ship_instance.level))
+            draw_object(img, obj_level_indicator, "Level %s" %
+                        (ship_instance.level))
         if (obj_level_progress['enabled'] and (ship_instance.level > 1 or ship_instance.exp > 0)
                 and ship_instance.level != setting('levels.level_cap') and ship_instance.level < setting('levels.level_cap_married')):
             exp = ship_instance.exp
             req = ship_instance.exp_req()
-            draw_object(img, obj_level_progress, "%s / %s EXP (%.02f%%)" % (exp, req, 100.0 * exp / req))
+            draw_object(img, obj_level_progress, "%s / %s EXP (%.02f%%)" %
+                        (exp, req, 100.0 * exp / req))
         if (base.remodels_into and obj_next_remodel['enabled']):
             r_base = ship_stats.ShipBase.instance(base.remodels_into)
-            draw_object(img, obj_next_remodel, "Next Remodel: %s (Level %s)" % (r_base.name, base.remodel_level))
+            draw_object(img, obj_next_remodel, "Next Remodel: %s (Level %s)" % (
+                r_base.name, base.remodel_level))
 
     if (obj_small_identifier['enabled']):
-        draw_object(img, obj_small_identifier, "%s-%04d" % (base.stype, ship_instance.invid))
+        draw_object(img, obj_small_identifier, "%s-%04d" %
+                    (base.stype, ship_instance.invid))
 
     if (obj_owned_by['enabled']):
         display_name = "Unknown User"
