@@ -8,3 +8,4 @@ usersdb.db
 output.log
 *.pyc
 .vscode/
+_newshipformat
