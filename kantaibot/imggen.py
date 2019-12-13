@@ -319,7 +319,7 @@ def generate_ship_card(bot, ship_instance):
             if (owner):
                 display_name = "%s#%s" % (owner.name, owner.discriminator)
                 break
-        draw_object(img, obj_owned_by, "Owned by %s" % (display_name))
+        draw_object(img, obj_owned_by, namesub("Part of %s's <fleet.title>" % (display_name)))
 
     r = io.BytesIO(b'')
     img.save(r, format="PNG")
